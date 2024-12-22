@@ -10,6 +10,8 @@ func _ready() -> void:
 	var dir = DirAccess.open(PROMPT_DIR)
 	var files = dir.get_files()
 	if files.ends_with('.json'):
+		pass
+		
 		
 	print(files)
 

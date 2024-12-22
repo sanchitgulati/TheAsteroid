@@ -12,8 +12,8 @@ func _ready():
 
 
 	print(Time.get_datetime_string_from_system())
-	#var generated_text = llm_engine.generate_text_simple(llm_input)
-	#print(generated_text)
+	var generated_text = llm_engine.generate_text_simple(llm_input.text)
+	print(generated_text)
 	print(Time.get_datetime_string_from_system())
 	
 
