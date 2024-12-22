@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=3 uid="uid://dpuoi45daojq2"]
+
+[ext_resource type="Script" path="res://test.gd" id="1_ripgd"]
+
+[node name="Test" type="Node2D"]
+script = ExtResource("1_ripgd")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 1.0
+offset_right = 1150.0
+offset_bottom = 648.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="llm_input" type="TextEdit" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="llm_output" type="RichTextLabel" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "ciao	"
+
+[node name="llm_engine" type="GDLlama" parent="."]
+n_predict = 20
