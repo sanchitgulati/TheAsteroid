@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 DataLoader="*res://autoloads/data_loader.gd"
 
+[debug]
+
+settings/stdout/verbose_stdout=true
+
 [display]
 
 window/size/viewport_width=1200

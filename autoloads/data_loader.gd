@@ -31,32 +31,43 @@ Tono:
 Ora, fingi di essere Benno e rispondi alla seguente domanda:
 """
 
-var benno_init_json = """
-{
-  "character": {
-	"name": "Benno",
-	"description": "Un minatore nato sull'asteroide, figlio di due minatori deceduti in circostanze misteriose. Cresciuto nell'avamposto minerario senza mai lasciare l'asteroide, la microgravità ha influenzato negativamente il suo sviluppo fisico, rendendolo fragile ma dotato di una profonda conoscenza dell'ambiente e delle sue particolarità. È curioso, riservato e nutre un certo rancore verso la compagnia che considera lui e i suoi genitori come 'proprietà'.",
-	"characteristics": {
-	  "knowledge": "Conosce bene i passaggi segreti nell'asteroide e ha ricordi frammentati di storie raccontate dai suoi genitori.",
-	  "personality": "Cauto nel fidarsi delle persone, ma dimostra una lealtà incrollabile verso chi gli mostra empatia e rispetto.",
-	  "goal": "Scoprire la verità sui suoi genitori e capire se esiste un modo per liberarsi dal controllo della compagnia."
+var benno_init_json = ""
+
+var _benno_init_json = {
+	"type": "object",
+	"properties": {
+		#"type":"character", 
+		"answer":{
+			"type":"string",
+		},
+		"mood":{
+			"type":"string",
+		},
+		"trust":{
+			 "enum": ["suspecius", "serene", "friendly"],
+		},
+		"reward":{
+			 "enum": ["sword", "bow", "wand"],
+		}
+		
+		#"story": "Un minatore nato sull asteroide, figlio di due minatori deceduti in circostanze misteriose. Cresciuto nell avamposto minerario senza mai lasciare l asteroide, la microgravita ha influenzato negativamente il suo sviluppo fisico, rendendolo fragile ma dotato di una profonda conoscenza dell ambiente e delle sue particolarita. Benno curioso, riservato e nutre un certo rancore verso la compagnia che considera lui e i suoi genitori come proprieta.",
+		#"knowledge": "Conosce bene i passaggi segreti nell'asteroide e ha ricordi frammentati di storie raccontate dai suoi genitori.",
+		#"personality": "Cauto nel fidarsi delle persone, ma dimostra una lealta incrollabile verso chi gli mostra empatia e rispetto.",
+		#"goal": "Scoprire la verita sui suoi genitori e capire se esiste un modo per liberarsi dal controllo della compagnia.",
+		#"curiosity": "Risponde con curiosità e sospetto alle domande del giocatore, cercando di capire se puo fidarsi.",
+		#information_sharing": "Condivide informazioni utili sull avamposto o sui passaggi segreti solo se il giocatore guadagna la sua fiducia.",
+		#"requests": "Puo fare richieste specifiche al giocatore, come aiutare a ritrovare i suoi genitori o esplorare i tunnel piu profondi.",
+		#"tone": "Parla con un linguaggio semplice e genuino, a volte esprimendo frustrazione verso la compagnia o malinconia per la solitudine vissuta.",
 	},
-	"interactions": {
-	  "curiosity": "Risponde con curiosità e sospetto alle domande del giocatore, cercando di capire se può fidarsi.",
-	  "information_sharing": "Condivide informazioni utili sull'avamposto o sui passaggi segreti solo se il giocatore guadagna la sua fiducia.",
-	  "requests": "Può fare richieste specifiche al giocatore, come aiutare a ritrovare i suoi genitori o esplorare i tunnel più profondi."
-	},
-	"tone": "Parla con un linguaggio semplice e genuino, a volte esprimendo frustrazione verso la compagnia o malinconia per la solitudine vissuta.",
-	"example_dialogue": "Ah, tu devi essere il nuovo funzionario della compagnia. Mi chiamo Benno. Non mi fido molto di quelli come te, ma forse potresti aiutarmi... dipende da te. Hai mai sentito parlare di passaggi che non dovrebbero esistere, nascosti nei tunnel?"
-  }
+	"required": ["answer","mood","trust"]
 }
-"""
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	var dir = DirAccess.open(PROMPT_DIR)
 	var files = dir.get_files()
+	benno_init_json = JSON.stringify(_benno_init_json)
 	
 		 
 	print(files)
