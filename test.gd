@@ -1,8 +1,8 @@
 extends Node2D
 
 @onready var llm_engine: GDLlama = $llm_engine
-@onready var llm_input: TextEdit = $HBoxContainer/llm_input
-@onready var llm_output: RichTextLabel = $HBoxContainer/llm_output
+@onready var llm_output: RichTextLabel = $Control/VBoxContainer/llm_output
+@onready var llm_input: TextEdit = $Control/VBoxContainer/llm_input
 
 func _ready():
 	print(Time.get_datetime_string_from_system())
@@ -12,8 +12,8 @@ func _ready():
 
 
 	print(Time.get_datetime_string_from_system())
-	var generated_text = llm_engine.generate_text_simple(llm_input.)
-	print(generated_text)
+	#var generated_text = llm_engine.generate_text_simple(llm_input)
+	#print(generated_text)
 	print(Time.get_datetime_string_from_system())
 	
 
@@ -21,3 +21,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+
+
+func _on_send_pressed() -> void:
+	pass # Replace with function body.
