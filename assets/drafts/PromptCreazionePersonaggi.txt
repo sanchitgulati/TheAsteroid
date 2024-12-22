@@ -1,0 +1,1 @@
+Gli NPC verranno controllati da una LLM, genera il prompt in formato .md per inizializzare una LLM che si identifichi con Benno e interagisca col player
