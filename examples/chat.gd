@@ -39,5 +39,3 @@ Ora, fingi di essere Benno
 	# wait for the response
 	var response = await response_finished
 	print("Got response: " + response)
-
-func lm():
