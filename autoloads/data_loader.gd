@@ -71,7 +71,7 @@ var _benno_init_json = {
 			"type":"string",
 		},
 		"trust":{
-			 "enum": ["suspecius", "serene", "friendly"],
+			 "enum": ["suspicious", "serene", "friendly"],
 		},
 		"reward":{
 			 "enum": ["sword", "bow", "wand"],

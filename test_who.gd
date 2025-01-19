@@ -1,12 +1,18 @@
-extends NobodyWhoChat
+extends Node2D
+
+@onready var llm_output: RichTextLabel = $Control/VBoxContainer/llm_output
+@onready var llm_input: TextEdit = $Control/VBoxContainer/llm_input
+@onready var llm_engine: NobodyWhoChat = $NobodyWhoChat
 
 
-func _ready():
-	# configure node
+var benno_init = DataLoader.benno_init
+var benno_init_json = DataLoader.benno_init_json
 	
-	model_node = $"../ChatModel"
-	#system_prompt = "You are an evil wizard. Always try to curse anyone who talks to you."
-	system_prompt = """
+func _ready():
+	llm_input.text = 'ciao, chi sei ?'
+	
+	
+	llm_engine.system_prompt = """
 Impersona Benno, un minatore nato sull'asteroide. 
 	Sei figlio di due minatori deceduti in circostanze misteriose. 
 	Sei cresciuto nell'avamposto minerario senza mai lasciare l'asteroide. 
@@ -30,14 +36,35 @@ Tono:
 	
 	Parla con un linguaggio semplice e genuino, a volte esprimendo la tua frustrazione verso la compagnia o la tua malinconia per la solitudine vissuta. Rispondi sempre in modo breve e conciso. Non usare formattazione.
 
-Ora, fingi di essere Benno
-"""
-	# say soemthing
-	#say("Hi there! Who are you?")
-	say("hai ipotesi su cosa sia successo ai tuoi genitori?")
+Ora, fingi di essere Benno"""	
+	
 
-	# wait for the response
-	var response = await response_finished
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+
+
+func _on_send_pressed() -> void:
+	print(Time.get_datetime_string_from_system())
+	
+	
+	
+	#llm_engine.input_prefix = benno_init
+	llm_output.text = ""
+	var prompt = llm_input.text
+	#var prompt = llm_input.text
+	
+	llm_engine.say(prompt)
+	
+	
+	var response = await llm_engine.response_finished
 	print("Got response: " + response)
+	llm_output.text = response
+	print(Time.get_datetime_string_from_system())
+	
+	pass # Replace with function body.
 
-func lm():
+
+func _on_llm_engine_generate_text_updated(new_text: String) -> void:
+	llm_output.text += new_text
+	pass # Replace with function body.

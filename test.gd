@@ -9,7 +9,7 @@ func _ready():
 	print(Time.get_datetime_string_from_system())
 	llm_engine.model_path = "./models/Meta-Llama-3-8B-Instruct-Q5_K_M.gguf" ##Your model path
 	llm_engine.n_predict = 200
-	llm_engine.instruct = false
+	llm_engine.instruct = true
 	llm_engine.should_output_prompt = false
 	llm_engine.should_output_special = false
 	llm_engine.context_size = 2024

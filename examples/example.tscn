@@ -14,7 +14,8 @@ grow_vertical = 2
 model_path = "res://models/gemma-2-2b-it-Q4_K_M.gguf"
 
 [node name="EmbeddingModel" type="NobodyWhoModel" parent="."]
-model_path = "res://gemma-2-2b-it-Q4_K_M.gguf"
+model_path = "res://models/gemma-2-2b-it-Q4_K_M.gguf"
 
-[node name="NobodyWhoChat" type="NobodyWhoChat" parent="."]
+[node name="NobodyWhoChat" type="NobodyWhoChat" parent="." node_paths=PackedStringArray("model_node")]
+model_node = NodePath("../ChatModel")
 script = ExtResource("1_4acvw")
