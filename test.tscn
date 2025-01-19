@@ -50,6 +50,7 @@ theme_override_constants/outline_size = 1
 text = "Send"
 
 [node name="llm_engine" type="GDLlama" parent="."]
+instruct = true
 should_output_prompt = false
 context_size = 1024
 

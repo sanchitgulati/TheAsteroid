@@ -13,7 +13,7 @@ func _ready():
 	llm_engine.should_output_prompt = false
 	llm_engine.should_output_special = false
 	llm_engine.context_size = 2024
-	llm_engine.main_gpu = 1
+	llm_engine.main_gpu = 0
 	
 	
 	llm_input.text = 'ciao, chi sei ?'

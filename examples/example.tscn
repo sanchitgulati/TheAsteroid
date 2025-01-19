@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://7kgf1khocnsa"]
+
+[ext_resource type="Script" path="res://examples/chat.gd" id="1_4acvw"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ChatModel" type="NobodyWhoModel" parent="."]
+model_path = "res://models/gemma-2-2b-it-Q4_K_M.gguf"
+
+[node name="EmbeddingModel" type="NobodyWhoModel" parent="."]
+model_path = "res://gemma-2-2b-it-Q4_K_M.gguf"
+
+[node name="NobodyWhoChat" type="NobodyWhoChat" parent="."]
+script = ExtResource("1_4acvw")
