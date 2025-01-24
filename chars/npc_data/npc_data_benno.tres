@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="npc_data" load_steps=2 format=3 uid="uid://dim7i148sbenk"]
+
+[ext_resource type="Script" path="res://chars/npc_data/npc_data.gd" id="1_jfxru"]
+
+[resource]
+script = ExtResource("1_jfxru")
+name = "Benno"
+system_prompt = "un lungo testodfdsdd ggaerg wreg ergerg"
+mood = "happy"
+quest_progress = Array[String]([])

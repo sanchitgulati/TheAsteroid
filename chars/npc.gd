@@ -3,10 +3,11 @@ extends Area2D
 var player: Area2D
 
 @onready var nobody_who_chat: NobodyWhoChat = $NobodyWhoChat
+@onready var texture_rect = $TextureRect
 
-@export var base_prompt:String
-@export var display_name:String
+@export var npc_info: npc_data
 @export var mood:String
+@export var texture:Texture2D
 
 var chat_history=[]
 var last_answer = ""
@@ -15,8 +16,9 @@ var first_touch = true
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	texture_rect.texture = texture
 	nobody_who_chat.model_node = LLMModel
-	nobody_who_chat.system_prompt = base_prompt
+	nobody_who_chat.system_prompt = npc_info.system_prompt
 	
 	#player = $"../Player"
 	pass # Replace with function body.w
@@ -51,13 +53,14 @@ func sayToNPC(prompt: String):
 
 func _on_nobody_who_chat_response_updated(new_token: String) -> void:
 	last_answer += new_token
-	print(last_answer)
+	#printraw(new_token)
 	
 	pass # Replace with function body.
 
 
 func _on_nobody_who_chat_response_finished(response: String) -> void:
 	chat_history.append(response)
+	print(response)
 	talking = false
 	pass # Replace with function body.
 
