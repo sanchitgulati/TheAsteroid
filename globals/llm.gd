@@ -1,8 +1,9 @@
 extends Node
 
 @export var Dialog: Dialogue
-@export var Chat: NobodyWhoChat 
-@export var Model: NobodyWhoModel 
+
+@onready var Chat: NobodyWhoChat = $Chat
+@onready var Model: NobodyWhoModel  = $Model
 
 var chat_history=[]
 var last_answer = ""
@@ -25,14 +26,12 @@ func sayToNPC(prompt: String):
 	print(prompt)
 	chat_history.append(prompt)
 	last_answer = ""
-	LLM.Chat.say(prompt)
-		
+	Chat.say(prompt)
+	
 	
 func _on_chat_response_updated(new_token: String) -> void:
 	last_answer += new_token
-	LLM.Dialog.llm_output.text = last_answer
-	
-	print(".")
+	Dialog.llm_output.text = last_answer
 
 
 
