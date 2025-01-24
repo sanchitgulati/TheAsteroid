@@ -13,3 +13,6 @@ model_path = "res://models/gemma-2-2b-it-Q4_K_M.gguf"
 [node name="Chat" type="NobodyWhoChat" parent="." node_paths=PackedStringArray("model_node")]
 model_node = NodePath("../Model")
 script = ExtResource("1_3wcse")
+
+[connection signal="response_finished" from="Chat" to="." method="_on_chat_response_finished"]
+[connection signal="response_updated" from="Chat" to="." method="_on_chat_response_updated"]

@@ -1,11 +1,14 @@
 extends Area2D
 
+
+class_name Player
 # to add Animation check:
 # https://docs.godotengine.org/en/stable/getting_started/first_2d_game/03.coding_the_player.html
 @export var speed = 400 # How fast the player will move (pixels/sec).
 var screen_size # Size of the game window.
 
 func _ready():
+	WorldState.PLAYER = self
 	screen_size = get_viewport_rect().size
 	var screen_center = Vector2(screen_size.x/2, screen_size.y/2)
 	position = screen_center
