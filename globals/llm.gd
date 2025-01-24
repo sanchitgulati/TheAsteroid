@@ -37,7 +37,7 @@ func sayToNPC(prompt: String):
 func _on_chat_response_updated(new_token: String) -> void:
 	last_answer += new_token
 	
-	last_answer = re_newline.sub(last_answer, "\n", true)
+	#last_answer = re_newline.sub(last_answer, "\n", true)
 	Dialog.llm_output.text = last_answer
 
 
