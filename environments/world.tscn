@@ -6,12 +6,9 @@
 [ext_resource type="TileSet" uid="uid://d21c0tc1t1kf3" path="res://assets/bitmaps/tilesets/Buildings2.tres" id="3_mc41w"]
 [ext_resource type="PackedScene" uid="uid://cwgaaiweib4b3" path="res://chars/npc.tscn" id="4_o2ggy"]
 [ext_resource type="Resource" uid="uid://dim7i148sbenk" path="res://chars/npc_data/npc_data_benno.tres" id="5_to8hj"]
-[ext_resource type="Texture2D" uid="uid://kdpekiddjnra" path="res://assets/bitmaps/benno3.png" id="6_go4lt"]
 [ext_resource type="Resource" uid="uid://l85wxsl6gxbj" path="res://chars/npc_data/npc_data_walter.tres" id="7_jkqyk"]
-[ext_resource type="Texture2D" uid="uid://cue36lij0fdtf" path="res://assets/bitmaps/generated/worker_redmond.png" id="8_5ujkh"]
-[ext_resource type="Texture2D" uid="uid://bfepmjeid6384" path="res://assets/bitmaps/generated/hydrophonic_operator.png" id="9_xmiee"]
-[ext_resource type="Resource" uid="uid://dsfitpq4lwfyi" path="res://chars/npc_data/npc_data_scientist.tres" id="10_81wa6"]
-[ext_resource type="Texture2D" uid="uid://56wrccsgqgww" path="res://assets/bitmaps/generated/scientist.png" id="11_2h3e7"]
+[ext_resource type="Resource" uid="uid://bylhgcssjoonc" path="res://chars/npc_data/npc_data_melinda.tres" id="8_m6sqd"]
+[ext_resource type="Resource" path="res://chars/npc_data/npc_data_scientist.tres" id="10_81wa6"]
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_qmn3i")
@@ -77,22 +74,18 @@ position = Vector2(600, 400)
 position = Vector2(662, 82)
 npc_info = ExtResource("5_to8hj")
 mood = "Happy"
-texture = ExtResource("6_go4lt")
 
 [node name="Walter" parent="." instance=ExtResource("4_o2ggy")]
 position = Vector2(962, 271)
 npc_info = ExtResource("7_jkqyk")
 mood = "grumpy"
-texture = ExtResource("8_5ujkh")
 
 [node name="Melinda" parent="." instance=ExtResource("4_o2ggy")]
 position = Vector2(962, 77)
-npc_info = ExtResource("7_jkqyk")
+npc_info = ExtResource("8_m6sqd")
 mood = "flirting"
-texture = ExtResource("9_xmiee")
 
 [node name="Scientist" parent="." instance=ExtResource("4_o2ggy")]
 position = Vector2(196, 170)
 npc_info = ExtResource("10_81wa6")
 mood = "chatty"
-texture = ExtResource("11_2h3e7")

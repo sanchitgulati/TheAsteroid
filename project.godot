@@ -30,7 +30,8 @@ settings/stdout/verbose_stdout=true
 
 window/size/viewport_width=1200
 window/size/viewport_height=800
-window/stretch/aspect="expand"
+window/stretch/mode="viewport"
+window/stretch/aspect="keep_width"
 
 [input]
 

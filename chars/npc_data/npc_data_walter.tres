@@ -7,6 +7,6 @@
 script = ExtResource("1_4x748")
 name = "Walter"
 texture = ExtResource("2_hglib")
-system_prompt = "Impersonate Walter, a metal worker who  mantains the station."
+system_prompt = "Impersonate Walter, a metal worker who mantains the station."
 mood = "happy"
 quest_progress = Array[String]([])
