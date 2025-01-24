@@ -21,7 +21,7 @@ offset_right = 0.0
 offset_bottom = 0.0
 
 [node name="Dialogue" parent="CanvasLayer50" instance=ExtResource("3_t1wol")]
-offset_left = 200.0
-offset_top = 496.0
-offset_right = 417.0
-offset_bottom = 683.0
+offset_left = 8.0
+offset_top = 592.0
+offset_right = 225.0
+offset_bottom = 779.0

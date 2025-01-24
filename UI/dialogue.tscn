@@ -7,10 +7,8 @@
 [node name="Dialogue" type="Control"]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 60.0
-offset_top = 1.0
-offset_right = 277.0
-offset_bottom = 188.0
+offset_right = 217.0
+offset_bottom = 187.0
 script = ExtResource("1_jww1s")
 
 [node name="NinePatchAnswer" type="NinePatchRect" parent="."]
@@ -18,9 +16,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -2.0
-offset_right = -2.0
-offset_bottom = -93.0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 971.0
+offset_bottom = -59.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_fwq6s")
@@ -29,35 +28,26 @@ patch_margin_top = 10
 patch_margin_right = 10
 patch_margin_bottom = 10
 
-[node name="VScrollBar" type="VScrollBar" parent="NinePatchAnswer"]
-clip_contents = true
+[node name="llm_output" type="Label" parent="NinePatchAnswer"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="llm_output" type="Label" parent="NinePatchAnswer/VScrollBar"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = 15.0
+offset_right = -17.0
+offset_bottom = -17.0
 grow_horizontal = 2
 grow_vertical = 2
 autowrap_mode = 1
 
 [node name="NinePatchQuestion" type="NinePatchRect" parent="."]
+custom_minimum_size = Vector2(1100, 80)
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -2.0
-offset_top = 90.0
-offset_right = -2.0
-offset_bottom = 6.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_left = 8.0
+offset_top = 127.0
+offset_right = 1088.15
+offset_bottom = 207.0
 texture = ExtResource("2_wb1ks")
 patch_margin_left = 10
 patch_margin_top = 10
@@ -66,8 +56,9 @@ patch_margin_bottom = 10
 
 [node name="llm_input" type="TextEdit" parent="NinePatchQuestion"]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
+anchors_preset = -1
+anchor_left = 0.00689655
+anchor_right = 0.993966
 anchor_bottom = 1.0
 offset_left = 8.0
 offset_top = 10.0
@@ -80,10 +71,10 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Button" type="Button" parent="NinePatchQuestion"]
 layout_mode = 0
-offset_left = 154.0
-offset_top = 54.0
-offset_right = 201.0
-offset_bottom = 85.0
+offset_left = 1112.0
+offset_top = 10.0
+offset_right = 1176.0
+offset_bottom = 74.0
 text = "Send"
 
 [connection signal="pressed" from="NinePatchQuestion/Button" to="." method="_on_button_pressed"]
