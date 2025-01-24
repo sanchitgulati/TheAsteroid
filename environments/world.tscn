@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://ceievfwtkqso0" path="res://chars/player.tscn" id="1_17igu"]
 [ext_resource type="TileSet" uid="uid://dft0l8i4cyhid" path="res://assets/bitmaps/tilesets/Grounds.tres" id="2_jvq8c"]
-[ext_resource type="TileSet" uid="uid://d21c0tc1t1kf3" path="res://assets/bitmaps/tilesets/Buildings2.tres" id="3_mc41w"]
+[ext_resource type="TileSet" uid="uid://8x6uvj3vvo3m" path="res://assets/bitmaps/tilesets/Buildings2.tres" id="3_mc41w"]
 [ext_resource type="PackedScene" uid="uid://cwgaaiweib4b3" path="res://chars/npc.tscn" id="4_o2ggy"]
 [ext_resource type="Resource" uid="uid://dim7i148sbenk" path="res://chars/npc_data/npc_data_benno.tres" id="5_to8hj"]
 [ext_resource type="Texture2D" uid="uid://kdpekiddjnra" path="res://assets/bitmaps/benno3.png" id="6_go4lt"]
