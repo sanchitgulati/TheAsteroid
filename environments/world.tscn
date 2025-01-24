@@ -61,19 +61,19 @@ speed = 300
 position = Vector2(600, 400)
 
 [node name="Benno" parent="." instance=ExtResource("4_o2ggy")]
-position = Vector2(608, 56)
+position = Vector2(662, 82)
 npc_info = ExtResource("5_to8hj")
 mood = "Happy"
 texture = ExtResource("6_go4lt")
 
 [node name="Walter" parent="." instance=ExtResource("4_o2ggy")]
-position = Vector2(924, 244)
+position = Vector2(962, 271)
 npc_info = ExtResource("7_jkqyk")
 mood = "grumpy"
 texture = ExtResource("8_5ujkh")
 
 [node name="Melinda" parent="." instance=ExtResource("4_o2ggy")]
-position = Vector2(888, 35)
+position = Vector2(962, 77)
 npc_info = ExtResource("7_jkqyk")
 mood = "flirting"
 texture = ExtResource("9_xmiee")
