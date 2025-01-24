@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://bhxc5hhawgeai"]
+[gd_scene load_steps=5 format=3 uid="uid://ceievfwtkqso0"]
 
 [ext_resource type="Texture2D" uid="uid://cfhswimc03g7a" path="res://assets/bitmaps/player.png" id="1_tbqpn"]
 [ext_resource type="Script" path="res://chars/player.gd" id="1_uqfcx"]
@@ -19,3 +19,4 @@ position = Vector2(2, 5.5)
 shape = SubResource("RectangleShape2D_pvsiw")
 
 [node name="Inventory" parent="." instance=ExtResource("3_n2773")]
+visible = false
