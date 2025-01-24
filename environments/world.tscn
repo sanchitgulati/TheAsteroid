@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://xm0sr6mbrqkn"]
+[gd_scene load_steps=10 format=4 uid="uid://xm0sr6mbrqkn"]
 
 [ext_resource type="PackedScene" uid="uid://ceievfwtkqso0" path="res://chars/player.tscn" id="1_17igu"]
 [ext_resource type="Script" path="res://environments/world.gd" id="1_qmn3i"]
@@ -8,7 +8,7 @@
 [ext_resource type="Resource" uid="uid://dim7i148sbenk" path="res://chars/npc_data/npc_data_benno.tres" id="5_to8hj"]
 [ext_resource type="Resource" uid="uid://l85wxsl6gxbj" path="res://chars/npc_data/npc_data_walter.tres" id="7_jkqyk"]
 [ext_resource type="Resource" uid="uid://bylhgcssjoonc" path="res://chars/npc_data/npc_data_melinda.tres" id="8_m6sqd"]
-[ext_resource type="Resource" path="res://chars/npc_data/npc_data_scientist.tres" id="10_81wa6"]
+[ext_resource type="Resource" uid="uid://dsfitpq4lwfyi" path="res://chars/npc_data/npc_data_scientist.tres" id="10_81wa6"]
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_qmn3i")
