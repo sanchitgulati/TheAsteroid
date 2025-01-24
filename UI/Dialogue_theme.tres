@@ -1,0 +1,16 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://c3gfwu5jojd"]
+
+[ext_resource type="FontFile" uid="uid://iv2gcl0qd8i6" path="res://assets/fonts/SF Pixelate.ttf" id="1_k6ga6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p35pq"]
+
+[resource]
+Label/colors/font_color = Color(0.234205, 0.167239, 0.172922, 1)
+Label/constants/line_spacing = 9
+Label/font_sizes/font_size = 15
+Label/fonts/font = ExtResource("1_k6ga6")
+TextEdit/colors/font_color = Color(0.0808155, 0.113188, 0.129423, 1)
+TextEdit/colors/search_result_border_color = Color(0.301961, 0.301961, 0.301961, 0)
+TextEdit/font_sizes/font_size = 15
+TextEdit/fonts/font = ExtResource("1_k6ga6")
+TextEdit/styles/normal = SubResource("StyleBoxEmpty_p35pq")

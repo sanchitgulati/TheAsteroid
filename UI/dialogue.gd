@@ -9,6 +9,8 @@ class_name Dialogue
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	LLM.Dialog = self
+	llm_input.text = ""
+	llm_output.text = ""
 	pass # Replace with function body.
 
 

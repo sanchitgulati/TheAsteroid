@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://ptkseutwb6ke"]
+[gd_scene load_steps=5 format=3 uid="uid://ptkseutwb6ke"]
 
 [ext_resource type="Texture2D" uid="uid://c5ygwwai8r27v" path="res://assets/bitmaps/ui/bubble_9patch.png" id="1_fwq6s"]
 [ext_resource type="Script" path="res://UI/dialogue.gd" id="1_jww1s"]
 [ext_resource type="Texture2D" uid="uid://d117yhbmf8o0f" path="res://assets/bitmaps/ui/textfield_9patch.png" id="2_wb1ks"]
+[ext_resource type="Theme" uid="uid://c3gfwu5jojd" path="res://UI/Dialogue_theme.tres" id="3_l0jdm"]
 
 [node name="Dialogue" type="Control" node_paths=PackedStringArray("llm_output", "llm_input")]
 layout_mode = 3
@@ -35,12 +36,14 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 16.0
-offset_top = 15.0
-offset_right = -17.0
-offset_bottom = -17.0
+offset_left = 26.0
+offset_top = 19.0
+offset_right = -24.0
+offset_bottom = -13.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("3_l0jdm")
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 autowrap_mode = 1
 
 [node name="NinePatchQuestion" type="NinePatchRect" parent="."]
@@ -59,15 +62,20 @@ patch_margin_bottom = 10
 [node name="llm_input" type="TextEdit" parent="NinePatchQuestion"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.00689655
-anchor_right = 0.993966
-anchor_bottom = 1.0
+anchor_left = 0.0163636
+anchor_top = 0.0875
+anchor_right = 0.986364
+anchor_bottom = 0.9875
 offset_left = 8.0
 offset_top = 10.0
 offset_right = -9.0
 offset_bottom = -10.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("3_l0jdm")
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+"
+wrap_mode = 1
 autowrap_mode = 1
 metadata/_edit_use_anchors_ = true
 
