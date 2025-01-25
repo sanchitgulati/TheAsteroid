@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=4 uid="uid://xm0sr6mbrqkn"]
+[gd_scene load_steps=10 format=4 uid="uid://xm0sr6mbrqkn"]
 
 [ext_resource type="PackedScene" uid="uid://ceievfwtkqso0" path="res://chars/player.tscn" id="1_17igu"]
 [ext_resource type="TileSet" uid="uid://dft0l8i4cyhid" path="res://assets/bitmaps/tilesets/Grounds.tres" id="2_jvq8c"]
@@ -6,6 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://cwgaaiweib4b3" path="res://chars/npc.tscn" id="4_o2ggy"]
 [ext_resource type="Resource" uid="uid://dim7i148sbenk" path="res://chars/npc_data/npc_data_benno.tres" id="5_to8hj"]
 [ext_resource type="Texture2D" uid="uid://kdpekiddjnra" path="res://assets/bitmaps/benno3.png" id="6_go4lt"]
+[ext_resource type="Resource" uid="uid://l85wxsl6gxbj" path="res://chars/npc_data/npc_data_walter.tres" id="7_jkqyk"]
+[ext_resource type="Texture2D" uid="uid://cue36lij0fdtf" path="res://assets/bitmaps/generated/worker_redmond.png" id="8_5ujkh"]
+[ext_resource type="Texture2D" uid="uid://bfepmjeid6384" path="res://assets/bitmaps/generated/hydrophonic_operator.png" id="9_xmiee"]
 
 [node name="World" type="Node2D"]
 
@@ -57,8 +60,20 @@ speed = 300
 [node name="ScreenCenter" type="Marker2D" parent="."]
 position = Vector2(600, 400)
 
-[node name="Npc" parent="." instance=ExtResource("4_o2ggy")]
+[node name="Benno" parent="." instance=ExtResource("4_o2ggy")]
 position = Vector2(608, 56)
 npc_info = ExtResource("5_to8hj")
 mood = "Happy"
 texture = ExtResource("6_go4lt")
+
+[node name="Walter" parent="." instance=ExtResource("4_o2ggy")]
+position = Vector2(924, 244)
+npc_info = ExtResource("7_jkqyk")
+mood = "grumpy"
+texture = ExtResource("8_5ujkh")
+
+[node name="Melinda" parent="." instance=ExtResource("4_o2ggy")]
+position = Vector2(888, 35)
+npc_info = ExtResource("7_jkqyk")
+mood = "flirting"
+texture = ExtResource("9_xmiee")
