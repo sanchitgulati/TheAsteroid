@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="npc_data" load_steps=3 format=3 uid="uid://dsfitpq4lwfyi"]
+
+[ext_resource type="Script" path="res://chars/npc_data/npc_data.gd" id="1_lp76s"]
+[ext_resource type="Texture2D" uid="uid://56wrccsgqgww" path="res://assets/bitmaps/generated/scientist.png" id="2_wf2sn"]
+
+[resource]
+script = ExtResource("1_lp76s")
+name = "Benno"
+texture = ExtResource("2_wf2sn")
+system_prompt = "Impersonate a scientist, your name is Mylord."
+mood = "happy"
+quest_progress = Array[String]([])
