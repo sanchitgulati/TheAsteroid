@@ -4,12 +4,14 @@
 [ext_resource type="Script" path="res://UI/dialogue.gd" id="1_jww1s"]
 [ext_resource type="Texture2D" uid="uid://d117yhbmf8o0f" path="res://assets/bitmaps/ui/textfield_9patch.png" id="2_wb1ks"]
 
-[node name="Dialogue" type="Control"]
+[node name="Dialogue" type="Control" node_paths=PackedStringArray("llm_output", "llm_input")]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 217.0
 offset_bottom = 187.0
 script = ExtResource("1_jww1s")
+llm_output = NodePath("NinePatchAnswer/llm_output")
+llm_input = NodePath("NinePatchQuestion/llm_input")
 
 [node name="NinePatchAnswer" type="NinePatchRect" parent="."]
 layout_mode = 1

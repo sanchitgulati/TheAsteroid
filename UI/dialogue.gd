@@ -3,8 +3,8 @@ extends Control
 
 class_name Dialogue
 
-@onready var llm_output: Label = $NinePatchAnswer/VScrollBar/llm_output
-@onready var llm_input: TextEdit = $NinePatchQuestion/llm_input
+@export var llm_output: Label
+@export var llm_input: TextEdit
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
