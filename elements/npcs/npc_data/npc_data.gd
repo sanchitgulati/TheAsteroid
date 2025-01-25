@@ -18,7 +18,10 @@ class_name npc_data
 
 func build_system_prompt():
 	var system_prompt: String
-	system_prompt = "You live on the asteroid Plutino in the Kuiper Belt. Your life takes place mostly inside The Station: a minerary avampost owned by The Company."
+	
+	system_prompt = """You live on the asteroid Plutino in the Kuiper Belt.
+	 Your life takes place mostly inside The Station: a minerary avampost owned by The Company.
+	An accident has happenend outside the Station, you know Inspector Kalashnicov has come to investaigate."""
 
 	system_prompt += "Your name is " + name + "\n"
 
