@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://rp4eqiqkbdpx"]
 
 [ext_resource type="Script" path="res://inventory/ui/inventory_ui.gd" id="1_ljtkx"]
-[ext_resource type="PackedScene" uid="uid://bmlp6yoh6ffhn" path="res://inventory/ui/inventory_slot_ui.tscn" id="2_kctl2"]
+[ext_resource type="PackedScene" uid="uid://sdf4pddtnkro" path="res://inventory/ui/inventory_slot_ui.tscn" id="2_kctl2"]
 
 [node name="Inventory" type="Control"]
 layout_mode = 3
@@ -23,6 +23,7 @@ offset_bottom = 159.0
 layout_mode = 0
 offset_right = 228.0
 offset_bottom = 160.0
+color = Color(0, 0, 1, 0.145098)
 
 [node name="GridContainer" type="GridContainer" parent="."]
 layout_mode = 0

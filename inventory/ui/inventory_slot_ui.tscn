@@ -1,25 +1,24 @@
-[gd_scene format=3 uid="uid://bmlp6yoh6ffhn"]
+[gd_scene load_steps=2 format=3 uid="uid://sdf4pddtnkro"]
 
-[node name="InvewntorySlotUi" type="Panel"]
-custom_minimum_size = Vector2(40, 40)
-anchors_preset = -1
-anchor_right = 0.03
-anchor_bottom = 0.046
-offset_right = 12.0
-offset_bottom = 11.2
-grow_horizontal = 2
-grow_vertical = 2
+[ext_resource type="Texture2D" uid="uid://c6vmia320m4b1" path="res://assets/bitmaps/ui/inv_slot_bg.png" id="1_uemv4"]
 
-[node name="ColorRect" type="ColorRect" parent="."]
-custom_minimum_size = Vector2(40, 40)
-layout_mode = 0
+[node name="InvewntorySlotUi" type="Control"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="40x40" type="ColorRect" parent="."]
+visible = false
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
 offset_right = 48.0
 offset_bottom = 48.0
 color = Color(0.58964, 0.174029, 0.801158, 1)
 
-[node name="ColorRect" type="ColorRect" parent="ColorRect"]
-offset_left = 8.0
-offset_top = 8.0
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
-color = Color(0, 0.498931, 0.411633, 1)
+texture = ExtResource("1_uemv4")
