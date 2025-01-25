@@ -13,11 +13,12 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
 	
 
 
 func _on_button_pressed() -> void:
-	LLM.Chat.say
+	LLM.Chat.say(LLM.Dialog.llm_input.text)
+	pass # Replace with function body.
 	pass # Replace with function body.

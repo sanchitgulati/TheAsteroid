@@ -1,5 +1,7 @@
 extends Node
 
+
+var PLAYER:Player
 var quests ={
 	"quest_1": 0,
 	"quest_2": 0,
@@ -14,5 +16,5 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
