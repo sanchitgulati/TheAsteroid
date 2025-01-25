@@ -8,13 +8,15 @@ class_name NPC
 
 @export var data: npc_data
 @export var mood:String
+@export var chat_history: Array[String]
 
 var first_touch = true
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	texture_rect.texture = data.texture
-	LLM.Chat.system_prompt = data.build_system_prompt()
+	var prompt = data.build_system_prompt()
+	LLM.set_system_prompt(prompt)
 	
 	pass
 	
@@ -33,8 +35,8 @@ func _on_area_entered(area: Area2D) -> void:
 		LLM.Dialog.visible = true
 		first_touch = false
 		WorldState.set_npc(self)
-		LLM.talk_npc("Who are you?")
-		LLM.Dialog.llm_input.text = "Who are you?"
+		LLM.talk_npc("Hello, I'm Kalasnikov")
+		#LLM.Dialog.llm_input.text = "Who are you?"
 		
 	pass # Replace with function body.
 

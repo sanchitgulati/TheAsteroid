@@ -23,9 +23,10 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	pass
-	
 
-	
+func set_system_prompt(prompt:String):
+	Chat.system_prompt = prompt
+	Chat.start_worker()
 	
 
 func talk_npc(prompt: String ):
