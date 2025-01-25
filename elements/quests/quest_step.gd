@@ -5,3 +5,6 @@ class_name quest_step
 @export_multiline var description = "Description"
 @export var request_items: Array[item_data] = []
 @export var request_npcs: Array[npc_data] = []
+
+@export var rewards_items: Array[item_data] = []
+@export var rewards_: Array[item_data] = []

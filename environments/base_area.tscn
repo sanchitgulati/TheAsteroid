@@ -1,13 +1,13 @@
 [gd_scene load_steps=10 format=4 uid="uid://cy2se4msxc27f"]
 
 [ext_resource type="Script" path="res://environments/world.gd" id="1_cu36i"]
-[ext_resource type="TileSet" uid="uid://cjncmt7n27ubh" path="res://environments/A4_Square.tres" id="2_d53uh"]
-[ext_resource type="PackedScene" uid="uid://ceievfwtkqso0" path="res://player/player.tscn" id="4_xnnpk"]
-[ext_resource type="PackedScene" uid="uid://cwgaaiweib4b3" path="res://npc/npc.tscn" id="5_jgyno"]
-[ext_resource type="Resource" uid="uid://dim7i148sbenk" path="res://npc/npc_data/npc_data_benno.tres" id="6_x0ihc"]
-[ext_resource type="Resource" uid="uid://l85wxsl6gxbj" path="res://npc/npc_data/npc_data_walter.tres" id="7_c1awk"]
-[ext_resource type="Resource" uid="uid://cpseqbo2x2h5u" path="res://npc/npc_data/npc_data_ivanka.tres" id="8_vtgxy"]
-[ext_resource type="Resource" uid="uid://c4ckkmv0baq7p" path="res://npc/npc_data/npc_data_scientist.tres" id="9_d7ria"]
+[ext_resource type="TileSet" uid="uid://bwlc3hexpogcp" path="res://environments/A4_Square.tres" id="2_d53uh"]
+[ext_resource type="PackedScene" uid="uid://ceievfwtkqso0" path="res://elements/player/player.tscn" id="4_xnnpk"]
+[ext_resource type="PackedScene" uid="uid://cwgaaiweib4b3" path="res://elements/npc/npc.tscn" id="5_jgyno"]
+[ext_resource type="Resource" uid="uid://dim7i148sbenk" path="res://elements/npc/npc_data/npc_data_benno.tres" id="6_x0ihc"]
+[ext_resource type="Resource" uid="uid://l85wxsl6gxbj" path="res://elements/npc/npc_data/npc_data_walter.tres" id="7_c1awk"]
+[ext_resource type="Resource" uid="uid://cpseqbo2x2h5u" path="res://elements/npc/npc_data/npc_data_ivanka.tres" id="8_vtgxy"]
+[ext_resource type="Resource" uid="uid://c4ckkmv0baq7p" path="res://elements/npc/npc_data/npc_data_scientist.tres" id="9_d7ria"]
 [ext_resource type="Texture2D" uid="uid://df06en7iu0kld" path="res://assets/bitmaps/generated/console.png" id="9_ogmy5"]
 
 [node name="BaseArea" type="Node2D"]
@@ -100,7 +100,7 @@ position = Vector2(1164, 376)
 data = ExtResource("7_c1awk")
 mood = "grumpy"
 
-[node name="Melinda" parent="." instance=ExtResource("5_jgyno")]
+[node name="Ivanka" parent="." instance=ExtResource("5_jgyno")]
 position = Vector2(1164, 152)
 data = ExtResource("8_vtgxy")
 mood = "flirting"

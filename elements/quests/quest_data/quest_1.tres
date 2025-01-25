@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="quest" load_steps=7 format=3 uid="uid://bg3sce5ura838"]
+
+[ext_resource type="Script" path="res://elements/quests/quest_requirement.gd" id="1_l45pc"]
+[ext_resource type="Script" path="res://elements/quests/quest.gd" id="1_nt8ea"]
+[ext_resource type="Script" path="res://elements/quests/quest_step.gd" id="3_t2ihl"]
+[ext_resource type="Script" path="res://elements/inventory/inventory_item.gd" id="4_nyrhd"]
+[ext_resource type="Script" path="res://elements/npc/npc_data/npc_data.gd" id="5_wukvh"]
+
+[sub_resource type="Resource" id="Resource_hpoeg"]
+script = ExtResource("3_t2ihl")
+description = "Description"
+request_items = Array[ExtResource("4_nyrhd")]([])
+request_npcs = Array[ExtResource("5_wukvh")]([])
+rewards_items = Array[ExtResource("4_nyrhd")]([])
+rewards_ = Array[ExtResource("4_nyrhd")]([])
+
+[resource]
+script = ExtResource("1_nt8ea")
+uid = "quest_1"
+name = "Quest di Benno"
+description = "Description"
+progress = 0
+steps = Array[ExtResource("3_t2ihl")]([SubResource("Resource_hpoeg")])
+begin_with = Array[ExtResource("1_l45pc")]([])
