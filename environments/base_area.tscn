@@ -102,7 +102,7 @@ data = ExtResource("7_c1awk")
 position = Vector2(1164, 152)
 data = ExtResource("8_vtgxy")
 
-[node name="Scientist" parent="." instance=ExtResource("5_jgyno")]
+[node name="Barrow" parent="." instance=ExtResource("5_jgyno")]
 position = Vector2(142, 272)
 data = ExtResource("9_d7ria")
 
