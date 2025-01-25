@@ -30,8 +30,10 @@ func _on_area_entered(area: Area2D) -> void:
 	
 	print(area.name)
 	if area.name=='Player':
+		LLM.Dialog.visible = true
 		first_touch = false
-		LLM.talk_npc("Who are you?", self)
+		WorldState.set_npc(self)
+		LLM.talk_npc("Who are you?")
 		LLM.Dialog.llm_input.text = "Who are you?"
 		
 	pass # Replace with function body.
@@ -39,5 +41,6 @@ func _on_area_entered(area: Area2D) -> void:
 
 func _on_area_exited(_area: Area2D) -> void:
 	first_touch = true
+	LLM.Dialog.visible = false
 	WorldState.clear_npc()
 	pass # Replace with function body.

@@ -28,22 +28,16 @@ func _process(_delta: float) -> void:
 	
 	
 
-func talk_npc(prompt: String, npc: NPC ):
+func talk_npc(prompt: String ):
 	print("-----------------------")
-	
+	if WorldState.current_npc == null: return
 	if talking: return
 	talking = true
-	WorldState.set_npc(npc)
-	
-	Chat.start_worker()
-	#print(Chat.system_prompt)
-	
 	
 	print(prompt)
 	chat_history.append(prompt)
 	last_answer = ""
 	
-	WorldState.PLAYER.can_move = false
 	Chat.say(prompt)
 	
 	
@@ -61,4 +55,3 @@ func _on_chat_response_finished(_response: String) -> void:
 	talking = false
 	Chat.system_prompt = ""
 	LLM.Dialog.llm_input.text = ""
-	WorldState.PLAYER.can_move = true

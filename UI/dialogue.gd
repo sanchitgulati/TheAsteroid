@@ -9,6 +9,7 @@ class_name Dialogue
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	LLM.Dialog = self
+	visible=false
 	llm_input.text = ""
 	llm_output.text = ""
 	pass # Replace with function body.
@@ -16,10 +17,11 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
+	WorldState.PLAYER.can_move = !visible
 	pass
 	
 
 
 func _on_button_pressed() -> void:
-	LLM.talk_npc(LLM.Dialog.llm_input.text, LLM.lastNPC)
+	LLM.talk_npc(LLM.Dialog.llm_input.text)
 	pass # Replace with function body.
