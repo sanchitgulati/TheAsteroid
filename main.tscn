@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://drkr0qihrw5tl"]
+
+[ext_resource type="PackedScene" uid="uid://xm0sr6mbrqkn" path="res://environments/world.tscn" id="1_p1f6j"]
+[ext_resource type="PackedScene" uid="uid://rp4eqiqkbdpx" path="res://inventory/ui/inventory_ui.tscn" id="2_4yhnd"]
+
+[node name="Main" type="Node2D"]
+
+[node name="ScreenSize" type="ColorRect" parent="."]
+visible = false
+custom_minimum_size = Vector2(1200, 800)
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(1, 0, 1, 0.12549)
+
+[node name="World" parent="." instance=ExtResource("1_p1f6j")]
+
+[node name="CanvasLayer50" type="CanvasLayer" parent="."]
+layer = 50
+
+[node name="Inventory" parent="." instance=ExtResource("2_4yhnd")]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 16.0
+offset_bottom = 16.0

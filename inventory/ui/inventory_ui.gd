@@ -15,9 +15,11 @@ func _process(delta: float) -> void:
 		else: open()
 
 func close():
+	print("Inventory CLOSE")
 	is_open = false
 	visible = false
 
 func open():
+	print("Inventory OPEN")
 	is_open = true
 	visible = true
