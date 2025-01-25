@@ -9,6 +9,7 @@ var benno_init = DataLoader.benno_init
 var benno_init_json = DataLoader.benno_init_json
 	
 func _ready():
+	llm_engine.model_node = LLMModel
 	llm_input.text = 'ciao, chi sei ?'
 	
 
