@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=4 uid="uid://xm0sr6mbrqkn"]
+[gd_scene load_steps=11 format=4 uid="uid://xm0sr6mbrqkn"]
 
 [ext_resource type="PackedScene" uid="uid://ceievfwtkqso0" path="res://chars/player.tscn" id="1_17igu"]
+[ext_resource type="Script" path="res://environments/world.gd" id="1_qmn3i"]
 [ext_resource type="TileSet" uid="uid://dft0l8i4cyhid" path="res://assets/bitmaps/tilesets/Grounds.tres" id="2_jvq8c"]
 [ext_resource type="TileSet" uid="uid://d21c0tc1t1kf3" path="res://assets/bitmaps/tilesets/Buildings2.tres" id="3_mc41w"]
 [ext_resource type="PackedScene" uid="uid://cwgaaiweib4b3" path="res://chars/npc.tscn" id="4_o2ggy"]
@@ -11,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://bfepmjeid6384" path="res://assets/bitmaps/generated/hydrophonic_operator.png" id="9_xmiee"]
 
 [node name="World" type="Node2D"]
+script = ExtResource("1_qmn3i")
 
 [node name="1200x800" type="ColorRect" parent="."]
 custom_minimum_size = Vector2(1200, 800)

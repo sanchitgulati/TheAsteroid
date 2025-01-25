@@ -1,6 +1,6 @@
 extends Area2D
 
-var player: Area2D
+class_name NPC
 
 @onready var texture_rect = $TextureRect
 
@@ -26,11 +26,12 @@ func _process(_delta: float) -> void:
 func _on_area_entered(area: Area2D) -> void:
 	if !first_touch : return
 	
-	
 	print(area.name)
 	if area.name=='Player':
 		first_touch = false
-		LLM.sayToNPC("You: don't touch me!")
+		LLM.sayToNPC("You: don't touch me!", self)
+		
+		
 	pass # Replace with function body.
 
 

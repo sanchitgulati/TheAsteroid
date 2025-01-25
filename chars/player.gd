@@ -6,6 +6,7 @@ class_name Player
 # https://docs.godotengine.org/en/stable/getting_started/first_2d_game/03.coding_the_player.html
 @export var speed = 400 # How fast the player will move (pixels/sec).
 var screen_size # Size of the game window.
+var can_move = true
 
 func _ready():
 	WorldState.PLAYER = self
@@ -14,6 +15,8 @@ func _ready():
 	position = screen_center
 
 func _process(delta):
+	if !can_move: return
+	
 	var velocity = Vector2.ZERO # The player's movement vector.
 	if Input.is_action_pressed("move_right"):
 		velocity.x += 1
