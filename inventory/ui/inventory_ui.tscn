@@ -11,12 +11,12 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ljtkx")
 
-[node name="GridContainer" type="GridContainer" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
 offset_right = 465.0
 offset_bottom = 344.0
+
+[node name="GridContainer" type="GridContainer" parent="ColorRect"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0

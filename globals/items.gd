@@ -1,14 +1,5 @@
 extends Node
 
-var items = {
-	"pendant_benno":{
-		"title": "a pendant shaped as shark",
-		"description":"sdfsdfsdf",
-		"quests_progress":[
-			{"quest_1":}
-		]
-	}
-}
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
