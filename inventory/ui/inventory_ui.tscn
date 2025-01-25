@@ -1,22 +1,37 @@
-[gd_scene load_steps=2 format=3 uid="uid://rp4eqiqkbdpx"]
+[gd_scene load_steps=3 format=3 uid="uid://rp4eqiqkbdpx"]
 
 [ext_resource type="Script" path="res://inventory/ui/inventory_ui.gd" id="1_ljtkx"]
+[ext_resource type="PackedScene" uid="uid://bmlp6yoh6ffhn" path="res://inventory/ui/inventory_slot_ui.tscn" id="2_kctl2"]
 
 [node name="Inventory" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = -948.0
+offset_bottom = -580.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ljtkx")
 
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 1
+offset_right = 229.0
+offset_bottom = 159.0
+
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
-offset_right = 465.0
-offset_bottom = 344.0
+offset_right = 228.0
+offset_bottom = 160.0
 
-[node name="GridContainer" type="GridContainer" parent="ColorRect"]
+[node name="GridContainer" type="GridContainer" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 221.0
+offset_bottom = 146.0
+columns = 7
+
+[node name="InvewntorySlotUi" parent="GridContainer" instance=ExtResource("2_kctl2")]
+layout_mode = 2
+
+[node name="InvewntorySlotUi2" parent="GridContainer" instance=ExtResource("2_kctl2")]
+layout_mode = 2

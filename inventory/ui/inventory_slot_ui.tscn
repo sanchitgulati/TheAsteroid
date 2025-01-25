@@ -1,8 +1,25 @@
-[gd_scene format=3 uid="uid://ebeggrclitrk"]
+[gd_scene format=3 uid="uid://bmlp6yoh6ffhn"]
 
-[node name="InventorySlotUi" type="Panel"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+[node name="InvewntorySlotUi" type="Panel"]
+custom_minimum_size = Vector2(40, 40)
+anchors_preset = -1
+anchor_right = 0.03
+anchor_bottom = 0.046
+offset_right = 12.0
+offset_bottom = 11.2
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 0
+offset_right = 48.0
+offset_bottom = 48.0
+color = Color(0.58964, 0.174029, 0.801158, 1)
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect"]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0, 0.498931, 0.411633, 1)
