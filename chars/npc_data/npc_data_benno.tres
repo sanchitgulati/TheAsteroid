@@ -1,12 +1,12 @@
 [gd_resource type="Resource" script_class="npc_data" load_steps=3 format=3 uid="uid://dim7i148sbenk"]
 
 [ext_resource type="Script" path="res://chars/npc_data/npc_data.gd" id="1_jfxru"]
-[ext_resource type="Texture2D" uid="uid://kdpekiddjnra" path="res://assets/bitmaps/benno3.png" id="2_c4lcr"]
+[ext_resource type="Texture2D" uid="uid://b1vx7alsoiyb" path="res://assets/bitmaps/benno4.png" id="2_fd4ns"]
 
 [resource]
 script = ExtResource("1_jfxru")
 name = "Benno"
-texture = ExtResource("2_c4lcr")
+texture = ExtResource("2_fd4ns")
 base = "Impersonate Benno, a miner born on the asteroid.
 You are the child of two miners who died under mysterious circumstances.
 You grew up in the mining outpost without ever leaving the asteroid.
