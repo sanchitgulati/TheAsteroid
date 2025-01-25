@@ -19,6 +19,6 @@ func _process(_delta: float) -> void:
 
 
 func _on_button_pressed() -> void:
-	LLM.Chat.say(LLM.Dialog.llm_input.text)
+	LLM.sayToNPC(LLM.Dialog.llm_input.text)
 	pass # Replace with function body.
 	pass # Replace with function body.
