@@ -8,9 +8,14 @@ extends Node
 var chat_history=[]
 var last_answer = ""
 var talking = false
+var re_newline: RegEx
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	re_newline = RegEx.create_from_string("\n\n+")
+
+	
+	Chat.start_worker()
 	pass # Replace with function body.
 
 
@@ -31,6 +36,8 @@ func sayToNPC(prompt: String):
 	
 func _on_chat_response_updated(new_token: String) -> void:
 	last_answer += new_token
+	
+	last_answer = re_newline.sub(last_answer, "\n", true)
 	Dialog.llm_output.text = last_answer
 
 
