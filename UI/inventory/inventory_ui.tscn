@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://rp4eqiqkbdpx"]
+[gd_scene load_steps=2 format=3 uid="uid://rp4eqiqkbdpx"]
 
-[ext_resource type="Script" path="res://elements/player/ui/inventory_ui.gd" id="1_ljtkx"]
-[ext_resource type="PackedScene" uid="uid://sdf4pddtnkro" path="res://elements/player/ui/inventory_slot_ui.tscn" id="2_kctl2"]
+[ext_resource type="Script" path="res://UI/inventory/inventory_ui.gd" id="1_ljtkx"]
 
 [node name="Inventory" type="Control"]
 layout_mode = 3
@@ -30,9 +29,3 @@ layout_mode = 0
 offset_right = 221.0
 offset_bottom = 146.0
 columns = 7
-
-[node name="InvewntorySlotUi" parent="GridContainer" instance=ExtResource("2_kctl2")]
-layout_mode = 2
-
-[node name="InvewntorySlotUi2" parent="GridContainer" instance=ExtResource("2_kctl2")]
-layout_mode = 2

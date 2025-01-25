@@ -1,13 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://sdf4pddtnkro"]
+[gd_scene load_steps=3 format=3 uid="uid://sdf4pddtnkro"]
 
 [ext_resource type="Texture2D" uid="uid://c6vmia320m4b1" path="res://assets/bitmaps/ui/inv_slot_bg.png" id="1_uemv4"]
+[ext_resource type="Script" path="res://UI/inventory/inventory_slot_ui.gd" id="1_ufp15"]
 
-[node name="InvewntorySlotUi" type="Control"]
+[node name="InventorySlotUi" type="Control"]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("1_ufp15")
 
 [node name="40x40" type="ColorRect" parent="."]
 visible = false

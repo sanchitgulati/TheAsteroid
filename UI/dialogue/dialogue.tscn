@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://ptkseutwb6ke"]
 
 [ext_resource type="Texture2D" uid="uid://c5ygwwai8r27v" path="res://assets/bitmaps/ui/bubble_9patch.png" id="1_fwq6s"]
-[ext_resource type="Script" path="res://UI/dialogue.gd" id="1_jww1s"]
+[ext_resource type="Script" path="res://UI/dialogue/dialogue.gd" id="1_jww1s"]
 [ext_resource type="Texture2D" uid="uid://d117yhbmf8o0f" path="res://assets/bitmaps/ui/textfield_9patch.png" id="2_wb1ks"]
-[ext_resource type="Theme" uid="uid://c3gfwu5jojd" path="res://UI/Dialogue_theme.tres" id="3_l0jdm"]
+[ext_resource type="Theme" uid="uid://c3gfwu5jojd" path="res://UI/dialogue/Dialogue_theme.tres" id="3_l0jdm"]
 
 [node name="Dialogue" type="Control" node_paths=PackedStringArray("llm_output", "llm_input")]
 layout_mode = 3
