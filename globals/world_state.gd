@@ -1,5 +1,7 @@
 extends Node
 
+var last_npc: NPC
+var current_npc: NPC
 
 var PLAYER:Player
 var quests ={
@@ -9,6 +11,18 @@ var quests ={
 } 
 
 var inventory = [];
+
+func clear_npc():
+	Chat.system_prompt = ""
+	current_npc = null
+	
+func set_npc(npc:NPC):
+	last_npc = current_npc
+	current_npc = npc
+	
+	Chat.system_prompt = npc.npc_info.bì
+	
+	
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

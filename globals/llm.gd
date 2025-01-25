@@ -23,13 +23,12 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	pass
-
-	
 	
 
 	
 	
-func sayToNPC(prompt: String, npc: NPC):
+
+func talk_npc(prompt: String, npc: NPC ):
 	print("-----------------------")
 	lastNPC = npc
 	if talking: return

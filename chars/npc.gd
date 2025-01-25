@@ -1,6 +1,8 @@
+@tool 
 extends Area2D
 
 class_name NPC
+
 
 @onready var texture_rect = $TextureRect
 
@@ -29,7 +31,7 @@ func _on_area_entered(area: Area2D) -> void:
 	print(area.name)
 	if area.name=='Player':
 		first_touch = false
-		LLM.sayToNPC("Who are you?", self)
+		LLM.talk_npc("Who are you?", self)
 		LLM.Dialog.llm_input.text = "Who are you?"
 		
 	pass # Replace with function body.
@@ -37,4 +39,5 @@ func _on_area_entered(area: Area2D) -> void:
 
 func _on_area_exited(_area: Area2D) -> void:
 	first_touch = true
+	LLM.clear_npc()
 	pass # Replace with function body.

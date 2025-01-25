@@ -14,7 +14,6 @@ class_name npc_data
 @export_multiline var enemies: String
 
 @export var mood: String
-@export var quest_progress: Array[String]
 
 
 func build_system_prompt():
