@@ -50,13 +50,14 @@ func sayToNPC(prompt: String):
 
 func _on_nobody_who_chat_response_updated(new_token: String) -> void:
 	last_answer += new_token
-	print(last_answer)
+	#printraw(new_token)
 	
 	pass # Replace with function body.
 
 
 func _on_nobody_who_chat_response_finished(response: String) -> void:
 	chat_history.append(response)
+	print(response)
 	talking = false
 	pass # Replace with function body.
 
