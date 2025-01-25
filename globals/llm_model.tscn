@@ -1,4 +1,0 @@
-[gd_scene format=3 uid="uid://chmqh8ro4p60d"]
-
-[node name="TalkModel" type="NobodyWhoModel"]
-model_path = "res://models/gemma-2-2b-it-Q4_K_M.gguf"

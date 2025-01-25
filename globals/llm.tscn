@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://cqq3rahd0e8fj"]
+
+[ext_resource type="Script" path="res://globals/llm.gd" id="1_3wcse"]
+
+[node name="LLM" type="Node" node_paths=PackedStringArray("Chat", "Model")]
+script = ExtResource("1_3wcse")
+Chat = NodePath("Chat")
+Model = NodePath("Model")
+
+[node name="Model" type="NobodyWhoModel" parent="."]
+model_path = "res://models/gemma-2-2b-it-Q4_K_M.gguf"
+
+[node name="Chat" type="NobodyWhoChat" parent="." node_paths=PackedStringArray("model_node")]
+model_node = NodePath("../Model")
+script = ExtResource("1_3wcse")
