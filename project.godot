@@ -25,6 +25,7 @@ Inventory="*res://globals/inventory.gd"
 [debug]
 
 settings/stdout/verbose_stdout=true
+gdscript/warnings/exclude_addons=false
 
 [display]
 

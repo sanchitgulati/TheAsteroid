@@ -47,7 +47,8 @@ func _on_chat_response_updated(new_token: String) -> void:
 
 
 func _on_chat_response_finished(_response: String) -> void:
-	WorldState.current_npc.chat_history.append(last_answer)
+	if WorldState.current_npc != null:
+		WorldState.current_npc.chat_history.append(last_answer)
 	print(last_answer)
 	talking = false
 	Chat.system_prompt = ""
