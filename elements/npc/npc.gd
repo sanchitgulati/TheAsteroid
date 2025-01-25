@@ -14,8 +14,6 @@ var first_touch = true
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	texture_rect.texture = data.texture
-	var prompt = data.build_system_prompt()
-	LLM.set_system_prompt(prompt)
 	
 	pass
 	

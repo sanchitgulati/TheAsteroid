@@ -31,5 +31,5 @@ func build_system_prompt():
 	system_prompt += enemies + "\n"
 	system_prompt += "Your mood is " + mood + ".\n"
 	system_prompt += "Now, pretend to be ." + name + ".\n"
-	print(system_prompt)
+	#print(system_prompt)
 	return system_prompt
