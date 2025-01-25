@@ -9,7 +9,7 @@ var chat_history=[]
 var last_answer = ""
 var talking = false
 var re_newline: RegEx
-var currentNPC: NPC
+var lastNPC: NPC
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -25,11 +25,14 @@ func _process(_delta: float) -> void:
 	pass
 
 
-func sayToNPC(prompt: String, npc: NPC, ):
+func sayToNPC(prompt: String, npc: NPC = null ):
+	if npc or lastNPC != null: lastNPC = npc
 	if talking: return
 	talking = true
 	
-	Chat.system_prompt = npc.npc_info.system_prompt
+	Chat.system_prompt = lastNPC.npc_info.system_prompt
+	print(Chat.system_prompt)
+	
 	
 	print(prompt)
 	chat_history.append(prompt)
