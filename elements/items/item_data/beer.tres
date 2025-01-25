@@ -1,8 +1,10 @@
-[gd_resource type="Resource" script_class="item_data" load_steps=2 format=3 uid="uid://feoqskgukx3t"]
+[gd_resource type="Resource" script_class="item_data" load_steps=3 format=3 uid="uid://feoqskgukx3t"]
 
 [ext_resource type="Script" path="res://elements/items/item_data.gd" id="1_bjuoi"]
+[ext_resource type="Texture2D" uid="uid://bakmnco4t7kam" path="res://assets/bitmaps/items/beer_can.png" id="2_t8h14"]
 
 [resource]
 script = ExtResource("1_bjuoi")
-name = "Beer"
-description = ""
+name = "Beer Can"
+description = "A can full of beer, the brand Benno likes most."
+texture = ExtResource("2_t8h14")
