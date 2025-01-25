@@ -1,12 +1,6 @@
-extends Node
+extends Control
 
-var quests ={
-	"quest_1": 0,
-	"quest_2": 0,
-	"quest_3": 0
-} 
-
-var inventory = [];
+var is_open = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

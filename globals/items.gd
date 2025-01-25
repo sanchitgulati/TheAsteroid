@@ -4,7 +4,9 @@ var items = {
 	"pendant_benno":{
 		"title": "a pendant shaped as shark",
 		"description":"sdfsdfsdf",
-		"quest":""
+		"quests_progress":[
+			{"quest_1":}
+		]
 	}
 }
 
