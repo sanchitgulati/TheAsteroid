@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://c5ygwwai8r27v" path="res://assets/bitmaps/ui/bubble_9patch.png" id="1_fwq6s"]
 [ext_resource type="Script" path="res://UI/dialogue.gd" id="1_jww1s"]
 [ext_resource type="Texture2D" uid="uid://d117yhbmf8o0f" path="res://assets/bitmaps/ui/textfield_9patch.png" id="2_wb1ks"]
-[ext_resource type="Theme" path="res://UI/Dialogue_theme.tres" id="3_l0jdm"]
+[ext_resource type="Theme" uid="uid://c3gfwu5jojd" path="res://UI/Dialogue_theme.tres" id="3_l0jdm"]
 
 [node name="Dialogue" type="Control" node_paths=PackedStringArray("llm_output", "llm_input")]
 layout_mode = 3
@@ -47,11 +47,11 @@ text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
 autowrap_mode = 1
 
 [node name="NinePatchQuestion" type="NinePatchRect" parent="."]
-custom_minimum_size = Vector2(1100, 80)
+custom_minimum_size = Vector2(1036, 80)
 layout_mode = 1
 offset_left = 8.0
 offset_top = 127.0
-offset_right = 1088.15
+offset_right = 1044.0
 offset_bottom = 207.0
 texture = ExtResource("2_wb1ks")
 patch_margin_left = 10
@@ -81,10 +81,19 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Button" type="Button" parent="NinePatchQuestion"]
 layout_mode = 0
+offset_left = 1040.0
+offset_top = 10.0
+offset_right = 1104.0
+offset_bottom = 74.0
+text = "Send"
+
+[node name="Button2" type="Button" parent="NinePatchQuestion"]
+layout_mode = 0
 offset_left = 1112.0
 offset_top = 10.0
 offset_right = 1176.0
 offset_bottom = 74.0
-text = "Send"
+text = "Close"
 
 [connection signal="pressed" from="NinePatchQuestion/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="NinePatchQuestion/Button2" to="." method="_on_button_2_pressed"]
