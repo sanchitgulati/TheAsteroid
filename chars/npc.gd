@@ -4,8 +4,7 @@ var player: Area2D
 
 @onready var nobody_who_chat: NobodyWhoChat = $NobodyWhoChat
 
-@export var base_prompt:String
-@export var display_name:String
+@export var npc_info: npc_data
 @export var mood:String
 
 var chat_history=[]
@@ -16,7 +15,7 @@ var first_touch = true
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	nobody_who_chat.model_node = LLMModel
-	nobody_who_chat.system_prompt = base_prompt
+	nobody_who_chat.system_prompt = npc_info.system_prompt
 	
 	#player = $"../Player"
 	pass # Replace with function body.w
