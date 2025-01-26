@@ -20,7 +20,7 @@ config/icon="res://icon.svg"
 LLM="*res://globals/llm.tscn"
 DataLoader="*res://globals/data_loader.gd"
 WorldState="*res://globals/world_state.gd"
-Items="*res://globals/items.gd"
+Inventory="*res://globals/inventory.gd"
 
 [debug]
 

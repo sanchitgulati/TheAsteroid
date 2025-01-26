@@ -1,6 +1,6 @@
 extends Resource
 
-class_name quest
+class_name quest_data
 
 @export var uid = "quest_1"
 @export var name = "Quest di Benno"

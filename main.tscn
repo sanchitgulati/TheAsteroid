@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://djxj1myx4n11u"]
 
 [ext_resource type="PackedScene" uid="uid://cy2se4msxc27f" path="res://environments/base_area.tscn" id="1_cawkp"]
-[ext_resource type="PackedScene" uid="uid://rp4eqiqkbdpx" path="res://elements/inventory/ui/inventory_ui.tscn" id="2_4yhnd"]
+[ext_resource type="PackedScene" uid="uid://rp4eqiqkbdpx" path="res://elements/player/ui/inventory_ui.tscn" id="2_4yhnd"]
 [ext_resource type="PackedScene" uid="uid://ptkseutwb6ke" path="res://UI/dialogue.tscn" id="3_t1wol"]
 [ext_resource type="AudioStream" uid="uid://d3fa5bhl4mgdn" path="res://assets/audio/soundtrack/Pix - Space travel.wav" id="4_al6dh"]
 

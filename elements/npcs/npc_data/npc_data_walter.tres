@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="npc_data" load_steps=3 format=3 uid="uid://l85wxsl6gxbj"]
 
-[ext_resource type="Script" path="res://elements/npc/npc_data/npc_data.gd" id="1_4x748"]
+[ext_resource type="Script" path="res://elements/npcs/npc_data/npc_data.gd" id="1_4x748"]
 [ext_resource type="Texture2D" uid="uid://cue36lij0fdtf" path="res://assets/bitmaps/generated/worker_redmond.png" id="2_hglib"]
 
 [resource]

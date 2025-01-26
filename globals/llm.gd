@@ -5,11 +5,9 @@ extends Node
 @onready var Chat: NobodyWhoChat = $Chat
 @onready var Model: NobodyWhoModel  = $Model
 
-var chat_history=[]
 var last_answer = ""
 var talking = false
 var re_newline: RegEx
-var lastNPC: NPC
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -23,7 +21,9 @@ func _process(_delta: float) -> void:
 
 func set_system_prompt(prompt:String):
 	Chat.system_prompt = prompt
+	print("start_worker: begin")
 	Chat.start_worker()
+	print("start_worker: end")
 	
 
 func talk_npc(prompt: String ):
