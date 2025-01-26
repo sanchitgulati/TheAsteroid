@@ -11,8 +11,8 @@ var can_move = true
 func _ready():
 	WorldState.PLAYER = self
 	screen_size = get_viewport_rect().size
-	var screen_center = Vector2(screen_size.x/2, screen_size.y/2)
-	position = screen_center
+	#var screen_center = Vector2(screen_size.x/2, screen_size.y/2)
+	#position = screen_center
 
 func _process(delta):
 	if !can_move: return
