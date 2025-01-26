@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="npc_data" load_steps=3 format=3 uid="uid://cpseqbo2x2h5u"]
 
-[ext_resource type="Script" path="res://chars/npc_data/npc_data.gd" id="1_smt3p"]
+[ext_resource type="Script" path="res://npc/npc_data/npc_data.gd" id="1_smt3p"]
 [ext_resource type="Texture2D" uid="uid://bfepmjeid6384" path="res://assets/bitmaps/generated/hydrophonic_operator.png" id="2_tjega"]
 
 [resource]
