@@ -113,4 +113,5 @@ position = Vector2(576, 48)
 texture = ExtResource("9_ogmy5")
 
 [node name="Beer" parent="." instance=ExtResource("10_o4pkl")]
+position = Vector2(576, 128)
 data = ExtResource("11_clx17")

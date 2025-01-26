@@ -1,3 +1,4 @@
+@tool
 extends Area2D
 
 @export var data: item_data
@@ -7,14 +8,17 @@ extends Area2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	texture_rect.texture = data.texture
-	display_name.text = data.name
+	if not Engine.is_editor_hint():
+		texture_rect.texture = data.texture
+		display_name.text = data.name
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if Engine.is_editor_hint():
+		if texture_rect.texture != data.texture:
+			texture_rect.texture = data.texture
 
 
 func _on_area_entered(area: Area2D) -> void:
