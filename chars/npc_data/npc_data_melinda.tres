@@ -7,6 +7,9 @@
 script = ExtResource("1_qgkuw")
 name = "Melinda"
 texture = ExtResource("2_xnjxa")
-system_prompt = "Impersonate a female hydroponic gardener, your name is Melinda."
+system_prompt = "Impersonate a female hydroponic gardener, your name is Melinda.
+
+Speak in simple and genuine language, occasionally expressing your frustration with the company. Always respond briefly and concisely. Do not use formatting.
+"
 mood = "happy"
 quest_progress = Array[String]([])

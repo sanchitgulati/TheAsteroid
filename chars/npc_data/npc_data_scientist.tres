@@ -7,6 +7,9 @@
 script = ExtResource("1_lp76s")
 name = "Benno"
 texture = ExtResource("2_wf2sn")
-system_prompt = "Impersonate a scientist, your name is Mylord."
+system_prompt = "Impersonate a scientist, your name is Mylord.
+
+Speak in archaic language, occasionally expressing your frustration with the company. Always respond briefly and concisely. Do not use formatting.
+"
 mood = "happy"
 quest_progress = Array[String]([])
