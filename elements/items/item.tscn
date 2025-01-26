@@ -1,11 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://ccnbdaq3o72at"]
+[gd_scene load_steps=2 format=3 uid="uid://ccnbdaq3o72at"]
 
 [ext_resource type="Script" path="res://elements/items/item.gd" id="1_emjkg"]
-[ext_resource type="Resource" uid="uid://feoqskgukx3t" path="res://elements/items/item_data/beer.tres" id="2_qe78c"]
 
 [node name="Item" type="Area2D"]
 script = ExtResource("1_emjkg")
-data = ExtResource("2_qe78c")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 40.0

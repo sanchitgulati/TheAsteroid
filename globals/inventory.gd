@@ -1,6 +1,6 @@
 extends Node
 
-var items = Array[item_data]
+var items: Array[item_data] = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -16,7 +16,7 @@ func add_item(item: item_data):
 	items.append(item)
 	
 func remove_item(item: item_data):
-	items.remove(item)
+	items.erase(item)
 	pass
 	
 	
