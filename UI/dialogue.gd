@@ -41,7 +41,6 @@ func close():
 	clear()
 
 func talk():
-
 	LLM.talk_npc(LLM.Dialog.llm_input.text)
 	llm_input.text = ""
 

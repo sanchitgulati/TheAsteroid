@@ -20,9 +20,9 @@ func set_npc(npc:NPC):
 	last_npc = current_npc
 	current_npc = npc
 	if npc != null and npc.data != null:
-		LLM.Chat.system_prompt = npc.data.build_system_prompt()
-		LLM.Chat.start_worker()
-	
+		var prompt = npc.data.build_system_prompt()
+		LLM.set_system_prompt(prompt)
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

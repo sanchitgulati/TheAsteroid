@@ -8,13 +8,15 @@ class_name NPC
 
 @export var data: npc_data
 @export var mood:String
+@export var chat_history: Array[String]
 
 var first_touch = true
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	texture_rect.texture = data.texture
-	LLM.Chat.system_prompt = data.build_system_prompt()
+	var prompt = data.build_system_prompt()
+	LLM.set_system_prompt(prompt)
 	
 	pass
 	
