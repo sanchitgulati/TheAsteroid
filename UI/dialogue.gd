@@ -18,19 +18,24 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	
-	if visible and Input.is_action_pressed("esc"):
-		visible = false
+	if visible:
+		if Input.is_action_pressed("esc"): close()
+		if Input.is_action_pressed("enter"): talk()
 	
 	WorldState.PLAYER.can_move = !visible
 	
 	pass
-	
+
+func close():
+	visible = false
+
+func talk():
+
+	LLM.talk_npc(LLM.Dialog.llm_input.text)
+	llm_input.text = ""
 
 # Button SEND
-func _on_button_pressed() -> void:
-	LLM.talk_npc(LLM.Dialog.llm_input.text)
-	pass # Replace with function body.
+func _on_button_pressed(): talk()
 
  #Button CLOSE
-func _on_button_2_pressed():
-	pass # Replace with function body.
+func _on_button_2_pressed(): close()

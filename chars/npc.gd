@@ -33,8 +33,8 @@ func _on_area_entered(area: Area2D) -> void:
 		LLM.Dialog.visible = true
 		first_touch = false
 		WorldState.set_npc(self)
-		LLM.talk_npc("Who are you?")
-		LLM.Dialog.llm_input.text = "Who are you?"
+		LLM.talk_npc("Hello, I'm Kalasnikov")
+		#LLM.Dialog.llm_input.text = "Who are you?"
 		
 	pass # Replace with function body.
 
