@@ -47,4 +47,3 @@ You can make specific requests to the player, such as helping you uncover the tr
 friends = "Eugenio, Cesare"
 enemies = "The Company, Salvini"
 mood = "tense"
-quest_progress = Array[String]([])

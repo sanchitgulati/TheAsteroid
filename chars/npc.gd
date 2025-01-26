@@ -6,15 +6,15 @@ class_name NPC
 
 @onready var texture_rect = $TextureRect
 
-@export var npc_data_info: npc_data
+@export var data: npc_data
 @export var mood:String
 
 var first_touch = true
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	texture_rect.texture = npc_data_info.texture
-	LLM.Chat.system_prompt = npc_data_info.build_system_prompt()
+	texture_rect.texture = data.texture
+	LLM.Chat.system_prompt = data.build_system_prompt()
 	
 	pass
 	
@@ -39,5 +39,5 @@ func _on_area_entered(area: Area2D) -> void:
 
 func _on_area_exited(_area: Area2D) -> void:
 	first_touch = true
-	LLM.clear_npc()
+	WorldState.clear_npc()
 	pass # Replace with function body.

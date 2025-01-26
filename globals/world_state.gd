@@ -13,14 +13,14 @@ var quests ={
 var inventory = [];
 
 func clear_npc():
-	#Chat.system_prompt = ""
+	LLM.Chat.system_prompt = ""
 	current_npc = null
 	
 func set_npc(npc:NPC):
 	last_npc = current_npc
 	current_npc = npc
-	
-	#Chat.system_prompt = npc.npc_info.bì
+	if npc != null and npc.data != null:
+		LLM.Chat.system_prompt = npc.data.build_system_prompt()
 	
 	
 

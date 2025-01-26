@@ -7,8 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://cwgaaiweib4b3" path="res://chars/npc.tscn" id="4_o2ggy"]
 [ext_resource type="Resource" uid="uid://dim7i148sbenk" path="res://chars/npc_data/npc_data_benno.tres" id="6_xiajw"]
 [ext_resource type="Resource" uid="uid://l85wxsl6gxbj" path="res://chars/npc_data/npc_data_walter.tres" id="7_nx1vx"]
-[ext_resource type="Resource" uid="uid://bylhgcssjoonc" path="res://chars/npc_data/npc_data_ivanka.tres" id="8_0vmd0"]
-[ext_resource type="Resource" uid="uid://dsfitpq4lwfyi" path="res://chars/npc_data/npc_data_scientist.tres" id="9_iwf84"]
+[ext_resource type="Resource" path="res://chars/npc_data/npc_data_ivanka.tres" id="8_ptk3k"]
+[ext_resource type="Resource" uid="uid://c4ckkmv0baq7p" path="res://chars/npc_data/npc_data_scientist.tres" id="9_iwf84"]
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_qmn3i")
@@ -81,20 +81,20 @@ position = Vector2(600, 400)
 
 [node name="Benno" parent="." instance=ExtResource("4_o2ggy")]
 position = Vector2(662, 82)
-npc_data_info = ExtResource("6_xiajw")
+data = ExtResource("6_xiajw")
 mood = "Happy"
 
 [node name="Walter" parent="." instance=ExtResource("4_o2ggy")]
 position = Vector2(962, 271)
-npc_data_info = ExtResource("7_nx1vx")
+data = ExtResource("7_nx1vx")
 mood = "grumpy"
 
 [node name="Melinda" parent="." instance=ExtResource("4_o2ggy")]
 position = Vector2(962, 77)
-npc_data_info = ExtResource("8_0vmd0")
+data = ExtResource("8_ptk3k")
 mood = "flirting"
 
 [node name="Scientist" parent="." instance=ExtResource("4_o2ggy")]
 position = Vector2(196, 170)
-npc_data_info = ExtResource("9_iwf84")
+data = ExtResource("9_iwf84")
 mood = "chatty"

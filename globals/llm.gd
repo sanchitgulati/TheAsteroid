@@ -30,13 +30,11 @@ func _process(_delta: float) -> void:
 
 func talk_npc(prompt: String, npc: NPC ):
 	print("-----------------------")
-	lastNPC = npc
+	
 	if talking: return
 	talking = true
+	WorldState.set_npc(npc)
 	
-	Chat.system_prompt = lastNPC.npc_data_info.build_system_prompt()
-	WorldState.last_npc = npc
-	Chat.system_prompt = npc.npc_info.system_prompt
 	Chat.start_worker()
 	#print(Chat.system_prompt)
 	
