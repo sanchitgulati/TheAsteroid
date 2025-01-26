@@ -21,6 +21,6 @@ func _on_area_entered(area: Area2D) -> void:
 	if area.name == 'Player':
 		Inventory.add_item(data)
 		visible = false
-		get_tree().root
+		get_tree().root.remove_child(self)
 		
 	pass # Replace with function body.
