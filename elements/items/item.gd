@@ -21,10 +21,9 @@ func _process(delta: float) -> void:
 			texture_rect.texture = data.texture
 
 
-func _on_area_entered(area: Area2D) -> void:
-	if area.name == 'Player':
+func _on_body_entered(body: Node2D) -> void:
+	if body.name == 'Player':
 		Inventory.add_item(data)
 		visible = false
-		get_tree().root.remove_child(self)
-		
-	pass # Replace with function body.
+		#get_tree().root.remove_child(self)
+	

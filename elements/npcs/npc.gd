@@ -24,21 +24,19 @@ func _process(_delta: float) -> void:
 
 
 
-func _on_area_entered(area: Area2D) -> void:
+
+func _on_body_entered(body: Node2D) -> void:
 	if !first_touch : return
 	
-	print(area.name)
-	if area.name=='Player':
+	print(body.name)
+	if body.name=='Player':
 		LLM.Dialog.visible = true
 		first_touch = false
 		WorldState.set_npc(self)
 		LLM.talk_npc("Hello, I'm Kalasnikov")
-		#LLM.Dialog.llm_input.text = "Who are you?"
-		
-	pass # Replace with function body.
 
 
-func _on_area_exited(_area: Area2D) -> void:
+func _on_body_exited(body: Node2D) -> void:
 	first_touch = true
 	LLM.Dialog.visible = false
 	WorldState.clear_npc()
