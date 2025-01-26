@@ -21,6 +21,5 @@ func _process(_delta: float) -> void:
 
 
 func _on_button_pressed() -> void:
-	LLM.sayToNPC(LLM.Dialog.llm_input.text, LLM.lastNPC)
-	pass # Replace with function body.
+	LLM.talk_npc(LLM.Dialog.llm_input.text, LLM.lastNPC)
 	pass # Replace with function body.
