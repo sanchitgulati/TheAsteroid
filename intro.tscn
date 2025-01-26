@@ -1,0 +1,78 @@
+[gd_scene load_steps=3 format=3 uid="uid://bq1toa3he2o4u"]
+
+[ext_resource type="Texture2D" uid="uid://kfx2k6oebu37" path="res://cutscenes/intro_bg.png" id="1_56jhi"]
+[ext_resource type="FontFile" uid="uid://bkfsvsrp1552e" path="res://assets/fonts/SF Pixelate Bold.ttf" id="2_1pqrc"]
+
+[node name="Intro" type="Node2D"]
+
+[node name="1200x800" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(1200, 800)
+offset_right = 1200.0
+offset_bottom = 800.0
+color = Color(1, 0, 1, 0.282353)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(617, 340)
+scale = Vector2(3.43125, 3.66)
+texture = ExtResource("1_56jhi")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 224.0
+offset_top = 55.0
+offset_right = 954.0
+offset_bottom = 145.0
+theme_override_colors/font_color = Color(0.93, 0.7719, 0.1395, 1)
+theme_override_colors/font_shadow_color = Color(0.030003, 0.285963, 0.662675, 1)
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 4
+theme_override_fonts/font = ExtResource("2_1pqrc")
+theme_override_font_sizes/font_size = 96
+text = "The Asteroid"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 226.0
+offset_top = 158.0
+offset_right = 952.0
+offset_bottom = 247.0
+theme_override_colors/font_color = Color(0.93, 0.7719, 0.1395, 1)
+theme_override_colors/font_shadow_color = Color(0.030003, 0.285963, 0.662675, 1)
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 4
+theme_override_fonts/font = ExtResource("2_1pqrc")
+theme_override_font_sizes/font_size = 45
+text = "A low budget Space Opera"
+
+[node name="Label3" type="Label" parent="."]
+offset_top = 498.0
+offset_right = 1200.0
+offset_bottom = 729.0
+theme_override_colors/font_color = Color(0.93, 0.7719, 0.1395, 1)
+theme_override_colors/font_shadow_color = Color(0.030003, 0.285963, 0.662675, 1)
+theme_override_constants/line_spacing = 15
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 2
+theme_override_fonts/font = ExtResource("2_1pqrc")
+theme_override_font_sizes/font_size = 29
+text = "Far in the depths of the Kuiper Belt lays Plotino: an asteroid exploited by The Company via a minerary outpost. 
+As an envoy of The Company your task is to investigate some sort of misterious accident involving some of the miners.
+Watch your back, you are on your own..."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 428.0
+offset_top = 734.0
+offset_right = 786.0
+offset_bottom = 782.0
+theme_override_colors/font_color = Color(0.93, 0.284425, 0.1395, 1)
+theme_override_colors/font_shadow_color = Color(0.45, 0.0225, 0.0225, 1)
+theme_override_constants/line_spacing = 15
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 2
+theme_override_fonts/font = ExtResource("2_1pqrc")
+theme_override_font_sizes/font_size = 29
+text = "Click to continue"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3

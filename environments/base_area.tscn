@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=4 uid="uid://cy2se4msxc27f"]
 
 [ext_resource type="Script" path="res://environments/world.gd" id="1_cu36i"]
-[ext_resource type="TileSet" uid="uid://bwlc3hexpogcp" path="res://environments/A4_Square.tres" id="2_d53uh"]
+[ext_resource type="TileSet" uid="uid://cjncmt7n27ubh" path="res://environments/A4_Square.tres" id="2_d53uh"]
 [ext_resource type="PackedScene" uid="uid://ceievfwtkqso0" path="res://elements/player/player.tscn" id="4_xnnpk"]
 [ext_resource type="PackedScene" uid="uid://cwgaaiweib4b3" path="res://elements/npcs/npc.tscn" id="5_jgyno"]
 [ext_resource type="Resource" uid="uid://dim7i148sbenk" path="res://elements/npcs/npc_data/npc_data_benno.tres" id="6_x0ihc"]
@@ -102,7 +102,7 @@ data = ExtResource("7_c1awk")
 position = Vector2(1164, 152)
 data = ExtResource("8_vtgxy")
 
-[node name="Scientist" parent="." instance=ExtResource("5_jgyno")]
+[node name="Barrow" parent="." instance=ExtResource("5_jgyno")]
 position = Vector2(142, 272)
 data = ExtResource("9_d7ria")
 
