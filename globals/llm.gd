@@ -14,9 +14,6 @@ var lastNPC: NPC
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	re_newline = RegEx.create_from_string("\n\n+")
-
-	
-	Chat.start_worker()
 	pass # Replace with function body.
 
 
@@ -36,7 +33,7 @@ func talk_npc(prompt: String ):
 	talking = true
 	
 	print(prompt)
-	chat_history.append(prompt)
+	WorldState.current_npc.chat_history.append(prompt)
 	last_answer = ""
 	
 	Chat.say(prompt)
@@ -49,9 +46,8 @@ func _on_chat_response_updated(new_token: String) -> void:
 	Dialog.llm_output.text = last_answer
 
 
-
 func _on_chat_response_finished(_response: String) -> void:
-	chat_history.append(last_answer)
+	WorldState.current_npc.chat_history.append(last_answer)
 	print(last_answer)
 	talking = false
 	Chat.system_prompt = ""

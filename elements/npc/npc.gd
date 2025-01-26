@@ -7,7 +7,6 @@ class_name NPC
 @onready var texture_rect = $TextureRect
 
 @export var data: npc_data
-@export var mood:String
 @export var chat_history: Array[String]
 
 var first_touch = true

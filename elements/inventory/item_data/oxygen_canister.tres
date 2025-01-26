@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="InvItem" load_steps=3 format=3 uid="uid://67xqij71avxj"]
 
-[ext_resource type="Script" path="res://inventory/inventory_item.gd" id="1_knaoe"]
+[ext_resource type="Script" path="res://elements/inventory/inventory_item.gd" id="1_knaoe"]
 [ext_resource type="Texture2D" uid="uid://dm4aps0mpdnlc" path="res://assets/bitmaps/items/wrench.png" id="2_1157w"]
 
 [resource]
