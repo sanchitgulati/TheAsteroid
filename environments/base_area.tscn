@@ -93,22 +93,18 @@ position = Vector2(600, 400)
 [node name="Benno" parent="." instance=ExtResource("5_jgyno")]
 position = Vector2(673, 285)
 data = ExtResource("6_x0ihc")
-mood = "Happy"
 
 [node name="Walter" parent="." instance=ExtResource("5_jgyno")]
 position = Vector2(1164, 376)
 data = ExtResource("7_c1awk")
-mood = "grumpy"
 
 [node name="Ivanka" parent="." instance=ExtResource("5_jgyno")]
 position = Vector2(1164, 152)
 data = ExtResource("8_vtgxy")
-mood = "flirting"
 
 [node name="Scientist" parent="." instance=ExtResource("5_jgyno")]
 position = Vector2(142, 272)
 data = ExtResource("9_d7ria")
-mood = "chatty"
 
 [node name="BeerMachine" type="Sprite2D" parent="."]
 position = Vector2(576, 48)

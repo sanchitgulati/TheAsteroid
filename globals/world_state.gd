@@ -4,11 +4,6 @@ var last_npc: NPC
 var current_npc: NPC
 
 var PLAYER:Player
-var quests ={
-	"quest_1": 0,
-	"quest_2": 0,
-	"quest_3": 0
-} 
 
 var inventory = [];
 
