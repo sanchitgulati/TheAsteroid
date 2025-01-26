@@ -35,6 +35,8 @@ func talk_npc(prompt: String, npc: NPC ):
 	talking = true
 	
 	Chat.system_prompt = lastNPC.npc_data_info.build_system_prompt()
+	WorldState.last_npc = npc
+	Chat.system_prompt = npc.npc_info.system_prompt
 	Chat.start_worker()
 	#print(Chat.system_prompt)
 	
@@ -42,6 +44,7 @@ func talk_npc(prompt: String, npc: NPC ):
 	print(prompt)
 	chat_history.append(prompt)
 	last_answer = ""
+	
 	WorldState.PLAYER.can_move = false
 	Chat.say(prompt)
 	
@@ -59,4 +62,5 @@ func _on_chat_response_finished(_response: String) -> void:
 	print(last_answer)
 	talking = false
 	Chat.system_prompt = ""
+	LLM.Dialog.llm_input.text = ""
 	WorldState.PLAYER.can_move = true

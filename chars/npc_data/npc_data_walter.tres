@@ -14,4 +14,3 @@ interactions = ""
 friends = ""
 enemies = ""
 mood = "happy"
-quest_progress = Array[String]([])
