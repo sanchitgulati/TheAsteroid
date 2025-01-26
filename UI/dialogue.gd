@@ -26,7 +26,11 @@ func _process(_delta: float) -> void:
 	pass
 	
 
-
+# Button SEND
 func _on_button_pressed() -> void:
 	LLM.talk_npc(LLM.Dialog.llm_input.text)
+	pass # Replace with function body.
+
+ #Button CLOSE
+func _on_button_2_pressed():
 	pass # Replace with function body.
