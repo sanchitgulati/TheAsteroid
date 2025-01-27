@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=3 uid="uid://rp4eqiqkbdpx"]
+
+[ext_resource type="Script" path="res://UI/inventory/inventory_ui.gd" id="1_ljtkx"]
+
+[node name="Inventory" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -948.0
+offset_bottom = -580.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ljtkx")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 1
+offset_right = 229.0
+offset_bottom = 159.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 228.0
+offset_bottom = 160.0
+color = Color(0, 0, 1, 0.145098)
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 0
+offset_right = 221.0
+offset_bottom = 146.0
+columns = 7

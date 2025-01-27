@@ -1,12 +1,22 @@
 extends Node
 
-var quests ={
-	"quest_1": 0,
-	"quest_2": 0,
-	"quest_3": 0
-} 
+var current_npc: NPC
 
-var inventory = [];
+var PLAYER:Player
+
+func clear_npc():
+	LLM.Chat.system_prompt = ""
+	current_npc = null
+	
+func set_npc(npc:NPC):
+	current_npc = npc
+	if npc == null or npc.data == null: 
+		print("BAD!!!")		
+		return
+		
+	var prompt = npc.data.build_system_prompt()
+	LLM.set_system_prompt(prompt)
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -14,5 +24,5 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass

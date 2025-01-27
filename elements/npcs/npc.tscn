@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://cwgaaiweib4b3"]
+
+[ext_resource type="Script" path="res://elements/npcs/npc.gd" id="1_8fksl"]
+[ext_resource type="Texture2D" uid="uid://cimtoxdlhn7gc" path="res://assets/bitmaps/nobody.png" id="2_urkum"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_687tg"]
+size = Vector2(40, 56)
+
+[node name="Npc" type="Area2D"]
+script = ExtResource("1_8fksl")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -27.0
+offset_top = -27.0
+offset_right = 27.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_urkum")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_687tg")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
