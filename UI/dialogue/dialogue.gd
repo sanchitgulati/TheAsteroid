@@ -3,8 +3,9 @@ extends Control
 
 class_name Dialogue
 
-@export var llm_output: Label
+@export var llm_output: RichTextLabel
 @export var llm_input: TextEdit
+@onready var character_texture: TextureRect = $Character
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -22,6 +23,7 @@ func _process(_delta: float) -> void:
 		if Input.is_action_pressed("esc"): close()
 		if Input.is_action_pressed("enter"): talk()
 	
+	#TODO: questo lo fa ad ogni frame, mi pare inefficiente
 	WorldState.PLAYER.can_move = !visible
 	
 	pass
@@ -32,6 +34,9 @@ func clear():
 
 func open():
 	if visible: return
+	
+#	TODO: qui deve caricare la texture del char in character_texture
+	#character_texture.texture = WorldState.current_npc.texture
 	visible = true
 	clear()
 
