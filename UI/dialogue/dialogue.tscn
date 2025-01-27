@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://ptkseutwb6ke"]
+[gd_scene load_steps=6 format=3 uid="uid://ptkseutwb6ke"]
 
 [ext_resource type="Texture2D" uid="uid://c5ygwwai8r27v" path="res://assets/bitmaps/ui/bubble_9patch.png" id="1_fwq6s"]
 [ext_resource type="Script" path="res://UI/dialogue/dialogue.gd" id="1_jww1s"]
 [ext_resource type="Texture2D" uid="uid://d117yhbmf8o0f" path="res://assets/bitmaps/ui/textfield_9patch.png" id="2_wb1ks"]
 [ext_resource type="Theme" uid="uid://c3gfwu5jojd" path="res://UI/dialogue/Dialogue_theme.tres" id="3_l0jdm"]
+[ext_resource type="Texture2D" uid="uid://cimtoxdlhn7gc" path="res://assets/bitmaps/nobody.png" id="5_1moy0"]
 
 [node name="Dialogue" type="Control" node_paths=PackedStringArray("llm_output", "llm_input")]
 layout_mode = 3
@@ -20,7 +21,7 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 8.0
-offset_top = 8.0
+offset_top = -37.0
 offset_right = 971.0
 offset_bottom = -59.0
 grow_horizontal = 2
@@ -31,7 +32,7 @@ patch_margin_top = 10
 patch_margin_right = 10
 patch_margin_bottom = 10
 
-[node name="llm_output" type="Label" parent="NinePatchAnswer"]
+[node name="llm_output" type="RichTextLabel" parent="NinePatchAnswer"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -43,8 +44,9 @@ offset_bottom = -13.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("3_l0jdm")
-text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-autowrap_mode = 3
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
 
 [node name="NinePatchQuestion" type="NinePatchRect" parent="."]
 custom_minimum_size = Vector2(1036, 80)
@@ -93,6 +95,18 @@ offset_top = 10.0
 offset_right = 1176.0
 offset_bottom = 74.0
 text = "Close"
+
+[node name="Character" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = -438.0
+offset_right = 233.0
+offset_bottom = -217.0
+grow_vertical = 0
+texture = ExtResource("5_1moy0")
 
 [connection signal="pressed" from="NinePatchQuestion/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="NinePatchQuestion/Button2" to="." method="_on_button_2_pressed"]
