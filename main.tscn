@@ -29,4 +29,4 @@ offset_bottom = 771.0
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Soundtrack"]
 stream = ExtResource("4_al6dh")
-volume_db = 18.0
+volume_db = 12.0

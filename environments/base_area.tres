@@ -10,3 +10,4 @@ render_mode blend_mul;
 mode = 1
 modes/blend = 3
 flags/light_only = false
+nodes/fragment/0/position = Vector2(520, 160)

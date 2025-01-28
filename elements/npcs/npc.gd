@@ -34,7 +34,8 @@ func _on_body_entered(body: Node2D) -> void:
 		LLM.Dialog.visible = true
 		first_touch = false
 		WorldState.set_npc(self)
-		LLM.talk_npc("Hello, I'm Inspector Kalashnikov. Who are you and what do you do on The Stationaaa?")
+		LLM.talk_npc("Hello, I'm Inspector Kalashnikov. Who are you and what do you do on The Station?")
+#		TODO: bisogna mettere il prompt iniziale dentro il dialog
 
 
 func _on_body_exited(body: Node2D) -> void:
