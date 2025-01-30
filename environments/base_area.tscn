@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=4 uid="uid://cy2se4msxc27f"]
+[gd_scene load_steps=41 format=4 uid="uid://cy2se4msxc27f"]
 
 [ext_resource type="Script" path="res://environments/world.gd" id="1_cu36i"]
 [ext_resource type="TileSet" uid="uid://dli1an21v3xpa" path="res://assets/bitmaps/tilesets/Grounds2.tres" id="3_d4kqp"]
@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://ceievfwtkqso0" path="res://elements/player/player.tscn" id="4_xnnpk"]
 [ext_resource type="Texture2D" uid="uid://dkusnm4k7almp" path="res://assets/bitmaps/generated/hydrp_tray.png" id="5_fy4wc"]
 [ext_resource type="PackedScene" uid="uid://cwgaaiweib4b3" path="res://elements/npcs/npc.tscn" id="5_jgyno"]
-[ext_resource type="Resource" uid="uid://bnss2nwuoksff" path="res://elements/npcs/npc_data/npc_data_assistant.tres" id="6_3sh5w"]
+[ext_resource type="Resource" uid="uid://bnss2nwuoksff" path="res://elements/npcs/npc_data/npc_white_drone.tres" id="6_3sh5w"]
 [ext_resource type="Texture2D" uid="uid://c824cp3mn3tpp" path="res://assets/bitmaps/generated/kitchen_forniture1.png" id="6_4s15p"]
 [ext_resource type="Texture2D" uid="uid://cip03cryipm8w" path="res://assets/bitmaps/generated/plant1.png" id="6_j0wun"]
 [ext_resource type="Resource" uid="uid://dim7i148sbenk" path="res://elements/npcs/npc_data/npc_data_benno.tres" id="6_x0ihc"]
@@ -36,6 +36,7 @@
 [ext_resource type="Texture2D" uid="uid://ddre27jj7ye35" path="res://assets/bitmaps/generated/door.png" id="23_wlevm"]
 [ext_resource type="Material" uid="uid://cermd26dujlt8" path="res://assets/shaders/ColorAdj.tres" id="24_7dyr3"]
 [ext_resource type="Shader" path="res://assets/shaders/ColAdjustement.gdshader" id="24_nwnxv"]
+[ext_resource type="Resource" uid="uid://b17ipj8wgm11x" path="res://elements/npcs/npc_data/npc_dark_drone.tres" id="34_eeopb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6ggm6"]
 size = Vector2(54, 24)
@@ -519,9 +520,15 @@ text = "Astroport"
 position = Vector2(752, 40)
 data = ExtResource("6_x0ihc")
 
-[node name="Assistant" parent="Chars" instance=ExtResource("5_jgyno")]
-position = Vector2(226, 785)
+[node name="WhiteDrone" parent="Chars" instance=ExtResource("5_jgyno")]
+modulate = Color(0.771848, 0.931241, 0.939994, 1)
+position = Vector2(224, 720)
 data = ExtResource("6_3sh5w")
+
+[node name="DarkDrone" parent="Chars" instance=ExtResource("5_jgyno")]
+modulate = Color(0.531259, 0.205409, 0.294548, 1)
+position = Vector2(224, 864)
+data = ExtResource("34_eeopb")
 
 [node name="Walter" parent="Chars" instance=ExtResource("5_jgyno")]
 position = Vector2(1024, 208)

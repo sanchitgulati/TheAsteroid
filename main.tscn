@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://djxj1myx4n11u"]
+[gd_scene load_steps=6 format=3 uid="uid://djxj1myx4n11u"]
 
 [ext_resource type="PackedScene" uid="uid://cy2se4msxc27f" path="res://environments/base_area.tscn" id="1_cawkp"]
 [ext_resource type="PackedScene" uid="uid://rp4eqiqkbdpx" path="res://UI/inventory/inventory_ui.tscn" id="2_4yhnd"]
 [ext_resource type="PackedScene" uid="uid://ptkseutwb6ke" path="res://UI/dialogue/dialogue.tscn" id="3_t1wol"]
 [ext_resource type="AudioStream" uid="uid://cr412rtd3alfc" path="res://assets/audio/soundtrack/mixkit-relax-beat-292.mp3" id="4_c8qn5"]
+[ext_resource type="AudioStream" uid="uid://dk3o5rr0rr8og" path="res://assets/audio/soundtrack/The Uprising.mp3" id="5_sojg4"]
 
 [node name="Main" type="Node2D"]
 
@@ -29,8 +30,12 @@ offset_bottom = -6.0
 
 [node name="Soundtrack" type="Node" parent="."]
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Soundtrack"]
+[node name="Relax" type="AudioStreamPlayer2D" parent="Soundtrack"]
 stream = ExtResource("4_c8qn5")
 volume_db = 12.0
+parameters/looping = true
+
+[node name="Tense" type="AudioStreamPlayer2D" parent="Soundtrack"]
+stream = ExtResource("5_sojg4")
 autoplay = true
 parameters/looping = true
