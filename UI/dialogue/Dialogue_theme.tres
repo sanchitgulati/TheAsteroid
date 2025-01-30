@@ -8,14 +8,15 @@
 [resource]
 Label/colors/font_color = Color(0.234205, 0.167239, 0.172922, 1)
 Label/constants/line_spacing = 9
-Label/font_sizes/font_size = 15
+Label/font_sizes/font_size = 10
 Label/fonts/font = ExtResource("1_k6ga6")
 RichTextLabel/colors/default_color = Color(0, 0.135325, 0.150964, 1)
 RichTextLabel/constants/line_separation = 5
+RichTextLabel/font_sizes/normal_font_size = 10
 RichTextLabel/fonts/bold_font = ExtResource("2_mfy1l")
 RichTextLabel/fonts/normal_font = ExtResource("1_k6ga6")
 TextEdit/colors/font_color = Color(0.0808155, 0.113188, 0.129423, 1)
 TextEdit/colors/search_result_border_color = Color(0.301961, 0.301961, 0.301961, 0)
-TextEdit/font_sizes/font_size = 15
+TextEdit/font_sizes/font_size = 10
 TextEdit/fonts/font = ExtResource("1_k6ga6")
 TextEdit/styles/normal = SubResource("StyleBoxEmpty_p35pq")

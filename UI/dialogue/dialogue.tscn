@@ -8,12 +8,28 @@
 
 [node name="Dialogue" type="Control" node_paths=PackedStringArray("llm_output", "llm_input")]
 layout_mode = 3
-anchors_preset = 0
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -152.0
 offset_right = 217.0
-offset_bottom = 187.0
+offset_bottom = 35.0
+grow_vertical = 0
 script = ExtResource("1_jww1s")
 llm_output = NodePath("NinePatchAnswer/llm_output")
 llm_input = NodePath("NinePatchQuestion/llm_input")
+
+[node name="Character" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -16.0
+offset_top = -331.0
+offset_right = 201.0
+offset_bottom = -110.0
+grow_vertical = 0
+texture = ExtResource("5_1moy0")
 
 [node name="NinePatchAnswer" type="NinePatchRect" parent="."]
 layout_mode = 1
@@ -21,8 +37,8 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 8.0
-offset_top = -37.0
-offset_right = 971.0
+offset_top = 3.0
+offset_right = 463.0
 offset_bottom = -59.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -49,12 +65,11 @@ text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
 
 [node name="NinePatchQuestion" type="NinePatchRect" parent="."]
-custom_minimum_size = Vector2(1036, 80)
 layout_mode = 1
 offset_left = 8.0
 offset_top = 127.0
-offset_right = 1044.0
-offset_bottom = 207.0
+offset_right = 528.0
+offset_bottom = 187.0
 texture = ExtResource("2_wb1ks")
 patch_margin_left = 10
 patch_margin_top = 10
@@ -82,31 +97,19 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Button" type="Button" parent="NinePatchQuestion"]
 layout_mode = 0
-offset_left = 1040.0
-offset_top = 10.0
-offset_right = 1104.0
-offset_bottom = 74.0
+offset_left = 528.0
+offset_top = 8.0
+offset_right = 592.0
+offset_bottom = 52.0
 text = "Send"
 
 [node name="Button2" type="Button" parent="NinePatchQuestion"]
 layout_mode = 0
-offset_left = 1112.0
-offset_top = 10.0
-offset_right = 1176.0
-offset_bottom = 74.0
+offset_left = 600.0
+offset_top = 8.0
+offset_right = 664.0
+offset_bottom = 52.0
 text = "Close"
-
-[node name="Character" type="TextureRect" parent="."]
-layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = 16.0
-offset_top = -438.0
-offset_right = 233.0
-offset_bottom = -217.0
-grow_vertical = 0
-texture = ExtResource("5_1moy0")
 
 [connection signal="pressed" from="NinePatchQuestion/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="NinePatchQuestion/Button2" to="." method="_on_button_2_pressed"]

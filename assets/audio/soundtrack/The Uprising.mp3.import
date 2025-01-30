@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dk3o5rr0rr8og"
+path="res://.godot/imported/The Uprising.mp3-75a9f27f0faf6e7e443f5f7a24569de3.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/soundtrack/The Uprising.mp3"
+dest_files=["res://.godot/imported/The Uprising.mp3-75a9f27f0faf6e7e443f5f7a24569de3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

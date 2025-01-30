@@ -1,12 +1,23 @@
-[gd_scene load_steps=3 format=3 uid="uid://ccnbdaq3o72at"]
+[gd_scene load_steps=6 format=3 uid="uid://ccnbdaq3o72at"]
 
 [ext_resource type="Script" path="res://elements/items/item.gd" id="1_emjkg"]
+[ext_resource type="Shader" path="res://assets/shaders/CastShadow.gdshader" id="2_3n7hn"]
+[ext_resource type="Texture2D" uid="uid://cimtoxdlhn7gc" path="res://assets/bitmaps/nobody.png" id="3_xn2ky"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4n7ik"]
+shader = ExtResource("2_3n7hn")
+shader_parameter/look_right = true
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hh772"]
 size = Vector2(36, 36)
 
 [node name="Item" type="Area2D"]
 script = ExtResource("1_emjkg")
+metadata/_edit_vertical_guides_ = [-262.0]
+
+[node name="SpriteShadow" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_4n7ik")
+texture = ExtResource("3_xn2ky")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 anchors_preset = 8

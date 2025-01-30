@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="item_data" load_steps=3 format=3 uid="uid://bnakhswxbfenw"]
+
+[ext_resource type="Script" path="res://elements/items/item_data.gd" id="1_gokka"]
+[ext_resource type="Texture2D" uid="uid://cqguyab16twq0" path="res://assets/bitmaps/generated/vodka_bottle.png" id="2_waiek"]
+
+[resource]
+script = ExtResource("1_gokka")
+name = "Vodka Bottle"
+description = "A bottle of vodka, finest quality."
+texture = ExtResource("2_waiek")
