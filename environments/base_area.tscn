@@ -35,7 +35,7 @@
 [ext_resource type="Texture2D" uid="uid://bjpsaarrhhrjn" path="res://assets/bitmaps/generated/cryo.png" id="23_nb6l0"]
 [ext_resource type="Texture2D" uid="uid://ddre27jj7ye35" path="res://assets/bitmaps/generated/door.png" id="23_wlevm"]
 [ext_resource type="Material" uid="uid://cermd26dujlt8" path="res://assets/shaders/ColorAdj.tres" id="24_7dyr3"]
-[ext_resource type="Shader" path="res://assets/shaders/SpriteColAdjustement.gdshader" id="24_nwnxv"]
+[ext_resource type="Shader" path="res://assets/shaders/ColAdjustement.gdshader" id="24_nwnxv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6ggm6"]
 size = Vector2(54, 24)
@@ -45,7 +45,7 @@ shader = ExtResource("24_nwnxv")
 shader_parameter/brightness = 0.0
 shader_parameter/gamma = 1.0
 shader_parameter/saturation = 1.0
-shader_parameter/modulate = Vector4(1, 1, 1, 1)
+shader_parameter/modulate = Color(1, 1, 1, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tth14"]
 
@@ -524,11 +524,11 @@ position = Vector2(226, 785)
 data = ExtResource("6_3sh5w")
 
 [node name="Walter" parent="Chars" instance=ExtResource("5_jgyno")]
-position = Vector2(1022, 210)
+position = Vector2(1024, 208)
 data = ExtResource("7_c1awk")
 
 [node name="Ivanka" parent="Chars" instance=ExtResource("5_jgyno")]
-position = Vector2(-56, -560)
+position = Vector2(-96, -544)
 data = ExtResource("8_vtgxy")
 
 [node name="Barrow" parent="Chars" instance=ExtResource("5_jgyno")]

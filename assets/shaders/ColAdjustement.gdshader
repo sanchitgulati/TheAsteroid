@@ -4,7 +4,7 @@ shader_type canvas_item;
 uniform float brightness = 0.0;  // Adjust brightness (-1.0 to 1.0)
 uniform float gamma = 1.0;       // Adjust gamma (0.1 to 3.0)
 uniform float saturation = 1.0;  // Adjust saturation (0.0 to 2.0)
-uniform vec4 modulate = vec4(1.0); // Tint color
+uniform vec4 modulate : source_color = vec4(1.0, 1.0, 1.0, 1.0); // Tint color
 
 // Converts RGB to grayscale using perceived luminance
 float luminance(vec3 color) {
