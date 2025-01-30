@@ -2,12 +2,11 @@
 
 [resource]
 code = "shader_type canvas_item;
-render_mode blend_mul;
+render_mode blend_mix;
 
 
 
 "
 mode = 1
-modes/blend = 3
 flags/light_only = false
 nodes/fragment/0/position = Vector2(520, 160)

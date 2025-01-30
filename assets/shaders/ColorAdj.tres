@@ -1,0 +1,10 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://cermd26dujlt8"]
+
+[ext_resource type="Shader" path="res://assets/shaders/SpriteColAdjustement.gdshader" id="1_3va1i"]
+
+[resource]
+shader = ExtResource("1_3va1i")
+shader_parameter/brightness = -0.275
+shader_parameter/gamma = 1.62
+shader_parameter/saturation = 1.0
+shader_parameter/modulate = Vector4(1, 1, 1, 1)
