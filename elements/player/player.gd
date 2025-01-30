@@ -25,7 +25,7 @@ func get_input():
 func _physics_process(delta):
 	if !can_move: return
 	get_input()
-	move_and_collide(velocity * delta)
+	#move_and_collide(velocity * delta)
 
 	## Move and slide
-	#move_and_slide()
+	move_and_slide()

@@ -4,7 +4,7 @@ var is_open = false
 
 var inventory_slot_ui = preload("res://UI/inventory/inventory_slot_ui.tscn")
 var slots = []
-@onready var grid_container: GridContainer = $GridContainer
+@onready var grid_container: GridContainer = $ColorRect/NinePatchRect/GridContainer
 
 
 # Called when the node enters the scene tree for the first time.
@@ -15,7 +15,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	if Input.is_action_just_pressed("i"):
+	if Input.is_action_just_pressed("inventory_toggle"):
 		if is_open: close()
 		else: open()
 	if Inventory.need_redraw:

@@ -572,7 +572,7 @@ position = Vector2(576, 29)
 data = ExtResource("11_clx17")
 
 [node name="VodkaBottle" parent="." instance=ExtResource("10_o4pkl")]
-position = Vector2(512, 28)
+position = Vector2(384, 873)
 data = ExtResource("16_xx2hv")
 
 [node name="Label" type="Label" parent="."]
