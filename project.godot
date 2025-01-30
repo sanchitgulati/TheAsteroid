@@ -29,10 +29,12 @@ gdscript/warnings/exclude_addons=false
 
 [display]
 
-window/size/viewport_width=1200
-window/size/viewport_height=800
+window/size/viewport_width=1365
+window/size/viewport_height=1024
 window/stretch/mode="viewport"
-window/stretch/aspect="keep_width"
+window/stretch/aspect="keep_height"
+window/stretch/scale=2.0
+window/stretch/scale_mode="integer"
 
 [input]
 

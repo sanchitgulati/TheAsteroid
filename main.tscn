@@ -22,8 +22,10 @@ offset_right = 0.0
 offset_bottom = 0.0
 
 [node name="Dialogue" parent="CanvasLayer50" instance=ExtResource("3_t1wol")]
-offset_top = 584.0
-offset_bottom = 771.0
+offset_left = -3.0
+offset_top = -193.0
+offset_right = 214.0
+offset_bottom = -6.0
 
 [node name="Soundtrack" type="Node" parent="."]
 
