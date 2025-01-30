@@ -13,6 +13,7 @@ size = Vector2(40, 56)
 
 [node name="Npc" type="Area2D"]
 script = ExtResource("1_8fksl")
+chat_history = null
 
 [node name="SpriteShadow" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_v3phr")
