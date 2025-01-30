@@ -18,10 +18,12 @@ color = Color(1, 0, 1, 0.12549)
 [node name="CanvasLayer50" type="CanvasLayer" parent="."]
 
 [node name="Inventory" parent="CanvasLayer50" instance=ExtResource("2_4yhnd")]
+visible = false
 offset_right = 0.0
 offset_bottom = 0.0
 
 [node name="Dialogue" parent="CanvasLayer50" instance=ExtResource("3_t1wol")]
+visible = false
 offset_top = 584.0
 offset_bottom = 771.0
 
