@@ -7,6 +7,7 @@ class_name Dialogue
 @export var llm_input: TextEdit
 @onready var character_texture: TextureRect = $Character
 var npc_data = null
+var npc = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -26,8 +27,12 @@ func _process(_delta: float) -> void:
 		
 	if npc_data != null:
 		character_texture.texture = npc_data.texture
+		if npc != null:
+			character_texture.texture = npc.texture_rect.texture
+			character_texture.modulate = npc.modulate
+		npc_data = null
 	else:
-		var npc = WorldState.current_npc
+		npc = WorldState.current_npc
 		if npc != null:
 			npc_data = npc.data
 	

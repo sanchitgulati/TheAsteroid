@@ -24,3 +24,13 @@ func remove_item(item: item_data):
 	pass
 	
 	
+func search(item_name: String):
+	item_name = item_name.to_lower().strip_edges()
+	
+	for item in items:
+		var name = item.name.to_lower().strip_edges()
+		if name == item_name: 
+			return item
+	
+	return null
+	

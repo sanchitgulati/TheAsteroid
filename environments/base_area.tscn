@@ -1,4 +1,4 @@
-[gd_scene load_steps=81 format=4 uid="uid://cy2se4msxc27f"]
+[gd_scene load_steps=79 format=4 uid="uid://cy2se4msxc27f"]
 
 [ext_resource type="Script" path="res://environments/world.gd" id="1_cu36i"]
 [ext_resource type="TileSet" uid="uid://dli1an21v3xpa" path="res://assets/bitmaps/tilesets/Grounds2.tres" id="3_d4kqp"]
@@ -27,7 +27,6 @@
 [ext_resource type="Texture2D" uid="uid://c575ers1s6njk" path="res://assets/bitmaps/generated/server.png" id="13_i8llp"]
 [ext_resource type="Texture2D" uid="uid://dydi55p2mh7v2" path="res://assets/bitmaps/generated/sink.png" id="14_ct5gn"]
 [ext_resource type="Texture2D" uid="uid://4qlb17h4xwgu" path="res://assets/bitmaps/generated/bench.png" id="15_rsbas"]
-[ext_resource type="Resource" uid="uid://bnakhswxbfenw" path="res://elements/items/item_data/vodka.tres" id="16_xx2hv"]
 [ext_resource type="Texture2D" uid="uid://deb1b65t8f5fi" path="res://assets/bitmaps/generated/crew_bed.png" id="19_u66wm"]
 [ext_resource type="Texture2D" uid="uid://gt3vnc80rjdd" path="res://assets/bitmaps/generated/crew_desk.png" id="20_hsin3"]
 [ext_resource type="Texture2D" uid="uid://fc00qb1ut2am" path="res://assets/bitmaps/generated/crew_bed_vert.png" id="21_syxxx"]
@@ -36,7 +35,6 @@
 [ext_resource type="Texture2D" uid="uid://ddre27jj7ye35" path="res://assets/bitmaps/generated/door.png" id="23_wlevm"]
 [ext_resource type="Material" uid="uid://cermd26dujlt8" path="res://assets/shaders/ColorAdj.tres" id="24_7dyr3"]
 [ext_resource type="Shader" path="res://assets/shaders/ColAdjustement.gdshader" id="24_nwnxv"]
-[ext_resource type="Resource" uid="uid://b17ipj8wgm11x" path="res://elements/npcs/npc_data/npc_dark_drone.tres" id="34_eeopb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6ggm6"]
 size = Vector2(54, 24)
@@ -576,7 +574,6 @@ data = ExtResource("11_clx17")
 
 [node name="VodkaBottle" parent="." instance=ExtResource("10_o4pkl")]
 position = Vector2(384, 873)
-data = ExtResource("16_xx2hv")
 
 [node name="Label" type="Label" parent="."]
 offset_left = -96.0
@@ -658,7 +655,6 @@ data = ExtResource("6_3sh5w")
 [node name="DarkDrone" parent="Chars" instance=ExtResource("5_jgyno")]
 modulate = Color(0.531259, 0.205409, 0.294548, 1)
 position = Vector2(224, 864)
-data = ExtResource("34_eeopb")
 
 [node name="Walter" parent="Chars" instance=ExtResource("5_jgyno")]
 position = Vector2(1024, 208)

@@ -1,8 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://ccnbdaq3o72at"]
+[gd_scene load_steps=8 format=3 uid="uid://ccnbdaq3o72at"]
 
 [ext_resource type="Script" path="res://elements/items/item.gd" id="1_emjkg"]
 [ext_resource type="Shader" path="res://assets/shaders/CastShadow.gdshader" id="2_3n7hn"]
+[ext_resource type="Resource" uid="uid://bnakhswxbfenw" path="res://elements/items/item_data/vodka.tres" id="2_usiwa"]
 [ext_resource type="Texture2D" uid="uid://cimtoxdlhn7gc" path="res://assets/bitmaps/nobody.png" id="3_xn2ky"]
+[ext_resource type="Texture2D" uid="uid://cqguyab16twq0" path="res://assets/bitmaps/generated/vodka_bottle.png" id="5_5bw4q"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_4n7ik"]
 shader = ExtResource("2_3n7hn")
@@ -13,6 +15,7 @@ size = Vector2(36, 36)
 
 [node name="Item" type="Area2D"]
 script = ExtResource("1_emjkg")
+data = ExtResource("2_usiwa")
 metadata/_edit_vertical_guides_ = [-262.0]
 
 [node name="SpriteShadow" type="Sprite2D" parent="."]
@@ -31,6 +34,7 @@ offset_right = 20.0
 offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = ExtResource("5_5bw4q")
 
 [node name="Name" type="Label" parent="."]
 offset_right = 16.0
