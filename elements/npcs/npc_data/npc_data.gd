@@ -15,7 +15,7 @@ class_name npc_data
 @export_multiline var friends: String
 @export_multiline var enemies: String
 
-@export var mood: String
+@export var current_status: String
 
 
 func build_system_prompt():
@@ -87,13 +87,13 @@ Use vivid descriptions and compelling dialogue to bring this world to life. Reme
 	system_prompt += "Your age is " + str(age) + "\n"
 	system_prompt += public_persona + "\n"
 	system_prompt += private_persona + "\n"
-	system_prompt += 'Characteristics:' + "\n"
+	#system_prompt += 'Characteristics:' + "\n"
 	system_prompt += characteristics  + "\n"
 	system_prompt += tone  + "\n"
+	system_prompt += current_status  + "\n"
 	system_prompt += interactions  + "\n"
 	system_prompt += friends  + "\n"
 	system_prompt += enemies + "\n"
-	system_prompt += "Your mood is " + mood + ".\n"
 	system_prompt += "Now, pretend to be ." + name + ".\n"
 
 
