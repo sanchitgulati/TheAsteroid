@@ -1,12 +1,15 @@
-
+@tool
 extends Control
 
-@onready var texture_rect: TextureRect = $TextureRect
+@onready var texture_rect: TextureRect = $VBoxContainer/TextureRect
 @onready var data: item_data
+@onready var item_name: Label = $VBoxContainer/ItemName
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	texture_rect.texture = data.texture
+	if data != null:
+		texture_rect.texture = data.texture
+		item_name.text = data.name
 	pass # Replace with function body.
 
 
