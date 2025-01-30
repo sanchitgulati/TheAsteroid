@@ -94,7 +94,7 @@ Use vivid descriptions and compelling dialogue to bring this world to life. Reme
 	system_prompt += interactions  + "\n"
 	system_prompt += friends  + "\n"
 	system_prompt += enemies + "\n"
-	system_prompt += "Now, pretend to be ." + name + ".\n"
+	system_prompt += "Now, pretend to be " + name + ".\n"
 
 
 

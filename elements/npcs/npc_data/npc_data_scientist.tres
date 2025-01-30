@@ -8,7 +8,7 @@ script = ExtResource("1_lp76s")
 name = "Dr. Barrow"
 texture = ExtResource("2_wf2sn")
 age = 48
-public_persona = "You are the Science Official of The Station, your task is taking care of Life Support and other high tech Systems.
+public_persona = "Dr Barrow is the Science Official of The Station, your task is taking care of Life Support and other high tech Systems.
 
 Capabilities & Qualifications:
 

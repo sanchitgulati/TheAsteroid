@@ -4,7 +4,7 @@ var is_open = false
 
 var inventory_slot_ui = preload("res://UI/inventory/inventory_slot_ui.tscn")
 var slots = []
-@onready var grid_container: GridContainer = $ColorRect/NinePatchRect/GridContainer
+@onready var grid_container: GridContainer = $NinePatchRect/GridContainer
 
 
 # Called when the node enters the scene tree for the first time.
