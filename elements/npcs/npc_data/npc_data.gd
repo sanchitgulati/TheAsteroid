@@ -16,7 +16,7 @@ class_name npc_data
 @export_multiline var enemies: String
 
 @export var current_status: String
-
+	
 
 func build_system_prompt():
 	var system_prompt: String
@@ -81,11 +81,11 @@ If you don't know the answer to a question, please don't share false information
 Use vivid descriptions and compelling dialogue to bring this world to life. Remember, even in the darkest corners of space, humanity endures.
 """
 #####################
-
+	var all_public_personas = WorldState.getScenePublicPersonasPrompts()
 
 	system_prompt += "Your name is " + name + "\n"
 	system_prompt += "Your age is " + str(age) + "\n"
-	system_prompt += public_persona + "\n"
+	system_prompt += all_public_personas + "\n"
 	system_prompt += private_persona + "\n"
 	#system_prompt += 'Characteristics:' + "\n"
 	system_prompt += characteristics  + "\n"

@@ -17,9 +17,26 @@ func set_npc(npc:NPC):
 	var prompt = npc.data.build_system_prompt()
 	LLM.set_system_prompt(prompt)
 
+func findNPCs(node: Node, result : Array) -> void:
+	if node is NPC:
+		result.push_back(node)
+	for child in node.get_children():
+		findNPCs(child, result)
 
+func getScenePublicPersonasPrompts():
+	var scene_npc=[]
+	var root = get_tree().root
+	findNPCs(root, scene_npc)
+	
+	var prompts = ""
+	for npc in scene_npc:
+		prompts += npc.data.public_persona + "\n"
+	print(prompts)
+	return prompts
+	
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	
 	pass # Replace with function body.
 
 

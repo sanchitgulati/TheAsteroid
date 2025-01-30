@@ -18,6 +18,9 @@ func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("i"):
 		if is_open: close()
 		else: open()
+	if Inventory.need_redraw:
+		refresh_items()
+		Inventory.need_redraw = false
 
 func close():
 	print("Inventory CLOSE")
@@ -28,6 +31,7 @@ func open():
 	print("Inventory OPEN")
 	is_open = true
 	visible = true
+	
 
 func clear_inventory():
 	for child in grid_container.get_children():
@@ -38,6 +42,6 @@ func refresh_items():
 	clear_inventory()
 	for item in Inventory.items:
 		var slot = inventory_slot_ui.instantiate()
-		slot.data
+		slot.data = item
 		grid_container.add_child(slot)
 	

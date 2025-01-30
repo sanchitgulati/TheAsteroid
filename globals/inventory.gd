@@ -1,6 +1,8 @@
 extends Node
 
 var items: Array[item_data] = []
+var need_redraw = true
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -14,9 +16,11 @@ func _process(_delta: float) -> void:
 
 func add_item(item: item_data):
 	items.append(item)
+	need_redraw = true
 	
 func remove_item(item: item_data):
 	items.erase(item)
+	need_redraw = true
 	pass
 	
 	
