@@ -1,4 +1,4 @@
-[gd_scene load_steps=85 format=4 uid="uid://cy2se4msxc27f"]
+[gd_scene load_steps=83 format=4 uid="uid://cy2se4msxc27f"]
 
 [ext_resource type="Script" path="res://environments/world.gd" id="1_cu36i"]
 [ext_resource type="TileSet" uid="uid://dli1an21v3xpa" path="res://assets/bitmaps/tilesets/Grounds2.tres" id="3_d4kqp"]
@@ -34,7 +34,6 @@
 [ext_resource type="Texture2D" uid="uid://ddre27jj7ye35" path="res://assets/bitmaps/generated/door.png" id="23_wlevm"]
 [ext_resource type="Material" uid="uid://cermd26dujlt8" path="res://assets/shaders/ColorAdj.tres" id="24_7dyr3"]
 [ext_resource type="Shader" path="res://assets/shaders/ColAdjustement.gdshader" id="24_nwnxv"]
-[ext_resource type="Resource" uid="uid://b17ipj8wgm11x" path="res://elements/npcs/npc_data/npc_dark_drone.tres" id="34_eeopb"]
 [ext_resource type="Texture2D" uid="uid://cth0rb3d3yyai" path="res://assets/bitmaps/generated/energy_core.png" id="38_piady"]
 [ext_resource type="Texture2D" uid="uid://cd3snniw0uy3n" path="res://assets/bitmaps/generated/Pipe.png" id="39_akc4s"]
 [ext_resource type="Texture2D" uid="uid://cvesg44cn77ia" path="res://assets/bitmaps/generated/Bench.png" id="40_8xwii"]

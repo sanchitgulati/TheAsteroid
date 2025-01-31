@@ -14,6 +14,8 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	pass
 
+func item_count():
+	return items.size()
 
 func add_item(item: item_data):
 	items.append(item)

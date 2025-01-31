@@ -37,11 +37,13 @@ func _on_body_entered(body: Node2D) -> void:
 	
 	print(body.name)
 	if body.name=='Player':
+		first_touch = false
 		WorldState.set_npc(self)
 		
 		LLM.Dialog.open()
-		Inventory.open()
-		first_touch = false
+		if Inventory.item_count() > 0:
+			Inventory.open()
+		
 		
 		var prompt = Prompts.greetings
 		LLM.talk_npc(prompt)
