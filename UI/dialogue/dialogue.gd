@@ -15,6 +15,7 @@ func _ready() -> void:
 	visible=false
 	llm_input.text = ""
 	llm_output.text = ""
+	Inventory.inventory_ui
 	pass # Replace with function body.
 
 
@@ -59,6 +60,7 @@ func close():
 	npc_data = null
 	visible = false
 	character_texture.texture = null
+	Inventory.close()
 	clear()
 
 func talk():

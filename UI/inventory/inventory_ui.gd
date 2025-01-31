@@ -1,5 +1,6 @@
 extends Control
 
+class_name Inventory_UI
 var is_open = false
 
 var inventory_slot_ui = preload("res://UI/inventory/inventory_slot_ui.tscn")
@@ -9,6 +10,7 @@ var slots = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	Inventory.inventory_ui = self
 	close()
 	pass # Replace with function body.
 
