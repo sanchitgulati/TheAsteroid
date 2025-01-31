@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://cwgaaiweib4b3"]
+[gd_scene load_steps=7 format=3 uid="uid://cwgaaiweib4b3"]
 
 [ext_resource type="Script" path="res://elements/npcs/npc.gd" id="1_8fksl"]
+[ext_resource type="Resource" uid="uid://b17ipj8wgm11x" path="res://elements/npcs/npc_data/npc_dark_drone.tres" id="2_mg17f"]
 [ext_resource type="Texture2D" uid="uid://cimtoxdlhn7gc" path="res://assets/bitmaps/nobody.png" id="2_urkum"]
 [ext_resource type="Shader" path="res://assets/shaders/CastShadow.gdshader" id="3_kkfki"]
 
@@ -13,6 +14,7 @@ size = Vector2(40, 56)
 
 [node name="Npc" type="Area2D"]
 script = ExtResource("1_8fksl")
+data = ExtResource("2_mg17f")
 
 [node name="SpriteShadow" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_v3phr")

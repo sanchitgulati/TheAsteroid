@@ -8,6 +8,7 @@ extends Node
 var last_answer = ""
 var talking = false
 var re_newline: RegEx
+var queue = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -29,21 +30,30 @@ func set_system_prompt(prompt:String):
 func talk_npc(prompt: String ):
 	print("-----------------------")
 	if WorldState.current_npc == null: return
-	if talking: return
+	if talking:
+		queue.append(prompt)
+		return
 	talking = true
 	
 	print(prompt)
 	WorldState.current_npc.chat_history.append(prompt)
-	last_answer = ""
+	if queue.size() == 0:
+		Dialog.llm_output.text == ""
 	
 	Chat.say(prompt)
-	
+
+func process_queue():
+	var prompt = queue.pop_front()
+	if prompt == null: 
+		return false
+	talk_npc(prompt)
+	return true
 	
 func _on_chat_response_updated(new_token: String) -> void:
-	last_answer += new_token
-	
-	last_answer = re_newline.sub(last_answer, "\n", true)
-	Dialog.llm_output.text = last_answer
+	var cur_answer = Dialog.llm_output.text
+	cur_answer += new_token
+	cur_answer = re_newline.sub(cur_answer, "\n", true)
+	Dialog.llm_output.text = cur_answer
 
 
 func _on_chat_response_finished(_response: String) -> void:
@@ -51,5 +61,7 @@ func _on_chat_response_finished(_response: String) -> void:
 		WorldState.current_npc.chat_history.append(last_answer)
 	print(last_answer)
 	talking = false
-	Chat.system_prompt = ""
-	LLM.Dialog.llm_input.text = ""
+	if not process_queue():
+		LLM.Dialog.llm_input.text = "";
+		
+	

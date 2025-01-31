@@ -2,6 +2,7 @@ extends Node
 
 var items: Array[item_data] = []
 var need_redraw = true
+var inventory_ui: Inventory_UI
 
 
 # Called when the node enters the scene tree for the first time.
@@ -22,5 +23,22 @@ func remove_item(item: item_data):
 	items.erase(item)
 	need_redraw = true
 	pass
+
+func open():
+	if inventory_ui == null: return
+	inventory_ui.open()
 	
+func close():
+	if inventory_ui == null: return
+	inventory_ui.close()
+	
+func search(item_name: String):
+	item_name = item_name.to_lower().strip_edges()
+	
+	for item in items:
+		var name = item.name.to_lower().strip_edges()
+		if name == item_name: 
+			return item
+	
+	return null
 	
