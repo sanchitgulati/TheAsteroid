@@ -45,14 +45,6 @@ Setting:
 """
 
 
-#	TODO: qui vanno aggiunte in automatico le public_persona dei personaggi attualmente attivi
-	system_prompt += """
-Characters:
-
-	Miners: Exhausted, disillusioned individuals seeking survival and escape from The Company's oppressive rule.
-
-"""
-
 	system_prompt += """
 Themes:
 
