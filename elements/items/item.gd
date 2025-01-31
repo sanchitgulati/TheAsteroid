@@ -17,12 +17,15 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	if Engine.is_editor_hint():
-		if texture_rect.texture != data.texture:
-			texture_rect.texture = data.texture
-			sprite_shadow.texture = data.texture
-	pass
+
+#SPENTO PERCHE' ERA IMPOX DEBUGGARE :-(aaa
+
+#func _process(delta: float) -> void:
+	#if Engine.is_editor_hint():
+		#if texture_rect.texture != data.texture:
+			#texture_rect.texture = data.texture
+			#sprite_shadow.texture = data.texture
+	#pass
 
 
 func _on_body_entered(body: Node2D) -> void:

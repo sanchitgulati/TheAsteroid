@@ -38,7 +38,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 8.0
 offset_top = 3.0
-offset_right = 463.0
+offset_right = 615.0
 offset_bottom = -59.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -68,7 +68,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 layout_mode = 1
 offset_left = 8.0
 offset_top = 127.0
-offset_right = 528.0
+offset_right = 680.0
 offset_bottom = 187.0
 texture = ExtResource("2_wb1ks")
 patch_margin_left = 10
@@ -97,17 +97,17 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Button" type="Button" parent="NinePatchQuestion"]
 layout_mode = 0
-offset_left = 528.0
+offset_left = 678.0
 offset_top = 8.0
-offset_right = 592.0
+offset_right = 742.0
 offset_bottom = 52.0
 text = "Send"
 
 [node name="Button2" type="Button" parent="NinePatchQuestion"]
 layout_mode = 0
-offset_left = 600.0
+offset_left = 750.0
 offset_top = 8.0
-offset_right = 664.0
+offset_right = 814.0
 offset_bottom = 52.0
 text = "Close"
 

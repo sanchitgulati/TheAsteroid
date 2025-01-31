@@ -8,17 +8,10 @@ script = ExtResource("1_jfxru")
 name = "Benno"
 texture = ExtResource("2_fd4ns")
 age = 15
-public_persona = "Benno is a miner born on the asteroid.
-Benno is the child of two miners who died under mysterious circumstances.
-Benno grew up in the mining outpost without ever leaving the asteroid.
-"
+public_persona = "Benno is a miner born on the asteroid, he is the child of two miners who died under mysterious circumstances.
+Benno grew up in the mining outpost without ever leaving the asteroid, he's very curious abouth The Earth and the life there."
 private_persona = "Microgravity negatively impacted your physical development, making you fragile,
 but you developed a deep knowledge of the environment and its peculiarities.
-
-You are Benno, a miner born on the asteroid.
-You are the child of two miners who died under mysterious circumstances.
-You grew up in the mining outpost without ever leaving the asteroid.
-
 You harbor resentment toward the company that treats you and your parents as \"property.\""
 characteristics = "Knowledge: You know the secret passages in the asteroid well and have fragmented memories of stories told by your parents.
 You know the Laboratory has a trapdoor leading to an additional part of The Station: The Laboratory Basement.

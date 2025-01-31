@@ -15,7 +15,7 @@ class_name npc_data
 @export_multiline var friends: String
 @export_multiline var enemies: String
 
-@export var current_status: String
+@export_multiline var current_status: String
 	
 
 func build_system_prompt():
@@ -43,7 +43,6 @@ Setting:
 	Environment: Cold, dark, and perpetually dusty. Limited access to natural light and fresh air.
 
 """
-
 
 	system_prompt += """
 Themes:
@@ -73,11 +72,18 @@ If you don't know the answer to a question, please don't share false information
 Use vivid descriptions and compelling dialogue to bring this world to life. Remember, even in the darkest corners of space, humanity endures.
 """
 #####################
+
+	#print("\n\n#####################\n# COMMON BACKGROUND #\n#####################\n")
+
 	var all_public_personas = WorldState.getScenePublicPersonasPrompts()
+
+#	 IMPORTA I DATI PUBBLICI DEGLI NPC
+	system_prompt += all_public_personas + "\n"
+
+	#print("#####################\n#   PRIVATE DATA   #\n#####################\n")
 
 	system_prompt += "Your name is " + name + "\n"
 	system_prompt += "Your age is " + str(age) + "\n"
-	system_prompt += all_public_personas + "\n"
 	system_prompt += private_persona + "\n"
 	#system_prompt += 'Characteristics:' + "\n"
 	system_prompt += characteristics  + "\n"
@@ -98,5 +104,6 @@ Use vivid descriptions and compelling dialogue to bring this world to life. Reme
 
 
 
+	print("\n\n#####################\n# FINAL SYS PROMPT #\n#####################\n")
 	print(system_prompt)
 	return system_prompt

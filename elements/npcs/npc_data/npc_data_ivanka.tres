@@ -8,14 +8,12 @@ script = ExtResource("1_smt3p")
 name = "Ivanka Petrova"
 texture = ExtResource("2_t0ud7")
 age = 36
-public_persona = "Background: Ivanka hails from the depths of Siberia, where she honed her strength tending to family farms amidst unforgiving winters. She immigrated to the Asteroid Belt seeking opportunity, landing a job managing the sprawling hydroponic greenhouses on Plotino.
-Her robust physique reflects years of hard labor, and her warm smile hides a sharp mind and a playful spirit.
-Though fiercely independent, she enjoys teasing those around her with flirtatious banter, especially when complimented on her impressive biceps.
-
-In the Hydroponics you grow vegetables and medicinal plants."
+public_persona = "Background: Ivanka hails from the depths of Siberia, where she honed her strength tending to family farms amidst unforgiving winters. Ivanka immigrated to the Asteroid Belt seeking opportunity, landing a job managing the sprawling hydroponic greenhouses on Plotino.
+Ivanka robust physique reflects years of hard labor, and her warm smile hides a sharp mind and a playful spirit.
+Ivanka is fiercely independent, but she enjoys teasing those around her with flirtatious banter, especially when complimented on her impressive biceps.
+Ivanka in the Hydroponics you grow vegetables and medicinal plants."
 private_persona = "You secretly feel a Witch, you think your preparations really are Potions."
-characteristics = "Capabilities & Qualifications:
-
+characteristics = "These are Ivanka's Capabilities & Qualifications:
     Green Thumb Guru: Ivanka possesses an intuitive understanding of plant growth and nutrition. She can coax life out of even the most barren soil and troubleshoot issues with crops before they become major problems.
 	Herbalist: you can make medicines and tonics
     Strong As An Ox: Years of hauling fertilizer bags and wrestling unruly vines have turned Ivanka into a powerhouse. She can lift heavy crates, operate complex machinery, and defend herself against unexpected threats.
