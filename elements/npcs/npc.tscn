@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://elements/npcs/npc.gd" id="1_8fksl"]
 [ext_resource type="Resource" uid="uid://b17ipj8wgm11x" path="res://elements/npcs/npc_data/npc_dark_drone.tres" id="2_mg17f"]
-[ext_resource type="Texture2D" uid="uid://cimtoxdlhn7gc" path="res://assets/bitmaps/nobody.png" id="2_urkum"]
 [ext_resource type="Shader" path="res://assets/shaders/CastShadow.gdshader" id="3_kkfki"]
+[ext_resource type="Texture2D" uid="uid://dkwwd6yrr554i" path="res://assets/bitmaps/generated/sphere_droid.png" id="4_lemvc"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_v3phr"]
 shader = ExtResource("3_kkfki")
@@ -18,10 +18,10 @@ data = ExtResource("2_mg17f")
 
 [node name="SpriteShadow" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_v3phr")
-texture = ExtResource("2_urkum")
+texture = ExtResource("4_lemvc")
 
 [node name="TextureRect" type="Sprite2D" parent="."]
-texture = ExtResource("2_urkum")
+texture = ExtResource("4_lemvc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
