@@ -1,9 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://ccnbdaq3o72at"]
+[gd_scene load_steps=7 format=3 uid="uid://ccnbdaq3o72at"]
 
 [ext_resource type="Script" path="res://elements/items/item.gd" id="1_emjkg"]
 [ext_resource type="Shader" path="res://assets/shaders/CastShadow.gdshader" id="2_3n7hn"]
 [ext_resource type="Resource" uid="uid://bnakhswxbfenw" path="res://elements/items/item_data/vodka.tres" id="2_usiwa"]
-[ext_resource type="Texture2D" uid="uid://cimtoxdlhn7gc" path="res://assets/bitmaps/nobody.png" id="3_xn2ky"]
 [ext_resource type="Texture2D" uid="uid://cqguyab16twq0" path="res://assets/bitmaps/generated/vodka_bottle.png" id="5_5bw4q"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_4n7ik"]
@@ -20,7 +19,7 @@ metadata/_edit_vertical_guides_ = [-262.0]
 
 [node name="SpriteShadow" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_4n7ik")
-texture = ExtResource("3_xn2ky")
+texture = ExtResource("5_5bw4q")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 anchors_preset = 8
@@ -39,6 +38,7 @@ texture = ExtResource("5_5bw4q")
 [node name="Name" type="Label" parent="."]
 offset_right = 16.0
 offset_bottom = 23.0
+text = "Vodka Bottle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_hh772")
