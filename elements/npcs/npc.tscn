@@ -1,24 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://cwgaaiweib4b3"]
+[gd_scene load_steps=7 format=3 uid="uid://cwgaaiweib4b3"]
 
 [ext_resource type="Script" path="res://elements/npcs/npc.gd" id="1_8fksl"]
 [ext_resource type="Resource" uid="uid://b17ipj8wgm11x" path="res://elements/npcs/npc_data/npc_dark_drone.tres" id="2_mg17f"]
-[ext_resource type="Shader" path="res://assets/shaders/CastShadow.gdshader" id="3_kkfki"]
+[ext_resource type="Material" uid="uid://clq40pb6ncpwg" path="res://assets/shaders/CharDropShadow.tres" id="3_ti88x"]
 [ext_resource type="Texture2D" uid="uid://dkwwd6yrr554i" path="res://assets/bitmaps/generated/chars/sphere_droid.png" id="4_lemvc"]
-[ext_resource type="Shader" path="res://assets/shaders/SpriteAndDropShadow.gdshader" id="5_uaflu"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_v3phr"]
-shader = ExtResource("3_kkfki")
-shader_parameter/look_right = true
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_u66yu"]
-shader = ExtResource("5_uaflu")
-shader_parameter/debug = false
-shader_parameter/border_scale = 2.0
-shader_parameter/shadow_offset = Vector2(-2, -1)
-shader_parameter/color = Color(0.0649228, 0.159271, 0.260505, 0.576471)
-shader_parameter/blur_amount = 0.0
-shader_parameter/shadow_scale = 2.0
-shader_parameter/disable_rotating = false
+[ext_resource type="Material" uid="uid://b2v7ukyj8oetb" path="res://assets/shaders/SpriteAndShadow.tres" id="5_vmid5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_687tg"]
 size = Vector2(40, 56)
@@ -29,11 +15,11 @@ data = ExtResource("2_mg17f")
 
 [node name="SpriteShadow" type="Sprite2D" parent="."]
 visible = false
-material = SubResource("ShaderMaterial_v3phr")
+material = ExtResource("3_ti88x")
 texture = ExtResource("4_lemvc")
 
 [node name="TextureRect" type="Sprite2D" parent="."]
-material = SubResource("ShaderMaterial_u66yu")
+material = ExtResource("5_vmid5")
 texture = ExtResource("4_lemvc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
