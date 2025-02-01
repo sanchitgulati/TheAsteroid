@@ -14,15 +14,19 @@ func _process(_delta: float) -> void:
 
 func check_quest(current_npc: npc_data):
 	var next_quest = get_next_quest(current_npc)
+	var next_step: quest_step = null
 	if next_quest != null:
+		next_step = current_quest_step(next_quest)
 		start_quest(next_quest)
-		return next_quest
+		return next_step
 	
 	var open = get_open_quests(current_npc)
 	if open.size() > 0:
 		var current = open[0]
-		check_step_progress(current, current_npc)
-		return current
+		next_step = check_step_progress(current, current_npc)
+		return next_step
+	
+	return next_step
 	
 func start_quest(quest:quest_data):
 	if quest.progress >= 0: return
@@ -54,13 +58,13 @@ func quest_npc(quest:quest_data):
 	
 func check_step_progress(quest:quest_data, current_npc: npc_data):
 	var cur_step = current_quest_step(quest)
-	if cur_step == null: return false
+	if cur_step == null: return null
 		
-	if not check_step_requests(quest): return false
+	if not check_step_requests(quest): return null
 	take_requests(cur_step)
 	give_rewards(cur_step)
 	quest.progress += 1
-	return true
+	return cur_step
 	
 
 func take_requests(step:quest_step):

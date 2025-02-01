@@ -44,14 +44,12 @@ func _on_body_entered(body: Node2D) -> void:
 		if Inventory.item_count() > 0:
 			Inventory.open()
 		
-		var quest = Quests.check_quest(data)
-		if quest != null:
-			Quests.check_step_progress(quest, data)
+		var step = Quests.check_quest(data)
+		if step != null:
+			LLM.Dialog.llm_output.text += step.description
 		else:
-			pass
-			
-		var prompt = Prompts.get_prompt('greetings')
-		LLM.talk_npc(prompt)
+			var prompt = Prompts.get_prompt('greetings')
+			LLM.talk_npc(prompt)
 			
 		
 		

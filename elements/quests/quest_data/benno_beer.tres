@@ -11,7 +11,7 @@
 
 [sub_resource type="Resource" id="Resource_qxltf"]
 script = ExtResource("2_4viar")
-description = "Description"
+description = "If while inspecting, you'll find a beer, bring it to me, i'll reward you profusely."
 request_items = Array[ExtResource("4_yocys")]([])
 request_npcs = Array[ExtResource("5_6qdmm")]([])
 rewards_items = Array[ExtResource("4_yocys")]([])
@@ -19,7 +19,7 @@ rewards_prompts = Array[ExtResource("6_1mt87")]([])
 
 [sub_resource type="Resource" id="Resource_c3t65"]
 script = ExtResource("2_4viar")
-description = "Description"
+description = "thank you for the beer, here some vodka for you!"
 request_items = Array[ExtResource("4_yocys")]([ExtResource("7_6pd8g")])
 request_npcs = Array[ExtResource("5_6qdmm")]([])
 rewards_items = Array[ExtResource("4_yocys")]([ExtResource("8_gdw3k")])
