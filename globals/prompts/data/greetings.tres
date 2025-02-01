@@ -1,8 +1,13 @@
-[gd_resource type="Resource" script_class="Prompt_data" load_steps=2 format=3 uid="uid://yv4qdirb63s5"]
+[gd_resource type="Resource" script_class="Prompt_data_list" load_steps=4 format=3 uid="uid://jo4b5lj5f2w0"]
 
-[ext_resource type="Script" path="res://globals/prompts/prompts_data.gd" id="1_56x2u"]
+[ext_resource type="Script" path="res://globals/prompts/prompts_data.gd" id="1_fdrh0"]
+[ext_resource type="Script" path="res://globals/prompts/prompts_data_list.gd" id="2_giefa"]
 
-[resource]
-script = ExtResource("1_56x2u")
+[sub_resource type="Resource" id="Resource_mcg6d"]
+script = ExtResource("1_fdrh0")
 active = true
 text = "Hello, I'm Inspector Kalasnikov. Who are you and what do you do in The Station?"
+
+[resource]
+script = ExtResource("2_giefa")
+list = Array[ExtResource("1_fdrh0")]([SubResource("Resource_mcg6d")])

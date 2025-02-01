@@ -1,11 +1,11 @@
-[gd_resource type="Resource" script_class="Prompt_data" load_steps=2 format=3 uid="uid://dnidycb0daal4"]
+[gd_resource type="Resource" script_class="Prompt_data_list" load_steps=5 format=3 uid="uid://oeusbhgkgq57"]
 
 [ext_resource type="Script" path="res://globals/prompts/prompts_data.gd" id="1_otw3v"]
+[ext_resource type="Script" path="res://globals/prompts/prompts_data_list.gd" id="2_qbhux"]
 
-[resource]
+[sub_resource type="Resource" id="Resource_paa7j"]
 script = ExtResource("1_otw3v")
 active = true
-unique_name = "world"
 text = "Your live on Plotino, a remote asteroid in the Kuiper Belt mined for Helium-3 by \"The Company\", a ruthlessly efficient megacorporation.
 
 On Plotino there is a minerary outpost: The Station, your life mostly take places inside it's metal and glass walls.
@@ -20,3 +20,12 @@ Setting:
 	Plotino: A barren asteroid transformed into a cramped mining outpost. Life here is harsh, with long shifts, dangerous conditions, and minimal comforts.
 	The Station: Minerary outpost on Plotino, owned by The Company. Parts of The Station are The Astroport, The Hydroponic Greenhouse, The Laboratory, The Social Hub.
 	Environment: Cold, dark, and perpetually dusty. Limited access to natural light and fresh air."
+
+[sub_resource type="Resource" id="Resource_vfh77"]
+script = ExtResource("1_otw3v")
+active = false
+text = "prova!"
+
+[resource]
+script = ExtResource("2_qbhux")
+list = Array[ExtResource("1_otw3v")]([SubResource("Resource_paa7j"), SubResource("Resource_vfh77")])
