@@ -2,29 +2,29 @@
 extends Area2D
 
 @export var data: item_data
-@onready var texture_rect: TextureRect = $TextureRect
+@onready var texture_rect: Sprite2D = $Sprite2D
 @onready var display_name: Label = $Name
-@onready var sprite_shadow: Sprite2D = $SpriteShadow
+
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	if data != null and data.texture != null:
-		texture_rect.texture = data.texture
-		display_name.text = data.name
-		sprite_shadow.texture = data.texture
+	set_from_data()
 	pass # Replace with function body.
 
-
+func set_from_data():
+	if data == null: return
+	if data.texture == null: return 
+	if texture_rect.texture != data.texture: return
+	texture_rect.texture = data.texture
+	display_name.text = data.name
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 
 #SPENTO PERCHE' ERA IMPOX DEBUGGARE :-(aaa
 
 func _process(delta: float) -> void:
 	if Engine.is_editor_hint():
-		if data!=null and data.texture != null and texture_rect.texture != data.texture:
-			texture_rect.texture = data.texture
-			sprite_shadow.texture = data.texture
+		set_from_data()
 	pass
 
 

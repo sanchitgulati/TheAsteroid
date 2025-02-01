@@ -58,9 +58,10 @@ func _on_chat_response_updated(new_token: String) -> void:
 
 func _on_chat_response_finished(_response: String) -> void:
 	if WorldState.current_npc != null:
-		WorldState.current_npc.chat_history.append(last_answer)
-	print(last_answer)
+		WorldState.current_npc.chat_history.append(_response)
+	print(_response)
 	talking = false
+	LLM.Dialog.llm_output.text += '\n---\n'
 	if not process_queue():
 		LLM.Dialog.llm_input.text = "";
 		
