@@ -1,18 +1,26 @@
 extends Node
-var data_dir = "res://globals/prompts/prompts_data/"
-var prompts: Array[Prompt_data]
+var data_dir = "res://globals/prompts/data/"
+var prompts: Dictionary
 
 
 func _ready() -> void:
 	for file_name in DirAccess.get_files_at(data_dir):
 		if (file_name.get_extension() == "tres"):
 			var res = ResourceLoader.load(data_dir+file_name)
-			prompts.append(res)
+			var name = file_name.substr(0,file_name.length()-5)
+			name = normalize_name(name)
+			res.name = name
+			prompts[name]=res
 			pass
 	
+func normalize_name(name:String):
+	name = name.to_lower().strip_edges().replace(" ","_")
+	return name
+
 func get_prompt(name:String):
-	for prompt in prompts:
-		if prompt.name != name: continue
-		if not prompt.active: continue
-		return prompt.text
+	name = normalize_name(name)
+	var prompt = prompts[name] 
+	if prompt == null: return 
+	if not prompt.active: return
+	return prompt.text
 	

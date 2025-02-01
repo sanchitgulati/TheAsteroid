@@ -19,12 +19,12 @@ class_name npc_data
 	
 
 func build_system_prompt():
-	var system_prompt: String
+	var system_prompt: String = ""
 	
 #####################
 # COMMON BACKGROUND #
 #####################
-
+	system_prompt += Prompts.get_prompt('world') 
 	system_prompt = """
 
 Your live on Plotino, a remote asteroid in the Kuiper Belt mined for Helium-3 by "The Company", a ruthlessly efficient megacorporation.
