@@ -20,10 +20,11 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	
+		
 	if visible:
-		if Input.is_action_pressed("esc"): close()
-		if Input.is_action_pressed("enter"): talk()
+		if Input.is_action_just_pressed("esc"): close()
+		if Input.is_action_just_pressed("enter"): talk()
+		LLM.Dialog.llm_input.editable = not LLM.talking
 		
 	if npc_data_cur != null:
 		character_texture.texture = npc_data_cur.texture
@@ -35,6 +36,7 @@ func _process(_delta: float) -> void:
 		npc = WorldState.current_npc
 		if npc != null:
 			npc_data_cur = npc.data
+			#llm_input.grab_focus()
 	
 	
 	
@@ -51,8 +53,15 @@ func open():
 	#character_texture.texture = WorldState.current_npc.texture
 	
 	
+	var timer:SceneTreeTimer = get_tree().create_timer(0.3)  
+	timer.timeout.connect(set_focus_input)
+	
 	visible = true
 	clear()
+
+func set_focus_input():
+	if not llm_input.has_focus():
+		llm_input.grab_focus()
 
 func close():
 	WorldState.PLAYER.can_move = true
@@ -63,8 +72,11 @@ func close():
 	clear()
 
 func talk():
-	LLM.talk_npc(LLM.Dialog.llm_input.text)
+	var text = LLM.Dialog.llm_input.text
+	if text.strip_edges() != "":
+		LLM.talk_npc(LLM.Dialog.llm_input.text)
 	llm_input.text = ""
+	set_focus_input()
 
 # Button SEND
 func _on_button_pressed(): talk()

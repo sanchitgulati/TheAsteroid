@@ -48,7 +48,7 @@ func process_queue():
 	var prompt = queue.pop_front()
 	if prompt == null: 
 		return false
-	talk_npc(prompt)
+	#talk_npc(prompt)
 	return true
 	
 func _on_chat_response_updated(new_token: String) -> void:
