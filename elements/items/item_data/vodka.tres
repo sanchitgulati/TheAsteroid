@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="item_data" load_steps=3 format=3 uid="uid://bnakhswxbfenw"]
 
 [ext_resource type="Script" path="res://elements/items/item_data.gd" id="1_gokka"]
-[ext_resource type="Texture2D" uid="uid://cqguyab16twq0" path="res://assets/bitmaps/generated/items/vodka_bottle.png" id="2_waiek"]
+[ext_resource type="Texture2D" uid="uid://ca1lb838nlnpl" path="res://assets/bitmaps/generated/items/vodka_bottle_small.png" id="2_y52cj"]
 
 [resource]
 script = ExtResource("1_gokka")
-name = "Vodka Bottle"
+name = "Vodka"
 description = "A bottle of vodka, finest quality."
-texture = ExtResource("2_waiek")
+texture = ExtResource("2_y52cj")

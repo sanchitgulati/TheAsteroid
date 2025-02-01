@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://rp4eqiqkbdpx"]
 
 [ext_resource type="Script" path="res://UI/inventory/inventory_ui.gd" id="1_ljtkx"]
-[ext_resource type="Texture2D" uid="uid://c5ygwwai8r27v" path="res://assets/bitmaps/ui/bubble_9patch.png" id="2_kbbj0"]
+[ext_resource type="Texture2D" uid="uid://dk72pbqq5osj7" path="res://assets/bitmaps/ui/inventory_9patch.png" id="2_6tgn7"]
 
 [node name="Inventory" type="Control"]
 layout_mode = 3
@@ -11,8 +11,8 @@ script = ExtResource("1_ljtkx")
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
 layout_mode = 1
 offset_right = 297.0
-offset_bottom = 124.0
-texture = ExtResource("2_kbbj0")
+offset_bottom = 72.0
+texture = ExtResource("2_6tgn7")
 region_rect = Rect2(-0.0812683, -0.0117111, 129.185, 64.9876)
 patch_margin_left = 32
 patch_margin_top = 32

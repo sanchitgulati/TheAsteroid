@@ -1,22 +1,55 @@
-[gd_resource type="Theme" load_steps=4 format=3 uid="uid://c3gfwu5jojd"]
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://c3gfwu5jojd"]
 
 [ext_resource type="FontFile" uid="uid://iv2gcl0qd8i6" path="res://assets/fonts/SF Pixelate.ttf" id="1_k6ga6"]
 [ext_resource type="FontFile" uid="uid://bkfsvsrp1552e" path="res://assets/fonts/SF Pixelate Bold.ttf" id="2_mfy1l"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fsgyt"]
+bg_color = Color(0.305945, 0.423796, 0.602404, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.722594, 0.59029, 0.286504, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j5rgl"]
+bg_color = Color(0.105311, 0.163914, 0.25278, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.722594, 0.59029, 0.286504, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p35pq"]
 
 [resource]
+default_font = ExtResource("1_k6ga6")
+Button/font_sizes/font_size = 10
+Button/styles/hover = SubResource("StyleBoxFlat_fsgyt")
+Button/styles/normal = SubResource("StyleBoxFlat_j5rgl")
 Label/colors/font_color = Color(0.234205, 0.167239, 0.172922, 1)
 Label/constants/line_spacing = 9
 Label/font_sizes/font_size = 10
 Label/fonts/font = ExtResource("1_k6ga6")
+LabelAlt/base_type = &"Label"
+LabelAlt/colors/font_color = Color(1, 1, 1, 1)
+LabelAlt/constants/outline_size = 4
 RichTextLabel/colors/default_color = Color(0, 0.135325, 0.150964, 1)
 RichTextLabel/constants/line_separation = 5
 RichTextLabel/font_sizes/normal_font_size = 10
 RichTextLabel/fonts/bold_font = ExtResource("2_mfy1l")
 RichTextLabel/fonts/normal_font = ExtResource("1_k6ga6")
+TextEdit/colors/caret_color = Color(0.321431, 0.50219, 0.435264, 1)
 TextEdit/colors/font_color = Color(0.0808155, 0.113188, 0.129423, 1)
 TextEdit/colors/search_result_border_color = Color(0.301961, 0.301961, 0.301961, 0)
+TextEdit/constants/caret_width = 6
 TextEdit/font_sizes/font_size = 10
 TextEdit/fonts/font = ExtResource("1_k6ga6")
 TextEdit/styles/normal = SubResource("StyleBoxEmpty_p35pq")
