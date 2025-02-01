@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Prompt_data" load_steps=2 format=3 uid="uid://b83tv6otlpr2a"]
+
+[ext_resource type="Script" path="res://globals/prompts/prompts_data.gd" id="1_jejhk"]
+
+[resource]
+script = ExtResource("1_jejhk")
+active = true
+name = "world"
+text = ""

@@ -1,4 +1,4 @@
-[gd_scene load_steps=86 format=4 uid="uid://cy2se4msxc27f"]
+[gd_scene load_steps=87 format=4 uid="uid://cy2se4msxc27f"]
 
 [ext_resource type="Script" path="res://environments/world.gd" id="1_cu36i"]
 [ext_resource type="TileSet" uid="uid://dli1an21v3xpa" path="res://assets/bitmaps/tilesets/Grounds2.tres" id="3_d4kqp"]
@@ -34,6 +34,7 @@
 [ext_resource type="Texture2D" uid="uid://ddre27jj7ye35" path="res://assets/bitmaps/generated/env/door.png" id="23_wlevm"]
 [ext_resource type="Material" uid="uid://cermd26dujlt8" path="res://assets/shaders/ColorAdj.tres" id="24_7dyr3"]
 [ext_resource type="Shader" path="res://assets/shaders/ColAdjustement.gdshader" id="24_nwnxv"]
+[ext_resource type="Material" uid="uid://b265yq8x2i4aj" path="res://assets/shaders/EnvAndShadow.tres" id="27_0hoxd"]
 [ext_resource type="Texture2D" uid="uid://cth0rb3d3yyai" path="res://assets/bitmaps/generated/env/energy_core.png" id="38_piady"]
 [ext_resource type="Texture2D" uid="uid://cd3snniw0uy3n" path="res://assets/bitmaps/generated/env/Pipe.png" id="39_akc4s"]
 [ext_resource type="Texture2D" uid="uid://cvesg44cn77ia" path="res://assets/bitmaps/generated/env/Bench.png" id="40_8xwii"]
@@ -278,63 +279,78 @@ tile_set = ExtResource("3_r8imx")
 position = Vector2(0, -64)
 
 [node name="HydrpGreenhouse" type="Sprite2D" parent="Hydroponics"]
+material = ExtResource("27_0hoxd")
 position = Vector2(-328, -768)
 texture = ExtResource("4_4mpff")
 
 [node name="HydrpStruct4" type="Sprite2D" parent="Hydroponics"]
+material = ExtResource("27_0hoxd")
 position = Vector2(-208, -608)
 texture = ExtResource("4_j6vmd")
 
 [node name="HydrpTray3" type="Sprite2D" parent="Hydroponics"]
+material = ExtResource("27_0hoxd")
 position = Vector2(-320, -576)
 texture = ExtResource("5_fy4wc")
 
 [node name="HydrpTray8" type="Sprite2D" parent="Hydroponics"]
+material = ExtResource("27_0hoxd")
 position = Vector2(-33, -760)
 texture = ExtResource("5_fy4wc")
 
 [node name="HydrpTray9" type="Sprite2D" parent="Hydroponics"]
+material = ExtResource("27_0hoxd")
 position = Vector2(-144, -760)
 texture = ExtResource("5_fy4wc")
 
 [node name="HydrpTray4" type="Sprite2D" parent="Hydroponics"]
+material = ExtResource("27_0hoxd")
 position = Vector2(-98, -576)
 texture = ExtResource("5_fy4wc")
 
 [node name="HydrpTray5" type="Sprite2D" parent="Hydroponics"]
+material = ExtResource("27_0hoxd")
 position = Vector2(-145, -368)
 texture = ExtResource("5_fy4wc")
 
 [node name="HydrpTray6" type="Sprite2D" parent="Hydroponics"]
+material = ExtResource("27_0hoxd")
 position = Vector2(-256, -368)
 texture = ExtResource("5_fy4wc")
 
 [node name="HydrpTray7" type="Sprite2D" parent="Hydroponics"]
+material = ExtResource("27_0hoxd")
 position = Vector2(-34, -368)
 texture = ExtResource("5_fy4wc")
 
 [node name="DeskComputer" type="Sprite2D" parent="Hydroponics"]
+material = ExtResource("27_0hoxd")
 position = Vector2(-240, -768)
 texture = ExtResource("12_se4yj")
 
 [node name="Server" type="Sprite2D" parent="Hydroponics"]
+material = ExtResource("27_0hoxd")
 position = Vector2(-267, -822)
 texture = ExtResource("13_i8llp")
 
 [node name="Server2" type="Sprite2D" parent="Hydroponics"]
+material = ExtResource("27_0hoxd")
 position = Vector2(-243, -822)
 texture = ExtResource("13_i8llp")
 
 [node name="Server3" type="Sprite2D" parent="Hydroponics"]
+material = ExtResource("27_0hoxd")
 position = Vector2(-219, -822)
 texture = ExtResource("13_i8llp")
 
 [node name="EnergyControl5" type="Sprite2D" parent="Hydroponics"]
+material = ExtResource("27_0hoxd")
 position = Vector2(-365, -336)
 scale = Vector2(1.5625, 1.5625)
 texture = ExtResource("41_7mh01")
 
 [node name="EnergyControl6" type="Sprite2D" parent="Hydroponics"]
+material = ExtResource("27_0hoxd")
 position = Vector2(-336, -336)
 scale = Vector2(1.5625, 1.5625)
 texture = ExtResource("41_7mh01")
@@ -619,6 +635,7 @@ position = Vector2(-27.5, -115.5)
 texture = ExtResource("15_rsbas")
 
 [node name="EnergyCore" type="Sprite2D" parent="Mechanic"]
+material = ExtResource("27_0hoxd")
 position = Vector2(-80, -8)
 scale = Vector2(1.67073, 1.67073)
 texture = ExtResource("38_piady")

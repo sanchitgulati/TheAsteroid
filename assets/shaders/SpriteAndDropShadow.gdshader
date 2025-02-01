@@ -89,7 +89,7 @@ void fragment() {
 
 	// Blend the shadow and the main texture properly
 	vec4 result = mix(shadow, main_texture, main_texture.a);
-	
+
 	// Ensure the sprite is drawn properly
 	if (main_texture.a > 0.0) {
 		result = main_texture;

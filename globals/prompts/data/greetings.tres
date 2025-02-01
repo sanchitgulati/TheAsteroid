@@ -5,5 +5,4 @@
 [resource]
 script = ExtResource("1_56x2u")
 active = true
-unique_name = "greetings"
 text = "Hello, I'm Inspector Kalasnikov. Who are you and what do you do in The Station?"
