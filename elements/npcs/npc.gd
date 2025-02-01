@@ -45,7 +45,7 @@ func _on_body_entered(body: Node2D) -> void:
 			Inventory.open()
 		
 		
-		var prompt = Prompts.greetings
+		var prompt = Prompts.get_prompt('greetings')
 		LLM.talk_npc(prompt)
 		
 		var found_beer = Inventory.search('beer can')

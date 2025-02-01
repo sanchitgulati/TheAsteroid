@@ -9,7 +9,7 @@ extends Area2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	if data != null:
+	if data != null and data.texture != null:
 		texture_rect.texture = data.texture
 		display_name.text = data.name
 		sprite_shadow.texture = data.texture
@@ -20,12 +20,12 @@ func _ready() -> void:
 
 #SPENTO PERCHE' ERA IMPOX DEBUGGARE :-(aaa
 
-#func _process(delta: float) -> void:
-	#if Engine.is_editor_hint():
-		#if texture_rect.texture != data.texture:
-			#texture_rect.texture = data.texture
-			#sprite_shadow.texture = data.texture
-	#pass
+func _process(delta: float) -> void:
+	if Engine.is_editor_hint():
+		if data!=null and data.texture != null and texture_rect.texture != data.texture:
+			texture_rect.texture = data.texture
+			sprite_shadow.texture = data.texture
+	pass
 
 
 func _on_body_entered(body: Node2D) -> void:
