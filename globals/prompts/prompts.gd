@@ -21,6 +21,11 @@ func get_prompt(name:String):
 	name = normalize_name(name)
 	var prompt = prompts[name] 
 	if prompt == null: return 
-	if not prompt.active: return
-	return prompt.text
+	
+	var output = ""
+	for part in prompt.list:
+		if not part.active: continue
+		output += part.text
+	
+	return output
 	

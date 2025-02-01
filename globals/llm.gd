@@ -61,7 +61,6 @@ func _on_chat_response_finished(_response: String) -> void:
 		WorldState.current_npc.chat_history.append(_response)
 	print(_response)
 	talking = false
-	LLM.Dialog.llm_output.text += '\n---\n'
 	if not process_queue():
 		LLM.Dialog.llm_input.text = "";
 		
