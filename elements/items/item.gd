@@ -15,7 +15,7 @@ func _ready() -> void:
 func set_from_data():
 	if data == null: return
 	if data.texture == null: return 
-	if texture_rect.texture != data.texture: return
+	if texture_rect.texture == data.texture: return
 	texture_rect.texture = data.texture
 	display_name.text = data.name
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -23,8 +23,8 @@ func set_from_data():
 #SPENTO PERCHE' ERA IMPOX DEBUGGARE :-(aaa
 
 func _process(delta: float) -> void:
-	if Engine.is_editor_hint():
-		set_from_data()
+	#if Engine.is_editor_hint():
+	set_from_data()
 	pass
 
 
