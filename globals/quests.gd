@@ -12,7 +12,7 @@ func _process(_delta: float) -> void:
 	pass
 
 
-func check_quest(current_npc: NPC):
+func check_quest(current_npc: npc_data):
 	var next_quest = get_next_quest(current_npc)
 	if next_quest != null:
 		start_quest(next_quest)
@@ -24,26 +24,24 @@ func check_quest(current_npc: NPC):
 		check_step_progress(current, current_npc)
 		return current
 	
-	
+func start_quest(quest:quest_data):
+	if quest.progress >= 0: return
+	quest.progress = 1
 
-func get_next_quest(current_npc: NPC):
+func get_next_quest(current_npc: npc_data):
 	for quest in quests:
-		var npc = quest_npc(quest)
-		if npc != current_npc: continue
+		var data_npc = quest_npc(quest)
+		if data_npc != current_npc: continue
 		
 		if quest.progress != -1: continue
 		if not check_step_requests(quest): continue  
 		return quest
 
-func start_quest(quest:quest_data):
-	if quest.progress >= 0: return
-	quest.progress = 1
-
-func get_open_quests(current_npc: NPC):
+func get_open_quests(current_npc: npc_data):
 	var open = []
 	for quest in quests:
-		var npc = quest_npc(quest)
-		if npc != current_npc: continue
+		var data_npc = quest_npc(quest)
+		if data_npc != current_npc: continue
 		if quest.progress < 0: continue
 		if quest.progress >= quest.steps.size(): continue
 		open.append(quest)
@@ -54,7 +52,7 @@ func quest_npc(quest:quest_data):
 	var npc = quest.default_npc if step == null or step.step_npc == null else step.step_npc
 	return npc
 	
-func check_step_progress(quest:quest_data, current_npc: NPC):
+func check_step_progress(quest:quest_data, current_npc: npc_data):
 	var cur_step = current_quest_step(quest)
 	if cur_step == null: return false
 		
