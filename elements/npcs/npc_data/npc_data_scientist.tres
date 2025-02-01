@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="npc_data" load_steps=3 format=3 uid="uid://c4ckkmv0baq7p"]
 
 [ext_resource type="Script" path="res://elements/npcs/npc_data/npc_data.gd" id="1_lp76s"]
-[ext_resource type="Texture2D" uid="uid://56wrccsgqgww" path="res://assets/bitmaps/generated/scientist.png" id="2_wf2sn"]
+[ext_resource type="Texture2D" uid="uid://56wrccsgqgww" path="res://assets/bitmaps/generated/chars/scientist.png" id="2_wf2sn"]
 
 [resource]
 script = ExtResource("1_lp76s")
