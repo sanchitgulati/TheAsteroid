@@ -5,5 +5,5 @@
 [resource]
 script = ExtResource("1_7xlfi")
 active = true
-name = "greetings"
+name = "test"
 text = "Hello, I'm Inspector Kalasnikov. Who are you and what do you do in The Station?"
