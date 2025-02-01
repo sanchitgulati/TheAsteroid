@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="npc_data" load_steps=3 format=3 uid="uid://cpseqbo2x2h5u"]
 
 [ext_resource type="Script" path="res://elements/npcs/npc_data/npc_data.gd" id="1_smt3p"]
-[ext_resource type="Texture2D" uid="uid://b3wi3r6v4h5fh" path="res://assets/bitmaps/generated/hydroponic_gardener3.png" id="2_t0ud7"]
+[ext_resource type="Texture2D" uid="uid://b3wi3r6v4h5fh" path="res://assets/bitmaps/generated/chars/hydroponic_gardener3.png" id="2_t0ud7"]
 
 [resource]
 script = ExtResource("1_smt3p")

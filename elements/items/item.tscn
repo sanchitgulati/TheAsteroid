@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://elements/items/item.gd" id="1_emjkg"]
 [ext_resource type="Shader" path="res://assets/shaders/CastShadow.gdshader" id="2_3n7hn"]
 [ext_resource type="Resource" uid="uid://bnakhswxbfenw" path="res://elements/items/item_data/vodka.tres" id="2_usiwa"]
-[ext_resource type="Texture2D" uid="uid://cqguyab16twq0" path="res://assets/bitmaps/generated/vodka_bottle.png" id="5_5bw4q"]
+[ext_resource type="Texture2D" uid="uid://cqguyab16twq0" path="res://assets/bitmaps/generated/items/vodka_bottle.png" id="5_5bw4q"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_4n7ik"]
 shader = ExtResource("2_3n7hn")
