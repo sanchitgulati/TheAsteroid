@@ -16,6 +16,12 @@ func _process(_delta: float) -> void:
 
 func item_count():
 	return items.size()
+	
+func contains(item: item_data):
+	for inv_item in items: 
+		if item == inv_item:
+			return true
+	return false
 
 func add_item(item: item_data):
 	items.append(item)
@@ -38,8 +44,8 @@ func search(item_name: String):
 	item_name = item_name.to_lower().strip_edges()
 	
 	for item in items:
-		var name = item.name.to_lower().strip_edges()
-		if name == item_name: 
+		var slug = item.name.to_lower().strip_edges()
+		if name == slug: 
 			return item
 	
 	return null

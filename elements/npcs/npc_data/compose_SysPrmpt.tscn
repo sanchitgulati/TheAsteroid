@@ -1,6 +1,3 @@
-[gd_scene load_steps=2 format=3 uid="uid://cbkso7n5sp6w8"]
-
-[ext_resource type="Script" path="res://elements/npcs/npc_data/compose_sys_prmpt.gd" id="1_tl00n"]
+[gd_scene format=3 uid="uid://cbq8vdrmq3iex"]
 
 [node name="Node" type="Node"]
-script = ExtResource("1_tl00n")

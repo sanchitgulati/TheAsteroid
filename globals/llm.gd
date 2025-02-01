@@ -28,17 +28,19 @@ func set_system_prompt(prompt:String):
 	
 
 func talk_npc(prompt: String ):
-	print("-----------------------")
+	print("talk_npc_queue:", queue.size() )
 	if WorldState.current_npc == null: return
 	if talking:
-		queue.append(prompt)
+		#queue.append(prompt)
 		return
+	
+	print("-----------------------")
 	talking = true
 	
 	print(prompt)
 	WorldState.current_npc.chat_history.append(prompt)
 	if queue.size() == 0:
-		Dialog.llm_output.text == ""
+		Dialog.llm_output.text = ""
 	
 	Chat.say(prompt)
 
@@ -61,7 +63,7 @@ func _on_chat_response_finished(_response: String) -> void:
 		WorldState.current_npc.chat_history.append(_response)
 	print(_response)
 	talking = false
-	if not process_queue():
-		LLM.Dialog.llm_input.text = "";
+	#if not process_queue():
+	LLM.Dialog.llm_input.text = "";
 		
 	

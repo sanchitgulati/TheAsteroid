@@ -22,6 +22,7 @@ DataLoader="*res://globals/data_loader.gd"
 WorldState="*res://globals/world_state.gd"
 Inventory="*res://globals/inventory.gd"
 Prompts="*res://globals/prompts/prompts.gd"
+Quests="*res://globals/quests.tscn"
 
 [debug]
 

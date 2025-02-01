@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="quest_data" load_steps=11 format=3 uid="uid://diphekyu608sg"]
+
+[ext_resource type="Script" path="res://elements/quests/quest_data.gd" id="1_3spgr"]
+[ext_resource type="Resource" uid="uid://dim7i148sbenk" path="res://elements/npcs/npc_data/npc_data_benno.tres" id="1_12k4y"]
+[ext_resource type="Script" path="res://elements/quests/quest_step.gd" id="2_4viar"]
+[ext_resource type="Script" path="res://elements/items/item_data.gd" id="4_yocys"]
+[ext_resource type="Script" path="res://elements/npcs/npc_data/npc_data.gd" id="5_6qdmm"]
+[ext_resource type="Script" path="res://globals/prompts/prompts_data.gd" id="6_1mt87"]
+[ext_resource type="Resource" uid="uid://feoqskgukx3t" path="res://elements/items/item_data/beer.tres" id="7_6pd8g"]
+[ext_resource type="Resource" uid="uid://bnakhswxbfenw" path="res://elements/items/item_data/vodka.tres" id="8_gdw3k"]
+
+[sub_resource type="Resource" id="Resource_qxltf"]
+script = ExtResource("2_4viar")
+description = "Description"
+request_items = Array[ExtResource("4_yocys")]([])
+request_npcs = Array[ExtResource("5_6qdmm")]([])
+rewards_items = Array[ExtResource("4_yocys")]([])
+rewards_prompts = Array[ExtResource("6_1mt87")]([])
+
+[sub_resource type="Resource" id="Resource_c3t65"]
+script = ExtResource("2_4viar")
+description = "Description"
+request_items = Array[ExtResource("4_yocys")]([ExtResource("7_6pd8g")])
+request_npcs = Array[ExtResource("5_6qdmm")]([])
+rewards_items = Array[ExtResource("4_yocys")]([ExtResource("8_gdw3k")])
+rewards_prompts = Array[ExtResource("6_1mt87")]([])
+
+[resource]
+script = ExtResource("1_3spgr")
+uid = "benno_beer"
+name = "Benno Beer"
+default_npc = ExtResource("1_12k4y")
+description = ""
+progress = -1
+steps = Array[ExtResource("2_4viar")]([SubResource("Resource_qxltf"), SubResource("Resource_c3t65")])

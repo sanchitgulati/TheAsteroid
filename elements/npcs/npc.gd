@@ -16,12 +16,13 @@ func _ready() -> void:
 	set_from_data()
 	pass
 	
-
+func equals(npc:NPC):
+	return self.data.equals(npc.data)
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	if Engine.is_editor_hint():
 		set_from_data()
-	
 	pass
 
 func set_from_data():
@@ -43,20 +44,23 @@ func _on_body_entered(body: Node2D) -> void:
 		if Inventory.item_count() > 0:
 			Inventory.open()
 		
-		
-		var prompt = Prompts.get_prompt('greetings')
-		LLM.talk_npc(prompt)
-		
-		var found_beer = Inventory.search('beer can')
-		if found_beer != null:
-			prompt =  "\n"+"You recieved a beer from inspector Kalasnikov. You drink it stright away,\nbecause you are very thirsy.\nYou feel grateful and trusy\n"
+		var quest = Quests.check_quest(self)
+		if quest == null:
+			var prompt = Prompts.get_prompt('greetings')
 			LLM.talk_npc(prompt)
-			Inventory.remove_item(found_beer)
+		else:
+			Quests.check_step_progress(quest, self)
+		
+		
 			
 #		TODO: bisogna mettere il prompt iniziale dentro il dialog
 
+func talk_to(prompt:String):
+	LLM.talk_npc(prompt)
 
-func _on_body_exited(body: Node2D) -> void:
+
+
+func _on_body_exited(_body: Node2D) -> void:
 	first_touch = true
 	LLM.Dialog.close()
 	WorldState.clear_npc()

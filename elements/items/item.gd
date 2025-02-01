@@ -22,7 +22,7 @@ func set_from_data():
 
 #SPENTO PERCHE' ERA IMPOX DEBUGGARE :-(aaa
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	#if Engine.is_editor_hint():
 	set_from_data()
 	pass

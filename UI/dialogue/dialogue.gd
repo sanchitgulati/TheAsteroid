@@ -6,7 +6,7 @@ class_name Dialogue
 @export var llm_output: RichTextLabel
 @export var llm_input: TextEdit
 @onready var character_texture: TextureRect = $Character
-var npc_data = null
+var npc_data_cur = null
 var npc = null
 
 # Called when the node enters the scene tree for the first time.
@@ -15,7 +15,6 @@ func _ready() -> void:
 	visible=false
 	llm_input.text = ""
 	llm_output.text = ""
-	Inventory.inventory_ui
 	pass # Replace with function body.
 
 
@@ -26,16 +25,16 @@ func _process(_delta: float) -> void:
 		if Input.is_action_pressed("esc"): close()
 		if Input.is_action_pressed("enter"): talk()
 		
-	if npc_data != null:
-		character_texture.texture = npc_data.texture
+	if npc_data_cur != null:
+		character_texture.texture = npc_data_cur.texture
 		if npc != null:
 			character_texture.texture = npc.texture_rect.texture
 			character_texture.modulate = npc.modulate
-		npc_data = null
+		npc_data_cur = null
 	else:
 		npc = WorldState.current_npc
 		if npc != null:
-			npc_data = npc.data
+			npc_data_cur = npc.data
 	
 	
 	
@@ -57,7 +56,7 @@ func open():
 
 func close():
 	WorldState.PLAYER.can_move = true
-	npc_data = null
+	npc_data_cur = null
 	visible = false
 	character_texture.texture = null
 	Inventory.close()

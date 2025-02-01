@@ -7,19 +7,19 @@ func _ready() -> void:
 	for file_name in DirAccess.get_files_at(data_dir):
 		if (file_name.get_extension() == "tres"):
 			var res = ResourceLoader.load(data_dir+file_name)
-			var name = file_name.substr(0,file_name.length()-5)
-			name = normalize_name(name)
-			res.name = name
-			prompts[name]=res
+			var slug = file_name.substr(0,file_name.length()-5)
+			slug = normalize_name(slug)
+			res.name = slug
+			prompts[slug]=res
 			pass
 	
-func normalize_name(name:String):
-	name = name.to_lower().strip_edges().replace(" ","_")
-	return name
+func normalize_name(dirty_name:String):
+	dirty_name = dirty_name.to_lower().strip_edges().replace(" ","_")
+	return dirty_name
 
-func get_prompt(name:String):
-	name = normalize_name(name)
-	var prompt = prompts[name] 
+func get_prompt(slug:String):
+	slug = normalize_name(slug)
+	var prompt = prompts[slug] 
 	if prompt == null: return 
 	
 	var output = ""

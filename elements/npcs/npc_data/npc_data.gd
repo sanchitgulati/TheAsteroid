@@ -3,10 +3,12 @@ extends Resource
 
 class_name npc_data
 
+@export_category("General")
 @export var name: String
 @export var texture:Texture2D
 
 @export var age: int
+@export_category("Prompts")
 @export_multiline var public_persona: String
 @export_multiline var private_persona: String
 @export_multiline var characteristics: String
@@ -14,9 +16,10 @@ class_name npc_data
 @export_multiline var interactions: String
 @export_multiline var friends: String
 @export_multiline var enemies: String
-
 @export_multiline var current_status: String
 	
+func equals(npc:npc_data):
+	return self.resource_name == npc.resource_name
 
 func build_system_prompt():
 	var system_prompt: String = ""
