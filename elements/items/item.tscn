@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://elements/items/item.gd" id="1_emjkg"]
 [ext_resource type="Resource" uid="uid://bnakhswxbfenw" path="res://elements/items/item_data/vodka.tres" id="2_usiwa"]
 [ext_resource type="Texture2D" uid="uid://cqguyab16twq0" path="res://assets/bitmaps/generated/items/vodka_bottle.png" id="5_5bw4q"]
-[ext_resource type="Material" path="res://assets/shaders/SpriteAndShadow.tres" id="5_wx0hq"]
+[ext_resource type="Material" uid="uid://b2v7ukyj8oetb" path="res://assets/shaders/SpriteAndShadow.tres" id="5_wx0hq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hh772"]
 size = Vector2(36, 36)

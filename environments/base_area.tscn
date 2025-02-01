@@ -34,7 +34,7 @@
 [ext_resource type="Texture2D" uid="uid://ddre27jj7ye35" path="res://assets/bitmaps/generated/env/door.png" id="23_wlevm"]
 [ext_resource type="Material" uid="uid://cermd26dujlt8" path="res://assets/shaders/ColorAdj.tres" id="24_7dyr3"]
 [ext_resource type="Shader" path="res://assets/shaders/ColAdjustement.gdshader" id="24_nwnxv"]
-[ext_resource type="Material" path="res://assets/shaders/EnvAndShadow.tres" id="27_0hoxd"]
+[ext_resource type="Material" uid="uid://b265yq8x2i4aj" path="res://assets/shaders/EnvAndShadow.tres" id="27_0hoxd"]
 [ext_resource type="Texture2D" uid="uid://cth0rb3d3yyai" path="res://assets/bitmaps/generated/env/energy_core.png" id="38_piady"]
 [ext_resource type="Texture2D" uid="uid://cd3snniw0uy3n" path="res://assets/bitmaps/generated/env/Pipe.png" id="39_akc4s"]
 [ext_resource type="Texture2D" uid="uid://cvesg44cn77ia" path="res://assets/bitmaps/generated/env/Bench.png" id="40_8xwii"]
@@ -700,7 +700,6 @@ data = ExtResource("11_clx17")
 
 [node name="VodkaBottle" parent="." instance=ExtResource("10_o4pkl")]
 position = Vector2(384, 873)
-data = null
 
 [node name="Label" type="Label" parent="."]
 offset_left = -96.0
