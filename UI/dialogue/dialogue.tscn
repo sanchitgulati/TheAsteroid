@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://ptkseutwb6ke"]
+[gd_scene load_steps=7 format=3 uid="uid://ptkseutwb6ke"]
 
 [ext_resource type="Texture2D" uid="uid://c5ygwwai8r27v" path="res://assets/bitmaps/ui/bubble_9patch.png" id="1_fwq6s"]
 [ext_resource type="Script" path="res://UI/dialogue/dialogue.gd" id="1_jww1s"]
 [ext_resource type="Texture2D" uid="uid://d117yhbmf8o0f" path="res://assets/bitmaps/ui/textfield_9patch.png" id="2_wb1ks"]
 [ext_resource type="Theme" uid="uid://c3gfwu5jojd" path="res://UI/dialogue/Dialogue_theme.tres" id="3_l0jdm"]
 [ext_resource type="Texture2D" uid="uid://cimtoxdlhn7gc" path="res://assets/bitmaps/nobody.png" id="5_1moy0"]
+[ext_resource type="Script" path="res://UI/dialogue/grab_focus.gd" id="6_b8ddn"]
 
 [node name="Dialogue" type="Control" node_paths=PackedStringArray("llm_output", "llm_input")]
 layout_mode = 3
@@ -93,6 +94,7 @@ theme = ExtResource("3_l0jdm")
 text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
 "
 wrap_mode = 1
+script = ExtResource("6_b8ddn")
 metadata/_edit_use_anchors_ = true
 
 [node name="Button" type="Button" parent="NinePatchQuestion"]
@@ -101,6 +103,7 @@ offset_left = 641.0
 offset_top = 10.0
 offset_right = 705.0
 offset_bottom = 54.0
+theme = ExtResource("3_l0jdm")
 text = "Send"
 
 [node name="Button2" type="Button" parent="NinePatchQuestion"]
@@ -109,6 +112,7 @@ offset_left = 713.0
 offset_top = 10.0
 offset_right = 777.0
 offset_bottom = 54.0
+theme = ExtResource("3_l0jdm")
 text = "Close"
 
 [connection signal="pressed" from="NinePatchQuestion/Button" to="." method="_on_button_pressed"]

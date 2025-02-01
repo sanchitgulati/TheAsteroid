@@ -1,11 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://sdf4pddtnkro"]
+[gd_scene load_steps=5 format=3 uid="uid://sdf4pddtnkro"]
 
 [ext_resource type="Texture2D" uid="uid://c6vmia320m4b1" path="res://assets/bitmaps/ui/inv_slot_bg.png" id="1_uemv4"]
 [ext_resource type="Script" path="res://UI/inventory/inventory_slot_ui.gd" id="1_ufp15"]
 [ext_resource type="Theme" uid="uid://c3gfwu5jojd" path="res://UI/dialogue/Dialogue_theme.tres" id="3_714jq"]
+[ext_resource type="Texture2D" uid="uid://cnfgl44xjnyor" path="res://assets/bitmaps/items/beer_can_small.png" id="3_h87q1"]
 
 [node name="InventorySlotUi" type="Control"]
-custom_minimum_size = Vector2(64, 64)
+custom_minimum_size = Vector2(48, 48)
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -23,9 +24,20 @@ custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 color = Color(0.58964, 0.174029, 0.801158, 1)
 
+[node name="TextureBG" type="TextureRect" parent="VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("1_uemv4")
+expand_mode = 3
+stretch_mode = 2
+
 [node name="TextureRect" type="TextureRect" parent="VBoxContainer"]
 layout_mode = 2
-texture = ExtResource("1_uemv4")
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("3_h87q1")
+stretch_mode = 2
 
 [node name="ItemName" type="Label" parent="VBoxContainer"]
 layout_mode = 2
@@ -35,4 +47,4 @@ theme_override_constants/outline_size = 2
 text = "item name is very long"
 horizontal_alignment = 1
 vertical_alignment = 1
-autowrap_mode = 3
+autowrap_mode = 2

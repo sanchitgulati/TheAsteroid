@@ -1,12 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://ccnbdaq3o72at"]
+[gd_scene load_steps=7 format=3 uid="uid://ccnbdaq3o72at"]
 
 [ext_resource type="Script" path="res://elements/items/item.gd" id="1_emjkg"]
 [ext_resource type="Resource" uid="uid://bnakhswxbfenw" path="res://elements/items/item_data/vodka.tres" id="2_usiwa"]
-[ext_resource type="Texture2D" uid="uid://cqguyab16twq0" path="res://assets/bitmaps/generated/items/vodka_bottle.png" id="5_5bw4q"]
+[ext_resource type="Texture2D" uid="uid://ca1lb838nlnpl" path="res://assets/bitmaps/generated/items/vodka_bottle_small.png" id="4_2sram"]
+[ext_resource type="Theme" uid="uid://c3gfwu5jojd" path="res://UI/dialogue/Dialogue_theme.tres" id="5_u0lrv"]
 [ext_resource type="Material" uid="uid://b2v7ukyj8oetb" path="res://assets/shaders/SpriteAndShadow.tres" id="5_wx0hq"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_hh772"]
-size = Vector2(36, 36)
+[sub_resource type="CircleShape2D" id="CircleShape2D_pwra4"]
+radius = 14.1421
 
 [node name="Item" type="Area2D"]
 script = ExtResource("1_emjkg")
@@ -15,23 +16,25 @@ metadata/_edit_vertical_guides_ = [-262.0]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 material = ExtResource("5_wx0hq")
-texture = ExtResource("5_5bw4q")
+position = Vector2(-2, -1)
+texture = ExtResource("4_2sram")
 
 [node name="Name" type="Label" parent="."]
-anchors_preset = 8
+anchors_preset = 5
 anchor_left = 0.5
-anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -49.5
-offset_top = -11.5
-offset_right = 49.5
-offset_bottom = 11.5
+offset_left = -50.0
+offset_top = 19.0
+offset_right = 49.0
+offset_bottom = 42.0
 grow_horizontal = 2
-grow_vertical = 2
-text = "Vodka Bottle"
+theme = ExtResource("5_u0lrv")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 4
+text = "Vodka"
+horizontal_alignment = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_hh772")
+shape = SubResource("CircleShape2D_pwra4")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

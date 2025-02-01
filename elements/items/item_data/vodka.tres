@@ -5,6 +5,6 @@
 
 [resource]
 script = ExtResource("1_gokka")
-name = "Vodka Bottle"
+name = "Vodka"
 description = "A bottle of vodka, finest quality."
 texture = ExtResource("2_y52cj")

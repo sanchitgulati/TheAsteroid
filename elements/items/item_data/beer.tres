@@ -5,6 +5,6 @@
 
 [resource]
 script = ExtResource("1_bjuoi")
-name = "Beer Can"
+name = "Beer"
 description = "A can full of beer, the brand Benno likes most."
 texture = ExtResource("2_eb7m3")
