@@ -856,10 +856,6 @@ position = Vector2(672, 176)
 [node name="ScreenCenter" type="Marker2D" parent="."]
 position = Vector2(600, 400)
 
-[node name="Mushrooms" parent="." instance=ExtResource("10_o4pkl")]
-position = Vector2(-584, -648)
-data = ExtResource("34_02pt1")
-
 [node name="Beer3" parent="." instance=ExtResource("10_o4pkl")]
 position = Vector2(480, -152)
 data = ExtResource("11_clx17")
@@ -1225,3 +1221,25 @@ shape = SubResource("RectangleShape2D_ep4xh")
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="COLL/Hydrphnc COLL"]
 position = Vector2(288, 176)
 shape = SubResource("RectangleShape2D_0heam")
+
+[node name="OUTSIDE" type="Node2D" parent="."]
+
+[node name="Mushrooms" parent="OUTSIDE" instance=ExtResource("10_o4pkl")]
+position = Vector2(-600, -632)
+data = ExtResource("34_02pt1")
+
+[node name="Mushrooms2" parent="OUTSIDE" instance=ExtResource("10_o4pkl")]
+position = Vector2(-560, -592)
+data = ExtResource("34_02pt1")
+
+[node name="Mushrooms5" parent="OUTSIDE" instance=ExtResource("10_o4pkl")]
+position = Vector2(-560, -528)
+data = ExtResource("34_02pt1")
+
+[node name="Mushrooms3" parent="OUTSIDE" instance=ExtResource("10_o4pkl")]
+position = Vector2(-640, -560)
+data = ExtResource("34_02pt1")
+
+[node name="Mushrooms4" parent="OUTSIDE" instance=ExtResource("10_o4pkl")]
+position = Vector2(-616, -496)
+data = ExtResource("34_02pt1")
