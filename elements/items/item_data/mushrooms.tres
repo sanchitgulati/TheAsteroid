@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="item_data" load_steps=3 format=3 uid="uid://dk0efq0rrj1dc"]
 
 [ext_resource type="Script" path="res://elements/items/item_data.gd" id="1_t7o43"]
-[ext_resource type="Texture2D" uid="uid://cvmis555hae1r" path="res://assets/bitmaps/items/4.png" id="2_0pws0"]
+[ext_resource type="Texture2D" uid="uid://xblu7c2gt0ii" path="res://assets/bitmaps/generated/items/mushrooms.png" id="2_0y4a6"]
 
 [resource]
 script = ExtResource("1_t7o43")
-name = "Mushrooms"
+name = "Shrooms"
 description = "Psychedelic Mushrooms found in Deeps of The Cave"
-texture = ExtResource("2_0pws0")
+texture = ExtResource("2_0y4a6")

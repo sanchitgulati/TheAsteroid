@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="quest_data" load_steps=14 format=3 uid="uid://dlti0rcwghtng"]
+[gd_resource type="Resource" script_class="quest_data" load_steps=14 format=3 uid="uid://0fmkn0p7pdch"]
 
 [ext_resource type="Resource" path="res://elements/npcs/npc_data/npc_vending_machine.tres" id="1_k3l5d"]
 [ext_resource type="Script" path="res://elements/quests/quest_data.gd" id="2_37bik"]
@@ -12,7 +12,7 @@
 
 [sub_resource type="Resource" id="Resource_258k0"]
 script = ExtResource("3_gk836")
-description = "QUEST: Will do anything for money! Get this beer, it's the last item I have in stock!"
+description = "QUEST: I'm a Stuff'O'Matic vending machine, I accept Coins."
 requests = Array[ExtResource("4_6u1rh")]([])
 rewards = Array[ExtResource("5_c4ho1")]([])
 
@@ -26,7 +26,7 @@ item = ExtResource("8_wtmjd")
 
 [sub_resource type="Resource" id="Resource_qxltf"]
 script = ExtResource("3_gk836")
-description = "QUEST: I'm a Stuff'O'Matic vending machine, I accept Coins."
+description = "QUEST: I like coins! Only thing I have in stock is a Can of Beer, help yourself."
 requests = Array[ExtResource("4_6u1rh")]([SubResource("Resource_hniwk")])
 rewards = Array[ExtResource("5_c4ho1")]([SubResource("Resource_gnhdn")])
 
