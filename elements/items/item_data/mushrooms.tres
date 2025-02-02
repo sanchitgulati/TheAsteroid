@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="item_data" load_steps=3 format=3 uid="uid://dk0efq0rrj1dc"]
+[gd_resource type="Resource" script_class="item_data" load_steps=3 format=3 uid="uid://xsjrrkohwuic"]
 
 [ext_resource type="Script" path="res://elements/items/item_data.gd" id="1_t7o43"]
 [ext_resource type="Texture2D" uid="uid://xblu7c2gt0ii" path="res://assets/bitmaps/generated/items/mushrooms.png" id="2_0y4a6"]

@@ -86,7 +86,6 @@ color = Color(1, 0, 1, 0.282353)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Soundtrack"]
 stream = ExtResource("4_8wsan")
-volume_db = 18.0
 autoplay = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
