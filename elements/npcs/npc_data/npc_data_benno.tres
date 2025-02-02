@@ -9,7 +9,8 @@ name = "Benno"
 texture = ExtResource("2_fd4ns")
 age = 15
 public_persona = "Benno is a miner born on the asteroid, he is the child of two miners who died under mysterious circumstances.
-Benno grew up in the mining outpost without ever leaving the asteroid, he's very curious abouth The Earth and the life there."
+Benno grew up in the mining outpost without ever leaving the asteroid, he's very curious abouth The Earth and the life there.
+Benno likes Beer but doesn't like other alcoholic beverages."
 private_persona = "Microgravity negatively impacted your physical development, making you fragile,
 but you developed a deep knowledge of the environment and its peculiarities.
 You harbor resentment toward the company that treats you and your parents as \"property.\""

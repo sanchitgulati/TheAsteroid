@@ -13,7 +13,7 @@
 
 [sub_resource type="Resource" id="Resource_qxltf"]
 script = ExtResource("2_4viar")
-description = "If while inspecting, you'll find a beer, bring it to me, i'll reward you profusely."
+description = "QUEST: Hello Inspector, I'm Benno, aren't you thirsty as well?	"
 request_items = Array[ExtResource("4_yocys")]([])
 request_npcs = Array[ExtResource("5_6qdmm")]([])
 rewards_items = Array[ExtResource("4_yocys")]([])
@@ -21,7 +21,7 @@ rewards_prompts = Array[ExtResource("6_1mt87")]([])
 
 [sub_resource type="Resource" id="Resource_c3t65"]
 script = ExtResource("2_4viar")
-description = "thank you for the beer, here some vodka for you!"
+description = "QUEST: Ohhhh, Beer, my favourite! Thank you... If you're thirsty I can give you some Vodka, I don't like it."
 request_items = Array[ExtResource("4_yocys")]([ExtResource("7_6pd8g")])
 request_npcs = Array[ExtResource("5_6qdmm")]([])
 rewards_items = Array[ExtResource("4_yocys")]([ExtResource("8_gdw3k")])
@@ -52,7 +52,7 @@ rewards_prompts = Array[ExtResource("6_1mt87")]([SubResource("Resource_rq54q")])
 [resource]
 script = ExtResource("1_3spgr")
 uid = "benno_beer"
-name = "Benno Beer"
+name = "Beer fot Benno"
 default_npc = ExtResource("1_12k4y")
 description = ""
 progress = -1
