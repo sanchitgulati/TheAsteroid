@@ -65,7 +65,7 @@ rewards = Array[ExtResource("5_ivy6v")]([SubResource("Resource_u5tue")])
 [resource]
 script = ExtResource("1_3spgr")
 uid = "benno_beer"
-active = false
+active = true
 name = "Benno Beer"
 default_npc = ExtResource("1_12k4y")
 description = ""

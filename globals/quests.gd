@@ -2,14 +2,25 @@ extends Node
 
 @export var quests: Array[quest_data] = []
 
+var data_dir = "res://elements/quests/quest_data/"
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	load_quests()
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	pass
+	
+
+func load_quests() -> void:
+	for file_name in DirAccess.get_files_at(data_dir):
+		if (file_name.get_extension() == "tres"):
+			var res = ResourceLoader.load(data_dir+file_name)
+			if not res.active: continue
+			quests.append(res)
 
 
 func check_quest(current_npc: npc_data):

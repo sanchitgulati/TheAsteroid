@@ -1,9 +1,0 @@
-[gd_scene load_steps=4 format=3 uid="uid://cbujdfd23qoyr"]
-
-[ext_resource type="Script" path="res://globals/quests.gd" id="1_rbhvq"]
-[ext_resource type="Script" path="res://elements/quests/quest_data.gd" id="2_qfx62"]
-[ext_resource type="Resource" uid="uid://diphekyu608sg" path="res://elements/quests/quest_data/benno_beer.tres" id="3_exfqc"]
-
-[node name="Quests" type="Node2D"]
-script = ExtResource("1_rbhvq")
-quests = Array[ExtResource("2_qfx62")]([ExtResource("3_exfqc")])
