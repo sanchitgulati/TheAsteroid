@@ -1,6 +1,8 @@
 @tool
 extends Area2D
 
+class_name Item
+
 @export var data: item_data
 @onready var texture_rect: Sprite2D = $Sprite2D
 @onready var display_name: Label = $Name

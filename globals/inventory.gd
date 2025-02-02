@@ -34,6 +34,14 @@ func remove_item(item: item_data):
 			need_redraw = true
 			break
 	pass
+	
+func drop_item(item: item_data):
+	for itm in items:
+		if itm == item:
+			
+			need_redraw = true
+			break
+	pass
 
 func open():
 	if inventory_ui == null: return
