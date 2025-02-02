@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://ceievfwtkqso0"]
 
-[ext_resource type="Script" path="res://elements/player/player.gd" id="1_uqfcx"]
+[ext_resource type="Script" path="res://elements/quests/player/player.gd" id="1_uqfcx"]
 [ext_resource type="Material" uid="uid://b2v7ukyj8oetb" path="res://assets/shaders/SpriteAndShadow.tres" id="2_rbqoe"]
 [ext_resource type="Texture2D" uid="uid://crcuetustuh7w" path="res://assets/bitmaps/generated/chars/detective1.png" id="3_cc7vm"]
 

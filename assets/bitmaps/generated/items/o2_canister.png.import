@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://xdgrs6b8kwf1"
-path="res://.godot/imported/oxy_canister.png-c823d5a71f27c25c8df1f6f98d8c570a.ctex"
+uid="uid://4rmcalddoh4j"
+path="res://.godot/imported/o2_canister.png-aec0b7fe5c6edd8473a0789a14118942.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/bitmaps/items/oxy_canister.png"
-dest_files=["res://.godot/imported/oxy_canister.png-c823d5a71f27c25c8df1f6f98d8c570a.ctex"]
+source_file="res://assets/bitmaps/generated/items/o2_canister.png"
+dest_files=["res://.godot/imported/o2_canister.png-aec0b7fe5c6edd8473a0789a14118942.ctex"]
 
 [params]
 
