@@ -1,4 +1,4 @@
-[gd_scene load_steps=88 format=4 uid="uid://cy2se4msxc27f"]
+[gd_scene load_steps=91 format=4 uid="uid://cy2se4msxc27f"]
 
 [ext_resource type="Script" path="res://environments/world.gd" id="1_cu36i"]
 [ext_resource type="TileSet" uid="uid://dli1an21v3xpa" path="res://assets/bitmaps/tilesets/Grounds2.tres" id="3_d4kqp"]
@@ -17,7 +17,6 @@
 [ext_resource type="Resource" uid="uid://cpseqbo2x2h5u" path="res://elements/npcs/npc_data/npc_data_ivanka.tres" id="8_vtgxy"]
 [ext_resource type="Texture2D" uid="uid://de6f7nbciu35" path="res://assets/bitmaps/generated/env/kitchen_forniture6.png" id="9_cmddw"]
 [ext_resource type="Resource" uid="uid://c4ckkmv0baq7p" path="res://elements/npcs/npc_data/npc_data_scientist.tres" id="9_d7ria"]
-[ext_resource type="Texture2D" uid="uid://df06en7iu0kld" path="res://assets/bitmaps/generated/env/console.png" id="9_ogmy5"]
 [ext_resource type="PackedScene" uid="uid://ccnbdaq3o72at" path="res://elements/items/item.tscn" id="10_o4pkl"]
 [ext_resource type="Texture2D" uid="uid://blu0cuwyjopoo" path="res://assets/bitmaps/generated/env/kitchen_forniture5.png" id="10_otvnd"]
 [ext_resource type="Texture2D" uid="uid://dssxatogwko4m" path="res://assets/bitmaps/generated/env/kitchen_forniture4.png" id="11_4aseb"]
@@ -36,6 +35,8 @@
 [ext_resource type="Shader" path="res://assets/shaders/ColAdjustement.gdshader" id="24_nwnxv"]
 [ext_resource type="Texture2D" uid="uid://cip03cryipm8w" path="res://assets/bitmaps/generated/env/plant1.png" id="26_61xtf"]
 [ext_resource type="Material" uid="uid://b265yq8x2i4aj" path="res://assets/shaders/EnvAndShadow.tres" id="27_0hoxd"]
+[ext_resource type="Resource" uid="uid://dk0efq0rrj1dc" path="res://elements/items/item_data/mushrooms.tres" id="34_02pt1"]
+[ext_resource type="Resource" uid="uid://dhhcwrimnbagq" path="res://elements/items/item_data/coins.tres" id="36_memte"]
 [ext_resource type="Texture2D" uid="uid://cth0rb3d3yyai" path="res://assets/bitmaps/generated/env/energy_core.png" id="38_piady"]
 [ext_resource type="Texture2D" uid="uid://cd3snniw0uy3n" path="res://assets/bitmaps/generated/env/Pipe.png" id="39_akc4s"]
 [ext_resource type="Texture2D" uid="uid://cvesg44cn77ia" path="res://assets/bitmaps/generated/env/Bench2.png" id="40_8xwii"]
@@ -44,9 +45,12 @@
 [ext_resource type="Theme" uid="uid://c3gfwu5jojd" path="res://UI/dialogue/Dialogue_theme.tres" id="41_rrr02"]
 [ext_resource type="Resource" uid="uid://dwseu1fmbin03" path="res://elements/npcs/npc_data/npc_john_lin.tres" id="42_qxk8x"]
 [ext_resource type="Texture2D" uid="uid://do2xejiglmol5" path="res://assets/bitmaps/generated/env/desk_alt.png" id="42_y3rwu"]
+[ext_resource type="Resource" uid="uid://dvigw1d87rldf" path="res://elements/npcs/npc_data/npc_vending_machine.tres" id="44_0jtl1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6ggm6"]
 size = Vector2(54, 24)
+
+[sub_resource type="SphereMesh" id="SphereMesh_4k21t"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_wcquh"]
 shader = ExtResource("24_nwnxv")
@@ -279,12 +283,6 @@ tile_set = ExtResource("3_r8imx")
 [node name="Hydroponics" type="Node2D" parent="."]
 position = Vector2(0, -64)
 
-[node name="VodkaBottle2" parent="Hydroponics" instance=ExtResource("10_o4pkl")]
-position = Vector2(-360, -808)
-
-[node name="VodkaBottle3" parent="Hydroponics" instance=ExtResource("10_o4pkl")]
-position = Vector2(-296, -808)
-
 [node name="HydrpGreenhouse" type="Sprite2D" parent="Hydroponics"]
 material = ExtResource("27_0hoxd")
 position = Vector2(-328, -768)
@@ -413,11 +411,6 @@ texture = ExtResource("11_4aseb")
 material = ExtResource("27_0hoxd")
 position = Vector2(603.5, -57.5)
 texture = ExtResource("11_4aseb")
-
-[node name="BeerMachine" type="Sprite2D" parent="Kitchen"]
-material = ExtResource("27_0hoxd")
-position = Vector2(538, -52)
-texture = ExtResource("9_ogmy5")
 
 [node name="Table" type="StaticBody2D" parent="Kitchen"]
 position = Vector2(654, -1)
@@ -578,6 +571,110 @@ texture = ExtResource("20_hsin3")
 [node name="Plant1" type="Sprite2D" parent="CrewQuart"]
 position = Vector2(1029, -72)
 texture = ExtResource("26_61xtf")
+
+[node name="Smoke" type="Node2D" parent="CrewQuart"]
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="CrewQuart/Smoke"]
+modulate = Color(0.5412, 0.56892, 0.66, 0.470588)
+position = Vector2(1024, 208)
+scale = Vector2(68.3272, 68.25)
+mesh = SubResource("SphereMesh_4k21t")
+
+[node name="MeshInstance2D4" type="MeshInstance2D" parent="CrewQuart/Smoke"]
+modulate = Color(0.5412, 0.56892, 0.66, 0.470588)
+position = Vector2(1072, 232)
+scale = Vector2(68.3272, 68.25)
+mesh = SubResource("SphereMesh_4k21t")
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="CrewQuart/Smoke"]
+modulate = Color(0.5412, 0.56892, 0.66, 0.470588)
+position = Vector2(1072, 192)
+scale = Vector2(34.1636, 34.125)
+mesh = SubResource("SphereMesh_4k21t")
+
+[node name="MeshInstance2D7" type="MeshInstance2D" parent="CrewQuart/Smoke"]
+modulate = Color(0.5412, 0.56892, 0.66, 0.470588)
+position = Vector2(1048, 176)
+scale = Vector2(34.1636, 34.125)
+mesh = SubResource("SphereMesh_4k21t")
+
+[node name="MeshInstance2D17" type="MeshInstance2D" parent="CrewQuart/Smoke"]
+modulate = Color(0.5412, 0.56892, 0.66, 0.470588)
+position = Vector2(1064, 216)
+scale = Vector2(34.1636, 34.125)
+mesh = SubResource("SphereMesh_4k21t")
+
+[node name="MeshInstance2D10" type="MeshInstance2D" parent="CrewQuart/Smoke"]
+modulate = Color(0.5412, 0.56892, 0.66, 0.470588)
+position = Vector2(1072, 168)
+scale = Vector2(34.1636, 34.125)
+mesh = SubResource("SphereMesh_4k21t")
+
+[node name="MeshInstance2D11" type="MeshInstance2D" parent="CrewQuart/Smoke"]
+modulate = Color(0.5412, 0.56892, 0.66, 0.470588)
+position = Vector2(1024, 240)
+scale = Vector2(34.1636, 34.125)
+mesh = SubResource("SphereMesh_4k21t")
+
+[node name="MeshInstance2D12" type="MeshInstance2D" parent="CrewQuart/Smoke"]
+modulate = Color(0.5412, 0.56892, 0.66, 0.470588)
+position = Vector2(1088, 248)
+scale = Vector2(34.1636, 34.125)
+mesh = SubResource("SphereMesh_4k21t")
+
+[node name="MeshInstance2D8" type="MeshInstance2D" parent="CrewQuart/Smoke"]
+modulate = Color(0.5412, 0.56892, 0.66, 0.470588)
+position = Vector2(1104, 192)
+scale = Vector2(34.1636, 34.125)
+mesh = SubResource("SphereMesh_4k21t")
+
+[node name="MeshInstance2D9" type="MeshInstance2D" parent="CrewQuart/Smoke"]
+modulate = Color(0.5412, 0.56892, 0.66, 0.470588)
+position = Vector2(1016, 168)
+scale = Vector2(34.1636, 34.125)
+mesh = SubResource("SphereMesh_4k21t")
+
+[node name="MeshInstance2D3" type="MeshInstance2D" parent="CrewQuart/Smoke"]
+modulate = Color(0.5412, 0.56892, 0.66, 0.470588)
+position = Vector2(992, 192)
+scale = Vector2(20.5546, 20.5313)
+mesh = SubResource("SphereMesh_4k21t")
+
+[node name="MeshInstance2D14" type="MeshInstance2D" parent="CrewQuart/Smoke"]
+modulate = Color(0.5412, 0.56892, 0.66, 0.470588)
+position = Vector2(1000, 224)
+scale = Vector2(20.5546, 20.5313)
+mesh = SubResource("SphereMesh_4k21t")
+
+[node name="MeshInstance2D15" type="MeshInstance2D" parent="CrewQuart/Smoke"]
+modulate = Color(0.5412, 0.56892, 0.66, 0.470588)
+position = Vector2(1008, 256)
+scale = Vector2(20.5546, 20.5313)
+mesh = SubResource("SphereMesh_4k21t")
+
+[node name="MeshInstance2D16" type="MeshInstance2D" parent="CrewQuart/Smoke"]
+modulate = Color(0.5412, 0.56892, 0.66, 0.470588)
+position = Vector2(1048, 248)
+scale = Vector2(20.5546, 20.5313)
+mesh = SubResource("SphereMesh_4k21t")
+
+[node name="MeshInstance2D5" type="MeshInstance2D" parent="CrewQuart/Smoke"]
+modulate = Color(0.5412, 0.56892, 0.66, 0.470588)
+position = Vector2(1048, 152)
+scale = Vector2(20.5546, 20.5313)
+mesh = SubResource("SphereMesh_4k21t")
+
+[node name="MeshInstance2D13" type="MeshInstance2D" parent="CrewQuart/Smoke"]
+modulate = Color(0.5412, 0.56892, 0.66, 0.470588)
+position = Vector2(1112, 224)
+scale = Vector2(20.5546, 20.5313)
+mesh = SubResource("SphereMesh_4k21t")
+
+[node name="MeshInstance2D6" type="MeshInstance2D" parent="CrewQuart/Smoke"]
+modulate = Color(0.5412, 0.56892, 0.66, 0.470588)
+position = Vector2(1096, 160)
+scale = Vector2(20.5546, 20.5313)
+mesh = SubResource("SphereMesh_4k21t")
 
 [node name="CryogenicSecret" type="Node2D" parent="."]
 
@@ -759,9 +856,21 @@ position = Vector2(672, 176)
 [node name="ScreenCenter" type="Marker2D" parent="."]
 position = Vector2(600, 400)
 
-[node name="Beer" parent="." instance=ExtResource("10_o4pkl")]
-position = Vector2(576, 29)
+[node name="Mushrooms" parent="." instance=ExtResource("10_o4pkl")]
+position = Vector2(-584, -648)
+data = ExtResource("34_02pt1")
+
+[node name="Beer3" parent="." instance=ExtResource("10_o4pkl")]
+position = Vector2(480, -152)
 data = ExtResource("11_clx17")
+
+[node name="Beer4" parent="." instance=ExtResource("10_o4pkl")]
+position = Vector2(-368, -872)
+data = ExtResource("36_memte")
+
+[node name="Beer5" parent="." instance=ExtResource("10_o4pkl")]
+position = Vector2(520, 24)
+data = ExtResource("36_memte")
 
 [node name="VodkaBottle" parent="." instance=ExtResource("10_o4pkl")]
 position = Vector2(384, 873)
@@ -848,19 +957,19 @@ modulate = Color(0.531259, 0.205409, 0.294548, 1)
 position = Vector2(224, 864)
 
 [node name="Walter" parent="Chars" instance=ExtResource("5_jgyno")]
-position = Vector2(1024, 208)
+position = Vector2(144, -24)
 data = ExtResource("7_c1awk")
 
 [node name="Ivanka" parent="Chars" instance=ExtResource("5_jgyno")]
-position = Vector2(-96, -544)
+position = Vector2(-64, -536)
 data = ExtResource("8_vtgxy")
 
 [node name="Barrow" parent="Chars" instance=ExtResource("5_jgyno")]
-position = Vector2(-136, 384)
+position = Vector2(144, 384)
 data = ExtResource("9_d7ria")
 
 [node name="EddyLin" parent="Chars" instance=ExtResource("5_jgyno")]
-position = Vector2(1016, 392)
+position = Vector2(1024, 408)
 scale = Vector2(0.675663, 0.675663)
 data = ExtResource("40_cg62m")
 
@@ -877,7 +986,7 @@ justification_flags = 171
 metadata/_edit_use_anchors_ = true
 
 [node name="JohnLin" parent="Chars" instance=ExtResource("5_jgyno")]
-position = Vector2(1016, 584)
+position = Vector2(1024, 592)
 data = ExtResource("42_qxk8x")
 
 [node name="Label" type="Label" parent="Chars/JohnLin"]
@@ -894,6 +1003,10 @@ theme_override_constants/outline_size = 5
 text = "Prompt from paper\"Gen Agents\""
 autowrap_mode = 2
 justification_flags = 171
+
+[node name="VendingMachine" parent="Chars" instance=ExtResource("5_jgyno")]
+position = Vector2(536, -56)
+data = ExtResource("44_0jtl1")
 
 [node name="COLL" type="Node2D" parent="."]
 visible = false

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://df06en7iu0kld"
-path="res://.godot/imported/console.png-91f98cdb7058dca380393c3c5a544704.ctex"
+uid="uid://d3ufb2jp42t6q"
+path="res://.godot/imported/Bribe.png-b456a0255bb9b4ea18a32e2a9e4fe666.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/bitmaps/generated/env/console.png"
-dest_files=["res://.godot/imported/console.png-91f98cdb7058dca380393c3c5a544704.ctex"]
+source_file="res://assets/bitmaps/Bribe.png"
+dest_files=["res://.godot/imported/Bribe.png-b456a0255bb9b4ea18a32e2a9e4fe666.ctex"]
 
 [params]
 

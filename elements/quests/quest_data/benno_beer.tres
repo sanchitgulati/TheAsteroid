@@ -13,9 +13,9 @@
 [ext_resource type="Resource" uid="uid://cpseqbo2x2h5u" path="res://elements/npcs/npc_data/npc_data_ivanka.tres" id="10_qvuhh"]
 [ext_resource type="Script" path="res://elements/quests/reward_prompt_world.gd" id="10_we7w0"]
 
-[sub_resource type="Resource" id="Resource_qxltf"]
+[sub_resource type="Resource" id="Resource_bcgd0"]
 script = ExtResource("2_4viar")
-description = "If while inspecting, you'll find a beer, bring it to me, i'll reward you profusely."
+description = "QUEST: Hello Inpector, I'm Benno, The Station is so hot, aren't you thirsty too?"
 requests = Array[ExtResource("4_h553h")]([])
 rewards = Array[ExtResource("5_ivy6v")]([])
 
@@ -29,7 +29,7 @@ item = ExtResource("8_olo00")
 
 [sub_resource type="Resource" id="Resource_c3t65"]
 script = ExtResource("2_4viar")
-description = "thank you for the beer, here some vodka for you!"
+description = "QUEST: Oh wow! This is my favourite Beer! Please take this Bottle of Vodka, I don't Like it."
 requests = Array[ExtResource("4_h553h")]([SubResource("Resource_itf8b")])
 rewards = Array[ExtResource("5_ivy6v")]([SubResource("Resource_sxg3a")])
 
@@ -43,7 +43,7 @@ item = ExtResource("10_3i8gi")
 
 [sub_resource type="Resource" id="Resource_ebyfa"]
 script = ExtResource("2_4viar")
-description = "Thank you for the vodka, here beeno's pendant!"
+description = "Thank you for the vodka, here benno's pendant!"
 step_npc = ExtResource("10_qvuhh")
 requests = Array[ExtResource("4_h553h")]([SubResource("Resource_2oh20")])
 rewards = Array[ExtResource("5_ivy6v")]([SubResource("Resource_igrou")])
@@ -70,4 +70,4 @@ name = "Benno Beer"
 default_npc = ExtResource("1_12k4y")
 description = ""
 progress = -1
-steps = Array[ExtResource("2_4viar")]([SubResource("Resource_qxltf"), SubResource("Resource_c3t65"), SubResource("Resource_ebyfa"), SubResource("Resource_t0bfe")])
+steps = Array[ExtResource("2_4viar")]([SubResource("Resource_bcgd0"), SubResource("Resource_c3t65"), SubResource("Resource_ebyfa"), SubResource("Resource_t0bfe")])

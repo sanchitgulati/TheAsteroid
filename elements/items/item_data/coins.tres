@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="item_data" load_steps=3 format=3 uid="uid://dhhcwrimnbagq"]
+
+[ext_resource type="Script" path="res://elements/items/item_data.gd" id="1_mbhko"]
+[ext_resource type="Texture2D" uid="uid://d3ufb2jp42t6q" path="res://assets/bitmaps/Bribe.png" id="2_5bite"]
+
+[resource]
+script = ExtResource("1_mbhko")
+name = "Coins"
+description = "Very useful in most occasions."
+texture = ExtResource("2_5bite")
