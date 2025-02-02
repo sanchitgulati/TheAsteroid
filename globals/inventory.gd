@@ -28,8 +28,11 @@ func add_item(item: item_data):
 	need_redraw = true
 	
 func remove_item(item: item_data):
-	items.erase(item)
-	need_redraw = true
+	for itm in items:
+		if itm == item:
+			items.erase(item)
+			need_redraw = true
+			break
 	pass
 
 func open():

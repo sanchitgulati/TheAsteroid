@@ -65,18 +65,18 @@ func check_step_progress(quest:quest_data, current_npc: npc_data):
 	give_rewards(cur_step)
 	quest.progress += 1
 	return cur_step
-	
 
 func take_requests(step:quest_step):
-	for item in step.request_items:
-		Inventory.remove_item(item)
-		print("take_request", item.name)
-	
+	for request in step.requests:
+		if request is request_item:
+			Inventory.remove_item(request.item)
+			print("take_request: ", request.item.name)
 
 func give_rewards(step:quest_step):
-	for item in step.rewards_items:
-		Inventory.add_item(item)
-		print("give_reward", item.name)
+	for reward in step.rewards:
+		if reward is reward_item:
+			Inventory.add_item(reward.item)
+			print("give_reward: ", reward.item.name)
 
 func current_quest_step(quest: quest_data):
 	if quest.progress>=quest.steps.size(): return null 
@@ -94,8 +94,10 @@ func check_step_requests(quest: quest_data):
 
 func check_step_items(step:quest_step):
 	var found = true
-	for item in step.request_items:
-		found = found and Inventory.contains(item)
+	for request in step.requests:
+		if request is request_item:
+			found = found and Inventory.contains(request.item)
+	
 	return found
 
 		

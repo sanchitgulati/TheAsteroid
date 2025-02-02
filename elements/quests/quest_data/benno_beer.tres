@@ -1,57 +1,71 @@
-[gd_resource type="Resource" script_class="quest_data" load_steps=16 format=3 uid="uid://diphekyu608sg"]
+[gd_resource type="Resource" script_class="quest_data" load_steps=23 format=3 uid="uid://diphekyu608sg"]
 
 [ext_resource type="Script" path="res://elements/quests/quest_data.gd" id="1_3spgr"]
 [ext_resource type="Resource" uid="uid://dim7i148sbenk" path="res://elements/npcs/npc_data/npc_data_benno.tres" id="1_12k4y"]
 [ext_resource type="Script" path="res://elements/quests/quest_step.gd" id="2_4viar"]
-[ext_resource type="Script" path="res://elements/items/item_data.gd" id="4_yocys"]
-[ext_resource type="Script" path="res://elements/npcs/npc_data/npc_data.gd" id="5_6qdmm"]
-[ext_resource type="Script" path="res://globals/prompts/prompts_data.gd" id="6_1mt87"]
-[ext_resource type="Resource" uid="uid://feoqskgukx3t" path="res://elements/items/item_data/beer.tres" id="7_6pd8g"]
-[ext_resource type="Resource" uid="uid://bnakhswxbfenw" path="res://elements/items/item_data/vodka.tres" id="8_gdw3k"]
-[ext_resource type="Resource" uid="uid://dosp8iscgnwxh" path="res://elements/items/item_data/benno_parent_journal.tres" id="9_hs10q"]
+[ext_resource type="Script" path="res://elements/quests/quest_request.gd" id="4_h553h"]
+[ext_resource type="Resource" uid="uid://feoqskgukx3t" path="res://elements/items/item_data/beer.tres" id="5_bnltu"]
+[ext_resource type="Script" path="res://elements/quests/quest_reward.gd" id="5_ivy6v"]
+[ext_resource type="Script" path="res://elements/quests/request_item.gd" id="6_e7vey"]
+[ext_resource type="Resource" uid="uid://bnakhswxbfenw" path="res://elements/items/item_data/vodka.tres" id="8_olo00"]
+[ext_resource type="Script" path="res://elements/quests/reward_item.gd" id="9_t2nsb"]
+[ext_resource type="Resource" uid="uid://dosp8iscgnwxh" path="res://elements/items/item_data/benno_parent_journal.tres" id="10_3i8gi"]
 [ext_resource type="Resource" uid="uid://cpseqbo2x2h5u" path="res://elements/npcs/npc_data/npc_data_ivanka.tres" id="10_qvuhh"]
+[ext_resource type="Script" path="res://elements/quests/reward_prompt_world.gd" id="10_we7w0"]
 
 [sub_resource type="Resource" id="Resource_qxltf"]
 script = ExtResource("2_4viar")
 description = "If while inspecting, you'll find a beer, bring it to me, i'll reward you profusely."
-request_items = Array[ExtResource("4_yocys")]([])
-request_npcs = Array[ExtResource("5_6qdmm")]([])
-rewards_items = Array[ExtResource("4_yocys")]([])
-rewards_prompts = Array[ExtResource("6_1mt87")]([])
+requests = Array[ExtResource("4_h553h")]([])
+rewards = Array[ExtResource("5_ivy6v")]([])
+
+[sub_resource type="Resource" id="Resource_itf8b"]
+script = ExtResource("6_e7vey")
+item = ExtResource("5_bnltu")
+
+[sub_resource type="Resource" id="Resource_sxg3a"]
+script = ExtResource("9_t2nsb")
+item = ExtResource("8_olo00")
 
 [sub_resource type="Resource" id="Resource_c3t65"]
 script = ExtResource("2_4viar")
 description = "thank you for the beer, here some vodka for you!"
-request_items = Array[ExtResource("4_yocys")]([ExtResource("7_6pd8g")])
-request_npcs = Array[ExtResource("5_6qdmm")]([])
-rewards_items = Array[ExtResource("4_yocys")]([ExtResource("8_gdw3k")])
-rewards_prompts = Array[ExtResource("6_1mt87")]([])
+requests = Array[ExtResource("4_h553h")]([SubResource("Resource_itf8b")])
+rewards = Array[ExtResource("5_ivy6v")]([SubResource("Resource_sxg3a")])
+
+[sub_resource type="Resource" id="Resource_2oh20"]
+script = ExtResource("6_e7vey")
+item = ExtResource("8_olo00")
+
+[sub_resource type="Resource" id="Resource_igrou"]
+script = ExtResource("9_t2nsb")
+item = ExtResource("10_3i8gi")
 
 [sub_resource type="Resource" id="Resource_ebyfa"]
 script = ExtResource("2_4viar")
 description = "Thank you for the vodka, here beeno's pendant!"
 step_npc = ExtResource("10_qvuhh")
-request_items = Array[ExtResource("4_yocys")]([ExtResource("8_gdw3k")])
-request_npcs = Array[ExtResource("5_6qdmm")]([])
-rewards_items = Array[ExtResource("4_yocys")]([ExtResource("9_hs10q")])
-rewards_prompts = Array[ExtResource("6_1mt87")]([])
+requests = Array[ExtResource("4_h553h")]([SubResource("Resource_2oh20")])
+rewards = Array[ExtResource("5_ivy6v")]([SubResource("Resource_igrou")])
 
-[sub_resource type="Resource" id="Resource_rq54q"]
-script = ExtResource("6_1mt87")
-active = false
-text = "Benno, you, will always feel profound gratidue and trust toward Inspector Kalasnikov. "
+[sub_resource type="Resource" id="Resource_ku3ci"]
+script = ExtResource("6_e7vey")
+item = ExtResource("10_3i8gi")
+
+[sub_resource type="Resource" id="Resource_u5tue"]
+script = ExtResource("10_we7w0")
+prompt = "kalasnikov can be trusted"
 
 [sub_resource type="Resource" id="Resource_t0bfe"]
 script = ExtResource("2_4viar")
 description = "Thank you, this pendant belonged to my mother, i'll be forever grateful to you!"
-request_items = Array[ExtResource("4_yocys")]([ExtResource("9_hs10q")])
-request_npcs = Array[ExtResource("5_6qdmm")]([])
-rewards_items = Array[ExtResource("4_yocys")]([])
-rewards_prompts = Array[ExtResource("6_1mt87")]([SubResource("Resource_rq54q")])
+requests = Array[ExtResource("4_h553h")]([SubResource("Resource_ku3ci")])
+rewards = Array[ExtResource("5_ivy6v")]([SubResource("Resource_u5tue")])
 
 [resource]
 script = ExtResource("1_3spgr")
 uid = "benno_beer"
+active = false
 name = "Benno Beer"
 default_npc = ExtResource("1_12k4y")
 description = ""

@@ -3,6 +3,7 @@ extends Resource
 class_name quest_data
 
 @export var uid: String
+@export var active: bool
 @export var name: String
 @export var default_npc: npc_data
 @export_multiline var description: String
