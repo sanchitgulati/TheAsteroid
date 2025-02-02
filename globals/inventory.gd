@@ -1,5 +1,6 @@
 extends Node
 
+var item_res = preload("res://elements/items/item.tscn")
 var items: Array[item_data] = []
 var need_redraw = true
 var inventory_ui: Inventory_UI
@@ -34,11 +35,22 @@ func remove_item(item: item_data):
 			need_redraw = true
 			break
 	pass
+
+func create_ground_item(item:item_data):
+	var ground_item = item_res.instantiate()
+	ground_item.data = item
+	var parent = WorldState.PLAYER.get_parent()
+	parent.add_child(ground_item)
 	
+	ground_item.transform =  WorldState.PLAYER.transform
+	
+	
+
 func drop_item(item: item_data):
-	for itm in items:
-		if itm == item:
-			
+	for inv_item in items:
+		if inv_item == item:
+			create_ground_item(item)
+			remove_item(item)
 			need_redraw = true
 			break
 	pass

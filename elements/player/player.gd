@@ -6,11 +6,12 @@ class_name Player
 @export var speed : float = 300.0  # Movement speed
 @export var acceleration : float = 500.0  # Smooth acceleration
 @export var friction : float = 500.0  # Friction when stopping
-
+@export var auto_interact:bool = true
 var direction := Vector2.ZERO
 
 var screen_size # Size of the game window.
 var can_move = true
+
 
 func _ready():
 	WorldState.PLAYER = self
