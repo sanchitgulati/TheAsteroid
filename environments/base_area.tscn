@@ -5,7 +5,7 @@
 [ext_resource type="TileSet" uid="uid://bhgia0gmuylsx" path="res://assets/bitmaps/tilesets/SpaceStation.tres" id="3_r8imx"]
 [ext_resource type="Texture2D" uid="uid://ctcd27ctg2jbd" path="res://assets/bitmaps/generated/env/hydrp_greenhouse.png" id="4_4mpff"]
 [ext_resource type="Texture2D" uid="uid://cdpugqw4fq1y5" path="res://assets/bitmaps/generated/env/hydrp_struct.png" id="4_j6vmd"]
-[ext_resource type="PackedScene" uid="uid://ceievfwtkqso0" path="res://elements/quests/player/player.tscn" id="4_xnnpk"]
+[ext_resource type="PackedScene" uid="uid://ceievfwtkqso0" path="res://elements/player/player.tscn" id="4_xnnpk"]
 [ext_resource type="Texture2D" uid="uid://dkusnm4k7almp" path="res://assets/bitmaps/generated/env/hydrp_tray.png" id="5_fy4wc"]
 [ext_resource type="PackedScene" uid="uid://cwgaaiweib4b3" path="res://elements/npcs/npc.tscn" id="5_jgyno"]
 [ext_resource type="Resource" uid="uid://bnss2nwuoksff" path="res://elements/npcs/npc_data/npc_white_drone.tres" id="6_3sh5w"]
@@ -44,7 +44,7 @@
 [ext_resource type="Theme" uid="uid://c3gfwu5jojd" path="res://UI/dialogue/Dialogue_theme.tres" id="41_rrr02"]
 [ext_resource type="Resource" uid="uid://dwseu1fmbin03" path="res://elements/npcs/npc_data/npc_john_lin.tres" id="42_qxk8x"]
 [ext_resource type="Texture2D" uid="uid://do2xejiglmol5" path="res://assets/bitmaps/generated/env/desk_alt.png" id="42_y3rwu"]
-[ext_resource type="Resource" uid="uid://dvigw1d87rldf" path="res://elements/npcs/npc_data/npc_vending_machine.tres" id="44_0jtl1"]
+[ext_resource type="Resource" path="res://elements/npcs/npc_data/npc_vending_machine.tres" id="44_0jtl1"]
 [ext_resource type="Texture2D" uid="uid://d4md5s6gte37u" path="res://assets/bitmaps/generated/canister.png" id="46_mqkpd"]
 [ext_resource type="Texture2D" uid="uid://fdpblg2u1wwk" path="res://assets/bitmaps/generated/env/airlock_door.png" id="47_uxo0t"]
 
