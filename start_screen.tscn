@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://c02x6c7k1q6wj"]
+
+[ext_resource type="PackedScene" uid="uid://cpe6naom4b41x" path="res://intro.tscn" id="1_m61mn"]
+
+[node name="StartScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Intro" parent="." instance=ExtResource("1_m61mn")]
+position = Vector2(13, 34)
+scale = Vector2(0.59, 0.59)
