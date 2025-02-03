@@ -1,0 +1,48 @@
+[gd_scene load_steps=9 format=3 uid="uid://l40mfx1lof5h"]
+
+[ext_resource type="Shader" path="res://assets/shaders/Outline.gdshader" id="1_0p54k"]
+[ext_resource type="Texture2D" uid="uid://b1vx7alsoiyb" path="res://assets/bitmaps/benno4.png" id="1_7rv6t"]
+[ext_resource type="Shader" path="res://assets/shaders/CastShadow.gdshader" id="3_h48ml"]
+[ext_resource type="Shader" path="res://assets/shaders/SpriteAndDropShadow.gdshader" id="4_wlu7c"]
+[ext_resource type="Material" uid="uid://cermd26dujlt8" path="res://assets/shaders/ColorAdj.tres" id="5_cowys"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hsavh"]
+shader = ExtResource("1_0p54k")
+shader_parameter/width = 1.0
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_q2rj6"]
+shader = ExtResource("3_h48ml")
+shader_parameter/look_right = true
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ut61c"]
+shader = ExtResource("4_wlu7c")
+shader_parameter/debug = false
+shader_parameter/border_scale = 2.0
+shader_parameter/shadow_offset = Vector2(-10, -10)
+shader_parameter/color = null
+shader_parameter/blur_amount = 0.0
+shader_parameter/shadow_scale = 1.5
+shader_parameter/disable_rotating = false
+
+[node name="ShaderTester" type="Node2D"]
+
+[node name="Outline" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_hsavh")
+position = Vector2(-96, -48)
+texture = ExtResource("1_7rv6t")
+
+[node name="CastShadov" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_q2rj6")
+position = Vector2(-48, -48)
+texture = ExtResource("1_7rv6t")
+
+[node name="SpriteAndDropShadow" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_ut61c")
+position = Vector2(24, -48)
+texture = ExtResource("1_7rv6t")
+
+[node name="ColorAdj" type="Sprite2D" parent="."]
+material = ExtResource("5_cowys")
+position = Vector2(88, -48)
+texture = ExtResource("1_7rv6t")

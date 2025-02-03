@@ -1,9 +1,9 @@
 [gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://gvsqh74vfut3"]
 
-[ext_resource type="Shader" path="res://assets/shaders/DropShadow.gdshader" id="1_nje3u"]
+[ext_resource type="Shader" path="res://assets/shaders/DropShadow.gdshader" id="1_ov71b"]
 
 [resource]
-shader = ExtResource("1_nje3u")
+shader = ExtResource("1_ov71b")
 shader_parameter/debug = false
 shader_parameter/border_scale = 2.0
 shader_parameter/shadow_offset = Vector2(0, 0.1)

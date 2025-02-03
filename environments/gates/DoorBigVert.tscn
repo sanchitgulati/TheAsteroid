@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://b4y0lr40yujf"]
+
+[ext_resource type="Texture2D" uid="uid://chuwqxcpxuv1q" path="res://assets/bitmaps/tilesets/SpcStationObjcts.png" id="1_53jgp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0l80i"]
+atlas = ExtResource("1_53jgp")
+region = Rect2(64, 64, 32, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hddee"]
+atlas = ExtResource("1_53jgp")
+region = Rect2(96, 64, 32, 128)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kisfn"]
+size = Vector2(32, 128)
+
+[node name="DoorBigVert" type="Node2D"]
+
+[node name="Open" type="TextureRect" parent="."]
+offset_top = -64.0
+offset_right = 40.0
+offset_bottom = 64.0
+texture = SubResource("AtlasTexture_0l80i")
+
+[node name="Close" type="TextureRect" parent="."]
+offset_top = -64.0
+offset_right = 40.0
+offset_bottom = 64.0
+texture = SubResource("AtlasTexture_hddee")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Close"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Close/StaticBody2D"]
+position = Vector2(16, 64)
+shape = SubResource("RectangleShape2D_kisfn")

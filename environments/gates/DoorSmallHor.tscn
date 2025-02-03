@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://bjsnpigujxrna"]
+
+[ext_resource type="Texture2D" uid="uid://chuwqxcpxuv1q" path="res://assets/bitmaps/tilesets/SpcStationObjcts.png" id="1_7sbf2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6rjv0"]
+atlas = ExtResource("1_7sbf2")
+region = Rect2(0, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b60f7"]
+atlas = ExtResource("1_7sbf2")
+region = Rect2(32, 0, 32, 64)
+
+[node name="DoorSmallHor" type="Node2D"]
+
+[node name="Open" type="TextureRect" parent="."]
+offset_top = -64.0
+offset_right = 40.0
+texture = SubResource("AtlasTexture_6rjv0")
+
+[node name="Close" type="TextureRect" parent="."]
+offset_top = -64.0
+offset_right = 40.0
+texture = SubResource("AtlasTexture_b60f7")

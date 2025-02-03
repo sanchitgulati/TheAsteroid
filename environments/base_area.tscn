@@ -1,4 +1,4 @@
-[gd_scene load_steps=92 format=4 uid="uid://cy2se4msxc27f"]
+[gd_scene load_steps=93 format=4 uid="uid://cy2se4msxc27f"]
 
 [ext_resource type="Script" path="res://environments/world.gd" id="1_cu36i"]
 [ext_resource type="TileSet" uid="uid://dli1an21v3xpa" path="res://assets/bitmaps/tilesets/Grounds2.tres" id="3_d4kqp"]
@@ -20,6 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://ccnbdaq3o72at" path="res://elements/items/item.tscn" id="10_o4pkl"]
 [ext_resource type="Texture2D" uid="uid://blu0cuwyjopoo" path="res://assets/bitmaps/generated/env/kitchen_forniture5.png" id="10_otvnd"]
 [ext_resource type="Texture2D" uid="uid://dssxatogwko4m" path="res://assets/bitmaps/generated/env/kitchen_forniture4.png" id="11_4aseb"]
+[ext_resource type="PackedScene" uid="uid://b4iaaacfaffpx" path="res://environments/gates/DoorMedVert.tscn" id="11_tmvlt"]
 [ext_resource type="Texture2D" uid="uid://bd2tipbn1ojkq" path="res://assets/bitmaps/generated/env/desk_computer.png" id="12_se4yj"]
 [ext_resource type="Texture2D" uid="uid://c575ers1s6njk" path="res://assets/bitmaps/generated/env/server.png" id="13_i8llp"]
 [ext_resource type="Texture2D" uid="uid://dydi55p2mh7v2" path="res://assets/bitmaps/generated/env/sink.png" id="14_ct5gn"]
@@ -44,7 +45,7 @@
 [ext_resource type="Theme" uid="uid://c3gfwu5jojd" path="res://UI/dialogue/Dialogue_theme.tres" id="41_rrr02"]
 [ext_resource type="Resource" uid="uid://dwseu1fmbin03" path="res://elements/npcs/npc_data/npc_john_lin.tres" id="42_qxk8x"]
 [ext_resource type="Texture2D" uid="uid://do2xejiglmol5" path="res://assets/bitmaps/generated/env/desk_alt.png" id="42_y3rwu"]
-[ext_resource type="Resource" path="res://elements/npcs/npc_data/npc_vending_machine.tres" id="44_0jtl1"]
+[ext_resource type="Resource" uid="uid://dvigw1d87rldf" path="res://elements/npcs/npc_data/npc_vending_machine.tres" id="44_0jtl1"]
 [ext_resource type="Texture2D" uid="uid://d4md5s6gte37u" path="res://assets/bitmaps/generated/canister.png" id="46_mqkpd"]
 [ext_resource type="Texture2D" uid="uid://fdpblg2u1wwk" path="res://assets/bitmaps/generated/env/airlock_door.png" id="47_uxo0t"]
 
@@ -504,6 +505,12 @@ position = Vector2(-176, 496)
 scale = Vector2(1.5625, 1.5625)
 texture = ExtResource("41_7mh01")
 
+[node name="DoorMedVert3" parent="Laboratory" instance=ExtResource("11_tmvlt")]
+position = Vector2(32, 432)
+
+[node name="DoorMedVert4" parent="Laboratory" instance=ExtResource("11_tmvlt")]
+position = Vector2(120, 432)
+
 [node name="CrewQuart" type="Node2D" parent="."]
 
 [node name="Lockers" type="Sprite2D" parent="CrewQuart"]
@@ -677,6 +684,18 @@ modulate = Color(0.5412, 0.56892, 0.66, 0.470588)
 position = Vector2(1096, 160)
 scale = Vector2(20.5546, 20.5313)
 mesh = SubResource("SphereMesh_4k21t")
+
+[node name="DoorMedVert5" parent="CrewQuart" instance=ExtResource("11_tmvlt")]
+position = Vector2(960, 48)
+
+[node name="DoorMedVert6" parent="CrewQuart" instance=ExtResource("11_tmvlt")]
+position = Vector2(960, 240)
+
+[node name="DoorMedVert7" parent="CrewQuart" instance=ExtResource("11_tmvlt")]
+position = Vector2(960, 432)
+
+[node name="DoorMedVert8" parent="CrewQuart" instance=ExtResource("11_tmvlt")]
+position = Vector2(960, 624)
 
 [node name="CryogenicSecret" type="Node2D" parent="."]
 
@@ -864,6 +883,12 @@ texture = ExtResource("46_mqkpd")
 position = Vector2(-176, 16)
 texture = ExtResource("46_mqkpd")
 
+[node name="DoorMedVert" parent="PowerStation" instance=ExtResource("11_tmvlt")]
+position = Vector2(32, 16)
+
+[node name="DoorMedVert2" parent="PowerStation" instance=ExtResource("11_tmvlt")]
+position = Vector2(120, 16)
+
 [node name="Player" parent="." instance=ExtResource("4_xnnpk")]
 position = Vector2(304, 808)
 
@@ -894,19 +919,19 @@ modulate = Color(0.531259, 0.205409, 0.294548, 1)
 position = Vector2(224, 864)
 
 [node name="Walter" parent="Chars" instance=ExtResource("5_jgyno")]
-position = Vector2(144, -24)
+position = Vector2(-128, 64)
 data = ExtResource("7_c1awk")
 
 [node name="Ivanka" parent="Chars" instance=ExtResource("5_jgyno")]
-position = Vector2(-64, -536)
+position = Vector2(-56, -544)
 data = ExtResource("8_vtgxy")
 
 [node name="Barrow" parent="Chars" instance=ExtResource("5_jgyno")]
-position = Vector2(144, 384)
+position = Vector2(-128, 472)
 data = ExtResource("9_d7ria")
 
 [node name="EddyLin" parent="Chars" instance=ExtResource("5_jgyno")]
-position = Vector2(1024, 408)
+position = Vector2(944, 400)
 scale = Vector2(0.675663, 0.675663)
 data = ExtResource("40_cg62m")
 
@@ -923,7 +948,7 @@ justification_flags = 171
 metadata/_edit_use_anchors_ = true
 
 [node name="JohnLin" parent="Chars" instance=ExtResource("5_jgyno")]
-position = Vector2(1024, 592)
+position = Vector2(944, 576)
 data = ExtResource("42_qxk8x")
 
 [node name="Label" type="Label" parent="Chars/JohnLin"]
@@ -1200,6 +1225,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Label" type="Label" parent="Labels"]
+layout_mode = 0
 offset_left = -96.0
 offset_top = -336.0
 offset_right = 14.0
@@ -1211,6 +1237,7 @@ theme_override_font_sizes/font_size = 18
 text = "Hydroponics"
 
 [node name="Label2" type="Label" parent="Labels"]
+layout_mode = 0
 offset_left = -11.0
 offset_top = 500.0
 offset_right = 99.0
@@ -1222,6 +1249,7 @@ theme_override_font_sizes/font_size = 18
 text = "LAB"
 
 [node name="Label7" type="Label" parent="Labels"]
+layout_mode = 0
 offset_left = -96.0
 offset_top = 80.0
 offset_right = 26.0
@@ -1234,6 +1262,7 @@ text = "Power Station
 "
 
 [node name="Label3" type="Label" parent="Labels"]
+layout_mode = 0
 offset_left = 781.0
 offset_top = 271.0
 offset_right = 891.0
@@ -1245,6 +1274,7 @@ theme_override_font_sizes/font_size = 18
 text = "HUB"
 
 [node name="Label4" type="Label" parent="Labels"]
+layout_mode = 0
 offset_left = 1048.0
 offset_top = 760.0
 offset_right = 1175.0
@@ -1256,6 +1286,7 @@ theme_override_font_sizes/font_size = 18
 text = "Crew Quarters"
 
 [node name="Label5" type="Label" parent="Labels"]
+layout_mode = 0
 offset_left = 352.0
 offset_top = 914.0
 offset_right = 479.0
@@ -1267,6 +1298,7 @@ theme_override_font_sizes/font_size = 18
 text = "Astroport"
 
 [node name="Label6" type="Label" parent="Labels"]
+layout_mode = 0
 offset_left = -40.0
 offset_top = 912.0
 offset_right = 122.0
