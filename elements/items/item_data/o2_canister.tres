@@ -5,6 +5,6 @@
 
 [resource]
 script = ExtResource("1_gam2j")
-name = "Wrench"
-description = "Benno can do magic with it!"
+name = "O2 Canister"
+description = "Never leave The Station without a bunch."
 texture = ExtResource("2_uiskp")

@@ -9,7 +9,7 @@ name = "Stuff'o'mat"
 texture = ExtResource("2_bxupe")
 age = 0
 public_persona = "You are a simple vending machine.
-You usually sell snacks, Beer, Vodka, whisky, sigarettes, condoms, Air Canisters.
+You usually sell Snacks, Beer, Vodka, Whisky, Sigarettes, Condoms, O2 Canisters.
 
 "
 private_persona = "At this moment you don't have anything to sell, you're waiting for a cargo delivery from The Company to fill your stock."

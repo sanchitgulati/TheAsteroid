@@ -1,4 +1,4 @@
-[gd_scene load_steps=93 format=4 uid="uid://cy2se4msxc27f"]
+[gd_scene load_steps=96 format=4 uid="uid://cy2se4msxc27f"]
 
 [ext_resource type="Script" path="res://environments/world.gd" id="1_cu36i"]
 [ext_resource type="TileSet" uid="uid://dli1an21v3xpa" path="res://assets/bitmaps/tilesets/Grounds2.tres" id="3_d4kqp"]
@@ -37,7 +37,10 @@
 [ext_resource type="Material" uid="uid://b265yq8x2i4aj" path="res://assets/shaders/EnvAndShadow.tres" id="27_0hoxd"]
 [ext_resource type="Resource" uid="uid://xsjrrkohwuic" path="res://elements/items/item_data/mushrooms.tres" id="34_02pt1"]
 [ext_resource type="Resource" uid="uid://dhhcwrimnbagq" path="res://elements/items/item_data/coins.tres" id="36_memte"]
+[ext_resource type="Resource" uid="uid://b76kc0k4f1w0y" path="res://elements/items/item_data/met_benno.tres" id="37_2ewrf"]
+[ext_resource type="Resource" uid="uid://feoqskgukx3t" path="res://elements/items/item_data/beer.tres" id="37_58tpb"]
 [ext_resource type="Texture2D" uid="uid://cth0rb3d3yyai" path="res://assets/bitmaps/generated/env/energy_core.png" id="38_piady"]
+[ext_resource type="Resource" uid="uid://b1yqhfywide7i" path="res://elements/items/item_data/met_ivanka.tres" id="39_1k7lm"]
 [ext_resource type="Texture2D" uid="uid://cd3snniw0uy3n" path="res://assets/bitmaps/generated/env/Pipe.png" id="39_akc4s"]
 [ext_resource type="Texture2D" uid="uid://cvesg44cn77ia" path="res://assets/bitmaps/generated/env/Bench2.png" id="40_8xwii"]
 [ext_resource type="Resource" uid="uid://d0vw2j8rj6nqf" path="res://elements/npcs/npc_data/npc_eddy_lin.tres" id="40_cg62m"]
@@ -362,6 +365,16 @@ material = ExtResource("27_0hoxd")
 position = Vector2(-336, -336)
 scale = Vector2(1.5625, 1.5625)
 texture = ExtResource("41_7mh01")
+
+[node name="DoorMedVert3" parent="Hydroponics" instance=ExtResource("11_tmvlt")]
+position = Vector2(32, -464)
+
+[node name="DoorMedVert4" parent="Hydroponics" instance=ExtResource("11_tmvlt")]
+position = Vector2(120, -464)
+
+[node name="Coins" parent="Hydroponics" instance=ExtResource("10_o4pkl")]
+position = Vector2(-368, -808)
+data = ExtResource("36_memte")
 
 [node name="Kitchen" type="Node2D" parent="."]
 
@@ -890,14 +903,10 @@ position = Vector2(32, 16)
 position = Vector2(120, 16)
 
 [node name="Player" parent="." instance=ExtResource("4_xnnpk")]
-position = Vector2(304, 808)
+position = Vector2(664, 176)
 
 [node name="ScreenCenter" type="Marker2D" parent="."]
 position = Vector2(600, 400)
-
-[node name="Coins" parent="." instance=ExtResource("10_o4pkl")]
-position = Vector2(-368, -872)
-data = ExtResource("36_memte")
 
 [node name="Coins2" parent="." instance=ExtResource("10_o4pkl")]
 position = Vector2(1128, 184)
@@ -906,7 +915,7 @@ data = ExtResource("36_memte")
 [node name="Chars" type="Node2D" parent="."]
 
 [node name="Benno" parent="Chars" instance=ExtResource("5_jgyno")]
-position = Vector2(752, 40)
+position = Vector2(600, 32)
 data = ExtResource("6_x0ihc")
 
 [node name="WhiteDrone" parent="Chars" instance=ExtResource("5_jgyno")]
@@ -923,48 +932,12 @@ position = Vector2(-128, 64)
 data = ExtResource("7_c1awk")
 
 [node name="Ivanka" parent="Chars" instance=ExtResource("5_jgyno")]
-position = Vector2(-56, -544)
+position = Vector2(784, 32)
 data = ExtResource("8_vtgxy")
 
 [node name="Barrow" parent="Chars" instance=ExtResource("5_jgyno")]
 position = Vector2(-128, 472)
 data = ExtResource("9_d7ria")
-
-[node name="EddyLin" parent="Chars" instance=ExtResource("5_jgyno")]
-position = Vector2(944, 400)
-scale = Vector2(0.675663, 0.675663)
-data = ExtResource("40_cg62m")
-
-[node name="Label" type="Label" parent="Chars/EddyLin"]
-offset_left = -42.0
-offset_right = 42.0
-offset_bottom = 63.0
-theme = ExtResource("41_rrr02")
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 5
-text = "Prompt from paper\"Gen Agents\""
-autowrap_mode = 2
-justification_flags = 171
-metadata/_edit_use_anchors_ = true
-
-[node name="JohnLin" parent="Chars" instance=ExtResource("5_jgyno")]
-position = Vector2(944, 576)
-data = ExtResource("42_qxk8x")
-
-[node name="Label" type="Label" parent="Chars/JohnLin"]
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -42.0
-offset_right = 42.0
-offset_bottom = 63.0
-grow_horizontal = 2
-theme = ExtResource("41_rrr02")
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 5
-text = "Prompt from paper\"Gen Agents\""
-autowrap_mode = 2
-justification_flags = 171
 
 [node name="VendingMachine" parent="Chars" instance=ExtResource("5_jgyno")]
 position = Vector2(536, -56)
@@ -1308,3 +1281,60 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 8
 theme_override_font_sizes/font_size = 18
 text = "Hidden Cryogenics"
+
+[node name="DEBUG" type="Node2D" parent="."]
+
+[node name="Coins3" parent="DEBUG" instance=ExtResource("10_o4pkl")]
+position = Vector2(664, 264)
+data = ExtResource("36_memte")
+
+[node name="Coins4" parent="DEBUG" instance=ExtResource("10_o4pkl")]
+position = Vector2(520, 240)
+data = ExtResource("37_58tpb")
+
+[node name="vodka" parent="DEBUG" instance=ExtResource("10_o4pkl")]
+position = Vector2(720, 264)
+
+[node name="TlkToBenno" parent="DEBUG" instance=ExtResource("10_o4pkl")]
+position = Vector2(768, 248)
+data = ExtResource("37_2ewrf")
+
+[node name="TlkToBenno2" parent="DEBUG" instance=ExtResource("10_o4pkl")]
+position = Vector2(808, 200)
+data = ExtResource("39_1k7lm")
+
+[node name="EddyLin" parent="DEBUG" instance=ExtResource("5_jgyno")]
+position = Vector2(944, 400)
+scale = Vector2(0.675663, 0.675663)
+data = ExtResource("40_cg62m")
+
+[node name="Label" type="Label" parent="DEBUG/EddyLin"]
+offset_left = -42.0
+offset_right = 42.0
+offset_bottom = 63.0
+theme = ExtResource("41_rrr02")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+text = "Prompt from paper\"Gen Agents\""
+autowrap_mode = 2
+justification_flags = 171
+metadata/_edit_use_anchors_ = true
+
+[node name="JohnLin" parent="DEBUG" instance=ExtResource("5_jgyno")]
+position = Vector2(944, 576)
+data = ExtResource("42_qxk8x")
+
+[node name="Label" type="Label" parent="DEBUG/JohnLin"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -42.0
+offset_right = 42.0
+offset_bottom = 63.0
+grow_horizontal = 2
+theme = ExtResource("41_rrr02")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+text = "Prompt from paper\"Gen Agents\""
+autowrap_mode = 2
+justification_flags = 171

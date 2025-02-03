@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="quest_data" load_steps=23 format=3 uid="uid://diphekyu608sg"]
+[gd_resource type="Resource" script_class="quest_data" load_steps=27 format=3 uid="uid://diphekyu608sg"]
 
 [ext_resource type="Script" path="res://elements/quests/quest_data.gd" id="1_3spgr"]
 [ext_resource type="Resource" uid="uid://dim7i148sbenk" path="res://elements/npcs/npc_data/npc_data_benno.tres" id="1_12k4y"]
@@ -7,16 +7,31 @@
 [ext_resource type="Resource" uid="uid://feoqskgukx3t" path="res://elements/items/item_data/beer.tres" id="5_bnltu"]
 [ext_resource type="Script" path="res://elements/quests/quest_reward.gd" id="5_ivy6v"]
 [ext_resource type="Script" path="res://elements/quests/request_item.gd" id="6_e7vey"]
+[ext_resource type="Resource" uid="uid://b76kc0k4f1w0y" path="res://elements/items/item_data/met_benno.tres" id="6_wdx4l"]
 [ext_resource type="Resource" uid="uid://bnakhswxbfenw" path="res://elements/items/item_data/vodka.tres" id="8_olo00"]
 [ext_resource type="Script" path="res://elements/quests/reward_item.gd" id="9_t2nsb"]
 [ext_resource type="Resource" uid="uid://dosp8iscgnwxh" path="res://elements/items/item_data/benno_parent_journal.tres" id="10_3i8gi"]
 [ext_resource type="Resource" uid="uid://cpseqbo2x2h5u" path="res://elements/npcs/npc_data/npc_data_ivanka.tres" id="10_qvuhh"]
 [ext_resource type="Script" path="res://elements/quests/reward_prompt_world.gd" id="10_we7w0"]
 
+[sub_resource type="Resource" id="Resource_jme3x"]
+script = ExtResource("9_t2nsb")
+item = ExtResource("6_wdx4l")
+
+[sub_resource type="Resource" id="Resource_wcqve"]
+script = ExtResource("2_4viar")
+description = "QUEST: Hello, Inspector."
+requests = Array[ExtResource("4_h553h")]([])
+rewards = Array[ExtResource("5_ivy6v")]([SubResource("Resource_jme3x")])
+
+[sub_resource type="Resource" id="Resource_4hpro"]
+script = ExtResource("6_e7vey")
+item = ExtResource("6_wdx4l")
+
 [sub_resource type="Resource" id="Resource_bcgd0"]
 script = ExtResource("2_4viar")
-description = "QUEST: Hello Inpector, I'm Benno, The Station is so hot, aren't you thirsty too?"
-requests = Array[ExtResource("4_h553h")]([])
+description = "QUEST: The Station is so hot, aren't you thirsty too?"
+requests = Array[ExtResource("4_h553h")]([SubResource("Resource_4hpro")])
 rewards = Array[ExtResource("5_ivy6v")]([])
 
 [sub_resource type="Resource" id="Resource_itf8b"]
@@ -58,7 +73,7 @@ prompt = "kalasnikov can be trusted"
 
 [sub_resource type="Resource" id="Resource_t0bfe"]
 script = ExtResource("2_4viar")
-description = "Thank you, this pendant belonged to my mother, i'll be forever grateful to you!"
+description = "QUEST: Thank you, this pendant belonged to my mother, i'll be forever grateful to you!"
 requests = Array[ExtResource("4_h553h")]([SubResource("Resource_ku3ci")])
 rewards = Array[ExtResource("5_ivy6v")]([SubResource("Resource_u5tue")])
 
@@ -70,4 +85,4 @@ name = "Benno Beer"
 default_npc = ExtResource("1_12k4y")
 description = ""
 progress = -1
-steps = Array[ExtResource("2_4viar")]([SubResource("Resource_bcgd0"), SubResource("Resource_c3t65"), SubResource("Resource_ebyfa"), SubResource("Resource_t0bfe")])
+steps = Array[ExtResource("2_4viar")]([SubResource("Resource_wcqve"), SubResource("Resource_bcgd0"), SubResource("Resource_c3t65"), SubResource("Resource_ebyfa"), SubResource("Resource_t0bfe")])
