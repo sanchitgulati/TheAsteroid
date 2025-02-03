@@ -14,8 +14,6 @@ var queue = []
 func _ready() -> void:
 	re_newline = RegEx.create_from_string("\n\n+")
 	
-	
-	
 	pass # Replace with function body.
 
 
@@ -24,6 +22,8 @@ func _process(_delta: float) -> void:
 	pass
 
 func set_system_prompt(prompt:String):
+	
+	
 	Chat.system_prompt = prompt
 	
 	print("start_worker: begin")
@@ -32,6 +32,10 @@ func set_system_prompt(prompt:String):
 	
 
 func talk_npc(prompt: String ):
+	
+	
+	
+	
 	print("talk_npc_queue:", queue.size() )
 	if WorldState.current_npc == null: return
 	if talking:
@@ -45,11 +49,7 @@ func talk_npc(prompt: String ):
 	WorldState.current_npc.chat_history.append(prompt)
 	if queue.size() == 0:
 		Dialog.llm_output.text = ""
-		
-	var path = "res://models/gemma-2-2b-it-Q4_K_M.gguf"
-	var exists = FileAccess.file_exists(path)
-	var exists_txt = 'yes' if exists else 'no'
-	Dialog.llm_input.text = exists_txt + "\n"
+	
 	
 	Chat.say(prompt)
 

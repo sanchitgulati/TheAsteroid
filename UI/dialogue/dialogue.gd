@@ -43,7 +43,7 @@ func _process(_delta: float) -> void:
 	pass
 
 func clear():
-	llm_input.text = ""
+	#llm_input.text = ""
 	llm_output.text = ""
 
 func open():

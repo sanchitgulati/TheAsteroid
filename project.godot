@@ -18,7 +18,6 @@ config/icon="res://icon.svg"
 [autoload]
 
 LLM="*res://globals/llm.tscn"
-DataLoader="*res://globals/data_loader.gd"
 WorldState="*res://globals/world_state.gd"
 Inventory="*res://globals/inventory.gd"
 Prompts="*res://globals/prompts/prompts.gd"
@@ -26,6 +25,7 @@ Quests="*res://globals/quests.gd"
 
 [debug]
 
+file_logging/enable_file_logging=true
 settings/stdout/verbose_stdout=true
 gdscript/warnings/exclude_addons=false
 

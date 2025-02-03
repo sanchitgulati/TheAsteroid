@@ -17,6 +17,9 @@ func _process(_delta: float) -> void:
 
 func load_quests() -> void:
 	for file_name in DirAccess.get_files_at(data_dir):
+		if (file_name.get_extension() == "remap"):
+			file_name = file_name.substr(0,file_name.length()-6)
+		
 		if (file_name.get_extension() == "tres"):
 			var res = ResourceLoader.load(data_dir+file_name)
 			if not res.active: continue
