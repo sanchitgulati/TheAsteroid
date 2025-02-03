@@ -35,6 +35,5 @@ parameters/looping = true
 
 [node name="Tense" type="AudioStreamPlayer2D" parent="Soundtrack"]
 stream = ExtResource("5_sojg4")
-volume_db = 2.0
 autoplay = true
 parameters/looping = true
