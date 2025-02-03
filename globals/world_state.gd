@@ -31,7 +31,7 @@ func getScenePublicPersonasPrompts():
 	var prompts = ""
 	for npc in scene_npc:
 		prompts += npc.data.public_persona + "\n"
-	print(prompts)
+	#print(prompts)
 	return prompts
 	
 # Called when the node enters the scene tree for the first time.
