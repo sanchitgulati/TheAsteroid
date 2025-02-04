@@ -1,8 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://ptkseutwb6ke"]
+[gd_scene load_steps=5 format=3 uid="uid://ptkseutwb6ke"]
 
-[ext_resource type="Texture2D" uid="uid://c5ygwwai8r27v" path="res://assets/bitmaps/ui/bubble_9patch.png" id="1_fwq6s"]
 [ext_resource type="Script" path="res://UI/dialogue/dialogue.gd" id="1_jww1s"]
-[ext_resource type="Texture2D" uid="uid://d117yhbmf8o0f" path="res://assets/bitmaps/ui/textfield_9patch.png" id="2_wb1ks"]
 [ext_resource type="Theme" uid="uid://c3gfwu5jojd" path="res://UI/dialogue/Dialogue_theme.tres" id="3_l0jdm"]
 [ext_resource type="Texture2D" uid="uid://cimtoxdlhn7gc" path="res://assets/bitmaps/nobody.png" id="5_1moy0"]
 [ext_resource type="Script" path="res://UI/dialogue/grab_focus.gd" id="6_b8ddn"]
@@ -17,8 +15,8 @@ offset_right = 217.0
 offset_bottom = 35.0
 grow_vertical = 0
 script = ExtResource("1_jww1s")
-llm_output = NodePath("NinePatchAnswer/llm_output")
-llm_input = NodePath("NinePatchQuestion/llm_input")
+llm_output = NodePath("Answer/llm_output")
+llm_input = NodePath("HBoxContainer/Question/llm_input")
 
 [node name="Character" type="TextureRect" parent="."]
 layout_mode = 1
@@ -32,7 +30,8 @@ offset_bottom = -112.0
 grow_vertical = 0
 texture = ExtResource("5_1moy0")
 
-[node name="NinePatchAnswer" type="NinePatchRect" parent="."]
+[node name="Answer" type="PanelContainer" parent="."]
+modulate = Color(0.6225, 0.75, 0.722375, 1)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -43,77 +42,53 @@ offset_right = 577.0
 offset_bottom = -61.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_fwq6s")
-patch_margin_left = 10
-patch_margin_top = 10
-patch_margin_right = 10
-patch_margin_bottom = 10
+theme = ExtResource("3_l0jdm")
 
-[node name="llm_output" type="RichTextLabel" parent="NinePatchAnswer"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 26.0
-offset_top = 19.0
-offset_right = -24.0
-offset_bottom = -13.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="llm_output" type="RichTextLabel" parent="Answer"]
+layout_mode = 2
 theme = ExtResource("3_l0jdm")
 text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
 
-[node name="NinePatchQuestion" type="NinePatchRect" parent="."]
-layout_mode = 1
-offset_left = 10.0
-offset_top = 125.0
-offset_right = 644.0
-offset_bottom = 185.0
-texture = ExtResource("2_wb1ks")
-patch_margin_left = 10
-patch_margin_top = 10
-patch_margin_right = 10
-patch_margin_bottom = 10
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+offset_left = 22.0
+offset_top = 137.0
+offset_right = 632.0
+offset_bottom = 173.0
 
-[node name="llm_input" type="TextEdit" parent="NinePatchQuestion"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.0163636
-anchor_top = 0.0875
-anchor_right = 0.986364
-anchor_bottom = 0.9875
-offset_left = 8.0
-offset_top = 10.0
-offset_right = -9.0
-offset_bottom = -10.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Question" type="PanelContainer" parent="HBoxContainer"]
+modulate = Color(0.925353, 0.925353, 0.925353, 1)
+custom_minimum_size = Vector2(655, 48)
+layout_mode = 2
 theme = ExtResource("3_l0jdm")
+
+[node name="llm_input" type="TextEdit" parent="HBoxContainer/Question"]
+custom_minimum_size = Vector2(630, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+theme = ExtResource("3_l0jdm")
+theme_override_colors/caret_background_color = Color(0, 0, 0, 1)
 text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
 "
 wrap_mode = 1
+caret_blink = true
+caret_multiple = false
 script = ExtResource("6_b8ddn")
 metadata/_edit_use_anchors_ = true
 
-[node name="Button" type="Button" parent="NinePatchQuestion"]
-layout_mode = 0
-offset_left = 641.0
-offset_top = 10.0
-offset_right = 705.0
-offset_bottom = 54.0
+[node name="Button" type="Button" parent="HBoxContainer"]
+custom_minimum_size = Vector2(48, 0)
+layout_mode = 2
 theme = ExtResource("3_l0jdm")
 text = "Send"
 
-[node name="Button2" type="Button" parent="NinePatchQuestion"]
-layout_mode = 0
-offset_left = 713.0
-offset_top = 10.0
-offset_right = 777.0
-offset_bottom = 54.0
+[node name="Button2" type="Button" parent="HBoxContainer"]
+custom_minimum_size = Vector2(48, 0)
+layout_mode = 2
 theme = ExtResource("3_l0jdm")
 text = "Close"
 
-[connection signal="pressed" from="NinePatchQuestion/Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="NinePatchQuestion/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="HBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/Button2" to="." method="_on_button_2_pressed"]
