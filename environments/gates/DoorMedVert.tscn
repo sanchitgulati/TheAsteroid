@@ -14,22 +14,35 @@ region = Rect2(160, 64, 32, 96)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i5pvj"]
 size = Vector2(32, 96)
 
-[node name="DoorMedVert" type="Node2D"]
+[node name="Door" type="Node2D"]
 script = ExtResource("1_sbqg6")
 
-[node name="Open" type="TextureRect" parent="."]
-offset_top = -96.0
+[node name="DoorMedVert" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
 offset_right = 40.0
+grow_vertical = 0
+
+[node name="Open" type="TextureRect" parent="DoorMedVert"]
+layout_mode = 0
+offset_top = -56.0
+offset_right = 40.0
+offset_bottom = 40.0
 texture = SubResource("AtlasTexture_h36ac")
 
-[node name="Close" type="TextureRect" parent="."]
-offset_top = -96.0
+[node name="Close" type="TextureRect" parent="DoorMedVert"]
+layout_mode = 0
+offset_top = -56.0
 offset_right = 40.0
+offset_bottom = 40.0
 texture = SubResource("AtlasTexture_xyol6")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Close"]
+[node name="StaticBody2D" type="StaticBody2D" parent="DoorMedVert/Close"]
 position = Vector2(0, 96)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Close/StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorMedVert/Close/StaticBody2D"]
 position = Vector2(16, -48)
 shape = SubResource("RectangleShape2D_i5pvj")

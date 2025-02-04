@@ -1,8 +1,10 @@
-[gd_resource type="Resource" script_class="item_data" load_steps=2 format=3 uid="uid://dosp8iscgnwxh"]
+[gd_resource type="Resource" script_class="item_data" load_steps=3 format=3 uid="uid://dosp8iscgnwxh"]
 
 [ext_resource type="Script" path="res://elements/items/item_data.gd" id="1_jvtmx"]
+[ext_resource type="Texture2D" uid="uid://cglbnndb6ra68" path="res://assets/generated/items/journal.png" id="2_22wvs"]
 
 [resource]
 script = ExtResource("1_jvtmx")
 name = "Journal"
 description = "Benno's parents Journal"
+texture = ExtResource("2_22wvs")

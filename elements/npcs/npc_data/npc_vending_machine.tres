@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="npc_data" load_steps=3 format=3 uid="uid://dvigw1d87rldf"]
 
 [ext_resource type="Script" path="res://elements/npcs/npc_data/npc_data.gd" id="1_uujri"]
-[ext_resource type="Texture2D" uid="uid://df06en7iu0kld" path="res://assets/bitmaps/generated/env/vending_machine.png" id="2_bxupe"]
+[ext_resource type="Texture2D" uid="uid://df06en7iu0kld" path="res://assets/generated/env/vending_machine.png" id="2_bxupe"]
 
 [resource]
 script = ExtResource("1_uujri")
