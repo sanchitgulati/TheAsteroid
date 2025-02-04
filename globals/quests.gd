@@ -32,6 +32,7 @@ func check_quest(current_npc: npc_data):
 	if next_quest != null:
 		next_step = current_quest_step(next_quest)
 		start_quest(next_quest)
+		next_step = check_step_progress(next_quest, current_npc)
 		return next_step
 	
 	var open = get_open_quests(current_npc)
@@ -44,7 +45,7 @@ func check_quest(current_npc: npc_data):
 	
 func start_quest(quest:quest_data):
 	if quest.progress >= 0: return
-	quest.progress = 1
+	quest.progress = 0
 
 func get_next_quest(current_npc: npc_data):
 	for quest in quests:
