@@ -1,4 +1,5 @@
 //https://godotshaders.com/shader/2d-cast-shadow/
+//This works only as an additional sprite due to the deformation of the sprite
 
 shader_type canvas_item;
 uniform bool look_right = true;

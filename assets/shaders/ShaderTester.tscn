@@ -1,10 +1,14 @@
-[gd_scene load_steps=9 format=3 uid="uid://l40mfx1lof5h"]
+[gd_scene load_steps=16 format=3 uid="uid://l40mfx1lof5h"]
 
 [ext_resource type="Shader" path="res://assets/shaders/Outline.gdshader" id="1_0p54k"]
 [ext_resource type="Texture2D" uid="uid://b1vx7alsoiyb" path="res://assets/bitmaps/benno4.png" id="1_7rv6t"]
 [ext_resource type="Shader" path="res://assets/shaders/CastShadow.gdshader" id="3_h48ml"]
 [ext_resource type="Shader" path="res://assets/shaders/SpriteAndDropShadow.gdshader" id="4_wlu7c"]
 [ext_resource type="Material" uid="uid://cermd26dujlt8" path="res://assets/shaders/ColorAdj.tres" id="5_cowys"]
+[ext_resource type="Shader" path="res://assets/shaders/Outline_CursCore.gdshader" id="6_hme0j"]
+[ext_resource type="Theme" uid="uid://c3gfwu5jojd" path="res://UI/dialogue/Dialogue_theme.tres" id="7_a6rvs"]
+[ext_resource type="Texture2D" uid="uid://d117yhbmf8o0f" path="res://assets/bitmaps/ui/textfield_9patch.png" id="8_n3eln"]
+[ext_resource type="Texture2D" uid="uid://dk72pbqq5osj7" path="res://assets/bitmaps/ui/inventory_9patch.png" id="9_qwmsd"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_hsavh"]
 shader = ExtResource("1_0p54k")
@@ -24,6 +28,23 @@ shader_parameter/color = null
 shader_parameter/blur_amount = 0.0
 shader_parameter/shadow_scale = 1.5
 shader_parameter/disable_rotating = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_a2cd4"]
+shader = ExtResource("6_hme0j")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e5bub"]
+texture = ExtResource("8_n3eln")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ny3xh"]
+texture = ExtResource("9_qwmsd")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
 
 [node name="ShaderTester" type="Node2D"]
 
@@ -46,3 +67,27 @@ texture = ExtResource("1_7rv6t")
 material = ExtResource("5_cowys")
 position = Vector2(88, -48)
 texture = ExtResource("1_7rv6t")
+
+[node name="Outliner" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_a2cd4")
+position = Vector2(-96, 40)
+texture = ExtResource("1_7rv6t")
+
+[node name="PnlContDialogue" type="PanelContainer" parent="."]
+offset_right = 344.0
+offset_bottom = 64.0
+theme = ExtResource("7_a6rvs")
+
+[node name="PnlContInput" type="PanelContainer" parent="."]
+offset_top = 72.0
+offset_right = 344.0
+offset_bottom = 136.0
+theme = ExtResource("7_a6rvs")
+theme_override_styles/panel = SubResource("StyleBoxTexture_e5bub")
+
+[node name="PnlContInvent" type="PanelContainer" parent="."]
+offset_top = 144.0
+offset_right = 344.0
+offset_bottom = 208.0
+theme = ExtResource("7_a6rvs")
+theme_override_styles/panel = SubResource("StyleBoxTexture_ny3xh")

@@ -936,7 +936,7 @@ position = Vector2(784, 32)
 data = ExtResource("8_vtgxy")
 
 [node name="Barrow" parent="Chars" instance=ExtResource("5_jgyno")]
-position = Vector2(-128, 472)
+position = Vector2(-80, 344)
 data = ExtResource("9_d7ria")
 
 [node name="VendingMachine" parent="Chars" instance=ExtResource("5_jgyno")]

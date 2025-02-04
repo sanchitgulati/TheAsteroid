@@ -10,6 +10,7 @@ text = "Your live on Plotino, a remote asteroid in the Kuiper Belt mined for Hel
 On Plotino there is a minerary outpost: The Station, your life mostly take places inside it's metal and glass walls.
 It's hot in The Station, the crew is often thirsty and they prefer to drink alcohol.
 Outside The Station, the endless darkness presses against thick reinforced glass, occasionally pierced by flashes of distant stars.
+On the West ofThe Station, The Mining Operation Area, The Cave is inside this area.
 Every day feels like a fight for survival against exhaustion, malfunctioning machines, and the suffocating atmosphere of oppression.
 
 Remember these key points when answering:
@@ -38,7 +39,7 @@ script = ExtResource("1_otw3v")
 active = true
 text = "Context:
 	The Accident has happenend outside the Station, you know Inspector Kalashnikov has come to investigate.
-	You don't know exactly what happened during The Accident. The accident happened in The Cave outside The Station, 	The Cave and the mining area are quarantined at the moment."
+	You don't know exactly what happened during The Accident. The accident happened in The Cave outside The Station, all the Miners are missing since The Accident, 	The Cave and the mining area are quarantined at the moment."
 
 [sub_resource type="Resource" id="Resource_vfh77"]
 script = ExtResource("1_otw3v")

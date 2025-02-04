@@ -52,7 +52,7 @@ theme_override_constants/shadow_offset_y = 2
 theme_override_fonts/font = ExtResource("2_1pqrc")
 theme_override_font_sizes/font_size = 29
 text = "Far in the depths of the Kuiper Belt lays Plotino: an asteroid exploited by The Company via a minerary outpost. 
-You play as Inspector Kalashnikov, an envoy of The Company, your task is to investigate a misterious accident.
+You are Inspector Kalashnikov, an envoy of The Company, your task is to investigate a misterious accident.
 Watch your back, you are on your own..."
 horizontal_alignment = 1
 vertical_alignment = 1
