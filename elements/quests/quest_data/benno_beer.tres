@@ -5,7 +5,7 @@
 [ext_resource type="Script" path="res://elements/quests/quest_step.gd" id="2_4viar"]
 [ext_resource type="Script" path="res://elements/items/item_data.gd" id="4_hjjbp"]
 [ext_resource type="Script" path="res://elements/quests/quest_reward.gd" id="5_ivy6v"]
-[ext_resource type="Resource" path="res://elements/items/item_data/met_benno.tres" id="6_wdx4l"]
+[ext_resource type="Resource" uid="uid://b76kc0k4f1w0y" path="res://elements/items/item_data/met_benno.tres" id="6_wdx4l"]
 [ext_resource type="Resource" uid="uid://bnakhswxbfenw" path="res://elements/items/item_data/vodka.tres" id="8_olo00"]
 [ext_resource type="Script" path="res://elements/quests/reward_item.gd" id="9_t2nsb"]
 [ext_resource type="Resource" uid="uid://dosp8iscgnwxh" path="res://elements/items/item_data/benno_parent_journal.tres" id="10_3i8gi"]
