@@ -1,28 +1,18 @@
-[gd_resource type="Resource" script_class="quest_data" load_steps=15 format=3 uid="uid://dw4j3r3ymacj"]
+[gd_resource type="Resource" script_class="quest_data" load_steps=11 format=3 uid="uid://dw4j3r3ymacj"]
 
 [ext_resource type="Script" path="res://elements/quests/quest_data.gd" id="2_vr08a"]
 [ext_resource type="Script" path="res://elements/quests/quest_step.gd" id="3_n83ee"]
-[ext_resource type="Script" path="res://elements/quests/quest_request.gd" id="4_jiw7v"]
+[ext_resource type="Script" path="res://elements/items/item_data.gd" id="4_x7hud"]
 [ext_resource type="Script" path="res://elements/quests/quest_reward.gd" id="5_jrkou"]
-[ext_resource type="Resource" uid="uid://b76kc0k4f1w0y" path="res://elements/items/item_data/met_benno.tres" id="5_kbph8"]
-[ext_resource type="Script" path="res://elements/quests/request_item.gd" id="7_5qwlt"]
 [ext_resource type="Resource" uid="uid://bnakhswxbfenw" path="res://elements/items/item_data/vodka.tres" id="8_3t6ej"]
 [ext_resource type="Script" path="res://elements/quests/reward_item.gd" id="9_vrpe6"]
 [ext_resource type="Resource" uid="uid://cpseqbo2x2h5u" path="res://elements/npcs/npc_data/npc_data_ivanka.tres" id="11_cfnnq"]
 
-[sub_resource type="Resource" id="Resource_2hu4i"]
-script = ExtResource("7_5qwlt")
-item = ExtResource("5_kbph8")
-
 [sub_resource type="Resource" id="Resource_qxltf"]
 script = ExtResource("3_n83ee")
 description = "QUEST: Hello Inpector, I'm Ivanka, I agree with Benno The Station is so hot, aren't you thirsty too?"
-requests = Array[ExtResource("4_jiw7v")]([SubResource("Resource_2hu4i")])
+requests = Array[ExtResource("4_x7hud")]([])
 rewards = Array[ExtResource("5_jrkou")]([])
-
-[sub_resource type="Resource" id="Resource_itf8b"]
-script = ExtResource("7_5qwlt")
-item = ExtResource("8_3t6ej")
 
 [sub_resource type="Resource" id="Resource_sxg3a"]
 script = ExtResource("9_vrpe6")
@@ -31,7 +21,7 @@ item = ExtResource("8_3t6ej")
 [sub_resource type="Resource" id="Resource_c3t65"]
 script = ExtResource("3_n83ee")
 description = "QUEST: Oh, this is Good Old Mother Russia Vodka, that's wonderful!"
-requests = Array[ExtResource("4_jiw7v")]([SubResource("Resource_itf8b")])
+requests = Array[ExtResource("4_x7hud")]([])
 rewards = Array[ExtResource("5_jrkou")]([SubResource("Resource_sxg3a")])
 
 [resource]

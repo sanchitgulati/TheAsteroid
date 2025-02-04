@@ -22,20 +22,13 @@ func _process(_delta: float) -> void:
 	pass
 
 func set_system_prompt(prompt:String):
-	
-	
 	Chat.system_prompt = prompt
-	
 	print("start_worker: begin")
 	Chat.start_worker()
 	print("start_worker: end")
 	
 
 func talk_npc(prompt: String ):
-	
-	
-	
-	
 	print("talk_npc_queue:", queue.size() )
 	if WorldState.current_npc == null: return
 	if talking:
@@ -49,7 +42,6 @@ func talk_npc(prompt: String ):
 	WorldState.current_npc.chat_history.append(prompt)
 	if queue.size() == 0:
 		Dialog.llm_output.text = ""
-	
 	
 	Chat.say(prompt)
 

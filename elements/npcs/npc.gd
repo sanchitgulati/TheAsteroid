@@ -40,11 +40,13 @@ func _on_body_entered(body: Node2D) -> void:
 		first_touch = false
 		WorldState.set_npc(self)
 		
+		var step = Quests.check_quest(data)
+		
 		LLM.Dialog.open()
 		if Inventory.item_count() > 0:
 			Inventory.open()
 		
-		var step = Quests.check_quest(data)
+		
 		if step != null:
 			LLM.Dialog.llm_output.text += step.description
 		else:

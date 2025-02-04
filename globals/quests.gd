@@ -21,7 +21,9 @@ func load_quests() -> void:
 			file_name = file_name.substr(0,file_name.length()-6)
 		
 		if (file_name.get_extension() == "tres"):
-			var res = ResourceLoader.load(data_dir+file_name)
+			var path  = data_dir+file_name
+			var res =  load(path) 
+			#var res = ResourceLoader.load(path) as quest_data
 			if not res.active: continue
 			quests.append(res)
 
@@ -82,10 +84,10 @@ func check_step_progress(quest:quest_data, current_npc: npc_data):
 	return cur_step
 
 func take_requests(step:quest_step):
-	for request in step.requests:
-		if request is request_item:
-			Inventory.remove_item(request.item)
-			print("take_request: ", request.item.name)
+	for item in step.requests:
+		if item is item_data:
+			Inventory.remove_item(item)
+			print("take_request: ", item.name)
 
 func give_rewards(step:quest_step):
 	for reward in step.rewards:
@@ -110,7 +112,7 @@ func check_step_requests(quest: quest_data):
 func check_step_items(step:quest_step):
 	var found = true
 	for request in step.requests:
-		if request is request_item:
+		if request is item_data:
 			found = found and Inventory.contains(request.item)
 	
 	return found

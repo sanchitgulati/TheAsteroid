@@ -1,24 +1,18 @@
-[gd_resource type="Resource" script_class="quest_data" load_steps=14 format=3 uid="uid://0fmkn0p7pdch"]
+[gd_resource type="Resource" script_class="quest_data" load_steps=11 format=3 uid="uid://0fmkn0p7pdch"]
 
-[ext_resource type="Resource" path="res://elements/npcs/npc_data/npc_vending_machine.tres" id="1_k3l5d"]
+[ext_resource type="Resource" uid="uid://dvigw1d87rldf" path="res://elements/npcs/npc_data/npc_vending_machine.tres" id="1_k3l5d"]
 [ext_resource type="Script" path="res://elements/quests/quest_data.gd" id="2_37bik"]
 [ext_resource type="Script" path="res://elements/quests/quest_step.gd" id="3_gk836"]
-[ext_resource type="Script" path="res://elements/quests/quest_request.gd" id="4_6u1rh"]
+[ext_resource type="Script" path="res://elements/items/item_data.gd" id="4_shtyy"]
 [ext_resource type="Script" path="res://elements/quests/quest_reward.gd" id="5_c4ho1"]
-[ext_resource type="Resource" path="res://elements/items/item_data/coins.tres" id="5_yirwv"]
-[ext_resource type="Script" path="res://elements/quests/request_item.gd" id="7_7hlxf"]
 [ext_resource type="Script" path="res://elements/quests/reward_item.gd" id="8_povr5"]
 [ext_resource type="Resource" uid="uid://feoqskgukx3t" path="res://elements/items/item_data/beer.tres" id="8_wtmjd"]
 
 [sub_resource type="Resource" id="Resource_258k0"]
 script = ExtResource("3_gk836")
 description = "QUEST: I'm a Stuff'O'Matic vending machine, I accept Coins."
-requests = Array[ExtResource("4_6u1rh")]([])
+requests = Array[ExtResource("4_shtyy")]([])
 rewards = Array[ExtResource("5_c4ho1")]([])
-
-[sub_resource type="Resource" id="Resource_hniwk"]
-script = ExtResource("7_7hlxf")
-item = ExtResource("5_yirwv")
 
 [sub_resource type="Resource" id="Resource_gnhdn"]
 script = ExtResource("8_povr5")
@@ -27,7 +21,7 @@ item = ExtResource("8_wtmjd")
 [sub_resource type="Resource" id="Resource_qxltf"]
 script = ExtResource("3_gk836")
 description = "QUEST: I like coins! Only thing I have in stock is a Can of Beer, help yourself."
-requests = Array[ExtResource("4_6u1rh")]([SubResource("Resource_hniwk")])
+requests = Array[ExtResource("4_shtyy")]([])
 rewards = Array[ExtResource("5_c4ho1")]([SubResource("Resource_gnhdn")])
 
 [resource]
