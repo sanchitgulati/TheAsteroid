@@ -8,7 +8,7 @@
 [ext_resource type="Shader" path="res://assets/shaders/Outline_CursCore.gdshader" id="6_hme0j"]
 [ext_resource type="Theme" uid="uid://c3gfwu5jojd" path="res://UI/dialogue/Dialogue_theme.tres" id="7_a6rvs"]
 [ext_resource type="Texture2D" uid="uid://d117yhbmf8o0f" path="res://assets/bitmaps/ui/textfield_9patch.png" id="8_n3eln"]
-[ext_resource type="Texture2D" uid="uid://dk72pbqq5osj7" path="res://assets/bitmaps/ui/inventory_9patch.png" id="9_qwmsd"]
+[ext_resource type="Texture2D" uid="uid://bvipvx3esky5g" path="res://assets/bitmaps/ui/dialog_neutral.png" id="9_o3xdc"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_hsavh"]
 shader = ExtResource("1_0p54k")
@@ -40,7 +40,7 @@ texture_margin_right = 8.0
 texture_margin_bottom = 8.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ny3xh"]
-texture = ExtResource("9_qwmsd")
+texture = ExtResource("9_o3xdc")
 texture_margin_left = 8.0
 texture_margin_top = 8.0
 texture_margin_right = 8.0
@@ -85,9 +85,36 @@ offset_bottom = 136.0
 theme = ExtResource("7_a6rvs")
 theme_override_styles/panel = SubResource("StyleBoxTexture_e5bub")
 
+[node name="PnlContNeutral4" type="PanelContainer" parent="."]
+offset_left = 352.0
+offset_top = -72.0
+offset_right = 696.0
+offset_bottom = -8.0
+theme = ExtResource("7_a6rvs")
+theme_override_styles/panel = SubResource("StyleBoxTexture_ny3xh")
+
+[node name="PnlContAzul" type="PanelContainer" parent="."]
+modulate = Color(0.6642, 0.78813, 0.81, 1)
+offset_left = 352.0
+offset_right = 696.0
+offset_bottom = 64.0
+theme = ExtResource("7_a6rvs")
+theme_override_styles/panel = SubResource("StyleBoxTexture_ny3xh")
+
+[node name="PnlContGreen" type="PanelContainer" parent="."]
+modulate = Color(0.802632, 0.89, 0.7209, 1)
+offset_left = 352.0
+offset_top = 72.0
+offset_right = 696.0
+offset_bottom = 136.0
+theme = ExtResource("7_a6rvs")
+theme_override_styles/panel = SubResource("StyleBoxTexture_ny3xh")
+
 [node name="PnlContInvent" type="PanelContainer" parent="."]
+modulate = Color(1, 0.9145, 0.81, 1)
+offset_left = 352.0
 offset_top = 144.0
-offset_right = 344.0
+offset_right = 696.0
 offset_bottom = 208.0
 theme = ExtResource("7_a6rvs")
 theme_override_styles/panel = SubResource("StyleBoxTexture_ny3xh")
