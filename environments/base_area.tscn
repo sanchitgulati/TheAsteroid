@@ -57,10 +57,6 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6ggm6"]
 size = Vector2(54, 24)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_agbes"]
-atlas = ExtResource("22_c8x03")
-region = Rect2(672, 32, 96, 32)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_b26o7"]
 atlas = ExtResource("22_c8x03")
 region = Rect2(736, 0, 32, 32)
@@ -72,6 +68,10 @@ region = Rect2(800, 0, 32, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_45ulr"]
 atlas = ExtResource("22_c8x03")
 region = Rect2(768, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_agbes"]
+atlas = ExtResource("22_c8x03")
+region = Rect2(672, 32, 96, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u6v21"]
 atlas = ExtResource("22_c8x03")
@@ -314,6 +314,10 @@ tile_set = ExtResource("3_r8imx")
 [node name="Hydroponics" type="Node2D" parent="."]
 position = Vector2(0, -64)
 
+[node name="Canister3" type="Sprite2D" parent="Hydroponics"]
+position = Vector2(-368, -816)
+texture = ExtResource("46_mqkpd")
+
 [node name="HydrpGreenhouse" type="Sprite2D" parent="Hydroponics"]
 material = ExtResource("27_0hoxd")
 position = Vector2(-328, -752)
@@ -392,29 +396,18 @@ scale = Vector2(1.5625, 1.5625)
 texture = ExtResource("41_7mh01")
 
 [node name="DoorMedVert3" parent="Hydroponics" instance=ExtResource("11_tmvlt")]
-position = Vector2(88, -601)
-
-[node name="DoorMedVert4" parent="Hydroponics" instance=ExtResource("11_tmvlt")]
-position = Vector2(176, -601)
+position = Vector2(96, -536)
 
 [node name="Coins" parent="Hydroponics" instance=ExtResource("10_o4pkl")]
 position = Vector2(0, -656)
 data = ExtResource("36_memte")
 
 [node name="Canister" type="Sprite2D" parent="Hydroponics"]
-position = Vector2(-368, -688)
+position = Vector2(-368, -672)
 texture = ExtResource("46_mqkpd")
 
 [node name="Canister2" type="Sprite2D" parent="Hydroponics"]
-position = Vector2(-368, -664)
-texture = ExtResource("46_mqkpd")
-
-[node name="Canister4" type="Sprite2D" parent="Hydroponics"]
-position = Vector2(-368, -488)
-texture = ExtResource("46_mqkpd")
-
-[node name="Canister3" type="Sprite2D" parent="Hydroponics"]
-position = Vector2(-368, -464)
+position = Vector2(-368, -477)
 texture = ExtResource("46_mqkpd")
 
 [node name="Kitchen" type="Node2D" parent="."]
@@ -564,15 +557,8 @@ position = Vector2(-162, 309)
 scale = Vector2(1.5625, 1.5625)
 texture = ExtResource("41_7mh01")
 
-[node name="DoorMedVert3" parent="Laboratory" instance=ExtResource("11_tmvlt")]
-position = Vector2(32, 432)
-
 [node name="DoorMedVert4" parent="Laboratory" instance=ExtResource("11_tmvlt")]
-position = Vector2(120, 432)
-
-[node name="Sprite2D" type="Sprite2D" parent="Laboratory"]
-position = Vector2(-17, 544)
-texture = SubResource("AtlasTexture_agbes")
+position = Vector2(99, 432)
 
 [node name="Sprite2D4" type="Sprite2D" parent="Laboratory"]
 position = Vector2(-56, 392)
@@ -580,16 +566,12 @@ texture = SubResource("AtlasTexture_b26o7")
 flip_h = true
 
 [node name="Sprite2D6" type="Sprite2D" parent="Laboratory"]
-position = Vector2(12, 523)
+position = Vector2(12, 526)
 texture = SubResource("AtlasTexture_konsj")
 flip_h = true
 
-[node name="Sprite2D3" type="Sprite2D" parent="Laboratory"]
-position = Vector2(-17, 493)
-texture = SubResource("AtlasTexture_agbes")
-
 [node name="Sprite2D9" type="Sprite2D" parent="Laboratory"]
-position = Vector2(12, 472)
+position = Vector2(12, 478)
 texture = SubResource("AtlasTexture_konsj")
 flip_h = true
 
@@ -602,14 +584,22 @@ position = Vector2(12, 575)
 texture = SubResource("AtlasTexture_konsj")
 flip_h = true
 
-[node name="Sprite2D2" type="Sprite2D" parent="Laboratory"]
-position = Vector2(-17, 595)
-texture = SubResource("AtlasTexture_agbes")
-
 [node name="Sprite2D5" type="Sprite2D" parent="Laboratory"]
 position = Vector2(-23, 392)
 texture = SubResource("AtlasTexture_b26o7")
 flip_h = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Laboratory"]
+position = Vector2(-19, 550)
+texture = SubResource("AtlasTexture_agbes")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Laboratory"]
+position = Vector2(-19, 502)
+texture = SubResource("AtlasTexture_agbes")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Laboratory"]
+position = Vector2(-19, 598)
+texture = SubResource("AtlasTexture_agbes")
 
 [node name="Basement" type="Node2D" parent="."]
 
@@ -691,14 +681,14 @@ texture = ExtResource("26_61xtf")
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="CrewQuart/Smoke"]
 modulate = Color(0.5412, 0.56892, 0.66, 0.470588)
-position = Vector2(1024, 208)
-scale = Vector2(68.3272, 68.25)
+position = Vector2(1018, 240)
+scale = Vector2(48.1794, 48.125)
 mesh = SubResource("SphereMesh_4k21t")
 
 [node name="MeshInstance2D4" type="MeshInstance2D" parent="CrewQuart/Smoke"]
 modulate = Color(0.5412, 0.56892, 0.66, 0.470588)
-position = Vector2(1072, 232)
-scale = Vector2(68.3272, 68.25)
+position = Vector2(1047, 208)
+scale = Vector2(40.1704, 40.125)
 mesh = SubResource("SphereMesh_4k21t")
 
 [node name="MeshInstance2D2" type="MeshInstance2D" parent="CrewQuart/Smoke"]
@@ -715,7 +705,7 @@ mesh = SubResource("SphereMesh_4k21t")
 
 [node name="MeshInstance2D17" type="MeshInstance2D" parent="CrewQuart/Smoke"]
 modulate = Color(0.5412, 0.56892, 0.66, 0.470588)
-position = Vector2(1064, 216)
+position = Vector2(1060, 214)
 scale = Vector2(34.1636, 34.125)
 mesh = SubResource("SphereMesh_4k21t")
 
@@ -727,13 +717,13 @@ mesh = SubResource("SphereMesh_4k21t")
 
 [node name="MeshInstance2D11" type="MeshInstance2D" parent="CrewQuart/Smoke"]
 modulate = Color(0.5412, 0.56892, 0.66, 0.470588)
-position = Vector2(1024, 240)
+position = Vector2(1015, 209)
 scale = Vector2(34.1636, 34.125)
 mesh = SubResource("SphereMesh_4k21t")
 
 [node name="MeshInstance2D12" type="MeshInstance2D" parent="CrewQuart/Smoke"]
 modulate = Color(0.5412, 0.56892, 0.66, 0.470588)
-position = Vector2(1088, 248)
+position = Vector2(1096, 251)
 scale = Vector2(34.1636, 34.125)
 mesh = SubResource("SphereMesh_4k21t")
 
@@ -751,7 +741,7 @@ mesh = SubResource("SphereMesh_4k21t")
 
 [node name="MeshInstance2D3" type="MeshInstance2D" parent="CrewQuart/Smoke"]
 modulate = Color(0.5412, 0.56892, 0.66, 0.470588)
-position = Vector2(992, 192)
+position = Vector2(998, 188)
 scale = Vector2(20.5546, 20.5313)
 mesh = SubResource("SphereMesh_4k21t")
 
@@ -769,8 +759,32 @@ mesh = SubResource("SphereMesh_4k21t")
 
 [node name="MeshInstance2D16" type="MeshInstance2D" parent="CrewQuart/Smoke"]
 modulate = Color(0.5412, 0.56892, 0.66, 0.470588)
-position = Vector2(1048, 248)
+position = Vector2(1105, 233)
 scale = Vector2(20.5546, 20.5313)
+mesh = SubResource("SphereMesh_4k21t")
+
+[node name="MeshInstance2D18" type="MeshInstance2D" parent="CrewQuart/Smoke"]
+modulate = Color(0.5412, 0.56892, 0.66, 0.470588)
+position = Vector2(1062.66, 245.867)
+scale = Vector2(41.375, 41.3282)
+mesh = SubResource("SphereMesh_4k21t")
+
+[node name="MeshInstance2D19" type="MeshInstance2D" parent="CrewQuart/Smoke"]
+modulate = Color(0.5412, 0.56892, 0.66, 0.470588)
+position = Vector2(1043, 234)
+scale = Vector2(20.5546, 20.5313)
+mesh = SubResource("SphereMesh_4k21t")
+
+[node name="MeshInstance2D20" type="MeshInstance2D" parent="CrewQuart/Smoke"]
+modulate = Color(0.5412, 0.56892, 0.66, 0.470588)
+position = Vector2(1027, 184)
+scale = Vector2(20.5546, 20.5313)
+mesh = SubResource("SphereMesh_4k21t")
+
+[node name="MeshInstance2D21" type="MeshInstance2D" parent="CrewQuart/Smoke"]
+modulate = Color(0.5412, 0.56892, 0.66, 0.470588)
+position = Vector2(1016, 194)
+scale = Vector2(20.2887, 20.5313)
 mesh = SubResource("SphereMesh_4k21t")
 
 [node name="MeshInstance2D5" type="MeshInstance2D" parent="CrewQuart/Smoke"]
@@ -791,11 +805,29 @@ position = Vector2(1096, 160)
 scale = Vector2(20.5546, 20.5313)
 mesh = SubResource("SphereMesh_4k21t")
 
+[node name="MeshInstance2D22" type="MeshInstance2D" parent="CrewQuart/Smoke"]
+modulate = Color(0.5412, 0.56892, 0.66, 0.470588)
+position = Vector2(1087.27, 217.266)
+scale = Vector2(34.1636, 34.125)
+mesh = SubResource("SphereMesh_4k21t")
+
+[node name="MeshInstance2D23" type="MeshInstance2D" parent="CrewQuart/Smoke"]
+modulate = Color(0.5412, 0.56892, 0.66, 0.470588)
+position = Vector2(1059, 251)
+scale = Vector2(20.5546, 20.5313)
+mesh = SubResource("SphereMesh_4k21t")
+
+[node name="MeshInstance2D24" type="MeshInstance2D" parent="CrewQuart/Smoke"]
+modulate = Color(0.5412, 0.56892, 0.66, 0.470588)
+position = Vector2(1111.27, 209.266)
+scale = Vector2(20.5546, 20.5313)
+mesh = SubResource("SphereMesh_4k21t")
+
 [node name="DoorMedVert5" parent="CrewQuart" instance=ExtResource("11_tmvlt")]
 position = Vector2(960, 48)
 
 [node name="DoorMedVert6" parent="CrewQuart" instance=ExtResource("11_tmvlt")]
-position = Vector2(960, 240)
+position = Vector2(960, 241)
 
 [node name="DoorMedVert7" parent="CrewQuart" instance=ExtResource("11_tmvlt")]
 position = Vector2(960, 432)
@@ -977,11 +1009,8 @@ material = ExtResource("27_0hoxd")
 position = Vector2(1040, 40)
 texture = ExtResource("42_y3rwu")
 
-[node name="DoorMedVert" parent="PowerStation" instance=ExtResource("11_tmvlt")]
-position = Vector2(32, 16)
-
 [node name="DoorMedVert2" parent="PowerStation" instance=ExtResource("11_tmvlt")]
-position = Vector2(120, 16)
+position = Vector2(96, 18)
 
 [node name="Player" parent="." instance=ExtResource("4_xnnpk")]
 position = Vector2(664, 176)

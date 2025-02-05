@@ -44,5 +44,6 @@ texture = SubResource("AtlasTexture_xyol6")
 position = Vector2(0, 96)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DoorMedVert/Close/StaticBody2D"]
+visible = false
 position = Vector2(16, -48)
 shape = SubResource("RectangleShape2D_i5pvj")
