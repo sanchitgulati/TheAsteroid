@@ -111,9 +111,9 @@ func check_step_requests(quest: quest_data):
 
 func check_step_items(step:quest_step):
 	var found = true
-	for request in step.requests:
-		if request is item_data:
-			found = found and Inventory.contains(request.item)
+	for item in step.requests:
+		if item is item_data:
+			found = found and Inventory.contains(item)
 	
 	return found
 
