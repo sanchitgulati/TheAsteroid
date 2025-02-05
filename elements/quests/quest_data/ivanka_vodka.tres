@@ -1,28 +1,51 @@
-[gd_resource type="Resource" script_class="quest_data" load_steps=11 format=3 uid="uid://dw4j3r3ymacj"]
+[gd_resource type="Resource" script_class="quest_data" load_steps=18 format=3 uid="uid://dw4j3r3ymacj"]
 
 [ext_resource type="Script" path="res://elements/quests/quest_data.gd" id="2_vr08a"]
 [ext_resource type="Script" path="res://elements/quests/quest_step.gd" id="3_n83ee"]
 [ext_resource type="Script" path="res://elements/items/item_data.gd" id="4_x7hud"]
 [ext_resource type="Script" path="res://elements/quests/quest_reward.gd" id="5_jrkou"]
+[ext_resource type="Resource" uid="uid://b1yqhfywide7i" path="res://elements/items/item_data/met_ivanka.tres" id="6_mnmm3"]
 [ext_resource type="Resource" uid="uid://bnakhswxbfenw" path="res://elements/items/item_data/vodka.tres" id="8_3t6ej"]
+[ext_resource type="Resource" uid="uid://trcqtrhdeok1" path="res://elements/items/item_data/keycard_hydro.tres" id="8_praxu"]
 [ext_resource type="Script" path="res://elements/quests/reward_item.gd" id="9_vrpe6"]
+[ext_resource type="Resource" uid="uid://dosp8iscgnwxh" path="res://elements/items/item_data/benno_parent_journal.tres" id="11_81bwg"]
 [ext_resource type="Resource" uid="uid://cpseqbo2x2h5u" path="res://elements/npcs/npc_data/npc_data_ivanka.tres" id="11_cfnnq"]
+
+[sub_resource type="Resource" id="Resource_cnjud"]
+script = ExtResource("9_vrpe6")
+item = ExtResource("6_mnmm3")
 
 [sub_resource type="Resource" id="Resource_qxltf"]
 script = ExtResource("3_n83ee")
-description = "QUEST: Hello Inpector, I'm Ivanka, I agree with Benno The Station is so hot, aren't you thirsty too?"
+description = "Hello Inpector, I'm Ivanka, Benno is right The Station is so hot, aren't you thirsty too?"
+requests = Array[ExtResource("4_x7hud")]([])
+rewards = Array[ExtResource("5_jrkou")]([SubResource("Resource_cnjud")])
+
+[sub_resource type="Resource" id="Resource_cg0ls"]
+script = ExtResource("9_vrpe6")
+item = ExtResource("8_praxu")
+
+[sub_resource type="Resource" id="Resource_w0npu"]
+script = ExtResource("3_n83ee")
+description = "Uff, i'm sure I lost some change down in the Hydrophonics, I'm really tired, could you be a gentlemen and fetch it for me? Here is The Hidroponycs Keycard"
+requests = Array[ExtResource("4_x7hud")]([])
+rewards = Array[ExtResource("5_jrkou")]([SubResource("Resource_cg0ls")])
+
+[sub_resource type="Resource" id="Resource_y21hm"]
+script = ExtResource("3_n83ee")
+description = "Anyway the change is no use, that stupid machine only has beer..."
 requests = Array[ExtResource("4_x7hud")]([])
 rewards = Array[ExtResource("5_jrkou")]([])
 
-[sub_resource type="Resource" id="Resource_sxg3a"]
+[sub_resource type="Resource" id="Resource_47ope"]
 script = ExtResource("9_vrpe6")
-item = ExtResource("8_3t6ej")
+item = ExtResource("11_81bwg")
 
 [sub_resource type="Resource" id="Resource_c3t65"]
 script = ExtResource("3_n83ee")
-description = "QUEST: Oh, this is Good Old Mother Russia Vodka, that's wonderful!"
-requests = Array[ExtResource("4_x7hud")]([])
-rewards = Array[ExtResource("5_jrkou")]([SubResource("Resource_sxg3a")])
+description = "Oh, this is Good Old Mother Russia Vodka, that's wonderful!"
+requests = Array[ExtResource("4_x7hud")]([ExtResource("8_3t6ej")])
+rewards = Array[ExtResource("5_jrkou")]([SubResource("Resource_47ope")])
 
 [resource]
 script = ExtResource("2_vr08a")
@@ -32,4 +55,4 @@ name = "Ivanka likes Vodka"
 default_npc = ExtResource("11_cfnnq")
 description = ""
 progress = -1
-steps = Array[ExtResource("3_n83ee")]([SubResource("Resource_qxltf"), SubResource("Resource_c3t65")])
+steps = Array[ExtResource("3_n83ee")]([SubResource("Resource_qxltf"), SubResource("Resource_w0npu"), SubResource("Resource_y21hm"), SubResource("Resource_c3t65")])

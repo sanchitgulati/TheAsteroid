@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="quest_data" load_steps=19 format=3 uid="uid://diphekyu608sg"]
+[gd_resource type="Resource" script_class="quest_data" load_steps=20 format=3 uid="uid://diphekyu608sg"]
 
 [ext_resource type="Script" path="res://elements/quests/quest_data.gd" id="1_3spgr"]
 [ext_resource type="Resource" uid="uid://dim7i148sbenk" path="res://elements/npcs/npc_data/npc_data_benno.tres" id="1_12k4y"]
@@ -18,15 +18,9 @@ item = ExtResource("6_wdx4l")
 
 [sub_resource type="Resource" id="Resource_wcqve"]
 script = ExtResource("2_4viar")
-description = "Hello, Inspector."
+description = "Hello, Inspector. The Station is so hot, aren't you thirsty too?"
 requests = Array[ExtResource("4_hjjbp")]([])
 rewards = Array[ExtResource("5_ivy6v")]([SubResource("Resource_jme3x")])
-
-[sub_resource type="Resource" id="Resource_bcgd0"]
-script = ExtResource("2_4viar")
-description = "The Station is so hot, aren't you thirsty too?"
-requests = Array[ExtResource("4_hjjbp")]([])
-rewards = Array[ExtResource("5_ivy6v")]([])
 
 [sub_resource type="Resource" id="Resource_sxg3a"]
 script = ExtResource("9_t2nsb")
@@ -44,9 +38,22 @@ prompt = "kalasnikov can be trusted"
 
 [sub_resource type="Resource" id="Resource_t0bfe"]
 script = ExtResource("2_4viar")
-description = "Thank you, this pendant belonged to my mother, i'll be forever grateful to you!"
+description = "Thank you, this is my Parents' Journal, I really want to know what they were looking for in The Cave.
+"
 requests = Array[ExtResource("4_hjjbp")]([ExtResource("10_3i8gi")])
 rewards = Array[ExtResource("5_ivy6v")]([SubResource("Resource_u5tue")])
+
+[sub_resource type="Resource" id="Resource_u568f"]
+script = ExtResource("2_4viar")
+description = "There were rumors there were mushrooms in The Cave, The Miners saw them... They were glowing... They said they had strange properties, Mum and Dad thought they could make a business with them."
+requests = Array[ExtResource("4_hjjbp")]([])
+rewards = Array[ExtResource("5_ivy6v")]([])
+
+[sub_resource type="Resource" id="Resource_cewbo"]
+script = ExtResource("2_4viar")
+description = "THIS IS A PLACEHOLDER: BENNO CAN REWARD AN O2 CANISTER"
+requests = Array[ExtResource("4_hjjbp")]([])
+rewards = Array[ExtResource("5_ivy6v")]([])
 
 [resource]
 script = ExtResource("1_3spgr")
@@ -56,4 +63,4 @@ name = "Benno Beer"
 default_npc = ExtResource("1_12k4y")
 description = ""
 progress = -1
-steps = Array[ExtResource("2_4viar")]([SubResource("Resource_wcqve"), SubResource("Resource_bcgd0"), SubResource("Resource_c3t65"), SubResource("Resource_t0bfe")])
+steps = Array[ExtResource("2_4viar")]([SubResource("Resource_wcqve"), SubResource("Resource_c3t65"), SubResource("Resource_t0bfe"), SubResource("Resource_u568f"), SubResource("Resource_cewbo")])

@@ -15,7 +15,7 @@ offset_right = 217.0
 offset_bottom = 35.0
 grow_vertical = 0
 script = ExtResource("1_jww1s")
-llm_output = NodePath("Answer/llm_output")
+llm_output = NodePath("Answer/MarginContainer/llm_output")
 llm_input = NodePath("HBoxContainer/Question/llm_input")
 
 [node name="Character" type="TextureRect" parent="."]
@@ -44,7 +44,14 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("3_l0jdm")
 
-[node name="llm_output" type="RichTextLabel" parent="Answer"]
+[node name="MarginContainer" type="MarginContainer" parent="Answer"]
+layout_mode = 2
+theme_override_constants/margin_left = 3
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 0
+
+[node name="llm_output" type="RichTextLabel" parent="Answer/MarginContainer"]
 layout_mode = 2
 theme = ExtResource("3_l0jdm")
 text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -53,10 +60,10 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 2
-offset_left = 22.0
-offset_top = 137.0
-offset_right = 632.0
-offset_bottom = 173.0
+offset_left = 16.0
+offset_top = 132.0
+offset_right = 781.0
+offset_bottom = 186.0
 
 [node name="Question" type="PanelContainer" parent="HBoxContainer"]
 modulate = Color(0.925353, 0.925353, 0.925353, 1)
@@ -81,12 +88,14 @@ metadata/_edit_use_anchors_ = true
 [node name="Button" type="Button" parent="HBoxContainer"]
 custom_minimum_size = Vector2(48, 0)
 layout_mode = 2
+size_flags_horizontal = 4
 theme = ExtResource("3_l0jdm")
 text = "Send"
 
 [node name="Button2" type="Button" parent="HBoxContainer"]
 custom_minimum_size = Vector2(48, 0)
 layout_mode = 2
+size_flags_horizontal = 4
 theme = ExtResource("3_l0jdm")
 text = "Close"
 
