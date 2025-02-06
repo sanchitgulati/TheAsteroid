@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://kfx2k6oebu37" path="res://cutscenes/intro_bg.png" id="1_56jhi"]
 [ext_resource type="Script" path="res://cutscenes/intro.gd" id="1_vvvq3"]
-[ext_resource type="FontFile" uid="uid://bkfsvsrp1552e" path="res://assets/fonts/SF Pixelate Bold.ttf" id="2_1pqrc"]
+[ext_resource type="FontFile" uid="uid://bkfsvsrp1552e" path="res://assets/fonts/SF_Pixelate/SF Pixelate Bold.ttf" id="2_1pqrc"]
 [ext_resource type="AudioStream" uid="uid://scy1pcfeb3cp" path="res://assets/audio/soundtrack/A Theme For Space.wav" id="4_8wsan"]
 
 [node name="Intro" type="Node2D"]

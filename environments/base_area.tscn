@@ -1043,9 +1043,6 @@ position = Vector2(-289, 58)
 texture = SubResource("AtlasTexture_0nunf")
 flip_h = true
 
-[node name="Player" parent="." instance=ExtResource("4_xnnpk")]
-position = Vector2(664, 176)
-
 [node name="ScreenCenter" type="Marker2D" parent="."]
 position = Vector2(600, 400)
 
@@ -1083,6 +1080,9 @@ data = ExtResource("9_d7ria")
 [node name="VendingMachine" parent="Chars" instance=ExtResource("5_jgyno")]
 position = Vector2(536, -56)
 data = ExtResource("44_0jtl1")
+
+[node name="Player" parent="." instance=ExtResource("4_xnnpk")]
+position = Vector2(664, 176)
 
 [node name="COLL" type="Node2D" parent="."]
 visible = false

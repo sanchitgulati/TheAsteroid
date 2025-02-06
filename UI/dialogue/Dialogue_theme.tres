@@ -1,9 +1,8 @@
-[gd_resource type="Theme" load_steps=11 format=3 uid="uid://c3gfwu5jojd"]
+[gd_resource type="Theme" load_steps=10 format=3 uid="uid://c3gfwu5jojd"]
 
-[ext_resource type="FontFile" uid="uid://iv2gcl0qd8i6" path="res://assets/fonts/SF Pixelate.ttf" id="1_k6ga6"]
 [ext_resource type="Texture2D" uid="uid://bvipvx3esky5g" path="res://assets/bitmaps/ui/dialog_neutral.png" id="2_7jnsb"]
-[ext_resource type="FontFile" uid="uid://bkfsvsrp1552e" path="res://assets/fonts/SF Pixelate Bold.ttf" id="2_mfy1l"]
 [ext_resource type="Texture2D" uid="uid://d117yhbmf8o0f" path="res://assets/bitmaps/ui/textfield_9patch.png" id="3_0gws1"]
+[ext_resource type="FontFile" uid="uid://dm8rlbl1f1q0b" path="res://assets/fonts/Billy_Font/Billy-Regular.ttf" id="5_wbs3c"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fsgyt"]
 bg_color = Color(0.305945, 0.423796, 0.602404, 1)
@@ -52,31 +51,27 @@ texture_margin_bottom = 8.0
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p35pq"]
 
 [resource]
-default_font = ExtResource("1_k6ga6")
+default_font = ExtResource("5_wbs3c")
+default_font_size = 14
 Button/font_sizes/font_size = 10
 Button/styles/hover = SubResource("StyleBoxFlat_fsgyt")
 Button/styles/normal = SubResource("StyleBoxFlat_j5rgl")
-Label/colors/font_color = Color(0.234205, 0.167239, 0.172922, 1)
-Label/constants/line_spacing = 9
-Label/font_sizes/font_size = 10
-Label/fonts/font = ExtResource("1_k6ga6")
+Label/colors/font_color = Color(0.474419, 0.35904, 0.368597, 1)
+Label/constants/line_spacing = 2
 LabelAlt/base_type = &"Label"
 LabelAlt/colors/font_color = Color(1, 1, 1, 1)
 LabelAlt/constants/outline_size = 4
 PanelContainer/styles/panel = SubResource("StyleBoxTexture_3cd21")
 PanlContAlt/base_type = &"PanelContainer"
 PanlContAlt/styles/panel = SubResource("StyleBoxTexture_xtse7")
-RichTextLabel/colors/default_color = Color(0, 0, 0, 1)
-RichTextLabel/constants/line_separation = 5
-RichTextLabel/font_sizes/normal_font_size = 10
-RichTextLabel/fonts/bold_font = ExtResource("2_mfy1l")
-RichTextLabel/fonts/normal_font = ExtResource("1_k6ga6")
+RichTextLabel/colors/default_color = Color(0.241156, 0.241156, 0.241156, 1)
+RichTextLabel/constants/line_separation = 2
 RichTextLabel/styles/focus = SubResource("StyleBoxEmpty_ok0t4")
-TextEdit/colors/caret_color = Color(0.162066, 0.162066, 0.162065, 1)
-TextEdit/colors/font_color = Color(0.0808155, 0.113188, 0.129423, 1)
+TextEdit/colors/caret_color = Color(0.233926, 0.233926, 0.233924, 1)
+TextEdit/colors/font_color = Color(0.160708, 0.188067, 0.184161, 1)
 TextEdit/colors/search_result_border_color = Color(0.301961, 0.301961, 0.301961, 0)
 TextEdit/constants/caret_width = 6
 TextEdit/constants/line_spacing = 5
-TextEdit/font_sizes/font_size = 10
-TextEdit/fonts/font = ExtResource("1_k6ga6")
+TextEdit/font_sizes/font_size = 14
+TextEdit/fonts/font = ExtResource("5_wbs3c")
 TextEdit/styles/normal = SubResource("StyleBoxEmpty_p35pq")

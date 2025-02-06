@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://sdf4pddtnkro"]
+[gd_scene load_steps=6 format=3 uid="uid://sdf4pddtnkro"]
 
 [ext_resource type="Texture2D" uid="uid://c6vmia320m4b1" path="res://assets/bitmaps/ui/inv_slot_bg.png" id="1_uemv4"]
 [ext_resource type="Script" path="res://UI/inventory/inventory_slot_ui.gd" id="1_ufp15"]
 [ext_resource type="Theme" uid="uid://c3gfwu5jojd" path="res://UI/dialogue/Dialogue_theme.tres" id="3_714jq"]
 [ext_resource type="Texture2D" uid="uid://cnfgl44xjnyor" path="res://assets/bitmaps/items/beer_can_small.png" id="3_h87q1"]
+[ext_resource type="FontFile" uid="uid://dxgg848nrycdm" path="res://assets/fonts/depixel/DePixelIllegible.ttf" id="5_dgkje"]
 
 [node name="InventorySlotUi" type="Button"]
 custom_minimum_size = Vector2(48, 48)
@@ -45,6 +46,8 @@ layout_mode = 2
 theme = ExtResource("3_714jq")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("5_dgkje")
+theme_override_font_sizes/font_size = 9
 text = "name too long"
 horizontal_alignment = 1
 vertical_alignment = 1

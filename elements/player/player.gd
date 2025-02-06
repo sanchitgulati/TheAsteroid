@@ -1,8 +1,7 @@
 extends CharacterBody2D
 
 class_name Player
-# to add Animation check:
-# https://docs.godotengine.org/en/stable/getting_started/first_2d_game/03.coding_the_player.html
+
 @export var speed : float = 300.0  # Movement speed
 @export var acceleration : float = 500.0  # Smooth acceleration
 @export var friction : float = 500.0  # Friction when stopping
