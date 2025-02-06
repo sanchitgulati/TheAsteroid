@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://11v8u0174ewp"
-path="res://.godot/imported/space_worker.png-f899da41dc3bfcd3ebf69003c880398c.ctex"
+uid="uid://dktmeap2i3n32"
+path="res://.godot/imported/companion_droid3.png-fbfbb1cd87042a5e384d9413d9fc0a7e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/generated/chars/space_worker.png"
-dest_files=["res://.godot/imported/space_worker.png-f899da41dc3bfcd3ebf69003c880398c.ctex"]
+source_file="res://assets/bitmaps/generated/chars/companion_droid3.png"
+dest_files=["res://.godot/imported/companion_droid3.png-fbfbb1cd87042a5e384d9413d9fc0a7e.ctex"]
 
 [params]
 

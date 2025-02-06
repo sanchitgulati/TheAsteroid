@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://cb3bmj4r2wbxx"]
+
+[ext_resource type="PackedScene" uid="uid://ccnbdaq3o72at" path="res://elements/items/item.tscn" id="1_hkfnn"]
+[ext_resource type="Resource" uid="uid://xsjrrkohwuic" path="res://elements/items/item_data/mushrooms.tres" id="2_5c2go"]
+
+[node name="TheCave" type="Node2D"]
+
+[node name="Mushrooms" parent="." instance=ExtResource("1_hkfnn")]
+position = Vector2(-600, -632)
+data = ExtResource("2_5c2go")
+
+[node name="Mushrooms2" parent="." instance=ExtResource("1_hkfnn")]
+position = Vector2(-560, -592)
+data = ExtResource("2_5c2go")
+
+[node name="Mushrooms5" parent="." instance=ExtResource("1_hkfnn")]
+position = Vector2(-560, -528)
+data = ExtResource("2_5c2go")
+
+[node name="Mushrooms3" parent="." instance=ExtResource("1_hkfnn")]
+position = Vector2(-640, -560)
+data = ExtResource("2_5c2go")
+
+[node name="Mushrooms4" parent="." instance=ExtResource("1_hkfnn")]
+position = Vector2(-616, -496)
+data = ExtResource("2_5c2go")

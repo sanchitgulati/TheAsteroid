@@ -16,9 +16,8 @@ script = ExtResource("1_ufp15")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 0
-offset_left = 4.0
-offset_right = 44.0
-offset_bottom = 117.0
+offset_right = 56.0
+offset_bottom = 64.0
 
 [node name="40x40" type="ColorRect" parent="VBoxContainer"]
 visible = false

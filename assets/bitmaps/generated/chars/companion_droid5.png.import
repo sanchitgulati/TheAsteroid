@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqgeg781i8t0c"
-path="res://.godot/imported/hydroponic_gardener2.png-744ab953d5b1b06a262b1684e26a0ebf.ctex"
+uid="uid://bmilj3hd4mfmw"
+path="res://.godot/imported/companion_droid5.png-9590995ad31ae49e7078c87e1efe826b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/generated/chars/hydroponic_gardener2.png"
-dest_files=["res://.godot/imported/hydroponic_gardener2.png-744ab953d5b1b06a262b1684e26a0ebf.ctex"]
+source_file="res://assets/bitmaps/generated/chars/companion_droid5.png"
+dest_files=["res://.godot/imported/companion_droid5.png-9590995ad31ae49e7078c87e1efe826b.ctex"]
 
 [params]
 

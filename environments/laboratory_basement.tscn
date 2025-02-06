@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://bnt6f0fxtund4"]
+
+[ext_resource type="Texture2D" uid="uid://chuwqxcpxuv1q" path="res://assets/bitmaps/tilesets/SpcStationObjcts.png" id="1_cbh3u"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3svyy"]
+atlas = ExtResource("1_cbh3u")
+region = Rect2(896, 0, 128, 128)
+
+[node name="LaboratoryBasement" type="Node2D"]
+
+[node name="LabTable" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_3svyy")

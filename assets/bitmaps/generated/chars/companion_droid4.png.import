@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7hfd3ses8tmf"
-path="res://.godot/imported/detective2.png-9f3e557c2fa2a5e2743e9f37bf4db09a.ctex"
+uid="uid://bwic1dr3mvi4f"
+path="res://.godot/imported/companion_droid4.png-1818bdeab2ac61d4a76ec241fc54a4d1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/generated/chars/detective2.png"
-dest_files=["res://.godot/imported/detective2.png-9f3e557c2fa2a5e2743e9f37bf4db09a.ctex"]
+source_file="res://assets/bitmaps/generated/chars/companion_droid4.png"
+dest_files=["res://.godot/imported/companion_droid4.png-1818bdeab2ac61d4a76ec241fc54a4d1.ctex"]
 
 [params]
 

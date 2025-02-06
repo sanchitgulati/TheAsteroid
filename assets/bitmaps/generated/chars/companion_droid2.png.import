@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgsfcxvo0hqj3"
-path="res://.godot/imported/space_fem_char11.png-9e28e496782dab13d1d09e3f127fc943.ctex"
+uid="uid://dxtt7mhg5jofl"
+path="res://.godot/imported/companion_droid2.png-9ce51ecf686901a0b0a84083087717e0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/generated/chars/space_fem_char11.png"
-dest_files=["res://.godot/imported/space_fem_char11.png-9e28e496782dab13d1d09e3f127fc943.ctex"]
+source_file="res://assets/bitmaps/generated/chars/companion_droid2.png"
+dest_files=["res://.godot/imported/companion_droid2.png-9ce51ecf686901a0b0a84083087717e0.ctex"]
 
 [params]
 

@@ -1,10 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://cwgaaiweib4b3"]
+[gd_scene load_steps=8 format=3 uid="uid://cwgaaiweib4b3"]
 
 [ext_resource type="Script" path="res://elements/npcs/npc.gd" id="1_8fksl"]
 [ext_resource type="Resource" uid="uid://b17ipj8wgm11x" path="res://elements/npcs/npc_data/npc_dark_drone.tres" id="2_mg17f"]
 [ext_resource type="Material" uid="uid://clq40pb6ncpwg" path="res://assets/shaders/CharDropShadow.tres" id="3_ti88x"]
-[ext_resource type="Texture2D" uid="uid://dkwwd6yrr554i" path="res://assets/generated/chars/sphere_droid.png" id="4_lemvc"]
+[ext_resource type="Texture2D" uid="uid://dkwwd6yrr554i" path="res://assets/bitmaps/generated/chars/sphere_droid.png" id="5_ioep4"]
 [ext_resource type="Material" uid="uid://b2v7ukyj8oetb" path="res://assets/shaders/SpriteAndShadow.tres" id="5_vmid5"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5qjj5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_687tg"]
 size = Vector2(40, 56)
@@ -16,11 +18,11 @@ data = ExtResource("2_mg17f")
 [node name="SpriteShadow" type="Sprite2D" parent="."]
 visible = false
 material = ExtResource("3_ti88x")
-texture = ExtResource("4_lemvc")
+texture = SubResource("CompressedTexture2D_5qjj5")
 
 [node name="TextureRect" type="Sprite2D" parent="."]
 material = ExtResource("5_vmid5")
-texture = ExtResource("4_lemvc")
+texture = ExtResource("5_ioep4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_687tg")
