@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://ptkseutwb6ke"]
+[gd_scene load_steps=6 format=3 uid="uid://ptkseutwb6ke"]
 
 [ext_resource type="Script" path="res://UI/dialogue/dialogue.gd" id="1_jww1s"]
 [ext_resource type="Theme" uid="uid://c3gfwu5jojd" path="res://UI/dialogue/Dialogue_theme.tres" id="3_l0jdm"]
 [ext_resource type="Texture2D" uid="uid://cimtoxdlhn7gc" path="res://assets/bitmaps/nobody.png" id="5_1moy0"]
+[ext_resource type="StyleBox" uid="uid://c7at62a831ysq" path="res://UI/dialogue/Button_box_red.tres" id="5_c31cj"]
 [ext_resource type="Script" path="res://UI/dialogue/grab_focus.gd" id="6_b8ddn"]
 
 [node name="Dialogue" type="Control" node_paths=PackedStringArray("llm_output", "llm_input")]
@@ -16,7 +17,7 @@ offset_bottom = 35.0
 grow_vertical = 0
 script = ExtResource("1_jww1s")
 llm_output = NodePath("Answer/MarginContainer/llm_output")
-llm_input = NodePath("HBoxContainer/Question/llm_input")
+llm_input = NodePath("HBoxContainer/Question/MarginContainer/llm_input")
 
 [node name="Character" type="TextureRect" parent="."]
 layout_mode = 1
@@ -36,17 +37,17 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 10.0
-offset_top = 1.0
-offset_right = 577.0
-offset_bottom = -61.0
+offset_left = 8.0
+offset_top = 4.0
+offset_right = 575.0
+offset_bottom = -58.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("3_l0jdm")
 
 [node name="MarginContainer" type="MarginContainer" parent="Answer"]
 layout_mode = 2
-theme_override_constants/margin_left = 3
+theme_override_constants/margin_left = 7
 theme_override_constants/margin_top = 3
 theme_override_constants/margin_right = 0
 theme_override_constants/margin_bottom = 0
@@ -60,19 +61,24 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 2
-offset_left = 16.0
+offset_left = 8.0
 offset_top = 132.0
-offset_right = 781.0
-offset_bottom = 186.0
+offset_right = 797.0
+offset_bottom = 196.0
 
 [node name="Question" type="PanelContainer" parent="HBoxContainer"]
 modulate = Color(0.925353, 0.925353, 0.925353, 1)
-custom_minimum_size = Vector2(655, 48)
+custom_minimum_size = Vector2(640, 0)
 layout_mode = 2
 theme = ExtResource("3_l0jdm")
 
-[node name="llm_input" type="TextEdit" parent="HBoxContainer/Question"]
-custom_minimum_size = Vector2(630, 0)
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/Question"]
+layout_mode = 2
+theme_override_constants/margin_left = 7
+theme_override_constants/margin_right = 5
+
+[node name="llm_input" type="TextEdit" parent="HBoxContainer/Question/MarginContainer"]
+custom_minimum_size = Vector2(620, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 theme = ExtResource("3_l0jdm")
@@ -86,17 +92,20 @@ script = ExtResource("6_b8ddn")
 metadata/_edit_use_anchors_ = true
 
 [node name="Button" type="Button" parent="HBoxContainer"]
-custom_minimum_size = Vector2(48, 0)
+custom_minimum_size = Vector2(64, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 theme = ExtResource("3_l0jdm")
 text = "Send"
 
 [node name="Button2" type="Button" parent="HBoxContainer"]
-custom_minimum_size = Vector2(48, 0)
+custom_minimum_size = Vector2(64, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 theme = ExtResource("3_l0jdm")
+theme_type_variation = &"FlatButton"
+theme_override_styles/hover = ExtResource("5_c31cj")
+theme_override_styles/normal = ExtResource("5_c31cj")
 text = "Close"
 
 [connection signal="pressed" from="HBoxContainer/Button" to="." method="_on_button_pressed"]

@@ -21,10 +21,8 @@ color = Color(1, 0, 1, 0.12549)
 [node name="Inventory" parent="CanvasLayer50" instance=ExtResource("2_4yhnd")]
 
 [node name="Dialogue" parent="CanvasLayer50" instance=ExtResource("3_t1wol")]
-offset_left = -3.0
-offset_top = -193.0
-offset_right = 214.0
-offset_bottom = -6.0
+offset_top = -204.0
+offset_bottom = -17.0
 
 [node name="Soundtrack" type="Node" parent="."]
 

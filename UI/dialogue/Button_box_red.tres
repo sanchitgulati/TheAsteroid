@@ -1,0 +1,11 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://c7at62a831ysq"]
+
+[ext_resource type="Texture2D" uid="uid://bvipvx3esky5g" path="res://assets/bitmaps/ui/dialog_neutral.png" id="1_wyfgu"]
+
+[resource]
+texture = ExtResource("1_wyfgu")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+modulate_color = Color(0.56, 0.35532, 0.3192, 1)

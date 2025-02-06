@@ -1336,99 +1336,8 @@ texture = ExtResource("47_uxo0t")
 position = Vector2(384, 1072)
 texture = ExtResource("47_uxo0t")
 
-[node name="Labels" type="Control" parent="."]
-visible = false
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Label" type="Label" parent="Labels"]
-layout_mode = 0
-offset_left = -96.0
-offset_top = -336.0
-offset_right = 14.0
-offset_bottom = -310.0
-theme_override_colors/font_color = Color(0.201123, 1, 0.40942, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 8
-theme_override_font_sizes/font_size = 18
-text = "Hydroponics"
-
-[node name="Label2" type="Label" parent="Labels"]
-layout_mode = 0
-offset_left = -11.0
-offset_top = 500.0
-offset_right = 99.0
-offset_bottom = 526.0
-theme_override_colors/font_color = Color(0.201123, 1, 0.40942, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 8
-theme_override_font_sizes/font_size = 18
-text = "LAB"
-
-[node name="Label7" type="Label" parent="Labels"]
-layout_mode = 0
-offset_left = -96.0
-offset_top = 80.0
-offset_right = 26.0
-offset_bottom = 106.0
-theme_override_colors/font_color = Color(0.201123, 1, 0.40942, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 8
-theme_override_font_sizes/font_size = 18
-text = "Power Station
-"
-
-[node name="Label3" type="Label" parent="Labels"]
-layout_mode = 0
-offset_left = 781.0
-offset_top = 271.0
-offset_right = 891.0
-offset_bottom = 297.0
-theme_override_colors/font_color = Color(0.201123, 1, 0.40942, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 8
-theme_override_font_sizes/font_size = 18
-text = "HUB"
-
-[node name="Label4" type="Label" parent="Labels"]
-layout_mode = 0
-offset_left = 1048.0
-offset_top = 760.0
-offset_right = 1175.0
-offset_bottom = 786.0
-theme_override_colors/font_color = Color(0.201123, 1, 0.40942, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 8
-theme_override_font_sizes/font_size = 18
-text = "Crew Quarters"
-
-[node name="Label5" type="Label" parent="Labels"]
-layout_mode = 0
-offset_left = 352.0
-offset_top = 914.0
-offset_right = 479.0
-offset_bottom = 940.0
-theme_override_colors/font_color = Color(0.201123, 1, 0.40942, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 8
-theme_override_font_sizes/font_size = 18
-text = "Astroport"
-
-[node name="Label6" type="Label" parent="Labels"]
-layout_mode = 0
-offset_left = -40.0
-offset_top = 912.0
-offset_right = 122.0
-offset_bottom = 938.0
-theme_override_colors/font_color = Color(0.201123, 1, 0.40942, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 8
-theme_override_font_sizes/font_size = 18
-text = "Hidden Cryogenics"
-
 [node name="DEBUG" type="Node2D" parent="."]
+visible = false
 
 [node name="Coins3" parent="DEBUG" instance=ExtResource("10_o4pkl")]
 position = Vector2(664, 264)
@@ -1488,3 +1397,94 @@ theme_override_constants/outline_size = 5
 text = "Prompt from paper\"Gen Agents\""
 autowrap_mode = 2
 justification_flags = 171
+
+[node name="Labels" type="Control" parent="DEBUG"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="DEBUG/Labels"]
+layout_mode = 0
+offset_left = -72.0
+offset_top = -328.0
+offset_right = 38.0
+offset_bottom = -302.0
+theme_override_colors/font_color = Color(0.201123, 1, 0.40942, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 18
+text = "Hydroponics"
+
+[node name="Label2" type="Label" parent="DEBUG/Labels"]
+layout_mode = 0
+offset_left = -56.0
+offset_top = 664.0
+offset_right = 54.0
+offset_bottom = 690.0
+theme_override_colors/font_color = Color(0.201123, 1, 0.40942, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 18
+text = "LAB"
+
+[node name="Label7" type="Label" parent="DEBUG/Labels"]
+layout_mode = 0
+offset_left = -80.0
+offset_top = 152.0
+offset_right = 42.0
+offset_bottom = 178.0
+theme_override_colors/font_color = Color(0.201123, 1, 0.40942, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 18
+text = "Power Station
+"
+
+[node name="Label3" type="Label" parent="DEBUG/Labels"]
+layout_mode = 0
+offset_left = 784.0
+offset_top = 344.0
+offset_right = 894.0
+offset_bottom = 370.0
+theme_override_colors/font_color = Color(0.201123, 1, 0.40942, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 18
+text = "HUB"
+
+[node name="Label4" type="Label" parent="DEBUG/Labels"]
+layout_mode = 0
+offset_left = 1048.0
+offset_top = 696.0
+offset_right = 1175.0
+offset_bottom = 722.0
+theme_override_colors/font_color = Color(0.201123, 1, 0.40942, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 18
+text = "Crew Quarters"
+
+[node name="Label5" type="Label" parent="DEBUG/Labels"]
+layout_mode = 0
+offset_left = 184.0
+offset_top = 976.0
+offset_right = 311.0
+offset_bottom = 1002.0
+theme_override_colors/font_color = Color(0.201123, 1, 0.40942, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 18
+text = "Astroport"
+
+[node name="Label6" type="Label" parent="DEBUG/Labels"]
+layout_mode = 0
+offset_left = -40.0
+offset_top = 976.0
+offset_right = 122.0
+offset_bottom = 1002.0
+theme_override_colors/font_color = Color(0.201123, 1, 0.40942, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 18
+text = "Hidden Cryogenics"

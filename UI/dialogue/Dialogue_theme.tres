@@ -1,43 +1,9 @@
 [gd_resource type="Theme" load_steps=10 format=3 uid="uid://c3gfwu5jojd"]
 
-[ext_resource type="Texture2D" uid="uid://bvipvx3esky5g" path="res://assets/bitmaps/ui/dialog_neutral.png" id="2_7jnsb"]
+[ext_resource type="StyleBox" uid="uid://dx5x3y6iske2o" path="res://UI/dialogue/Button_box_green.tres" id="1_ueer8"]
+[ext_resource type="StyleBox" uid="uid://drapd835ba6td" path="res://UI/dialogue/Dialog_box_texture.tres" id="2_mf2d8"]
 [ext_resource type="Texture2D" uid="uid://d117yhbmf8o0f" path="res://assets/bitmaps/ui/textfield_9patch.png" id="3_0gws1"]
 [ext_resource type="FontFile" uid="uid://dm8rlbl1f1q0b" path="res://assets/fonts/Billy_Font/Billy-Regular.ttf" id="5_wbs3c"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fsgyt"]
-bg_color = Color(0.305945, 0.423796, 0.602404, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0.722594, 0.59029, 0.286504, 1)
-corner_radius_top_left = 5
-corner_radius_top_right = 5
-corner_radius_bottom_right = 5
-corner_radius_bottom_left = 5
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j5rgl"]
-bg_color = Color(0.105311, 0.163914, 0.25278, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0.722594, 0.59029, 0.286504, 1)
-corner_radius_top_left = 5
-corner_radius_top_right = 5
-corner_radius_bottom_right = 5
-corner_radius_bottom_left = 5
-shadow_color = Color(0, 0, 0, 0.372549)
-shadow_size = 1
-shadow_offset = Vector2(2, 2)
-anti_aliasing = false
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3cd21"]
-texture = ExtResource("2_7jnsb")
-texture_margin_left = 12.0
-texture_margin_top = 12.0
-texture_margin_right = 12.0
-texture_margin_bottom = 12.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xtse7"]
 texture = ExtResource("3_0gws1")
@@ -46,32 +12,38 @@ texture_margin_top = 8.0
 texture_margin_right = 8.0
 texture_margin_bottom = 8.0
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ok0t4"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h0yss"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_oyvol"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p35pq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kmra3"]
 
 [resource]
 default_font = ExtResource("5_wbs3c")
 default_font_size = 14
-Button/font_sizes/font_size = 10
-Button/styles/hover = SubResource("StyleBoxFlat_fsgyt")
-Button/styles/normal = SubResource("StyleBoxFlat_j5rgl")
+Button/constants/outline_size = 4
+Button/font_sizes/font_size = 14
+Button/styles/hover = ExtResource("1_ueer8")
+Button/styles/normal = ExtResource("1_ueer8")
 Label/colors/font_color = Color(0.474419, 0.35904, 0.368597, 1)
 Label/constants/line_spacing = 2
 LabelAlt/base_type = &"Label"
 LabelAlt/colors/font_color = Color(1, 1, 1, 1)
 LabelAlt/constants/outline_size = 4
-PanelContainer/styles/panel = SubResource("StyleBoxTexture_3cd21")
+PanelContainer/styles/panel = ExtResource("2_mf2d8")
 PanlContAlt/base_type = &"PanelContainer"
 PanlContAlt/styles/panel = SubResource("StyleBoxTexture_xtse7")
 RichTextLabel/colors/default_color = Color(0.241156, 0.241156, 0.241156, 1)
 RichTextLabel/constants/line_separation = 2
-RichTextLabel/styles/focus = SubResource("StyleBoxEmpty_ok0t4")
+RichTextLabel/styles/focus = SubResource("StyleBoxEmpty_h0yss")
 TextEdit/colors/caret_color = Color(0.233926, 0.233926, 0.233924, 1)
 TextEdit/colors/font_color = Color(0.160708, 0.188067, 0.184161, 1)
 TextEdit/colors/search_result_border_color = Color(0.301961, 0.301961, 0.301961, 0)
 TextEdit/constants/caret_width = 6
 TextEdit/constants/line_spacing = 5
-TextEdit/font_sizes/font_size = 14
 TextEdit/fonts/font = ExtResource("5_wbs3c")
+TextEdit/styles/focus = SubResource("StyleBoxEmpty_oyvol")
 TextEdit/styles/normal = SubResource("StyleBoxEmpty_p35pq")
+TextEdit/styles/read_only = SubResource("StyleBoxEmpty_kmra3")
