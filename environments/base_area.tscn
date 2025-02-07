@@ -1500,29 +1500,28 @@ position = Vector2(384, 1072)
 texture = ExtResource("47_uxo0t")
 
 [node name="DEBUG" type="Node2D" parent="."]
-visible = false
 
 [node name="Coins3" parent="DEBUG" instance=ExtResource("10_o4pkl")]
-position = Vector2(664, 264)
+position = Vector2(664, 280)
 data = ExtResource("36_memte")
 
 [node name="Coins4" parent="DEBUG" instance=ExtResource("10_o4pkl")]
-position = Vector2(520, 240)
+position = Vector2(512, 256)
 data = ExtResource("37_58tpb")
 
 [node name="vodka" parent="DEBUG" instance=ExtResource("10_o4pkl")]
-position = Vector2(720, 264)
+position = Vector2(712, 280)
 
 [node name="vodka2" parent="DEBUG" instance=ExtResource("10_o4pkl")]
-position = Vector2(808, 112)
+position = Vector2(808, 96)
 data = ExtResource("48_bc463")
 
 [node name="TlkToBenno" parent="DEBUG" instance=ExtResource("10_o4pkl")]
-position = Vector2(768, 248)
+position = Vector2(768, 280)
 data = ExtResource("37_2ewrf")
 
 [node name="TlkToBenno2" parent="DEBUG" instance=ExtResource("10_o4pkl")]
-position = Vector2(808, 209)
+position = Vector2(808, 208)
 data = ExtResource("39_1k7lm")
 
 [node name="EddyLin" parent="DEBUG" instance=ExtResource("5_jgyno")]
@@ -1672,3 +1671,6 @@ offset_top = 264.0
 offset_right = 40.0
 offset_bottom = 632.0
 texture = SubResource("GradientTexture2D_ydvkp")
+
+[node name="DoorAstroport" parent="." instance=ExtResource("11_tmvlt")]
+position = Vector2(480, 632)

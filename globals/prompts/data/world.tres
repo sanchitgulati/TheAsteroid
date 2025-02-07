@@ -38,8 +38,8 @@ Company Culture:
 script = ExtResource("1_otw3v")
 active = true
 text = "Context:
-	The Accident has happenend outside the Station, you know Inspector Kalashnikov has come to investigate.
-	You don't know exactly what happened during The Accident. The accident happened in The Cave outside The Station, all the Miners are missing since The Accident, 	The Cave and the mining area are quarantined at the moment."
+	The Accident has happenend outside the Station, you know Inspector Kalashnikov has been sent by The Company to investigate.
+	You don't know exactly what happened during The Accident, but you know the Miners did not come back from the shift. The accident happened in The Cave outside The Station, The Cave and the mining area are quarantined at the moment."
 
 [sub_resource type="Resource" id="Resource_vfh77"]
 script = ExtResource("1_otw3v")
