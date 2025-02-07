@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://dhdcixbvblhwl"]
+
+[ext_resource type="Material" uid="uid://b265yq8x2i4aj" path="res://assets/shaders/EnvAndShadow.tres" id="1_523oq"]
+[ext_resource type="Texture2D" uid="uid://c575ers1s6njk" path="res://assets/generated/env/server.png" id="2_5x4r7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_walgw"]
+size = Vector2(71, 50)
+
+[node name="Servers2" type="StaticBody2D"]
+position = Vector2(-241, -795)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -27)
+shape = SubResource("RectangleShape2D_walgw")
+
+[node name="Server" type="Sprite2D" parent="."]
+material = ExtResource("1_523oq")
+position = Vector2(-25, -26)
+texture = ExtResource("2_5x4r7")
+
+[node name="Server2" type="Sprite2D" parent="."]
+material = ExtResource("1_523oq")
+position = Vector2(-1, -26)
+texture = ExtResource("2_5x4r7")
+
+[node name="Server3" type="Sprite2D" parent="."]
+material = ExtResource("1_523oq")
+position = Vector2(23, -26)
+texture = ExtResource("2_5x4r7")

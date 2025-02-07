@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://ctxhswu64v6tk"]
+
+[ext_resource type="Texture2D" uid="uid://chuwqxcpxuv1q" path="res://assets/bitmaps/tilesets/SpcStationObjcts.png" id="1_vd52v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g0yb6"]
+size = Vector2(111, 117)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sy0kl"]
+atlas = ExtResource("1_vd52v")
+region = Rect2(224, 544, 128, 160)
+
+[node name="HydropTray" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-319.5, -579.5)
+shape = SubResource("RectangleShape2D_g0yb6")
+debug_color = Color(0, 0.595, 0.7, 0.376471)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-312, -590)
+texture = SubResource("AtlasTexture_sy0kl")

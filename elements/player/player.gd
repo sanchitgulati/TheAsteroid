@@ -14,6 +14,8 @@ var screen_size # Size of the game window.
 
 # Anim section
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
+@onready var animated_shadow: AnimatedSprite2D = $AnimatedSprite2DShadow
+
 var face_direction : String = "down"
 var animation_to_play := "idle_down"
 
@@ -21,7 +23,7 @@ var animation_to_play := "idle_down"
 func _ready():
 	WorldState.PLAYER = self
 	screen_size = get_viewport_rect().size
-	#var screen_center = Vector2(screen_size.x/2, screen_size.y/2)
+	#var screen_center = Vector2(screen_size.x/2, screen_size.y/2)37.7
 	#position = screen_center
 
 func get_input():
@@ -51,6 +53,7 @@ func _physics_process(_delta):
 	animation_to_play =  ("walk" if velocity.length() > 0.0 else "idle") + "_" + face_direction
 	#print("Player anim: " + animation_to_play)
 	animated_sprite.play(animation_to_play)
+	animated_shadow.play(animation_to_play)
 	
 	## Move and slide
 	move_and_slide()

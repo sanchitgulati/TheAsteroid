@@ -5,6 +5,9 @@
 [ext_resource type="Texture2D" uid="uid://18el8wjflkqf" path="res://assets/bitmaps/detective/walk.png" id="3_dys7o"]
 [ext_resource type="Script" path="res://elements/player/player_light.gd" id="4_vgi0x"]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hn822"]
+radius = 12.0
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_v2qve"]
 atlas = ExtResource("2_52lrd")
 region = Rect2(0, 0, 32, 64)
@@ -272,9 +275,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hn822"]
-radius = 12.0
-
 [sub_resource type="Gradient" id="Gradient_80po8"]
 offsets = PackedFloat32Array(0, 0.227207, 0.625181, 0.907381)
 colors = PackedColorArray(0.55, 0.445592, 0.1815, 0.117647, 0.226732, 0.19688, 0.0910876, 0.32549, 0.01, 0.01, 0.01, 0.4, 0.0264, 0.03312, 0.06, 0.611765)
@@ -290,17 +290,24 @@ fill_to = Vector2(0.675214, 0.247863)
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_qsi7k")
 speed = 200.0
-metadata/_edit_group_ = true
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -30)
-sprite_frames = SubResource("SpriteFrames_pp1j4")
-animation = &"idle_right"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -15)
 shape = SubResource("CapsuleShape2D_hn822")
 debug_color = Color(0, 0.6, 0.7, 0.42)
+
+[node name="AnimatedSprite2DShadow" type="AnimatedSprite2D" parent="."]
+modulate = Color(0, 0, 0, 0.392157)
+position = Vector2(9.18629, -11.1863)
+scale = Vector2(1, 0.522097)
+skew = 0.785398
+sprite_frames = SubResource("SpriteFrames_pp1j4")
+animation = &"idle_right"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -30)
+sprite_frames = SubResource("SpriteFrames_pp1j4")
+animation = &"idle_right"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position_smoothing_enabled = true

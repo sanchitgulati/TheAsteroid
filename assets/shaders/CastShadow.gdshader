@@ -7,7 +7,7 @@ uniform bool look_right = true;
 void vertex() {
 	VERTEX.x = VERTEX.x * { -1.0, 1.0 }[int(look_right)];
 
-	float xSkewRatio = step(UV.y, .5);
+	float xSkewRatio = step(UV.y, 0.5);
 	vec2 skewTransition = vec2(abs(VERTEX.x) * xSkewRatio, 0.0);
 	vec2 skewScale = vec2(VERTEX.x, (VERTEX.y + abs(VERTEX.y)) / 2.0);
 

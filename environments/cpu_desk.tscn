@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://q2qd01otejqf"]
+
+[ext_resource type="Material" uid="uid://b265yq8x2i4aj" path="res://assets/shaders/EnvAndShadow.tres" id="1_8jr78"]
+[ext_resource type="Texture2D" uid="uid://bd2tipbn1ojkq" path="res://assets/generated/env/desk_computer.png" id="2_l6oor"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j5y4s"]
+size = Vector2(35, 27)
+
+[node name="CpuDesk2" type="StaticBody2D"]
+position = Vector2(-240, -750)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -17.5)
+shape = SubResource("RectangleShape2D_j5y4s")
+
+[node name="DeskComputer" type="Sprite2D" parent="."]
+material = ExtResource("1_8jr78")
+position = Vector2(-0.5, -18)
+texture = ExtResource("2_l6oor")
