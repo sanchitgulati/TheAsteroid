@@ -28,6 +28,7 @@ Quests="*res://globals/quests.gd"
 file_logging/enable_file_logging=true
 settings/stdout/verbose_stdout=true
 gdscript/warnings/exclude_addons=false
+shapes/collision/shape_color=Color(0, 0.595, 0.7, 0.129412)
 
 [display]
 

@@ -6,6 +6,8 @@ class_name NPC
 
 @onready var texture_rect = $TextureRect
 
+@export var face_opposite : bool = false
+
 @export var data: npc_data
 @export var chat_history: Array[String]
 
@@ -14,6 +16,8 @@ var first_touch = true
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	set_from_data()
+	if face_opposite == true:
+		texture_rect.flip_h = true
 	pass
 	
 func equals(npc:NPC):

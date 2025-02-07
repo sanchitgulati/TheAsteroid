@@ -1,12 +1,12 @@
 [gd_resource type="Resource" script_class="npc_data" load_steps=3 format=3 uid="uid://bnss2nwuoksff"]
 
 [ext_resource type="Script" path="res://elements/npcs/npc_data/npc_data.gd" id="1_fqg3o"]
-[ext_resource type="Texture2D" uid="uid://dkwwd6yrr554i" path="res://assets/bitmaps/generated/chars/sphere_droid.png" id="2_15ayi"]
+[ext_resource type="Texture2D" uid="uid://cj0co3u26bp3k" path="res://assets/bitmaps/comp_droid_pap.png" id="2_utr1o"]
 
 [resource]
 script = ExtResource("1_fqg3o")
 name = "Wilson"
-texture = ExtResource("2_15ayi")
+texture = ExtResource("2_utr1o")
 age = 4
 public_persona = "Wilson is the helpful droid welcoming visitors to The Station"
 private_persona = "You are a companion spherical flying droid.

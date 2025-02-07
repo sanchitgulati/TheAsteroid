@@ -1,12 +1,12 @@
 [gd_resource type="Resource" script_class="npc_data" load_steps=3 format=3 uid="uid://b17ipj8wgm11x"]
 
 [ext_resource type="Script" path="res://elements/npcs/npc_data/npc_data.gd" id="1_plqt2"]
-[ext_resource type="Texture2D" uid="uid://dkwwd6yrr554i" path="res://assets/generated/chars/sphere_droid.png" id="2_cbw0m"]
+[ext_resource type="Texture2D" uid="uid://cj0co3u26bp3k" path="res://assets/bitmaps/comp_droid_pap.png" id="2_0ealt"]
 
 [resource]
 script = ExtResource("1_plqt2")
 name = "Marvin"
-texture = ExtResource("2_cbw0m")
+texture = ExtResource("2_0ealt")
 age = 4
 public_persona = "Gollum is a companion spherical flying droid that records all the events that happen.
 
