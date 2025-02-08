@@ -10,6 +10,7 @@ class_name NPC
 
 @export var data: npc_data
 @export var chat_history: Array[String]
+@export var talk_begin: bool = false
 
 
 var first_touch = true
@@ -34,13 +35,15 @@ func equals(npc:NPC):
 func _process(_delta: float) -> void:
 	if Engine.is_editor_hint():
 		set_from_data()
+	elif talk_begin: 
+		start_talk()
+		talk_begin = false
 	pass
 
 func set_from_data():
 	if data == null: return
 	if texture_rect.texture != data.texture:
 		texture_rect.texture = data.texture
-
 
 
 func _on_body_entered(body: Node2D) -> void:
@@ -63,16 +66,19 @@ func _on_body_entered(body: Node2D) -> void:
 			LLM.Dialog.llm_output.text += step.description
 			LLM.Dialog.llm_output.text += '[/b]'
 		else:
-			var system_prompt = data.build_system_prompt()
-			LLM.set_system_prompt(system_prompt)
-			var prompt = Prompts.get_prompt('greetings')
-			LLM.talk_npc(prompt)
+			talk_begin = true
+			
 			
 		
 		
 			
 #		TODO: bisogna mettere il prompt iniziale dentro il dialog
 
+func start_talk():
+	var system_prompt = data.build_system_prompt()
+	LLM.set_system_prompt(system_prompt)
+	var prompt = Prompts.get_prompt('greetings')
+	LLM.talk_npc(prompt)
 
 
 

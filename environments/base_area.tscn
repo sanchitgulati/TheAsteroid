@@ -47,6 +47,7 @@
 [ext_resource type="Theme" uid="uid://c3gfwu5jojd" path="res://themes/Dialogue_theme.tres" id="41_rrr02"]
 [ext_resource type="Resource" uid="uid://dwseu1fmbin03" path="res://elements/npcs/npc_data/npc_john_lin.tres" id="42_qxk8x"]
 [ext_resource type="Texture2D" uid="uid://do2xejiglmol5" path="res://assets/generated/env/desk_alt.png" id="42_y3rwu"]
+[ext_resource type="Resource" uid="uid://c4ckkmv0baq7p" path="res://elements/npcs/npc_data/npc_data_scientist.tres" id="43_3ei5x"]
 [ext_resource type="Resource" uid="uid://dvigw1d87rldf" path="res://elements/npcs/npc_data/npc_vending_machine.tres" id="44_0jtl1"]
 [ext_resource type="Script" path="res://debug.gd" id="45_ndqxi"]
 [ext_resource type="Texture2D" uid="uid://d4md5s6gte37u" path="res://assets/generated/canister.png" id="46_mqkpd"]
