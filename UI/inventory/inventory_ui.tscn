@@ -1,28 +1,24 @@
 [gd_scene load_steps=3 format=3 uid="uid://rp4eqiqkbdpx"]
 
 [ext_resource type="Script" path="res://UI/inventory/inventory_ui.gd" id="1_ljtkx"]
-[ext_resource type="Texture2D" uid="uid://dk72pbqq5osj7" path="res://assets/bitmaps/ui/inventory_9patch.png" id="2_6tgn7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_oxm3p"]
 
 [node name="Inventory" type="Control"]
 layout_mode = 3
 anchors_preset = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 8.0
+offset_bottom = 8.0
 script = ExtResource("1_ljtkx")
 
-[node name="NinePatchRect" type="NinePatchRect" parent="."]
+[node name="Frame" type="PanelContainer" parent="."]
 layout_mode = 1
-offset_right = 297.0
-offset_bottom = 72.0
-texture = ExtResource("2_6tgn7")
-region_rect = Rect2(-0.0812683, -0.0117111, 129.185, 64.9876)
-patch_margin_left = 32
-patch_margin_top = 32
-patch_margin_right = 32
-patch_margin_bottom = 32
+offset_right = 48.0
+offset_bottom = 48.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_oxm3p")
 
-[node name="GridContainer" type="GridContainer" parent="NinePatchRect"]
-layout_mode = 1
-offset_left = 10.0
-offset_top = 15.0
-offset_right = 82.0
-offset_bottom = 84.0
+[node name="GridContainer" type="GridContainer" parent="Frame"]
+layout_mode = 2
 columns = 4
