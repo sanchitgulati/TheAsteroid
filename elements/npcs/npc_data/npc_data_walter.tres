@@ -1,5 +1,6 @@
-[gd_resource type="Resource" script_class="npc_data" load_steps=3 format=3 uid="uid://l85wxsl6gxbj"]
+[gd_resource type="Resource" script_class="npc_data" load_steps=4 format=3 uid="uid://l85wxsl6gxbj"]
 
+[ext_resource type="Script" path="res://elements/quests/quest_data.gd" id="1_0muyh"]
 [ext_resource type="Script" path="res://elements/npcs/npc_data.gd" id="1_4x748"]
 [ext_resource type="Texture2D" uid="uid://cue36lij0fdtf" path="res://assets/bitmaps/generated/chars/worker_redmond.png" id="2_hglib"]
 
@@ -8,6 +9,7 @@ script = ExtResource("1_4x748")
 name = "Gus \"Geargrinder\" Grumwald"
 texture = ExtResource("2_hglib")
 age = 42
+quests = Array[ExtResource("1_0muyh")]([])
 public_persona = "Gus \"Geargrinder\" Grumwald is a seasoned space mechanic residing on the asteroid Plotino. His workshop is cluttered with salvaged tech and tools, the air thick with the scent of ozone and grease. You prefer solitude and honest work, fixing broken machines rather than socializing.
 Gus was born in London, UK.
 His duty is to mantain The Station."

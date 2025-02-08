@@ -8,3 +8,4 @@ script = ExtResource("1_jvtmx")
 name = "Journal"
 description = "Benno's parents Journal"
 texture = ExtResource("2_22wvs")
+quest_item = false

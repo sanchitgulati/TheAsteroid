@@ -1,4 +1,4 @@
-[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://cdefqe3kbj5y7"]
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://b2v7ukyj8oetb"]
 
 [ext_resource type="Shader" path="res://assets/shaders/SpriteAndDropShadow.gdshader" id="1_3mfq8"]
 
