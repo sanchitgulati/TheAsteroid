@@ -63,16 +63,18 @@ func _on_body_entered(body: Node2D) -> void:
 			LLM.Dialog.llm_output.text += step.description
 			LLM.Dialog.llm_output.text += '[/b]'
 		else:
-			var system_prompt = data.build_system_prompt()
-			LLM.set_system_prompt(system_prompt)
-			var prompt = Prompts.get_prompt('greetings')
-			LLM.talk_npc(prompt)
+			start_talk()
 			
 		
 		
 			
 #		TODO: bisogna mettere il prompt iniziale dentro il dialog
 
+func start_talk():
+	var system_prompt = data.build_system_prompt()
+	LLM.set_system_prompt(system_prompt)
+	var prompt = Prompts.get_prompt('greetings')
+	LLM.talk_npc(prompt)
 
 
 
