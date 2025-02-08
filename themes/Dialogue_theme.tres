@@ -1,8 +1,9 @@
-[gd_resource type="Theme" load_steps=10 format=3 uid="uid://c3gfwu5jojd"]
+[gd_resource type="Theme" load_steps=11 format=3 uid="uid://c3gfwu5jojd"]
 
 [ext_resource type="StyleBox" uid="uid://dx5x3y6iske2o" path="res://themes/Button_box_green.tres" id="1_ueer8"]
 [ext_resource type="StyleBox" uid="uid://drapd835ba6td" path="res://themes/Dialog_box_texture.tres" id="2_mf2d8"]
 [ext_resource type="Texture2D" uid="uid://d117yhbmf8o0f" path="res://assets/bitmaps/ui/textfield_9patch.png" id="3_0gws1"]
+[ext_resource type="FontFile" uid="uid://bcfe8imdhx3q7" path="res://assets/fonts/Billy_Font/Billy-Bold.ttf" id="4_ju2o4"]
 [ext_resource type="FontFile" uid="uid://dm8rlbl1f1q0b" path="res://assets/fonts/Billy_Font/Billy-Regular.ttf" id="5_wbs3c"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xtse7"]
@@ -37,6 +38,7 @@ PanlContAlt/base_type = &"PanelContainer"
 PanlContAlt/styles/panel = SubResource("StyleBoxTexture_xtse7")
 RichTextLabel/colors/default_color = Color(0.241156, 0.241156, 0.241156, 1)
 RichTextLabel/constants/line_separation = 2
+RichTextLabel/fonts/bold_font = ExtResource("4_ju2o4")
 RichTextLabel/styles/focus = SubResource("StyleBoxEmpty_h0yss")
 TextEdit/colors/caret_color = Color(0.233926, 0.233926, 0.233924, 1)
 TextEdit/colors/font_color = Color(0.160708, 0.188067, 0.184161, 1)
