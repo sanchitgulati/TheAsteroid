@@ -6,7 +6,7 @@
 [ext_resource type="Shader" path="res://assets/shaders/SpriteAndDropShadow.gdshader" id="4_wlu7c"]
 [ext_resource type="Material" uid="uid://cermd26dujlt8" path="res://assets/shaders/ColorAdj.tres" id="5_cowys"]
 [ext_resource type="Shader" path="res://assets/shaders/Outline_CursCore.gdshader" id="6_hme0j"]
-[ext_resource type="Theme" uid="uid://c3gfwu5jojd" path="res://UI/dialogue/Dialogue_theme.tres" id="7_a6rvs"]
+[ext_resource type="Theme" uid="uid://c3gfwu5jojd" path="res://themes/Dialogue_theme.tres" id="7_a6rvs"]
 [ext_resource type="Texture2D" uid="uid://d117yhbmf8o0f" path="res://assets/bitmaps/ui/textfield_9patch.png" id="8_n3eln"]
 [ext_resource type="Texture2D" uid="uid://bvipvx3esky5g" path="res://assets/bitmaps/ui/dialog_neutral.png" id="9_o3xdc"]
 [ext_resource type="Texture2D" uid="uid://dkrd8wbp5w3b3" path="res://assets/bitmaps/SpriteSizeRef.png" id="10_7oh3g"]

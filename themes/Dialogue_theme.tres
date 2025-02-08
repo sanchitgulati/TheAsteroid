@@ -1,7 +1,7 @@
 [gd_resource type="Theme" load_steps=10 format=3 uid="uid://c3gfwu5jojd"]
 
-[ext_resource type="StyleBox" uid="uid://dx5x3y6iske2o" path="res://UI/Button_box_green.tres" id="1_ueer8"]
-[ext_resource type="StyleBox" uid="uid://drapd835ba6td" path="res://UI/dialogue/Dialog_box_texture.tres" id="2_mf2d8"]
+[ext_resource type="StyleBox" uid="uid://dx5x3y6iske2o" path="res://themes/Button_box_green.tres" id="1_ueer8"]
+[ext_resource type="StyleBox" uid="uid://drapd835ba6td" path="res://themes/Dialog_box_texture.tres" id="2_mf2d8"]
 [ext_resource type="Texture2D" uid="uid://d117yhbmf8o0f" path="res://assets/bitmaps/ui/textfield_9patch.png" id="3_0gws1"]
 [ext_resource type="FontFile" uid="uid://dm8rlbl1f1q0b" path="res://assets/fonts/Billy_Font/Billy-Regular.ttf" id="5_wbs3c"]
 

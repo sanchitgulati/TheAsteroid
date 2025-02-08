@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://b4iaaacfaffpx"]
 
-[ext_resource type="Script" path="res://elements/gates/door.gd" id="1_sbqg6"]
+[ext_resource type="Script" path="res://elements/doors/door.gd" id="1_sbqg6"]
 [ext_resource type="Texture2D" uid="uid://chuwqxcpxuv1q" path="res://assets/bitmaps/tilesets/SpcStationObjcts.png" id="1_wf3gn"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h36ac"]
@@ -20,27 +20,25 @@ size = Vector2(32, 128)
 [node name="Door" type="Node2D"]
 script = ExtResource("1_sbqg6")
 
-[node name="Open" type="TextureRect" parent="."]
+[node name="open" type="TextureRect" parent="."]
 offset_top = -96.0
 offset_right = 40.0
 texture = SubResource("AtlasTexture_h36ac")
 
-[node name="Close" type="TextureRect" parent="."]
+[node name="close" type="TextureRect" parent="."]
 offset_top = -96.0
 offset_right = 40.0
 texture = SubResource("AtlasTexture_xyol6")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="close_area" type="StaticBody2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="close_shape" type="CollisionShape2D" parent="close_area"]
 position = Vector2(16, -48)
 shape = SubResource("RectangleShape2D_i5pvj")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="interaction_area" type="Area2D" parent="."]
 position = Vector2(0, -64)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="interaction_shape" type="CollisionShape2D" parent="interaction_area"]
 position = Vector2(16, 0)
 shape = SubResource("RectangleShape2D_doodw")
-
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
