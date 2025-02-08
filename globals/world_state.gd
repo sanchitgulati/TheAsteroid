@@ -7,7 +7,6 @@ var current_npc: NPC
 var PLAYER:Player
 
 func clear_npc():
-	LLM.Chat.system_prompt = ""
 	current_npc = null
 	
 func set_npc(npc:NPC):

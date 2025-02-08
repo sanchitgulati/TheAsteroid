@@ -10,6 +10,7 @@ class_name NPC
 
 @export var data: npc_data
 @export var chat_history: Array[String]
+@export var talk_begin: bool = false
 
 
 var first_touch = true
@@ -34,13 +35,15 @@ func equals(npc:NPC):
 func _process(_delta: float) -> void:
 	if Engine.is_editor_hint():
 		set_from_data()
+	elif talk_begin: 
+		start_talk()
+		talk_begin = false
 	pass
 
 func set_from_data():
 	if data == null: return
 	if texture_rect.texture != data.texture:
 		texture_rect.texture = data.texture
-
 
 
 func _on_body_entered(body: Node2D) -> void:
@@ -63,7 +66,8 @@ func _on_body_entered(body: Node2D) -> void:
 			LLM.Dialog.llm_output.text += step.description
 			LLM.Dialog.llm_output.text += '[/b]'
 		else:
-			start_talk()
+			talk_begin = true
+			
 			
 		
 		
