@@ -1,0 +1,105 @@
+[gd_scene load_steps=4 format=3 uid="uid://2skldmflessm"]
+
+[ext_resource type="StyleBox" uid="uid://drblnwg1fpmyu" path="res://UI/Button_box_grey.tres" id="2_vqhan"]
+[ext_resource type="Theme" uid="uid://c3gfwu5jojd" path="res://UI/dialogue/Dialogue_theme.tres" id="3_21jqb"]
+[ext_resource type="FontFile" uid="uid://bcfe8imdhx3q7" path="res://assets/fonts/Billy_Font/Billy-Bold.ttf" id="3_mfw03"]
+
+[node name="QuestLog" type="Control"]
+layout_mode = 3
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -152.0
+offset_right = 217.0
+offset_bottom = 35.0
+grow_vertical = 0
+
+[node name="Button" type="Button" parent="."]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+offset_left = 634.0
+offset_top = -292.0
+offset_right = 698.0
+offset_bottom = -259.0
+size_flags_horizontal = 4
+theme = ExtResource("3_21jqb")
+theme_type_variation = &"FlatButton"
+theme_override_styles/hover = ExtResource("2_vqhan")
+theme_override_styles/normal = ExtResource("2_vqhan")
+text = "Open"
+
+[node name="Button2" type="Button" parent="."]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+offset_left = 702.0
+offset_top = -292.0
+offset_right = 791.0
+offset_bottom = -259.0
+size_flags_horizontal = 4
+theme = ExtResource("3_21jqb")
+theme_type_variation = &"FlatButton"
+theme_override_styles/hover = ExtResource("2_vqhan")
+theme_override_styles/normal = ExtResource("2_vqhan")
+text = "Completed"
+
+[node name="Title" type="PanelContainer" parent="."]
+modulate = Color(0.741385, 0.741385, 0.741384, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 9.0
+offset_top = -293.0
+offset_right = 31.0
+offset_bottom = -446.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_21jqb")
+
+[node name="MarginContainer" type="MarginContainer" parent="Title"]
+layout_mode = 2
+theme_override_constants/margin_left = 7
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 0
+
+[node name="Label" type="Label" parent="Title/MarginContainer"]
+layout_mode = 2
+theme = ExtResource("3_21jqb")
+theme_override_colors/font_color = Color(0.20871, 0.20871, 0.20871, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_mfw03")
+text = "Quest Log"
+
+[node name="Answer" type="PanelContainer" parent="."]
+modulate = Color(0.82, 0.77982, 0.6478, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = -257.0
+offset_right = 575.0
+offset_bottom = -43.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_21jqb")
+
+[node name="MarginContainer" type="MarginContainer" parent="Answer"]
+layout_mode = 2
+theme_override_constants/margin_left = 7
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 0
+
+[node name="llm_output" type="RichTextLabel" parent="Answer/MarginContainer"]
+layout_mode = 2
+theme = ExtResource("3_21jqb")
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."

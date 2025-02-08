@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://UI/dialogue/dialogue.gd" id="1_jww1s"]
 [ext_resource type="Theme" uid="uid://c3gfwu5jojd" path="res://UI/dialogue/Dialogue_theme.tres" id="3_l0jdm"]
 [ext_resource type="Texture2D" uid="uid://cimtoxdlhn7gc" path="res://assets/bitmaps/nobody.png" id="5_1moy0"]
-[ext_resource type="StyleBox" uid="uid://c7at62a831ysq" path="res://UI/dialogue/Button_box_red.tres" id="5_c31cj"]
+[ext_resource type="StyleBox" uid="uid://c7at62a831ysq" path="res://UI/Button_box_red.tres" id="5_c31cj"]
 [ext_resource type="Script" path="res://UI/dialogue/grab_focus.gd" id="6_b8ddn"]
 
 [node name="Dialogue" type="Control" node_paths=PackedStringArray("llm_output", "llm_input")]
