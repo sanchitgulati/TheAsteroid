@@ -22,9 +22,14 @@ func _process(_delta: float) -> void:
 	pass
 
 func set_system_prompt(prompt:String):
-	Chat.system_prompt = prompt
+	#LLM.Chat = NobodyWhoChat.new()
+	#LLM.Chat.model_node = Model
+	#LLM.Chat.response_updated.connect(_on_chat_response_updated)
+	#LLM.Chat.response_finished.connect(_on_chat_response_finished)
+	
+	LLM.Chat.system_prompt = prompt
 	print("start_worker: begin")
-	Chat.start_worker()
+	await LLM.Chat.start_worker()
 	print("start_worker: end")
 	
 
@@ -43,7 +48,7 @@ func talk_npc(prompt: String ):
 	if queue.size() == 0:
 		Dialog.llm_output.text = ""
 	
-	Chat.say(prompt)
+	LLM.Chat.say(prompt)
 
 func process_queue():
 	var prompt = queue.pop_front()
