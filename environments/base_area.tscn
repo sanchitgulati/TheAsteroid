@@ -47,7 +47,6 @@
 [ext_resource type="Theme" uid="uid://c3gfwu5jojd" path="res://themes/Dialogue_theme.tres" id="41_rrr02"]
 [ext_resource type="Resource" uid="uid://dwseu1fmbin03" path="res://elements/npcs/npc_data/npc_john_lin.tres" id="42_qxk8x"]
 [ext_resource type="Texture2D" uid="uid://do2xejiglmol5" path="res://assets/generated/env/desk_alt.png" id="42_y3rwu"]
-[ext_resource type="Resource" uid="uid://c4ckkmv0baq7p" path="res://elements/npcs/npc_data/npc_data_scientist.tres" id="43_3ei5x"]
 [ext_resource type="Resource" uid="uid://dvigw1d87rldf" path="res://elements/npcs/npc_data/npc_vending_machine.tres" id="44_0jtl1"]
 [ext_resource type="Script" path="res://debug.gd" id="45_ndqxi"]
 [ext_resource type="Texture2D" uid="uid://d4md5s6gte37u" path="res://assets/generated/canister.png" id="46_mqkpd"]
@@ -471,7 +470,7 @@ texture = ExtResource("6_4s15p")
 
 [node name="KitchenForniture4" type="Sprite2D" parent="Kitchen"]
 material = ExtResource("27_0hoxd")
-position = Vector2(660.5, -56.5)
+position = Vector2(580.5, -56.5)
 texture = ExtResource("8_jk6g4")
 
 [node name="KitchenForniture7" type="Sprite2D" parent="Kitchen"]
@@ -499,21 +498,44 @@ material = ExtResource("27_0hoxd")
 position = Vector2(820, 29)
 texture = ExtResource("10_otvnd")
 
+[node name="KitchenForniture10" type="Sprite2D" parent="Kitchen"]
+material = ExtResource("27_0hoxd")
+position = Vector2(492, -41)
+texture = ExtResource("10_otvnd")
+flip_h = true
+
+[node name="KitchenForniture15" type="Sprite2D" parent="Kitchen"]
+material = ExtResource("27_0hoxd")
+position = Vector2(492, -17)
+texture = ExtResource("10_otvnd")
+flip_h = true
+
+[node name="KitchenForniture16" type="Sprite2D" parent="Kitchen"]
+material = ExtResource("27_0hoxd")
+position = Vector2(492, 5)
+texture = ExtResource("10_otvnd")
+flip_h = true
+
+[node name="KitchenForniture17" type="Sprite2D" parent="Kitchen"]
+material = ExtResource("27_0hoxd")
+position = Vector2(492, 29)
+texture = ExtResource("10_otvnd")
+flip_h = true
+
 [node name="KitchenForniture11" type="Sprite2D" parent="Kitchen"]
 material = ExtResource("27_0hoxd")
-position = Vector2(627.5, -57.5)
+position = Vector2(547.5, -57.5)
 texture = ExtResource("11_4aseb")
 
 [node name="KitchenForniture12" type="Sprite2D" parent="Kitchen"]
 material = ExtResource("27_0hoxd")
-position = Vector2(603.5, -57.5)
+position = Vector2(523.5, -57.5)
 texture = ExtResource("11_4aseb")
 
 [node name="Table" type="StaticBody2D" parent="Kitchen"]
-position = Vector2(654, -1)
+position = Vector2(552, -8)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Kitchen/Table"]
-position = Vector2(0, -2)
 shape = SubResource("RectangleShape2D_6ggm6")
 debug_color = Color(0, 0.6, 0.7, 0.42)
 
@@ -522,7 +544,7 @@ material = ExtResource("27_0hoxd")
 texture = ExtResource("7_jlku4")
 
 [node name="Table2" type="StaticBody2D" parent="Kitchen"]
-position = Vector2(735, -1)
+position = Vector2(744, -8)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Kitchen/Table2"]
 position = Vector2(0, -2)
@@ -1183,7 +1205,7 @@ position = Vector2(600, 400)
 [node name="Chars" type="Node2D" parent="."]
 
 [node name="Benno" parent="Chars" instance=ExtResource("5_jgyno")]
-position = Vector2(504, 48)
+position = Vector2(536, 43)
 face_opposite = true
 data = ExtResource("6_x0ihc")
 
@@ -1196,7 +1218,7 @@ position = Vector2(-32, 32)
 data = ExtResource("7_c1awk")
 
 [node name="Ivanka" parent="Chars" instance=ExtResource("5_jgyno")]
-position = Vector2(784, 40)
+position = Vector2(760, 38)
 data = ExtResource("8_vtgxy")
 
 [node name="Barrow" parent="Chars" instance=ExtResource("5_jgyno")]
@@ -1204,7 +1226,7 @@ position = Vector2(-72, 384)
 face_opposite = true
 
 [node name="VendingMachine" parent="Chars" instance=ExtResource("5_jgyno")]
-position = Vector2(536, -56)
+position = Vector2(640, -56)
 data = ExtResource("44_0jtl1")
 
 [node name="Player" parent="." instance=ExtResource("4_xnnpk")]
