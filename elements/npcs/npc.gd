@@ -25,9 +25,6 @@ func _ready() -> void:
 		if quest == null: continue 
 		quest.default_npc = data
 		Quests.quests.append(quest)
-		
-			
-	
 	pass
 	
 func equals(npc:NPC):
@@ -66,6 +63,8 @@ func _on_body_entered(body: Node2D) -> void:
 			LLM.Dialog.llm_output.text += step.description
 			LLM.Dialog.llm_output.text += '[/b]'
 		else:
+			var system_prompt = data.build_system_prompt()
+			LLM.set_system_prompt(system_prompt)
 			var prompt = Prompts.get_prompt('greetings')
 			LLM.talk_npc(prompt)
 			
@@ -74,8 +73,6 @@ func _on_body_entered(body: Node2D) -> void:
 			
 #		TODO: bisogna mettere il prompt iniziale dentro il dialog
 
-func talk_to(prompt:String):
-	LLM.talk_npc(prompt)
 
 
 

@@ -49,6 +49,20 @@ func show_quests():
 			#content.text += "[b]*[/b] " 
 			content.text += 	("%2d. " % (step+1) )
 			content.text += cur_step.description +"\n"
+			var total = cur_step.requests.size() + cur_step.rewards.size()
+			
+			for reward in cur_step.rewards:
+				if reward is reward_item:
+					var item = reward.item as item_data # todo
+					content.text += "+" + item.name + " "
+					
+			for requests in cur_step.requests:
+				if requests is item_data:
+					var item = requests as item_data # todo
+					content.text += "-" + item.name + " "
+			
+			if total>0: content.text += "\n"
+					
 			step += 1
 		content.text += "\n"
 	need_update_text = false
