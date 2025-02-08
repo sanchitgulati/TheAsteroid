@@ -1,13 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://brxmqawrcecww"]
+[gd_scene load_steps=3 format=3 uid="uid://cu0esbug5kqby"]
 
 [ext_resource type="Script" path="res://globals/sfx.gd" id="1_j2eis"]
-[ext_resource type="AudioStream" uid="uid://dyycgr55eeopi" path="res://assets/audio/SFX/Pick Up.wav" id="2_i7uu4"]
+[ext_resource type="AudioStream" uid="uid://cxp16rkfl7dk3" path="res://assets/audio/SFX/sfx_menu_select3.wav" id="2_bpu20"]
 
 [node name="sfx" type="Node"]
 script = ExtResource("1_j2eis")
 
 [node name="AddItemSound" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_i7uu4")
+stream = ExtResource("2_bpu20")
 volume_db = -8.0
 
 [node name="RemoveItemSound" type="AudioStreamPlayer" parent="."]
