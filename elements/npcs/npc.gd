@@ -11,6 +11,7 @@ class_name NPC
 @export var data: npc_data
 @export var chat_history: Array[String]
 
+
 var first_touch = true
 
 # Called when the node enters the scene tree for the first time.
@@ -18,6 +19,15 @@ func _ready() -> void:
 	set_from_data()
 	if face_opposite == true:
 		texture_rect.flip_h = true
+	
+	if data == null: return
+	for quest in data.quests:
+		if quest == null: continue 
+		quest.default_npc = data
+		Quests.quests.append(quest)
+		
+			
+	
 	pass
 	
 func equals(npc:NPC):
@@ -52,7 +62,9 @@ func _on_body_entered(body: Node2D) -> void:
 		
 		
 		if step != null:
-			LLM.Dialog.llm_output.text += 'QUEST: ' + step.description
+			LLM.Dialog.llm_output.text += '[b]'
+			LLM.Dialog.llm_output.text += step.description
+			LLM.Dialog.llm_output.text += '[/b]'
 		else:
 			var prompt = Prompts.get_prompt('greetings')
 			LLM.talk_npc(prompt)

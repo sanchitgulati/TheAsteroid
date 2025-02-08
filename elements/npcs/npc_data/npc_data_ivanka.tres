@@ -1,13 +1,16 @@
-[gd_resource type="Resource" script_class="npc_data" load_steps=3 format=3 uid="uid://cpseqbo2x2h5u"]
+[gd_resource type="Resource" script_class="npc_data" load_steps=5 format=3 uid="uid://cpseqbo2x2h5u"]
 
-[ext_resource type="Script" path="res://elements/npcs/npc_data/npc_data.gd" id="1_smt3p"]
-[ext_resource type="Texture2D" uid="uid://b3wi3r6v4h5fh" path="res://assets/generated/chars/hydroponic_gardener3.png" id="2_t0ud7"]
+[ext_resource type="Script" path="res://elements/quests/quest_data.gd" id="1_7qkwm"]
+[ext_resource type="Script" path="res://elements/npcs/npc_data.gd" id="1_smt3p"]
+[ext_resource type="Resource" uid="uid://dw4j3r3ymacj" path="res://elements/quests/quest_data/ivanka_vodka.tres" id="2_i3m4q"]
+[ext_resource type="Texture2D" uid="uid://b3wi3r6v4h5fh" path="res://assets/bitmaps/generated/chars/hydroponic_gardener3.png" id="2_t0ud7"]
 
 [resource]
 script = ExtResource("1_smt3p")
 name = "Ivanka Petrova"
 texture = ExtResource("2_t0ud7")
 age = 36
+quests = Array[ExtResource("1_7qkwm")]([ExtResource("2_i3m4q")])
 public_persona = "Background: Ivanka hails from the depths of Siberia, where she honed her strength tending to family farms amidst unforgiving winters.
 Ivanka immigrated to the Asteroid Belt seeking opportunity, landing a job managing the sprawling hydroponic greenhouses on Plotino.
 Ivanka robust physique reflects years of hard labor, and her warm smile hides a sharp mind and a playful spirit.

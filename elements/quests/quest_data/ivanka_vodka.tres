@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="quest_data" load_steps=18 format=3 uid="uid://dw4j3r3ymacj"]
+[gd_resource type="Resource" script_class="quest_data" load_steps=17 format=3 uid="uid://dw4j3r3ymacj"]
 
 [ext_resource type="Script" path="res://elements/quests/quest_data.gd" id="2_vr08a"]
 [ext_resource type="Script" path="res://elements/quests/quest_step.gd" id="3_n83ee"]
@@ -9,7 +9,6 @@
 [ext_resource type="Resource" uid="uid://trcqtrhdeok1" path="res://elements/items/item_data/keycard_hydro.tres" id="8_praxu"]
 [ext_resource type="Script" path="res://elements/quests/reward_item.gd" id="9_vrpe6"]
 [ext_resource type="Resource" uid="uid://dosp8iscgnwxh" path="res://elements/items/item_data/benno_parent_journal.tres" id="11_81bwg"]
-[ext_resource type="Resource" uid="uid://cpseqbo2x2h5u" path="res://elements/npcs/npc_data/npc_data_ivanka.tres" id="11_cfnnq"]
 
 [sub_resource type="Resource" id="Resource_cnjud"]
 script = ExtResource("9_vrpe6")
@@ -52,7 +51,6 @@ script = ExtResource("2_vr08a")
 uid = "ivanka_vodka"
 active = true
 name = "Ivanka likes Vodka"
-default_npc = ExtResource("11_cfnnq")
 description = ""
 progress = -1
 steps = Array[ExtResource("3_n83ee")]([SubResource("Resource_qxltf"), SubResource("Resource_w0npu"), SubResource("Resource_y21hm"), SubResource("Resource_c3t65")])
