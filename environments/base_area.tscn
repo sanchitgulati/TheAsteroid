@@ -1496,7 +1496,7 @@ position = Vector2(664, 280)
 data = ExtResource("36_memte")
 
 [node name="Coins4" parent="DEBUG" instance=ExtResource("10_o4pkl")]
-position = Vector2(512, 256)
+position = Vector2(512, 248)
 data = ExtResource("37_58tpb")
 
 [node name="vodka" parent="DEBUG" instance=ExtResource("10_o4pkl")]

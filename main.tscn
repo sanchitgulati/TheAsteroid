@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://ptkseutwb6ke" path="res://UI/dialogue/dialogue.tscn" id="3_t1wol"]
 [ext_resource type="AudioStream" uid="uid://cr412rtd3alfc" path="res://assets/audio/soundtrack/mixkit-relax-beat-292.mp3" id="4_c8qn5"]
 [ext_resource type="PackedScene" uid="uid://2skldmflessm" path="res://UI/questlog/quest_log.tscn" id="4_pxxmd"]
-[ext_resource type="Script" path="res://soundtrack.gd" id="4_ygivj"]
+[ext_resource type="Script" path="res://assets/audio/soundtrack.gd" id="4_ygivj"]
 [ext_resource type="AudioStream" uid="uid://dk3o5rr0rr8og" path="res://assets/audio/soundtrack/The Uprising.mp3" id="5_sojg4"]
 
 [node name="Main" type="Node2D"]
