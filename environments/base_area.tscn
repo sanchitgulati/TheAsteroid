@@ -20,18 +20,18 @@
 [ext_resource type="Texture2D" uid="uid://dssxatogwko4m" path="res://assets/generated/env/kitchen_forniture4.png" id="11_4aseb"]
 [ext_resource type="PackedScene" uid="uid://b4iaaacfaffpx" path="res://elements/doors/DoorMedVert.tscn" id="11_tmvlt"]
 [ext_resource type="Texture2D" uid="uid://bd2tipbn1ojkq" path="res://assets/generated/env/desk_computer.png" id="12_se4yj"]
-[ext_resource type="PackedScene" path="res://environments/servers.tscn" id="13_xyybr"]
+[ext_resource type="PackedScene" uid="uid://dhdcixbvblhwl" path="res://environments/servers.tscn" id="13_xyybr"]
 [ext_resource type="Texture2D" uid="uid://dydi55p2mh7v2" path="res://assets/generated/env/sink.png" id="14_ct5gn"]
-[ext_resource type="PackedScene" path="res://environments/cpu_desk.tscn" id="14_ho7jo"]
+[ext_resource type="PackedScene" uid="uid://q2qd01otejqf" path="res://environments/cpu_desk.tscn" id="14_ho7jo"]
 [ext_resource type="Texture2D" uid="uid://4qlb17h4xwgu" path="res://assets/generated/env/bench.png" id="15_rsbas"]
-[ext_resource type="PackedScene" path="res://environments/hydrop_tray.tscn" id="15_usxpw"]
+[ext_resource type="PackedScene" uid="uid://ctxhswu64v6tk" path="res://environments/hydrop_tray.tscn" id="15_usxpw"]
 [ext_resource type="Texture2D" uid="uid://deb1b65t8f5fi" path="res://assets/generated/env/crew_bed.png" id="19_u66wm"]
 [ext_resource type="Texture2D" uid="uid://gt3vnc80rjdd" path="res://assets/generated/env/crew_desk.png" id="20_hsin3"]
 [ext_resource type="Texture2D" uid="uid://fc00qb1ut2am" path="res://assets/generated/env/crew_bed_vert.png" id="21_syxxx"]
 [ext_resource type="Texture2D" uid="uid://dom56fe08ru71" path="res://assets/generated/env/plant2.png" id="22_588vq"]
 [ext_resource type="Texture2D" uid="uid://chuwqxcpxuv1q" path="res://assets/bitmaps/tilesets/SpcStationObjcts.png" id="22_c8x03"]
 [ext_resource type="Texture2D" uid="uid://cifhfiwkp7bgp" path="res://assets/generated/env/Lockers.png" id="22_t64qr"]
-[ext_resource type="Resource" path="res://elements/items/item_data/key_pssprt.tres" id="23_0royy"]
+[ext_resource type="Resource" uid="uid://c3oxm6qx2xy66" path="res://elements/items/item_data/key_pssprt.tres" id="23_0royy"]
 [ext_resource type="Texture2D" uid="uid://bjpsaarrhhrjn" path="res://assets/generated/env/cryo.png" id="23_nb6l0"]
 [ext_resource type="Texture2D" uid="uid://cip03cryipm8w" path="res://assets/generated/env/plant1.png" id="26_61xtf"]
 [ext_resource type="Material" uid="uid://b265yq8x2i4aj" path="res://assets/shaders/EnvAndShadow.tres" id="27_0hoxd"]
@@ -471,7 +471,7 @@ texture = ExtResource("6_4s15p")
 
 [node name="KitchenForniture4" type="Sprite2D" parent="Kitchen"]
 material = ExtResource("27_0hoxd")
-position = Vector2(660.5, -56.5)
+position = Vector2(580.5, -56.5)
 texture = ExtResource("8_jk6g4")
 
 [node name="KitchenForniture7" type="Sprite2D" parent="Kitchen"]
@@ -499,21 +499,44 @@ material = ExtResource("27_0hoxd")
 position = Vector2(820, 29)
 texture = ExtResource("10_otvnd")
 
+[node name="KitchenForniture10" type="Sprite2D" parent="Kitchen"]
+material = ExtResource("27_0hoxd")
+position = Vector2(492, -41)
+texture = ExtResource("10_otvnd")
+flip_h = true
+
+[node name="KitchenForniture15" type="Sprite2D" parent="Kitchen"]
+material = ExtResource("27_0hoxd")
+position = Vector2(492, -17)
+texture = ExtResource("10_otvnd")
+flip_h = true
+
+[node name="KitchenForniture16" type="Sprite2D" parent="Kitchen"]
+material = ExtResource("27_0hoxd")
+position = Vector2(492, 5)
+texture = ExtResource("10_otvnd")
+flip_h = true
+
+[node name="KitchenForniture17" type="Sprite2D" parent="Kitchen"]
+material = ExtResource("27_0hoxd")
+position = Vector2(492, 29)
+texture = ExtResource("10_otvnd")
+flip_h = true
+
 [node name="KitchenForniture11" type="Sprite2D" parent="Kitchen"]
 material = ExtResource("27_0hoxd")
-position = Vector2(627.5, -57.5)
+position = Vector2(547.5, -57.5)
 texture = ExtResource("11_4aseb")
 
 [node name="KitchenForniture12" type="Sprite2D" parent="Kitchen"]
 material = ExtResource("27_0hoxd")
-position = Vector2(603.5, -57.5)
+position = Vector2(523.5, -57.5)
 texture = ExtResource("11_4aseb")
 
 [node name="Table" type="StaticBody2D" parent="Kitchen"]
-position = Vector2(654, -1)
+position = Vector2(552, -8)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Kitchen/Table"]
-position = Vector2(0, -2)
 shape = SubResource("RectangleShape2D_6ggm6")
 debug_color = Color(0, 0.6, 0.7, 0.42)
 
@@ -522,7 +545,7 @@ material = ExtResource("27_0hoxd")
 texture = ExtResource("7_jlku4")
 
 [node name="Table2" type="StaticBody2D" parent="Kitchen"]
-position = Vector2(735, -1)
+position = Vector2(744, -8)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Kitchen/Table2"]
 position = Vector2(0, -2)
@@ -1183,7 +1206,8 @@ position = Vector2(600, 400)
 [node name="Chars" type="Node2D" parent="."]
 
 [node name="Benno" parent="Chars" instance=ExtResource("5_jgyno")]
-position = Vector2(504, 48)
+position = Vector2(536, 43)
+face_opposite = true
 data = ExtResource("6_x0ihc")
 face_opposite = true
 
@@ -1196,7 +1220,7 @@ position = Vector2(-32, 32)
 data = ExtResource("7_c1awk")
 
 [node name="Ivanka" parent="Chars" instance=ExtResource("5_jgyno")]
-position = Vector2(784, 40)
+position = Vector2(760, 38)
 data = ExtResource("8_vtgxy")
 
 [node name="Barrow" parent="Chars" instance=ExtResource("5_jgyno")]
@@ -1205,7 +1229,7 @@ data = ExtResource("43_kag5v")
 face_opposite = true
 
 [node name="VendingMachine" parent="Chars" instance=ExtResource("5_jgyno")]
-position = Vector2(536, -56)
+position = Vector2(640, -56)
 data = ExtResource("44_0jtl1")
 
 [node name="Player" parent="." instance=ExtResource("4_xnnpk")]
