@@ -410,9 +410,9 @@ autowrap_mode = 3
 
 [node name="Label5" type="Label" parent="Title"]
 layout_mode = 0
-offset_top = 388.0
+offset_top = 381.0
 offset_right = 800.0
-offset_bottom = 452.0
+offset_bottom = 445.0
 theme_override_colors/font_color = Color(0.678943, 0.678944, 0.678943, 1)
 theme_override_colors/font_shadow_color = Color(0.233925, 0.233925, 0.233925, 1)
 theme_override_constants/line_spacing = 15
