@@ -27,12 +27,14 @@ func contains(item: item_data):
 func add_item(item: item_data):
 	items.append(item)
 	need_redraw = true
+	Sfx.add_item()
 	
 func remove_item(item: item_data):
 	for itm in items:
 		if itm == item:
 			items.erase(item)
 			need_redraw = true
+			Sfx.remove_item()
 			break
 	pass
 

@@ -6,7 +6,7 @@ extends CanvasLayer
 func _ready() -> void:
 	animation_player.play("intro_sequence")
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if WorldState.debug:
 		get_tree().change_scene_to_file("res://main.tscn")
 

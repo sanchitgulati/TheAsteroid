@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://brxmqawrcecww"]
+
+[ext_resource type="Script" path="res://globals/sfx.gd" id="1_j2eis"]
+
+[node name="sfx" type="Node"]
+script = ExtResource("1_j2eis")
+
+[node name="AddItemSound" type="AudioStreamPlayer" parent="."]
+volume_db = -8.0
+
+[node name="RemoveItemSound" type="AudioStreamPlayer" parent="."]
+
+[node name="DoorOpenSound" type="AudioStreamPlayer" parent="."]
+volume_db = -8.0
+
+[node name="FinishQuestSound" type="AudioStreamPlayer" parent="."]
+volume_db = -8.0

@@ -21,7 +21,8 @@ LLM="*res://globals/llm.tscn"
 WorldState="*res://globals/world_state.gd"
 Inventory="*res://globals/inventory.gd"
 Prompts="*res://globals/prompts/prompts.gd"
-Quests="*res://globals/quests.gd"
+Sfx="*res://globals/sfx.tscn"
+Quests="*res://globals/quests.tscn"
 
 [debug]
 
