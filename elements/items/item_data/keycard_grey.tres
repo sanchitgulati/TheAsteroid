@@ -8,3 +8,4 @@ script = ExtResource("1_tfs04")
 name = "Key Grey"
 description = "Lowest level Keycard"
 texture = ExtResource("2_kul6r")
+quest_item = true

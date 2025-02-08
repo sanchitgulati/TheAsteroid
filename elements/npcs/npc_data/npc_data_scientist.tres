@@ -1,14 +1,14 @@
 [gd_resource type="Resource" script_class="npc_data" load_steps=3 format=3 uid="uid://c4ckkmv0baq7p"]
 
 [ext_resource type="Script" path="res://elements/npcs/npc_data/npc_data.gd" id="1_lp76s"]
-[ext_resource type="Texture2D" uid="uid://bnu1hx03knhel" path="res://assets/generated/chars/scientist2.png" id="2_dv26p"]
+[ext_resource type="Texture2D" uid="uid://bnu1hx03knhel" path="res://assets/bitmaps/generated/chars/scientist2.png" id="2_dv26p"]
 
 [resource]
 script = ExtResource("1_lp76s")
 name = "Dr. Barrows"
 texture = ExtResource("2_dv26p")
 age = 48
-public_persona = "Dr Barrows is the Science Official of The Station, his task is taking care of Life Support and other high tech Systems.
+public_persona = "Dr Barrows is the Science Official and Doctor of The Station, his task is taking care of Life Support and the healt of the crew.
 
 Dr. Barrows' Capabilities & Qualifications:
     Chemical Engineering Skills: Dr Barrows understands the intricate processes involved in chemical synthesis and purification, demonstrating resourcefulness and technical proficiency.

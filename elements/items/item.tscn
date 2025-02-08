@@ -3,9 +3,9 @@
 [ext_resource type="Script" path="res://elements/items/item.gd" id="1_emjkg"]
 [ext_resource type="Resource" uid="uid://bnakhswxbfenw" path="res://elements/items/item_data/vodka.tres" id="2_usiwa"]
 [ext_resource type="Texture2D" uid="uid://ca1lb838nlnpl" path="res://assets/generated/items/vodka_bottle_small.png" id="4_2sram"]
-[ext_resource type="Theme" uid="uid://c3gfwu5jojd" path="res://themes/Dialogue_theme.tres" id="5_u0lrv"]
-[ext_resource type="Material" uid="uid://cdefqe3kbj5y7" path="res://assets/shaders/SpriteAndShadow.tres" id="5_wx0hq"]
-[ext_resource type="FontFile" uid="uid://dxgg848nrycdm" path="res://assets/fonts/depixel/DePixelIllegible.ttf" id="6_8cdqf"]
+[ext_resource type="Theme" uid="uid://c3gfwu5jojd" path="res://UI/dialogue/Dialogue_theme.tres" id="5_u0lrv"]
+[ext_resource type="Material" uid="uid://b2v7ukyj8oetb" path="res://assets/shaders/SpriteAndShadow.tres" id="5_wx0hq"]
+[ext_resource type="FontFile" uid="uid://fvujwj53nmld" path="res://assets/fonts/tiny-3x5/tiny-3x5.ttf" id="6_h6kub"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pwra4"]
 radius = 14.1421
@@ -14,6 +14,10 @@ radius = 14.1421
 script = ExtResource("1_emjkg")
 data = ExtResource("2_usiwa")
 metadata/_edit_vertical_guides_ = [-262.0]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_pwra4")
+debug_color = Color(0, 0.6, 0.7, 0.42)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 material = ExtResource("5_wx0hq")
@@ -32,14 +36,10 @@ grow_horizontal = 2
 theme = ExtResource("5_u0lrv")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 4
-theme_override_fonts/font = ExtResource("6_8cdqf")
-theme_override_font_sizes/font_size = 9
+theme_override_fonts/font = ExtResource("6_h6kub")
+theme_override_font_sizes/font_size = 8
 text = "Vodka"
 horizontal_alignment = 1
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_pwra4")
-debug_color = Color(0, 0.6, 0.7, 0.42)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
