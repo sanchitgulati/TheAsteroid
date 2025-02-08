@@ -42,13 +42,13 @@ func show_quests():
 	
 	content.text = ""
 	for quest in quests_list:
-		content.text += "[u]"+quest.name+"[/u]"+"\n"
+		content.text += "[b][u]"+quest.name+"[/u][/b]"+"\n"
 		var step = 0
 		while step < quest.progress:
 			var cur_step = quest.steps[step] as quest_step
 			#content.text += "[b]*[/b] " 
 			content.text += 	("%2d. " % (step+1) )
-			content.text += cur_step.description +"\n"
+			content.text += cur_step.description.strip_edges() +"\n"
 			var total = cur_step.requests.size() + cur_step.rewards.size()
 			
 			for reward in cur_step.rewards:

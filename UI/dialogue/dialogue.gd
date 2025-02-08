@@ -68,7 +68,7 @@ func close():
 	npc_data_cur = null
 	visible = false
 	character_texture.texture = null
-	Inventory.close()
+	#Inventory.close()
 	clear()
 
 func talk():
