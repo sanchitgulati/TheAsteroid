@@ -19,13 +19,13 @@
 [ext_resource type="PackedScene" uid="uid://ccnbdaq3o72at" path="res://elements/items/item.tscn" id="10_o4pkl"]
 [ext_resource type="Texture2D" uid="uid://blu0cuwyjopoo" path="res://assets/generated/env/kitchen_forniture5.png" id="10_otvnd"]
 [ext_resource type="Texture2D" uid="uid://dssxatogwko4m" path="res://assets/generated/env/kitchen_forniture4.png" id="11_4aseb"]
-[ext_resource type="PackedScene" uid="uid://b4iaaacfaffpx" path="res://environments/gates/DoorMedVert.tscn" id="11_tmvlt"]
+[ext_resource type="PackedScene" uid="uid://b4iaaacfaffpx" path="res://elements/gates/DoorMedVert.tscn" id="11_tmvlt"]
 [ext_resource type="Texture2D" uid="uid://bd2tipbn1ojkq" path="res://assets/generated/env/desk_computer.png" id="12_se4yj"]
-[ext_resource type="PackedScene" uid="uid://dhdcixbvblhwl" path="res://environments/servers.tscn" id="13_xyybr"]
+[ext_resource type="PackedScene" path="res://environments/servers.tscn" id="13_xyybr"]
 [ext_resource type="Texture2D" uid="uid://dydi55p2mh7v2" path="res://assets/generated/env/sink.png" id="14_ct5gn"]
-[ext_resource type="PackedScene" uid="uid://q2qd01otejqf" path="res://environments/cpu_desk.tscn" id="14_ho7jo"]
+[ext_resource type="PackedScene" path="res://environments/cpu_desk.tscn" id="14_ho7jo"]
 [ext_resource type="Texture2D" uid="uid://4qlb17h4xwgu" path="res://assets/generated/env/bench.png" id="15_rsbas"]
-[ext_resource type="PackedScene" uid="uid://ctxhswu64v6tk" path="res://environments/hydrop_tray.tscn" id="15_usxpw"]
+[ext_resource type="PackedScene" path="res://environments/hydrop_tray.tscn" id="15_usxpw"]
 [ext_resource type="Texture2D" uid="uid://deb1b65t8f5fi" path="res://assets/generated/env/crew_bed.png" id="19_u66wm"]
 [ext_resource type="Texture2D" uid="uid://gt3vnc80rjdd" path="res://assets/generated/env/crew_desk.png" id="20_hsin3"]
 [ext_resource type="Texture2D" uid="uid://fc00qb1ut2am" path="res://assets/generated/env/crew_bed_vert.png" id="21_syxxx"]
@@ -35,11 +35,11 @@
 [ext_resource type="Texture2D" uid="uid://bjpsaarrhhrjn" path="res://assets/generated/env/cryo.png" id="23_nb6l0"]
 [ext_resource type="Texture2D" uid="uid://cip03cryipm8w" path="res://assets/generated/env/plant1.png" id="26_61xtf"]
 [ext_resource type="Material" uid="uid://b265yq8x2i4aj" path="res://assets/shaders/EnvAndShadow.tres" id="27_0hoxd"]
-[ext_resource type="Resource" uid="uid://dhhcwrimnbagq" path="res://elements/items/item_data/coins.tres" id="36_memte"]
-[ext_resource type="Resource" uid="uid://b76kc0k4f1w0y" path="res://elements/items/item_data/met_benno.tres" id="37_2ewrf"]
+[ext_resource type="Resource" path="res://elements/items/item_data/coins.tres" id="36_memte"]
+[ext_resource type="Resource" path="res://elements/items/item_data/met_benno.tres" id="37_2ewrf"]
 [ext_resource type="Resource" uid="uid://feoqskgukx3t" path="res://elements/items/item_data/beer.tres" id="37_58tpb"]
 [ext_resource type="Texture2D" uid="uid://cth0rb3d3yyai" path="res://assets/generated/env/energy_core.png" id="38_piady"]
-[ext_resource type="Resource" uid="uid://b1yqhfywide7i" path="res://elements/items/item_data/met_ivanka.tres" id="39_1k7lm"]
+[ext_resource type="Resource" path="res://elements/items/item_data/met_ivanka.tres" id="39_1k7lm"]
 [ext_resource type="Texture2D" uid="uid://cd3snniw0uy3n" path="res://assets/generated/env/Pipe.png" id="39_akc4s"]
 [ext_resource type="Texture2D" uid="uid://cvesg44cn77ia" path="res://assets/generated/env/Bench2.png" id="40_8xwii"]
 [ext_resource type="Resource" uid="uid://d0vw2j8rj6nqf" path="res://elements/npcs/npc_data/npc_eddy_lin.tres" id="40_cg62m"]
@@ -50,7 +50,7 @@
 [ext_resource type="Resource" uid="uid://dvigw1d87rldf" path="res://elements/npcs/npc_data/npc_vending_machine.tres" id="44_0jtl1"]
 [ext_resource type="Texture2D" uid="uid://d4md5s6gte37u" path="res://assets/generated/canister.png" id="46_mqkpd"]
 [ext_resource type="Texture2D" uid="uid://fdpblg2u1wwk" path="res://assets/generated/env/airlock_door.png" id="47_uxo0t"]
-[ext_resource type="Resource" uid="uid://trcqtrhdeok1" path="res://elements/items/item_data/keycard_hydro.tres" id="48_bc463"]
+[ext_resource type="Resource" path="res://elements/items/item_data/keycard_hydro.tres" id="48_bc463"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7ef21"]
 radius = 25.0
@@ -400,7 +400,8 @@ scale = Vector2(1.5625, 1.5625)
 texture = ExtResource("41_7mh01")
 
 [node name="DoorMedVert3" parent="Hydroponics" instance=ExtResource("11_tmvlt")]
-position = Vector2(96, -536)
+position = Vector2(96, -462)
+item_unlock = ExtResource("48_bc463")
 
 [node name="Coins" parent="Hydroponics" instance=ExtResource("10_o4pkl")]
 position = Vector2(-239, -731)

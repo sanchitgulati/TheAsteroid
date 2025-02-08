@@ -1,7 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://b4y0lr40yujf"]
+[gd_scene load_steps=7 format=3 uid="uid://b4y0lr40yujf"]
 
 [ext_resource type="Texture2D" uid="uid://chuwqxcpxuv1q" path="res://assets/bitmaps/tilesets/SpcStationObjcts.png" id="1_53jgp"]
-[ext_resource type="Script" path="res://environments/gates/doors.gd" id="1_sl4va"]
+[ext_resource type="Script" path="res://elements/gates/door.gd" id="1_sl4va"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0l80i"]
 atlas = ExtResource("1_53jgp")
@@ -12,6 +12,9 @@ atlas = ExtResource("1_53jgp")
 region = Rect2(96, 64, 32, 128)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kisfn"]
+size = Vector2(16, 128)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8ugiq"]
 size = Vector2(32, 128)
 
 [node name="DoorBigVert" type="Node2D"]
@@ -29,8 +32,18 @@ offset_right = 40.0
 offset_bottom = 64.0
 texture = SubResource("AtlasTexture_hddee")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Close"]
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(0, -64)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Close/StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(16, 64)
 shape = SubResource("RectangleShape2D_kisfn")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(0, -64)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(16, 64)
+shape = SubResource("RectangleShape2D_8ugiq")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
