@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://elements/quests/quest_step.gd" id="3_gk836"]
 [ext_resource type="Script" path="res://elements/items/item_data.gd" id="4_shtyy"]
 [ext_resource type="Script" path="res://elements/quests/quest_reward.gd" id="5_c4ho1"]
-[ext_resource type="Resource" uid="uid://cfvknu0gxh4sb" path="res://elements/items/item_data/coins.tres" id="5_g1xq6"]
+[ext_resource type="Resource" uid="uid://dhhcwrimnbagq" path="res://elements/items/item_data/coins.tres" id="5_g1xq6"]
 [ext_resource type="Script" path="res://elements/quests/reward_item.gd" id="8_povr5"]
 [ext_resource type="Resource" uid="uid://feoqskgukx3t" path="res://elements/items/item_data/beer.tres" id="8_wtmjd"]
 

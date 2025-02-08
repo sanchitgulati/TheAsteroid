@@ -1188,7 +1188,7 @@ face_opposite = true
 data = ExtResource("6_x0ihc")
 
 [node name="WhiteDrone" parent="Chars" instance=ExtResource("5_jgyno")]
-position = Vector2(224, 720)
+position = Vector2(208, 888)
 data = ExtResource("6_3sh5w")
 
 [node name="Walter" parent="Chars" instance=ExtResource("5_jgyno")]
@@ -1647,7 +1647,7 @@ text = "Hidden Cryogenics"
 
 [node name="DarkDrone" parent="DEBUG" instance=ExtResource("5_jgyno")]
 modulate = Color(0.623766, 0.414989, 0.532202, 1)
-position = Vector2(224, 864)
+position = Vector2(384, 912)
 
 [node name="LightingTest" type="Node2D" parent="."]
 visible = false

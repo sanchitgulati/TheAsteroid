@@ -1,7 +1,10 @@
 extends CanvasLayer
 
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
+
+
 func _ready() -> void:
-	pass
+	animation_player.play("intro_sequence")
 
 func _process(delta: float) -> void:
 	if WorldState.debug:
