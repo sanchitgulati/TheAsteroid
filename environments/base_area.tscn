@@ -1,4 +1,4 @@
-[gd_scene load_steps=116 format=4 uid="uid://cy2se4msxc27f"]
+[gd_scene load_steps=117 format=4 uid="uid://cy2se4msxc27f"]
 
 [ext_resource type="Script" path="res://environments/world.gd" id="1_cu36i"]
 [ext_resource type="TileSet" uid="uid://dli1an21v3xpa" path="res://assets/bitmaps/tilesets/Grounds2.tres" id="3_d4kqp"]
@@ -20,18 +20,18 @@
 [ext_resource type="Texture2D" uid="uid://dssxatogwko4m" path="res://assets/generated/env/kitchen_forniture4.png" id="11_4aseb"]
 [ext_resource type="PackedScene" uid="uid://b4iaaacfaffpx" path="res://elements/doors/DoorMedVert.tscn" id="11_tmvlt"]
 [ext_resource type="Texture2D" uid="uid://bd2tipbn1ojkq" path="res://assets/generated/env/desk_computer.png" id="12_se4yj"]
-[ext_resource type="PackedScene" uid="uid://dhdcixbvblhwl" path="res://environments/servers.tscn" id="13_xyybr"]
+[ext_resource type="PackedScene" path="res://environments/servers.tscn" id="13_xyybr"]
 [ext_resource type="Texture2D" uid="uid://dydi55p2mh7v2" path="res://assets/generated/env/sink.png" id="14_ct5gn"]
-[ext_resource type="PackedScene" uid="uid://q2qd01otejqf" path="res://environments/cpu_desk.tscn" id="14_ho7jo"]
+[ext_resource type="PackedScene" path="res://environments/cpu_desk.tscn" id="14_ho7jo"]
 [ext_resource type="Texture2D" uid="uid://4qlb17h4xwgu" path="res://assets/generated/env/bench.png" id="15_rsbas"]
-[ext_resource type="PackedScene" uid="uid://ctxhswu64v6tk" path="res://environments/hydrop_tray.tscn" id="15_usxpw"]
+[ext_resource type="PackedScene" path="res://environments/hydrop_tray.tscn" id="15_usxpw"]
 [ext_resource type="Texture2D" uid="uid://deb1b65t8f5fi" path="res://assets/generated/env/crew_bed.png" id="19_u66wm"]
 [ext_resource type="Texture2D" uid="uid://gt3vnc80rjdd" path="res://assets/generated/env/crew_desk.png" id="20_hsin3"]
 [ext_resource type="Texture2D" uid="uid://fc00qb1ut2am" path="res://assets/generated/env/crew_bed_vert.png" id="21_syxxx"]
 [ext_resource type="Texture2D" uid="uid://dom56fe08ru71" path="res://assets/generated/env/plant2.png" id="22_588vq"]
 [ext_resource type="Texture2D" uid="uid://chuwqxcpxuv1q" path="res://assets/bitmaps/tilesets/SpcStationObjcts.png" id="22_c8x03"]
 [ext_resource type="Texture2D" uid="uid://cifhfiwkp7bgp" path="res://assets/generated/env/Lockers.png" id="22_t64qr"]
-[ext_resource type="Resource" uid="uid://c3oxm6qx2xy66" path="res://elements/items/item_data/key_pssprt.tres" id="23_0royy"]
+[ext_resource type="Resource" path="res://elements/items/item_data/key_pssprt.tres" id="23_0royy"]
 [ext_resource type="Texture2D" uid="uid://bjpsaarrhhrjn" path="res://assets/generated/env/cryo.png" id="23_nb6l0"]
 [ext_resource type="Texture2D" uid="uid://cip03cryipm8w" path="res://assets/generated/env/plant1.png" id="26_61xtf"]
 [ext_resource type="Material" uid="uid://b265yq8x2i4aj" path="res://assets/shaders/EnvAndShadow.tres" id="27_0hoxd"]
@@ -47,7 +47,7 @@
 [ext_resource type="Theme" uid="uid://c3gfwu5jojd" path="res://themes/Dialogue_theme.tres" id="41_rrr02"]
 [ext_resource type="Resource" uid="uid://dwseu1fmbin03" path="res://elements/npcs/npc_data/npc_john_lin.tres" id="42_qxk8x"]
 [ext_resource type="Texture2D" uid="uid://do2xejiglmol5" path="res://assets/generated/env/desk_alt.png" id="42_y3rwu"]
-[ext_resource type="Resource" uid="uid://c4ckkmv0baq7p" path="res://elements/npcs/npc_data/npc_data_scientist.tres" id="43_3ei5x"]
+[ext_resource type="Resource" uid="uid://c4ckkmv0baq7p" path="res://elements/npcs/npc_data/npc_data_scientist.tres" id="43_kag5v"]
 [ext_resource type="Resource" uid="uid://dvigw1d87rldf" path="res://elements/npcs/npc_data/npc_vending_machine.tres" id="44_0jtl1"]
 [ext_resource type="Script" path="res://debug.gd" id="45_ndqxi"]
 [ext_resource type="Texture2D" uid="uid://d4md5s6gte37u" path="res://assets/generated/canister.png" id="46_mqkpd"]
@@ -1202,6 +1202,7 @@ data = ExtResource("8_vtgxy")
 [node name="Barrow" parent="Chars" instance=ExtResource("5_jgyno")]
 position = Vector2(-72, 384)
 face_opposite = true
+data = ExtResource("43_kag5v")
 
 [node name="VendingMachine" parent="Chars" instance=ExtResource("5_jgyno")]
 position = Vector2(536, -56)
