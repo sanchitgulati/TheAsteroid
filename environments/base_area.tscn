@@ -1,4 +1,4 @@
-[gd_scene load_steps=113 format=4 uid="uid://cy2se4msxc27f"]
+[gd_scene load_steps=114 format=4 uid="uid://cy2se4msxc27f"]
 
 [ext_resource type="Script" path="res://environments/world.gd" id="1_cu36i"]
 [ext_resource type="TileSet" uid="uid://dli1an21v3xpa" path="res://assets/bitmaps/tilesets/Grounds2.tres" id="3_d4kqp"]
@@ -48,6 +48,7 @@
 [ext_resource type="Resource" uid="uid://dwseu1fmbin03" path="res://elements/npcs/npc_data/npc_john_lin.tres" id="42_qxk8x"]
 [ext_resource type="Texture2D" uid="uid://do2xejiglmol5" path="res://assets/generated/env/desk_alt.png" id="42_y3rwu"]
 [ext_resource type="Resource" uid="uid://dvigw1d87rldf" path="res://elements/npcs/npc_data/npc_vending_machine.tres" id="44_0jtl1"]
+[ext_resource type="Script" path="res://debug.gd" id="45_ndqxi"]
 [ext_resource type="Texture2D" uid="uid://d4md5s6gte37u" path="res://assets/generated/canister.png" id="46_mqkpd"]
 [ext_resource type="Texture2D" uid="uid://fdpblg2u1wwk" path="res://assets/generated/env/airlock_door.png" id="47_uxo0t"]
 [ext_resource type="Resource" uid="uid://trcqtrhdeok1" path="res://elements/items/item_data/keycard_hydro.tres" id="48_bc463"]
@@ -1193,7 +1194,10 @@ position = Vector2(536, -56)
 data = ExtResource("44_0jtl1")
 
 [node name="Player" parent="." instance=ExtResource("4_xnnpk")]
-position = Vector2(664, 176)
+position = Vector2(320, 816)
+acceleration = 500.0
+friction = 500.0
+auto_interact = true
 
 [node name="COLL" type="Node2D" parent="."]
 visible = false
@@ -1473,7 +1477,7 @@ position = Vector2(384, 1072)
 texture = ExtResource("47_uxo0t")
 
 [node name="DEBUG" type="Node2D" parent="."]
-visible = false
+script = ExtResource("45_ndqxi")
 
 [node name="Coins3" parent="DEBUG" instance=ExtResource("10_o4pkl")]
 position = Vector2(664, 280)

@@ -21,6 +21,11 @@ var animation_to_play := "idle_down"
 
 
 func _ready():
+
+	if not WorldState.debug:
+		queue_free()
+		position = Vector2(320.0, 816.0)
+
 	WorldState.PLAYER = self
 	screen_size = get_viewport_rect().size
 	#var screen_center = Vector2(screen_size.x/2, screen_size.y/2)37.7
