@@ -1172,10 +1172,6 @@ data = ExtResource("6_x0ihc")
 position = Vector2(224, 720)
 data = ExtResource("6_3sh5w")
 
-[node name="DarkDrone" parent="Chars" instance=ExtResource("5_jgyno")]
-modulate = Color(0.623766, 0.414989, 0.532202, 1)
-position = Vector2(224, 864)
-
 [node name="Walter" parent="Chars" instance=ExtResource("5_jgyno")]
 position = Vector2(-32, 32)
 data = ExtResource("7_c1awk")
@@ -1195,9 +1191,6 @@ data = ExtResource("44_0jtl1")
 
 [node name="Player" parent="." instance=ExtResource("4_xnnpk")]
 position = Vector2(320, 816)
-acceleration = 500.0
-friction = 500.0
-auto_interact = true
 
 [node name="COLL" type="Node2D" parent="."]
 visible = false
@@ -1628,6 +1621,10 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 8
 theme_override_font_sizes/font_size = 18
 text = "Hidden Cryogenics"
+
+[node name="DarkDrone" parent="DEBUG" instance=ExtResource("5_jgyno")]
+modulate = Color(0.623766, 0.414989, 0.532202, 1)
+position = Vector2(224, 864)
 
 [node name="LightingTest" type="Node2D" parent="."]
 visible = false

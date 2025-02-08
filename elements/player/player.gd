@@ -23,7 +23,8 @@ var animation_to_play := "idle_down"
 func _ready():
 
 	if not WorldState.debug:
-		queue_free()
+		
+#		Puts the player at start
 		position = Vector2(320.0, 816.0)
 
 	WorldState.PLAYER = self
