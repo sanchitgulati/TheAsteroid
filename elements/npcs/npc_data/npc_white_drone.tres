@@ -1,6 +1,8 @@
-[gd_resource type="Resource" script_class="npc_data" load_steps=3 format=3 uid="uid://bnss2nwuoksff"]
+[gd_resource type="Resource" script_class="npc_data" load_steps=5 format=3 uid="uid://bnss2nwuoksff"]
 
-[ext_resource type="Script" path="res://elements/npcs/npc_data/npc_data.gd" id="1_fqg3o"]
+[ext_resource type="Script" path="res://elements/quests/quest_data.gd" id="1_71n42"]
+[ext_resource type="Script" path="res://elements/npcs/npc_data.gd" id="1_fqg3o"]
+[ext_resource type="Resource" uid="uid://1rkr3r3cs04n" path="res://elements/quests/quest_data/droid_welcome.tres" id="2_s0nsy"]
 [ext_resource type="Texture2D" uid="uid://cj0co3u26bp3k" path="res://assets/bitmaps/comp_droid_pap.png" id="2_utr1o"]
 
 [resource]
@@ -8,6 +10,7 @@ script = ExtResource("1_fqg3o")
 name = "Wilson"
 texture = ExtResource("2_utr1o")
 age = 4
+quests = Array[ExtResource("1_71n42")]([ExtResource("2_s0nsy")])
 public_persona = "Wilson is the helpful droid welcoming visitors to The Station"
 private_persona = "You are a companion spherical flying droid.
 Your main goal is welcoming visitors and telling them about The Station.

@@ -6,7 +6,7 @@ var data_dir = "res://elements/quests/quest_data/"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	load_quests()
+	#load_quests()
 	pass # Replace with function body.
 
 
