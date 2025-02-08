@@ -1,9 +1,10 @@
 @tool
 extends Control
 
-@onready var texture_rect: TextureRect = $VBoxContainer/TextureRect
+@onready var texture_rect: TextureRect = $PanelContainer/TextureRect
+
 @onready var data: item_data
-@onready var item_name: Label = $VBoxContainer/ItemName
+@onready var item_name: Label = $PanelContainer/ItemName
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

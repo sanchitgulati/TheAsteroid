@@ -1,10 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://sdf4pddtnkro"]
+[gd_scene load_steps=5 format=3 uid="uid://sdf4pddtnkro"]
 
-[ext_resource type="Texture2D" uid="uid://c6vmia320m4b1" path="res://assets/bitmaps/ui/inv_slot_bg.png" id="1_uemv4"]
 [ext_resource type="Script" path="res://UI/inventory/inventory_slot_ui.gd" id="1_ufp15"]
-[ext_resource type="Theme" uid="uid://c3gfwu5jojd" path="res://UI/dialogue/Dialogue_theme.tres" id="3_714jq"]
+[ext_resource type="FontFile" uid="uid://fvujwj53nmld" path="res://assets/fonts/tiny-3x5/tiny-3x5.ttf" id="3_d5llf"]
 [ext_resource type="Texture2D" uid="uid://cnfgl44xjnyor" path="res://assets/bitmaps/items/beer_can_small.png" id="3_h87q1"]
-[ext_resource type="FontFile" uid="uid://dxgg848nrycdm" path="res://assets/fonts/depixel/DePixelIllegible.ttf" id="5_dgkje"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m64te"]
 
 [node name="InventorySlotUi" type="Button"]
 custom_minimum_size = Vector2(48, 48)
@@ -14,39 +14,34 @@ button_mask = 3
 flat = true
 script = ExtResource("1_ufp15")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 0
-offset_right = 56.0
-offset_bottom = 64.0
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_m64te")
 
-[node name="40x40" type="ColorRect" parent="VBoxContainer"]
+[node name="40x40" type="ColorRect" parent="PanelContainer"]
 visible = false
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 color = Color(0.58964, 0.174029, 0.801158, 1)
 
-[node name="TextureBG" type="TextureRect" parent="VBoxContainer"]
-visible = false
-layout_mode = 2
-size_flags_horizontal = 4
-texture = ExtResource("1_uemv4")
-expand_mode = 3
-stretch_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="VBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="PanelContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = ExtResource("3_h87q1")
 stretch_mode = 2
 
-[node name="ItemName" type="Label" parent="VBoxContainer"]
+[node name="ItemName" type="Label" parent="PanelContainer"]
 layout_mode = 2
-theme = ExtResource("3_714jq")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 2
-theme_override_fonts/font = ExtResource("5_dgkje")
-theme_override_font_sizes/font_size = 9
+theme_override_fonts/font = ExtResource("3_d5llf")
+theme_override_font_sizes/font_size = 8
 text = "name too long"
 horizontal_alignment = 1
 vertical_alignment = 1
