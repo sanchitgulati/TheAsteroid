@@ -7,6 +7,10 @@
 [node name="Inventory" type="Control"]
 layout_mode = 3
 anchors_preset = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 8.0
+offset_bottom = 8.0
 script = ExtResource("1_ljtkx")
 
 [node name="Frame" type="PanelContainer" parent="."]

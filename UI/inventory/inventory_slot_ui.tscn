@@ -1,13 +1,19 @@
-[gd_scene load_steps=5 format=3 uid="uid://sdf4pddtnkro"]
+[gd_scene load_steps=6 format=3 uid="uid://sdf4pddtnkro"]
 
 [ext_resource type="Script" path="res://UI/inventory/inventory_slot_ui.gd" id="1_ufp15"]
+[ext_resource type="Texture2D" uid="uid://dk72pbqq5osj7" path="res://assets/bitmaps/ui/inventory_9patch.png" id="2_cm6o3"]
 [ext_resource type="FontFile" uid="uid://fvujwj53nmld" path="res://assets/fonts/tiny-3x5/tiny-3x5.ttf" id="3_d5llf"]
 [ext_resource type="Texture2D" uid="uid://cnfgl44xjnyor" path="res://assets/bitmaps/items/beer_can_small.png" id="3_h87q1"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m64te"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c3cqx"]
+texture = ExtResource("2_cm6o3")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
 
 [node name="InventorySlotUi" type="Button"]
-custom_minimum_size = Vector2(48, 48)
+custom_minimum_size = Vector2(46, 46)
 offset_right = 48.0
 offset_bottom = 48.0
 button_mask = 3
@@ -15,13 +21,14 @@ flat = true
 script = ExtResource("1_ufp15")
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(42, 42)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_m64te")
+theme_override_styles/panel = SubResource("StyleBoxTexture_c3cqx")
 
 [node name="40x40" type="ColorRect" parent="PanelContainer"]
 visible = false
@@ -30,6 +37,7 @@ layout_mode = 2
 color = Color(0.58964, 0.174029, 0.801158, 1)
 
 [node name="TextureRect" type="TextureRect" parent="PanelContainer"]
+custom_minimum_size = Vector2(36, 36)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -38,13 +46,13 @@ stretch_mode = 2
 
 [node name="ItemName" type="Label" parent="PanelContainer"]
 layout_mode = 2
+size_flags_vertical = 8
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 2
+theme_override_constants/outline_size = 4
 theme_override_fonts/font = ExtResource("3_d5llf")
 theme_override_font_sizes/font_size = 8
 text = "name too long"
 horizontal_alignment = 1
-vertical_alignment = 1
 autowrap_mode = 2
 
 [connection signal="button_down" from="." to="." method="_on_button_down"]
