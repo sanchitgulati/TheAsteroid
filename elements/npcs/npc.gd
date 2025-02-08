@@ -52,7 +52,9 @@ func _on_body_entered(body: Node2D) -> void:
 		
 		
 		if step != null:
-			LLM.Dialog.llm_output.text += 'QUEST: ' + step.description
+			LLM.Dialog.llm_output.text += '[b]'
+			LLM.Dialog.llm_output.text += step.description
+			LLM.Dialog.llm_output.text += '[/b]'
 		else:
 			var prompt = Prompts.get_prompt('greetings')
 			LLM.talk_npc(prompt)

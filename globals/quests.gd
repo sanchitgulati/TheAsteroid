@@ -58,15 +58,25 @@ func get_next_quest(current_npc: npc_data):
 		if not check_step_requests(quest): continue  
 		return quest
 
-func get_open_quests(current_npc: npc_data):
-	var open = []
+func get_open_quests(current_npc: npc_data=null):
+	var open = [] as Array[quest_data]
 	for quest in quests:
 		var data_npc = quest_npc(quest)
-		if data_npc != current_npc: continue
+		if current_npc != null and data_npc != current_npc: continue
 		if quest.progress < 0: continue
 		if quest.progress >= quest.steps.size(): continue
 		open.append(quest)
 	return open
+	
+func get_completed_quests(current_npc: npc_data=null):
+	var completed = [] as Array[quest_data]
+	for quest in quests:
+		var data_npc = quest_npc(quest)
+		if current_npc != null and data_npc != current_npc: continue
+		if quest.progress < 0: continue
+		if quest.progress < quest.steps.size(): continue
+		completed.append(quest)
+	return completed
 	
 func quest_npc(quest:quest_data):
 	var step = current_quest_step(quest)
