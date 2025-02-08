@@ -28,6 +28,7 @@ offset_top = -204.0
 offset_bottom = -17.0
 
 [node name="QuestLog" parent="CanvasLayer50" instance=ExtResource("4_pxxmd")]
+visible = false
 
 [node name="Soundtrack" type="Node" parent="."]
 script = ExtResource("4_ygivj")

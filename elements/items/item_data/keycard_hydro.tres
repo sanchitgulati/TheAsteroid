@@ -8,3 +8,4 @@ script = ExtResource("1_08o7e")
 name = "Key Hydro"
 description = "Keycard for Hydrophonics"
 texture = ExtResource("2_pn3o5")
+quest_item = true

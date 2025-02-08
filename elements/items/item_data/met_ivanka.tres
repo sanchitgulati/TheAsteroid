@@ -8,3 +8,4 @@ script = ExtResource("1_lbi8e")
 name = "Met Ivanka"
 description = "You talked to Ivanka at least once."
 texture = ExtResource("2_c7baa")
+quest_item = true
