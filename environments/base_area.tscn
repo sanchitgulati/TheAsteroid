@@ -1,4 +1,4 @@
-[gd_scene load_steps=113 format=4 uid="uid://cy2se4msxc27f"]
+[gd_scene load_steps=115 format=4 uid="uid://cy2se4msxc27f"]
 
 [ext_resource type="Script" path="res://environments/world.gd" id="1_cu36i"]
 [ext_resource type="TileSet" uid="uid://dli1an21v3xpa" path="res://assets/bitmaps/tilesets/Grounds2.tres" id="3_d4kqp"]
@@ -48,6 +48,7 @@
 [ext_resource type="Resource" uid="uid://dwseu1fmbin03" path="res://elements/npcs/npc_data/npc_john_lin.tres" id="42_qxk8x"]
 [ext_resource type="Texture2D" uid="uid://do2xejiglmol5" path="res://assets/generated/env/desk_alt.png" id="42_y3rwu"]
 [ext_resource type="Resource" uid="uid://dvigw1d87rldf" path="res://elements/npcs/npc_data/npc_vending_machine.tres" id="44_0jtl1"]
+[ext_resource type="Script" path="res://debug.gd" id="45_ndqxi"]
 [ext_resource type="Texture2D" uid="uid://d4md5s6gte37u" path="res://assets/generated/canister.png" id="46_mqkpd"]
 [ext_resource type="Texture2D" uid="uid://fdpblg2u1wwk" path="res://assets/generated/env/airlock_door.png" id="47_uxo0t"]
 [ext_resource type="Resource" path="res://elements/items/item_data/keycard_hydro.tres" id="48_bc463"]
@@ -55,6 +56,9 @@
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7ef21"]
 radius = 25.0
 height = 98.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_om30y"]
+size = Vector2(96, 40)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6ggm6"]
 size = Vector2(54, 24)
@@ -386,6 +390,12 @@ shape = SubResource("CapsuleShape2D_7ef21")
 material = ExtResource("27_0hoxd")
 position = Vector2(-208, -608)
 texture = ExtResource("4_j6vmd")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Hydroponics/HydrpStruct4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hydroponics/HydrpStruct4/StaticBody2D"]
+position = Vector2(0, 36)
+shape = SubResource("RectangleShape2D_om30y")
 
 [node name="EnergyControl5" type="Sprite2D" parent="Hydroponics"]
 material = ExtResource("27_0hoxd")
@@ -1172,10 +1182,6 @@ data = ExtResource("6_x0ihc")
 position = Vector2(224, 720)
 data = ExtResource("6_3sh5w")
 
-[node name="DarkDrone" parent="Chars" instance=ExtResource("5_jgyno")]
-modulate = Color(0.623766, 0.414989, 0.532202, 1)
-position = Vector2(224, 864)
-
 [node name="Walter" parent="Chars" instance=ExtResource("5_jgyno")]
 position = Vector2(-32, 32)
 data = ExtResource("7_c1awk")
@@ -1194,7 +1200,7 @@ position = Vector2(536, -56)
 data = ExtResource("44_0jtl1")
 
 [node name="Player" parent="." instance=ExtResource("4_xnnpk")]
-position = Vector2(664, 176)
+position = Vector2(320, 816)
 
 [node name="COLL" type="Node2D" parent="."]
 visible = false
@@ -1474,7 +1480,7 @@ position = Vector2(384, 1072)
 texture = ExtResource("47_uxo0t")
 
 [node name="DEBUG" type="Node2D" parent="."]
-visible = false
+script = ExtResource("45_ndqxi")
 
 [node name="Coins3" parent="DEBUG" instance=ExtResource("10_o4pkl")]
 position = Vector2(664, 280)
@@ -1626,6 +1632,10 @@ theme_override_constants/outline_size = 8
 theme_override_font_sizes/font_size = 18
 text = "Hidden Cryogenics"
 
+[node name="DarkDrone" parent="DEBUG" instance=ExtResource("5_jgyno")]
+modulate = Color(0.623766, 0.414989, 0.532202, 1)
+position = Vector2(224, 864)
+
 [node name="LightingTest" type="Node2D" parent="."]
 visible = false
 
@@ -1646,4 +1656,4 @@ offset_bottom = 632.0
 texture = SubResource("GradientTexture2D_ydvkp")
 
 [node name="DoorAstroport" parent="." instance=ExtResource("11_tmvlt")]
-position = Vector2(480, 632)
+position = Vector2(480, 720)

@@ -1,9 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://djxj1myx4n11u"]
+[gd_scene load_steps=8 format=3 uid="uid://djxj1myx4n11u"]
 
 [ext_resource type="PackedScene" uid="uid://cy2se4msxc27f" path="res://environments/base_area.tscn" id="1_cawkp"]
 [ext_resource type="PackedScene" uid="uid://rp4eqiqkbdpx" path="res://UI/inventory/inventory_ui.tscn" id="2_4yhnd"]
 [ext_resource type="PackedScene" uid="uid://ptkseutwb6ke" path="res://UI/dialogue/dialogue.tscn" id="3_t1wol"]
 [ext_resource type="AudioStream" uid="uid://cr412rtd3alfc" path="res://assets/audio/soundtrack/mixkit-relax-beat-292.mp3" id="4_c8qn5"]
+[ext_resource type="PackedScene" uid="uid://2skldmflessm" path="res://UI/quest_log.tscn" id="4_pxxmd"]
+[ext_resource type="Script" path="res://soundtrack.gd" id="4_ygivj"]
 [ext_resource type="AudioStream" uid="uid://dk3o5rr0rr8og" path="res://assets/audio/soundtrack/The Uprising.mp3" id="5_sojg4"]
 
 [node name="Main" type="Node2D"]
@@ -21,10 +23,14 @@ color = Color(1, 0, 1, 0.12549)
 [node name="Inventory" parent="CanvasLayer50" instance=ExtResource("2_4yhnd")]
 
 [node name="Dialogue" parent="CanvasLayer50" instance=ExtResource("3_t1wol")]
+visible = false
 offset_top = -204.0
 offset_bottom = -17.0
 
+[node name="QuestLog" parent="CanvasLayer50" instance=ExtResource("4_pxxmd")]
+
 [node name="Soundtrack" type="Node" parent="."]
+script = ExtResource("4_ygivj")
 
 [node name="Relax" type="AudioStreamPlayer2D" parent="Soundtrack"]
 stream = ExtResource("4_c8qn5")

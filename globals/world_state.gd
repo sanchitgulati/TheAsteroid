@@ -1,5 +1,7 @@
 extends Node
 
+var debug : bool = true
+
 var current_npc: NPC
 
 var PLAYER:Player
