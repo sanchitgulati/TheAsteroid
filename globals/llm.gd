@@ -1,10 +1,9 @@
 extends Node
 
 @export var Dialog: Dialogue
-
-@onready var Chat: NobodyWhoChat = $Chat
 @onready var Model: NobodyWhoModel  = $Model
 
+var chat_once: NobodyWhoChat = null 
 var last_answer = ""
 var talking = false
 var re_newline: RegEx
@@ -13,32 +12,27 @@ var queue = []
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	re_newline = RegEx.create_from_string("\n\n+")
-	
-	pass # Replace with function body.
 
+func clear_chat():
+	if chat_once != null:
+		#chat_once.free_queue()
+		chat_once = null
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
-	pass
-
-func set_system_prompt(prompt:String):
-	#LLM.Chat = NobodyWhoChat.new()
-	#LLM.Chat.model_node = Model
-	#LLM.Chat.response_updated.connect(_on_chat_response_updated)
-	#LLM.Chat.response_finished.connect(_on_chat_response_finished)
+func init_chat(prompt:String):
+	clear_chat()
+	chat_once = NobodyWhoChat.new()
+	add_child(chat_once)
+	chat_once.model_node = Model
+	chat_once.response_updated.connect(_on_chat_response_updated)
+	chat_once.response_finished.connect(_on_chat_response_finished)
 	
-	LLM.Chat.system_prompt = prompt
-	print("start_worker: begin")
-	await LLM.Chat.start_worker()
-	print("start_worker: end")
-	
+	chat_once.system_prompt = prompt
+	chat_once.start_worker()
 
 func talk_npc(prompt: String ):
 	print("talk_npc_queue:", queue.size() )
 	if WorldState.current_npc == null: return
-	if talking:
-		#queue.append(prompt)
-		return
+	if talking: return
 	
 	print("-----------------------")
 	talking = true
@@ -48,14 +42,7 @@ func talk_npc(prompt: String ):
 	if queue.size() == 0:
 		Dialog.llm_output.text = ""
 	
-	LLM.Chat.say(prompt)
-
-func process_queue():
-	var prompt = queue.pop_front()
-	if prompt == null: 
-		return false
-	#talk_npc(prompt)
-	return true
+	chat_once.say(prompt)
 	
 func _on_chat_response_updated(new_token: String) -> void:
 	var cur_answer = Dialog.llm_output.text
@@ -69,7 +56,6 @@ func _on_chat_response_finished(_response: String) -> void:
 		WorldState.current_npc.chat_history.append(_response)
 	print(_response)
 	talking = false
-	#if not process_queue():
 	LLM.Dialog.llm_input.text = "";
 		
 	
