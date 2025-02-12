@@ -64,6 +64,7 @@ func set_focus_input():
 		llm_input.grab_focus()
 
 func close():
+	if LLM.talking: return
 	WorldState.PLAYER.can_move = true
 	npc_data_cur = null
 	visible = false
@@ -72,6 +73,7 @@ func close():
 	clear()
 
 func talk():
+	if LLM.talking: return
 	var text = LLM.Dialog.llm_input.text
 	if text.strip_edges() != "":
 		LLM.talk_npc(LLM.Dialog.llm_input.text)

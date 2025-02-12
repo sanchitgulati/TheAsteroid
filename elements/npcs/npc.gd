@@ -35,9 +35,6 @@ func equals(npc:NPC):
 func _process(_delta: float) -> void:
 	if Engine.is_editor_hint():
 		set_from_data()
-	elif talk_begin: 
-		call_deferred_thread_group("start_talk")
-		talk_begin = false
 	pass
 
 func set_from_data():
@@ -62,13 +59,11 @@ func _on_body_entered(body: Node2D) -> void:
 		
 		
 		if quest_step_data == null:
-			talk_begin = true
+			start_talk()
 		else:
 			LLM.Dialog.llm_output.text += '[b]'
 			LLM.Dialog.llm_output.text += quest_step_data.description
 			LLM.Dialog.llm_output.text += '[/b]'
-		else:
-			talk_begin = true
 
 
 func start_talk():

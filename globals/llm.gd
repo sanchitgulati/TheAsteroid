@@ -16,8 +16,8 @@ func _ready() -> void:
 
 func clear_chat():
 	if chat_once != null:
-		#chat_once.free_queue()
-		chat_once = null
+		remove_child(chat_once)
+		chat_once.queue_free()
 
 func init_chat(prompt:String):
 	clear_chat()
