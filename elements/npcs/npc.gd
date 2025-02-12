@@ -36,7 +36,7 @@ func _process(_delta: float) -> void:
 	if Engine.is_editor_hint():
 		set_from_data()
 	elif talk_begin: 
-		start_talk()
+		call_deferred_thread_group("start_talk")
 		talk_begin = false
 	pass
 
@@ -54,16 +54,18 @@ func _on_body_entered(body: Node2D) -> void:
 		first_touch = false
 		WorldState.set_npc(self)
 		
-		var step = Quests.check_quest(data)
+		var quest_step_data = Quests.check_quest(data)
 		
 		LLM.Dialog.open()
 		if Inventory.item_count() > 0:
 			Inventory.open()
 		
 		
-		if step != null:
+		if quest_step_data == null:
+			talk_begin = true
+		else:
 			LLM.Dialog.llm_output.text += '[b]'
-			LLM.Dialog.llm_output.text += step.description
+			LLM.Dialog.llm_output.text += quest_step_data.description
 			LLM.Dialog.llm_output.text += '[/b]'
 		else:
 			talk_begin = true

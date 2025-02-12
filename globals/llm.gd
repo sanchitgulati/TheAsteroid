@@ -8,6 +8,7 @@ var last_answer = ""
 var talking = false
 var re_newline: RegEx
 var queue = []
+var is_chat_ready: bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

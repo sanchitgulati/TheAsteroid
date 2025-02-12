@@ -1223,8 +1223,8 @@ data = ExtResource("8_vtgxy")
 
 [node name="Barrow" parent="Chars" instance=ExtResource("5_jgyno")]
 position = Vector2(-72, 384)
-data = ExtResource("43_kag5v")
 face_opposite = true
+data = ExtResource("43_kag5v")
 
 [node name="VendingMachine" parent="Chars" instance=ExtResource("5_jgyno")]
 position = Vector2(640, -56)
