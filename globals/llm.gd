@@ -8,6 +8,7 @@ var last_answer = ""
 var talking = false
 var re_newline: RegEx
 var queue = []
+var is_chat_ready: bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -15,8 +16,8 @@ func _ready() -> void:
 
 func clear_chat():
 	if chat_once != null:
-		#chat_once.free_queue()
-		chat_once = null
+		remove_child(chat_once)
+		chat_once.queue_free()
 
 func init_chat(prompt:String):
 	clear_chat()

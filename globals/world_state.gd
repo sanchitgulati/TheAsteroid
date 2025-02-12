@@ -4,6 +4,7 @@ var debug : bool = false
 
 var current_npc: NPC
 
+
 var PLAYER:Player
 
 func clear_npc():
@@ -11,6 +12,7 @@ func clear_npc():
 	
 func set_npc(npc:NPC):
 	current_npc = npc
+	LLM.is_chat_ready = false
 	if npc == null or npc.data == null: 
 		print("BAD!!!")		
 		return
