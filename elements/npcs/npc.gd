@@ -67,23 +67,16 @@ func _on_body_entered(body: Node2D) -> void:
 			LLM.Dialog.llm_output.text += '[/b]'
 		else:
 			talk_begin = true
-			
-			
-		
-		
-			
-#		TODO: bisogna mettere il prompt iniziale dentro il dialog
+
 
 func start_talk():
 	var system_prompt = data.build_system_prompt()
-	LLM.set_system_prompt(system_prompt)
+	LLM.init_chat(system_prompt)
 	var prompt = Prompts.get_prompt('greetings')
 	LLM.talk_npc(prompt)
-
 
 
 func _on_body_exited(_body: Node2D) -> void:
 	first_touch = true
 	LLM.Dialog.close()
 	WorldState.clear_npc()
-	pass # Replace with function body.

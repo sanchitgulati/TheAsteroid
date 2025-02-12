@@ -14,10 +14,6 @@ func set_npc(npc:NPC):
 	if npc == null or npc.data == null: 
 		print("BAD!!!")		
 		return
-	#if npc.data == current_npc.data: return #skip
-	
-	#var prompt = npc.data.build_system_prompt()
-	#LLM.set_system_prompt(prompt)
 
 func findNPCs(node: Node, result : Array) -> void:
 	if node is NPC:
