@@ -58,7 +58,10 @@ func player_did_enter():
 		
 	if Inventory.contains(item_unlock):
 		open_door()
-		return 
+		return
+		
+#		if conditions are not met play reject sound
+	Sfx.door_locked()
 
 func player_did_leave():
 	if !is_open: return
