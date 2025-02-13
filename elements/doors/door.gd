@@ -40,7 +40,7 @@ func update_door():
 func open_door():
 	is_open = true
 	status_changed = true
-	#TODO: play sound
+	Sfx.door_open()
 	
 func close_door():
 	is_open = false

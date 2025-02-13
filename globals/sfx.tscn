@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://brxmqawrcecww"]
+[gd_scene load_steps=5 format=3 uid="uid://brxmqawrcecww"]
 
 [ext_resource type="Script" path="res://globals/sfx.gd" id="1_j2eis"]
 [ext_resource type="AudioStream" uid="uid://cxp16rkfl7dk3" path="res://assets/audio/SFX/sfx_menu_select3.wav" id="2_bpu20"]
+[ext_resource type="AudioStream" uid="uid://jl3a8in5khj2" path="res://assets/audio/SFX/zapsplat_science_fiction_door_open_slide_002_63412.mp3" id="3_frrx4"]
+[ext_resource type="AudioStream" uid="uid://dhods4dx6bsd3" path="res://assets/audio/SFX/mixkit-epic-orchestra-transition-2290.mp3" id="4_8jn2u"]
 
 [node name="sfx" type="Node"]
 script = ExtResource("1_j2eis")
@@ -13,7 +15,7 @@ volume_db = -10.0
 [node name="RemoveItemSound" type="AudioStreamPlayer" parent="."]
 
 [node name="DoorOpenSound" type="AudioStreamPlayer" parent="."]
-volume_db = -8.0
+stream = ExtResource("3_frrx4")
 
 [node name="FinishQuestSound" type="AudioStreamPlayer" parent="."]
-volume_db = -8.0
+stream = ExtResource("4_8jn2u")

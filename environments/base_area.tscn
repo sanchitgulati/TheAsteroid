@@ -412,7 +412,7 @@ scale = Vector2(1.5625, 1.5625)
 texture = ExtResource("41_7mh01")
 
 [node name="DoorMedVert3" parent="Hydroponics" instance=ExtResource("11_tmvlt")]
-position = Vector2(96, -462)
+position = Vector2(96, -464)
 item_unlock = ExtResource("48_bc463")
 
 [node name="Coins" parent="Hydroponics" instance=ExtResource("10_o4pkl")]
@@ -957,19 +957,19 @@ scale = Vector2(20.5546, 20.5313)
 mesh = SubResource("SphereMesh_4k21t")
 
 [node name="DoorMedVert5" parent="CrewQuart" instance=ExtResource("11_tmvlt")]
-position = Vector2(960, 48)
+position = Vector2(959, 47)
 item_unlock = ExtResource("23_0royy")
 
 [node name="DoorMedVert6" parent="CrewQuart" instance=ExtResource("11_tmvlt")]
-position = Vector2(960, 241)
+position = Vector2(959, 240)
 item_unlock = ExtResource("23_0royy")
 
 [node name="DoorMedVert7" parent="CrewQuart" instance=ExtResource("11_tmvlt")]
-position = Vector2(960, 432)
+position = Vector2(959, 431)
 item_unlock = ExtResource("23_0royy")
 
 [node name="DoorMedVert8" parent="CrewQuart" instance=ExtResource("11_tmvlt")]
-position = Vector2(960, 624)
+position = Vector2(959, 623)
 item_unlock = ExtResource("23_0royy")
 
 [node name="Coins2" parent="CrewQuart" instance=ExtResource("10_o4pkl")]
@@ -1031,7 +1031,7 @@ position = Vector2(-16, 840)
 [node name="PowerStation" type="Node2D" parent="."]
 
 [node name="DoorMedVert2" parent="PowerStation" instance=ExtResource("11_tmvlt")]
-position = Vector2(96, 18)
+position = Vector2(96, 16)
 item_unlock = ExtResource("23_0royy")
 
 [node name="Sprite2D" type="Sprite2D" parent="PowerStation"]
