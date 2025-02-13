@@ -26,6 +26,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
+#	TODO: è meglio mandare un messaggio broadcast a tutti gli elementi del gruppo "Doors"
 	update_door()
 	pass
 
