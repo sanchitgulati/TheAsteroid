@@ -6,18 +6,23 @@ class_name Door
 @export var auto_close: bool = false
 var status_changed: bool = true
 
-@onready var open: TextureRect = $open
-@onready var close: TextureRect = $close
+@export_enum("Vert Medium", "Hor Medium") var model: String = "Vert Medium"
+
+@onready var open: TextureRect
+@onready var close: TextureRect
 
 # close_area
-@onready var close_shape: CollisionShape2D = $close_area/close_shape
-@onready var interaction_area: Area2D = $interaction_area
+@onready var close_shape: CollisionShape2D
+@onready var interaction_area: Area2D
 # interaction_shape
+@onready var interaction_shape: CollisionShape2D
 
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	
+	init_door()
 	close_door()
 	interaction_area.connect('body_entered',did_enter_area)
 	interaction_area.connect('body_exited',did_exit_area)
@@ -29,6 +34,28 @@ func _process(_delta: float) -> void:
 #	TODO: è meglio mandare un messaggio broadcast a tutti gli elementi del gruppo "Doors"
 	update_door()
 	pass
+
+func init_door():
+	#	Init Shapes
+	match model:
+		"Vert Medium":
+			print("Vertical Medium Model Selected")
+			open = $VertMedOpen
+			close = $VertMedClose
+			close_shape = $VertMedClose_area/close_shape
+			interaction_area = $VertMedInteraction_area
+			interaction_shape = $VertMedInteraction_area/interaction_shape
+		"Hor Medium":
+			print("Horizontal Medium Model Selected")
+			open = $HortMedOpen
+			close = $HorMedClose
+			close_shape = $HorMedClose_area/close_shape
+			interaction_area = $HorMedInteraction_area
+			interaction_shape = $HorMedInteraction_area/interaction_shape
+			
+	close_shape.disabled = false
+	interaction_shape.disabled = false
+
 
 func update_door():
 	if not status_changed: return
