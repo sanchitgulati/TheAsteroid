@@ -22,17 +22,13 @@ func set_from_data():
 	display_name.text = data.name
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 
-#SPENTO PERCHE' ERA IMPOX DEBUGGARE :-(aaa
+#SPENTO PERCHE' ERA IMPOX DEBUGGARE :-(
 
 func _process(_delta: float) -> void:
 	#if Engine.is_editor_hint():
 	set_from_data()
 	if player_near and not WorldState.PLAYER.auto_interact: 
-		
-		
-		if Input.is_action_just_pressed("interact"):
-			pickup()
-	pass
+		if Input.is_action_just_pressed("interact"): pickup()
 
 
 func pickup() -> void:

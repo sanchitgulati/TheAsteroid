@@ -18,7 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://ccnbdaq3o72at" path="res://elements/items/item.tscn" id="10_o4pkl"]
 [ext_resource type="Texture2D" uid="uid://blu0cuwyjopoo" path="res://assets/generated/env/kitchen_forniture5.png" id="10_otvnd"]
 [ext_resource type="Texture2D" uid="uid://dssxatogwko4m" path="res://assets/generated/env/kitchen_forniture4.png" id="11_4aseb"]
-[ext_resource type="PackedScene" uid="uid://b4iaaacfaffpx" path="res://elements/doors/DoorMedVert.tscn" id="11_tmvlt"]
+[ext_resource type="PackedScene" path="res://elements/doors/DoorMedVert.tscn" id="11_tmvlt"]
 [ext_resource type="Texture2D" uid="uid://bd2tipbn1ojkq" path="res://assets/generated/env/desk_computer.png" id="12_se4yj"]
 [ext_resource type="PackedScene" path="res://environments/servers.tscn" id="13_xyybr"]
 [ext_resource type="Texture2D" uid="uid://dydi55p2mh7v2" path="res://assets/generated/env/sink.png" id="14_ct5gn"]
@@ -53,7 +53,7 @@
 [ext_resource type="Texture2D" uid="uid://d4md5s6gte37u" path="res://assets/generated/canister.png" id="46_mqkpd"]
 [ext_resource type="Texture2D" uid="uid://fdpblg2u1wwk" path="res://assets/generated/env/airlock_door.png" id="47_uxo0t"]
 [ext_resource type="Resource" uid="uid://trcqtrhdeok1" path="res://elements/items/item_data/keycard_hydro.tres" id="48_bc463"]
-[ext_resource type="Resource" uid="uid://ddgwqudsnpagn" path="res://elements/items/item_data/keycard_grey.tres" id="53_c28mn"]
+[ext_resource type="Resource" path="res://elements/items/item_data/keycard_grey.tres" id="53_c28mn"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7ef21"]
 radius = 25.0
@@ -1223,8 +1223,8 @@ data = ExtResource("8_vtgxy")
 
 [node name="Barrow" parent="Chars" instance=ExtResource("5_jgyno")]
 position = Vector2(-72, 384)
-data = ExtResource("43_kag5v")
 face_opposite = true
+data = ExtResource("43_kag5v")
 
 [node name="VendingMachine" parent="Chars" instance=ExtResource("5_jgyno")]
 position = Vector2(640, -56)
