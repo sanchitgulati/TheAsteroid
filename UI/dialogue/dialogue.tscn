@@ -92,14 +92,14 @@ caret_multiple = false
 script = ExtResource("6_b8ddn")
 metadata/_edit_use_anchors_ = true
 
-[node name="Button" type="Button" parent="HBoxContainer"]
+[node name="send_button" type="Button" parent="HBoxContainer"]
 custom_minimum_size = Vector2(64, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 theme = ExtResource("3_l0jdm")
 text = "Send"
 
-[node name="Button2" type="Button" parent="HBoxContainer"]
+[node name="close_button" type="Button" parent="HBoxContainer"]
 custom_minimum_size = Vector2(64, 0)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -109,5 +109,5 @@ theme_override_styles/hover = ExtResource("5_c31cj")
 theme_override_styles/normal = ExtResource("5_c31cj")
 text = "Close"
 
-[connection signal="pressed" from="HBoxContainer/Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="HBoxContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="HBoxContainer/send_button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/close_button" to="." method="_on_button_2_pressed"]

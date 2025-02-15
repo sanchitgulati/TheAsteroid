@@ -25,7 +25,7 @@ func _ready():
 	if not WorldState.debug:
 		
 #		Puts the player at start
-		position = Vector2(320.0, 816.0)
+		position = Vector2(592.0, 816.0)
 
 	WorldState.PLAYER = self
 	screen_size = get_viewport_rect().size

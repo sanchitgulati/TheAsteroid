@@ -6,6 +6,10 @@ class_name Dialogue
 @export var llm_output: RichTextLabel
 @export var llm_input: TextEdit
 @onready var character_texture: TextureRect = $Character
+@onready var send_button: Button = $HBoxContainer/send_button
+@onready var close_button: Button = $HBoxContainer/close_button
+
+
 var npc_data_cur = null
 var npc = null
 
@@ -38,7 +42,8 @@ func _process(_delta: float) -> void:
 			npc_data_cur = npc.data
 			#llm_input.grab_focus()
 	
-	
+	send_button.disabled = LLM.talking
+	close_button.disabled = LLM.talking
 	
 	pass
 
@@ -64,6 +69,7 @@ func set_focus_input():
 		llm_input.grab_focus()
 
 func close():
+	if LLM.talking: return
 	WorldState.PLAYER.can_move = true
 	npc_data_cur = null
 	visible = false
@@ -72,6 +78,7 @@ func close():
 	clear()
 
 func talk():
+	if LLM.talking: return
 	var text = LLM.Dialog.llm_input.text
 	if text.strip_edges() != "":
 		LLM.talk_npc(LLM.Dialog.llm_input.text)

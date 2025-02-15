@@ -6,6 +6,7 @@ var rng = RandomNumberGenerator.new()
 @onready var remove_item_sound: AudioStreamPlayer = $RemoveItemSound
 @onready var door_open_sound: AudioStreamPlayer = $DoorOpenSound
 @onready var finish_quest_sound: AudioStreamPlayer = $FinishQuestSound
+@onready var door_locked_sound: AudioStreamPlayer = $DoorLockedSound
 
 
 
@@ -21,6 +22,9 @@ func remove_item():
 	
 func door_open():
 	door_open_sound.play()
+	
+func door_locked():
+	door_locked_sound.play()
 
 func finish_quest():
 	finish_quest_sound.play()

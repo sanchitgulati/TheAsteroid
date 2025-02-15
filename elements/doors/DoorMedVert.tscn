@@ -1,7 +1,19 @@
-[gd_scene load_steps=7 format=3 uid="uid://b4iaaacfaffpx"]
+[gd_scene load_steps=11 format=3 uid="uid://b4iaaacfaffpx"]
 
 [ext_resource type="Script" path="res://elements/doors/door.gd" id="1_sbqg6"]
 [ext_resource type="Texture2D" uid="uid://chuwqxcpxuv1q" path="res://assets/bitmaps/tilesets/SpcStationObjcts.png" id="1_wf3gn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i5pvj"]
+size = Vector2(16, 96)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_doodw"]
+size = Vector2(32, 128)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gm7oq"]
+size = Vector2(96, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5sw3t"]
+size = Vector2(96, 56)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h36ac"]
 atlas = ExtResource("1_wf3gn")
@@ -11,34 +23,71 @@ region = Rect2(128, 64, 32, 96)
 atlas = ExtResource("1_wf3gn")
 region = Rect2(160, 64, 32, 96)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_i5pvj"]
-size = Vector2(16, 96)
+[sub_resource type="AtlasTexture" id="AtlasTexture_1v6qy"]
+atlas = ExtResource("1_wf3gn")
+region = Rect2(80, 16, 96, 48)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_doodw"]
-size = Vector2(32, 128)
+[sub_resource type="AtlasTexture" id="AtlasTexture_dnrum"]
+atlas = ExtResource("1_wf3gn")
+region = Rect2(192, 16, 96, 48)
 
 [node name="Door" type="Node2D"]
 script = ExtResource("1_sbqg6")
 
-[node name="open" type="TextureRect" parent="."]
+[node name="VertMedClose_area" type="StaticBody2D" parent="."]
+
+[node name="close_shape" type="CollisionShape2D" parent="VertMedClose_area"]
+position = Vector2(16, -48)
+shape = SubResource("RectangleShape2D_i5pvj")
+disabled = true
+
+[node name="VertMedInteraction_area" type="Area2D" parent="."]
+position = Vector2(0, -64)
+
+[node name="interaction_shape" type="CollisionShape2D" parent="VertMedInteraction_area"]
+position = Vector2(16, 0)
+shape = SubResource("RectangleShape2D_doodw")
+disabled = true
+
+[node name="HorMedClose_area" type="StaticBody2D" parent="."]
+
+[node name="close_shape" type="CollisionShape2D" parent="HorMedClose_area"]
+position = Vector2(56, -20)
+shape = SubResource("RectangleShape2D_gm7oq")
+disabled = true
+
+[node name="HorMedInteraction_area" type="Area2D" parent="."]
+position = Vector2(0, -64)
+
+[node name="interaction_shape" type="CollisionShape2D" parent="HorMedInteraction_area"]
+position = Vector2(56, 44)
+shape = SubResource("RectangleShape2D_5sw3t")
+disabled = true
+
+[node name="VertMedOpen" type="TextureRect" parent="."]
+visible = false
 offset_top = -96.0
 offset_right = 40.0
 texture = SubResource("AtlasTexture_h36ac")
 
-[node name="close" type="TextureRect" parent="."]
+[node name="VertMedClose" type="TextureRect" parent="."]
+visible = false
 offset_top = -96.0
 offset_right = 40.0
 texture = SubResource("AtlasTexture_xyol6")
 
-[node name="close_area" type="StaticBody2D" parent="."]
+[node name="HortMedOpen" type="TextureRect" parent="."]
+visible = false
+offset_left = 8.0
+offset_top = -48.0
+offset_right = 104.0
+texture = SubResource("AtlasTexture_1v6qy")
+stretch_mode = 2
 
-[node name="close_shape" type="CollisionShape2D" parent="close_area"]
-position = Vector2(16, -48)
-shape = SubResource("RectangleShape2D_i5pvj")
-
-[node name="interaction_area" type="Area2D" parent="."]
-position = Vector2(0, -64)
-
-[node name="interaction_shape" type="CollisionShape2D" parent="interaction_area"]
-position = Vector2(16, 0)
-shape = SubResource("RectangleShape2D_doodw")
+[node name="HorMedClose" type="TextureRect" parent="."]
+visible = false
+offset_left = 8.0
+offset_top = -48.0
+offset_right = 104.0
+texture = SubResource("AtlasTexture_dnrum")
+stretch_mode = 2

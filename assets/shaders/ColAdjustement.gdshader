@@ -13,7 +13,7 @@ float luminance(vec3 color) {
 
 void fragment() {
     vec4 color = texture(TEXTURE, UV);
-    
+
     // Adjust brightness
     color.rgb += brightness;
 
