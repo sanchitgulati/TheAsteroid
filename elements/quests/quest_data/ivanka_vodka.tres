@@ -1,7 +1,8 @@
-[gd_resource type="Resource" script_class="quest_data" load_steps=17 format=3 uid="uid://dw4j3r3ymacj"]
+[gd_resource type="Resource" script_class="quest_data" load_steps=18 format=3 uid="uid://dw4j3r3ymacj"]
 
 [ext_resource type="Script" path="res://elements/quests/quest_data.gd" id="2_vr08a"]
 [ext_resource type="Script" path="res://elements/quests/quest_step.gd" id="3_n83ee"]
+[ext_resource type="Resource" uid="uid://b76kc0k4f1w0y" path="res://elements/items/item_data/met_benno.tres" id="4_immdv"]
 [ext_resource type="Script" path="res://elements/items/item_data.gd" id="4_x7hud"]
 [ext_resource type="Script" path="res://elements/quests/quest_reward.gd" id="5_jrkou"]
 [ext_resource type="Resource" uid="uid://b1yqhfywide7i" path="res://elements/items/item_data/met_ivanka.tres" id="6_mnmm3"]
@@ -17,7 +18,7 @@ item = ExtResource("6_mnmm3")
 [sub_resource type="Resource" id="Resource_qxltf"]
 script = ExtResource("3_n83ee")
 description = "Hello Inpector, I'm Ivanka, Benno is right The Station is so hot, but that stupid Vending Machine only has beer..."
-requests = Array[ExtResource("4_x7hud")]([])
+requests = Array[ExtResource("4_x7hud")]([ExtResource("4_immdv")])
 rewards = Array[ExtResource("5_jrkou")]([SubResource("Resource_cnjud")])
 
 [sub_resource type="Resource" id="Resource_cg0ls"]
@@ -42,7 +43,8 @@ item = ExtResource("11_81bwg")
 
 [sub_resource type="Resource" id="Resource_c3t65"]
 script = ExtResource("3_n83ee")
-description = "Oh, this is Good Old Mother Russia Vodka, that's wonderful!"
+description = "Oh, this is Good Old Mother Russia Vodka, that's wonderful!
+This is a gift for you!"
 requests = Array[ExtResource("4_x7hud")]([ExtResource("8_3t6ej")])
 rewards = Array[ExtResource("5_jrkou")]([SubResource("Resource_47ope")])
 

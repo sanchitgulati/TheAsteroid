@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://elements/quests/quest_data.gd" id="1_71n42"]
 [ext_resource type="Script" path="res://elements/npcs/npc_data.gd" id="1_fqg3o"]
-[ext_resource type="Resource" uid="uid://1rkr3r3cs04n" path="res://elements/quests/quest_data/droid_welcome.tres" id="2_s0nsy"]
+[ext_resource type="Resource" uid="uid://c62vg13sqog3l" path="res://elements/quests/quest_data/droid_welcome.tres" id="2_s0nsy"]
 [ext_resource type="Texture2D" uid="uid://cj0co3u26bp3k" path="res://assets/bitmaps/comp_droid_pap.png" id="2_utr1o"]
 
 [resource]
@@ -14,7 +14,8 @@ quests = Array[ExtResource("1_71n42")]([ExtResource("2_s0nsy")])
 public_persona = "Wilson is the helpful droid welcoming visitors to The Station"
 private_persona = "You are a companion spherical flying droid.
 Your main goal is welcoming visitors and telling them about The Station.
-You record all the events that happen and give informations about that."
+You record all the events that happen and give informations about that.
+The Door to The Station needs a Grey Keycard."
 characteristics = "You are a helpful, respectful, and honest character."
 tone = "Always answer as helpfully as possible using the context text provided.
 Your answer are complete, simple and concise."
