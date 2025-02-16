@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://b48t1qnaqbqkr"]
+
+[ext_resource type="Script" path="res://elements/fog/destroy_self_and_children.gd" id="1_agsb0"]
+
+[node name="FogOf War" type="Area2D"]
+position = Vector2(-163, -634)
+script = ExtResource("1_agsb0")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

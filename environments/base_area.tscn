@@ -1,4 +1,4 @@
-[gd_scene load_steps=122 format=4 uid="uid://cy2se4msxc27f"]
+[gd_scene load_steps=127 format=4 uid="uid://cy2se4msxc27f"]
 
 [ext_resource type="Script" path="res://environments/world.gd" id="1_cu36i"]
 [ext_resource type="TileSet" uid="uid://dli1an21v3xpa" path="res://assets/bitmaps/tilesets/Grounds2.tres" id="3_d4kqp"]
@@ -56,6 +56,7 @@
 [ext_resource type="Resource" uid="uid://trcqtrhdeok1" path="res://elements/items/item_data/keycard_hydro.tres" id="48_bc463"]
 [ext_resource type="Resource" uid="uid://cqi5ssgp0dtp3" path="res://elements/npcs/npc_data/npc_water_dispenser.tres" id="49_um1pd"]
 [ext_resource type="Resource" uid="uid://ddgwqudsnpagn" path="res://elements/items/item_data/keycard_grey.tres" id="53_c28mn"]
+[ext_resource type="PackedScene" uid="uid://b48t1qnaqbqkr" path="res://elements/fog/fog_of_war.tscn" id="57_1o4s5"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7ef21"]
 radius = 25.0
@@ -273,6 +274,18 @@ height = 256
 fill = 1
 fill_from = Vector2(1, 0.324786)
 fill_to = Vector2(0.153846, 0.905983)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_glyh0"]
+size = Vector2(51, 99)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_73bti"]
+size = Vector2(96, 36.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v07l2"]
+size = Vector2(26, 101)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_itsax"]
+size = Vector2(26, 101)
 
 [node name="BaseArea" type="Node2D"]
 script = ExtResource("1_cu36i")
@@ -593,9 +606,9 @@ position = Vector2(434, -18)
 texture = SubResource("AtlasTexture_ybiv5")
 
 [node name="Label3" type="Label" parent="SocialHub"]
-offset_left = 423.0
+offset_left = 424.0
 offset_top = -76.0
-offset_right = 498.0
+offset_right = 499.0
 offset_bottom = -53.0
 theme = ExtResource("41_rrr02")
 theme_override_colors/font_color = Color(0.910083, 0.843492, 0.674012, 1)
@@ -1850,4 +1863,122 @@ offset_left = 31.0
 offset_top = -81.0
 offset_right = 72.0
 offset_bottom = 17.0
+color = Color(0.0446046, 0.128797, 0.148593, 0.945098)
+
+[node name="FogOf War_Hydro" parent="FogOWar" instance=ExtResource("57_1o4s5")]
+
+[node name="ColorRect7" type="ColorRect" parent="FogOWar/FogOf War_Hydro"]
+offset_left = -220.0
+offset_top = -278.0
+offset_right = 195.0
+offset_bottom = 267.0
+color = Color(0.0446046, 0.128797, 0.148593, 0.945098)
+
+[node name="ColorRect12" type="ColorRect" parent="FogOWar/FogOf War_Hydro"]
+offset_left = 194.0
+offset_top = 10.0
+offset_right = 235.0
+offset_bottom = 108.0
+color = Color(0.0446046, 0.128797, 0.148593, 0.945098)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FogOWar/FogOf War_Hydro"]
+position = Vector2(210.5, 59.5)
+shape = SubResource("RectangleShape2D_glyh0")
+
+[node name="FogOf War_Hub" parent="FogOWar" instance=ExtResource("57_1o4s5")]
+position = Vector2(633, 41)
+
+[node name="ColorRect7" type="ColorRect" parent="FogOWar/FogOf War_Hub"]
+offset_left = -221.0
+offset_top = -123.0
+offset_right = 198.0
+offset_bottom = 262.0
+color = Color(0.0446046, 0.128797, 0.148593, 0.945098)
+
+[node name="ColorRect12" type="ColorRect" parent="FogOWar/FogOf War_Hub"]
+offset_left = -89.0
+offset_top = 262.0
+offset_right = 11.0
+offset_bottom = 549.0
+color = Color(0.0446046, 0.128797, 0.148593, 0.945098)
+
+[node name="ColorRect13" type="ColorRect" parent="FogOWar/FogOf War_Hub"]
+offset_left = -322.0
+offset_top = 104.0
+offset_right = -221.0
+offset_bottom = 199.0
+color = Color(0.0446046, 0.128797, 0.148593, 0.945098)
+
+[node name="ColorRect14" type="ColorRect" parent="FogOWar/FogOf War_Hub"]
+offset_left = 198.0
+offset_top = 104.0
+offset_right = 208.0
+offset_bottom = 199.0
+color = Color(0.0446046, 0.128797, 0.148593, 0.945098)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="FogOWar/FogOf War_Hub"]
+position = Vector2(-41, 531.25)
+shape = SubResource("RectangleShape2D_73bti")
+
+[node name="FogOf War_Crew" parent="FogOWar" instance=ExtResource("57_1o4s5")]
+position = Vector2(633, 41)
+
+[node name="ColorRect12" type="ColorRect" parent="FogOWar/FogOf War_Crew"]
+offset_left = 230.0
+offset_top = -121.0
+offset_right = 336.0
+offset_bottom = 615.0
+color = Color(0.0446046, 0.128797, 0.148593, 0.945098)
+
+[node name="ColorRect13" type="ColorRect" parent="FogOWar/FogOf War_Crew"]
+offset_left = 223.0
+offset_top = 103.0
+offset_right = 232.0
+offset_bottom = 198.0
+color = Color(0.0446046, 0.128797, 0.148593, 0.945098)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FogOWar/FogOf War_Crew"]
+position = Vector2(235, 150.5)
+shape = SubResource("RectangleShape2D_v07l2")
+
+[node name="FogOf War_Utilities" parent="FogOWar" instance=ExtResource("57_1o4s5")]
+position = Vector2(224, 197)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FogOWar/FogOf War_Utilities"]
+position = Vector2(60, -5)
+shape = SubResource("RectangleShape2D_itsax")
+
+[node name="ColorRect12" type="ColorRect" parent="FogOWar/FogOf War_Utilities"]
+offset_left = -66.0
+offset_top = -822.0
+offset_right = 32.0
+offset_bottom = 170.0
+color = Color(0.0446046, 0.128797, 0.148593, 0.945098)
+
+[node name="ColorRect14" type="ColorRect" parent="FogOWar/FogOf War_Utilities"]
+offset_left = -137.0
+offset_top = 75.0
+offset_right = -66.0
+offset_bottom = 170.0
+color = Color(0.0446046, 0.128797, 0.148593, 0.945098)
+
+[node name="ColorRect15" type="ColorRect" parent="FogOWar/FogOf War_Utilities"]
+offset_left = -137.0
+offset_top = -278.0
+offset_right = -66.0
+offset_bottom = -183.0
+color = Color(0.0446046, 0.128797, 0.148593, 0.945098)
+
+[node name="ColorRect16" type="ColorRect" parent="FogOWar/FogOf War_Utilities"]
+offset_left = -137.0
+offset_top = -821.0
+offset_right = -66.0
+offset_bottom = -726.0
+color = Color(0.0446046, 0.128797, 0.148593, 0.945098)
+
+[node name="ColorRect13" type="ColorRect" parent="FogOWar/FogOf War_Utilities"]
+offset_left = 33.0
+offset_top = -54.0
+offset_right = 72.0
+offset_bottom = 42.0
 color = Color(0.0446046, 0.128797, 0.148593, 0.945098)
