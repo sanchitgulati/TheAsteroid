@@ -14,6 +14,7 @@ quests = Array[ExtResource("1_5bu8v")]([ExtResource("2_b3mmh")])
 public_persona = "Stuff'O'Matic vending machine, accepts Coins.
 It usually sells Snacks, Beer, Vodka, Whisky, Sigarettes, Condoms, O2 Canisters.
 
+
 "
 private_persona = "You don't give your merchandise for free."
 characteristics = ""

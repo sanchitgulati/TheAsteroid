@@ -88,8 +88,8 @@ func talk():
 
 func start_talk():	
 	if LLM.did_init(): return 
-	var npc = WorldState.current_npc
-	var system_prompt = npc.data.build_system_prompt()
+	var cur_npc = WorldState.current_npc
+	var system_prompt = cur_npc.data.build_system_prompt()
 	LLM.init_chat(system_prompt)
 
 # Button SEND

@@ -22,7 +22,6 @@ class_name npc_data
 @export_multiline var current_status: String
 
 
-
 func equals(npc:npc_data):
 	return self.resource_name == npc.resource_name
 
