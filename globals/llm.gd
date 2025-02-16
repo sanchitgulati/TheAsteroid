@@ -77,7 +77,7 @@ func check_tags(answer:String):
 		var res = tags.get(tag.strings[1])
 		if res != null:
 			var item = load(base_path + res +'.tres')
-			if Inventory.contains(item): continue
+			# if Inventory.contains(item): continue # ONLY ONE
 			Inventory.open()
 			Inventory.add_item(item)
 		
