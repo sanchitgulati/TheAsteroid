@@ -12,6 +12,7 @@ func _on_body_entered(body: Node2D) -> void:
 		print("Fade Out")
 		animation_player.play("fade_out")
 		
-func _on_animation_finished():
+func _on_animation_finished(anim_name: String
+):
 		print("Destroy Self and Children!")
 		queue_free()
