@@ -581,15 +581,15 @@ position = Vector2(831, 240)
 item_unlock = ExtResource("53_c28mn")
 
 [node name="Sprite2D3" type="Sprite2D" parent="SocialHub"]
-position = Vector2(585, -33)
+position = Vector2(434, 11)
 texture = SubResource("AtlasTexture_ybiv5")
 
 [node name="Sprite2D4" type="Sprite2D" parent="SocialHub"]
-position = Vector2(585, -48)
+position = Vector2(434, -4)
 texture = SubResource("AtlasTexture_ybiv5")
 
 [node name="Sprite2D5" type="Sprite2D" parent="SocialHub"]
-position = Vector2(585, -62)
+position = Vector2(434, -18)
 texture = SubResource("AtlasTexture_ybiv5")
 
 [node name="Label3" type="Label" parent="SocialHub"]
@@ -604,7 +604,7 @@ theme_override_colors/font_outline_color = Color(0.94, 0.874827, 0.7896, 0.22352
 theme_override_constants/outline_size = 8
 theme_override_fonts/font = ExtResource("17_odwda")
 theme_override_font_sizes/font_size = 15
-text = "Stuff'O'Mat"
+text = "S'O'Mat"
 vertical_alignment = 1
 
 [node name="Laboratory" type="Node2D" parent="."]
@@ -1361,7 +1361,7 @@ position = Vector2(600, 400)
 [node name="Chars" type="Node2D" parent="."]
 
 [node name="Benno" parent="Chars" instance=ExtResource("5_jgyno")]
-position = Vector2(452, 38)
+position = Vector2(465, 77)
 face_opposite = true
 data = ExtResource("6_x0ihc")
 
@@ -1379,11 +1379,11 @@ face_opposite = true
 data = ExtResource("43_kag5v")
 
 [node name="VendingMachine" parent="Chars" instance=ExtResource("5_jgyno")]
-position = Vector2(531, -33)
+position = Vector2(510, -33)
 data = ExtResource("44_0jtl1")
 
 [node name="VendingMachine2" parent="Chars" instance=ExtResource("5_jgyno")]
-position = Vector2(624, 116)
+position = Vector2(575, -44)
 data = ExtResource("49_um1pd")
 
 [node name="Player" parent="." instance=ExtResource("4_xnnpk")]
