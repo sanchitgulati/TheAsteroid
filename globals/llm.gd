@@ -7,12 +7,14 @@ var chat_once: NobodyWhoChat = null
 var last_answer = ""
 var talking = false
 var re_newline: RegEx
+var re_tag:RegEx
 var queue = []
 var is_chat_ready: bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	re_newline = RegEx.create_from_string("\n\n+")
+	re_tag = RegEx.create_from_string("<<[A-Z_]+>>")
 
 func did_init():
 	return chat_once != null
@@ -52,6 +54,7 @@ func _on_chat_response_updated(new_token: String) -> void:
 	var cur_answer = Dialog.llm_output.text
 	cur_answer += new_token
 	cur_answer = re_newline.sub(cur_answer, "\n", true)
+	cur_answer = check_tags(cur_answer)
 	Dialog.llm_output.text = cur_answer
 
 
@@ -60,6 +63,18 @@ func _on_chat_response_finished(_response: String) -> void:
 		WorldState.current_npc.chat_history.append(_response)
 	print(_response)
 	talking = false
-	LLM.Dialog.llm_input.text = "";
+	LLM.Dialog.llm_input.text = ""
+	
+func check_tags(answer:String):
+	var tags_found = re_tag.search_all(answer)
+	answer = re_tag.sub(answer,"",true)
+	var tags = ['<<WATER_BOTTLE>>']
+	for tag in tags:
+		if tags_found.has(tag):
+			var item = preload("res://elements/items/item_data/beer.tres")
+			Inventory.add_item(item)
 		
+		
+	return answer
+	
 	
