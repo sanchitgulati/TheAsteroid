@@ -53,8 +53,9 @@ func talk_npc(prompt: String ):
 func _on_chat_response_updated(new_token: String) -> void:
 	var cur_answer = Dialog.llm_output.text
 	cur_answer += new_token
-	cur_answer = re_newline.sub(cur_answer, "\n", true)
 	cur_answer = check_tags(cur_answer)
+	cur_answer = re_newline.sub(cur_answer, "\n", true)
+	cur_answer = cur_answer.strip_edges(true, true)
 	Dialog.llm_output.text = cur_answer
 
 
@@ -67,14 +68,16 @@ func _on_chat_response_finished(_response: String) -> void:
 	
 func check_tags(answer:String):
 	var tags_found = re_tag.search_all(answer)
+	
 	var base_path = "res://elements/items/item_data/"
 	var tags = {}
-	tags['GLASS_OF_WATER'] = 'beer'
+	tags['GLASS_OF_WATER'] = 'glass_of_water'
 	tags['GREY_KEYCARD']= 'keycard_grey'
 	for tag in tags_found:
 		var res = tags.get(tag.strings[1])
 		if res != null:
 			var item = load(base_path + res +'.tres')
+			if Inventory.contains(item): continue
 			Inventory.open()
 			Inventory.add_item(item)
 		
