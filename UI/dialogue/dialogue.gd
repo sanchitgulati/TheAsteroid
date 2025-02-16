@@ -78,12 +78,19 @@ func close():
 	clear()
 
 func talk():
+	start_talk()
 	if LLM.talking: return
 	var text = LLM.Dialog.llm_input.text
 	if text.strip_edges() != "":
 		LLM.talk_npc(LLM.Dialog.llm_input.text)
 	llm_input.text = ""
 	set_focus_input()
+
+func start_talk():	
+	if LLM.did_init(): return 
+	var npc = WorldState.current_npc
+	var system_prompt = npc.data.build_system_prompt()
+	LLM.init_chat(system_prompt)
 
 # Button SEND
 func _on_button_pressed(): talk()

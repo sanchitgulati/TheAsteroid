@@ -49,6 +49,7 @@ func _on_body_entered(body: Node2D) -> void:
 	print(body.name)
 	if body.name=='Player':
 		first_touch = false
+		LLM.clear_chat()
 		WorldState.set_npc(self)
 		
 		var quest_step_data = Quests.check_quest(data)
@@ -77,3 +78,4 @@ func _on_body_exited(_body: Node2D) -> void:
 	first_touch = true
 	LLM.Dialog.close()
 	WorldState.clear_npc()
+	LLM.clear_chat()

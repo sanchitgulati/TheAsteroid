@@ -14,6 +14,9 @@ var is_chat_ready: bool = false
 func _ready() -> void:
 	re_newline = RegEx.create_from_string("\n\n+")
 
+func did_init():
+	return chat_once != null
+
 func clear_chat():
 	if chat_once != null:
 		remove_child(chat_once)
@@ -31,7 +34,7 @@ func init_chat(prompt:String):
 	chat_once.start_worker()
 
 func talk_npc(prompt: String ):
-	print("talk_npc_queue:", queue.size() )
+	#print("talk_npc_queue:", queue.size() )
 	if WorldState.current_npc == null: return
 	if talking: return
 	

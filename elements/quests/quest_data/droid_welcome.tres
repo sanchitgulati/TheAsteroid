@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://elements/quests/quest_data.gd" id="2_0anxo"]
 [ext_resource type="Script" path="res://elements/quests/quest_step.gd" id="3_7umki"]
 [ext_resource type="Script" path="res://elements/items/item_data.gd" id="4_k7ni8"]
-[ext_resource type="Resource" path="res://elements/items/item_data/keycard_grey.tres" id="6_2wdob"]
+[ext_resource type="Resource" uid="uid://ddgwqudsnpagn" path="res://elements/items/item_data/keycard_grey.tres" id="6_2wdob"]
 [ext_resource type="Script" path="res://elements/quests/quest_reward.gd" id="6_kslbd"]
 [ext_resource type="Script" path="res://elements/quests/reward_item.gd" id="8_p61oi"]
 
