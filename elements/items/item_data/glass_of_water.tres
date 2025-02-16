@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="item_data" load_steps=3 format=3 uid="uid://di101i2l0pvre"]
+
+[ext_resource type="Script" path="res://elements/items/item_data.gd" id="1_shf2s"]
+[ext_resource type="Texture2D" uid="uid://dm4aps0mpdnlc" path="res://assets/bitmaps/items/wrench.png" id="2_1is1v"]
+
+[resource]
+script = ExtResource("1_shf2s")
+name = "Wrench"
+description = "Benno can do magic with it!"
+texture = ExtResource("2_1is1v")
+quest_item = false

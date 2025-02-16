@@ -67,11 +67,14 @@ func _on_chat_response_finished(_response: String) -> void:
 	
 func check_tags(answer:String):
 	var tags_found = re_tag.search_all(answer)
-	
-	var tags = ['WATER_BOTTLE']
+	var base_path = "res://elements/items/item_data/"
+	var tags = {}
+	tags['GLASS_OF_WATER'] = 'beer'
+	tags['GREY_KEYCARD']= 'keycard_grey'
 	for tag in tags_found:
-		if tags.has(tag.strings[1]):
-			var item = preload("res://elements/items/item_data/beer.tres")
+		var res = tags.get(tag.strings[1])
+		if res != null:
+			var item = load(base_path + res +'.tres')
 			Inventory.open()
 			Inventory.add_item(item)
 		
