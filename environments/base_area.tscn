@@ -54,7 +54,7 @@
 [ext_resource type="Texture2D" uid="uid://d4md5s6gte37u" path="res://assets/generated/canister.png" id="46_mqkpd"]
 [ext_resource type="Texture2D" uid="uid://fdpblg2u1wwk" path="res://assets/generated/env/airlock_door.png" id="47_uxo0t"]
 [ext_resource type="Resource" uid="uid://trcqtrhdeok1" path="res://elements/items/item_data/keycard_hydro.tres" id="48_bc463"]
-[ext_resource type="Resource" uid="uid://cqi5ssgp0dtp3" path="res://elements/npcs/npc_data/npc_water_dispenser.tres" id="49_um1pd"]
+[ext_resource type="Resource" uid="uid://dfehf5de81l3v" path="res://elements/npcs/npc_data/npc_water_dispenser.tres" id="49_um1pd"]
 [ext_resource type="Resource" uid="uid://ddgwqudsnpagn" path="res://elements/items/item_data/keycard_grey.tres" id="53_c28mn"]
 [ext_resource type="PackedScene" uid="uid://b48t1qnaqbqkr" path="res://elements/fog/fog_of_war.tscn" id="57_1o4s5"]
 

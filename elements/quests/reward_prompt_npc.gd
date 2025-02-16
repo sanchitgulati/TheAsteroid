@@ -15,6 +15,4 @@ enum prompt_type {
 @export_multiline var prompt: String
 @export var npc: npc_data
 @export var replace: bool = false
-
-
 @export var type: prompt_type

@@ -14,7 +14,7 @@ var is_chat_ready: bool = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	re_newline = RegEx.create_from_string("\n\n+")
-	re_tag = RegEx.create_from_string("<<[A-Z_]+>>")
+	re_tag = RegEx.create_from_string("<<([A-Z_]+)>>")
 
 func did_init():
 	return chat_once != null
@@ -67,14 +67,15 @@ func _on_chat_response_finished(_response: String) -> void:
 	
 func check_tags(answer:String):
 	var tags_found = re_tag.search_all(answer)
-	answer = re_tag.sub(answer,"",true)
-	var tags = ['<<WATER_BOTTLE>>']
-	for tag in tags:
-		if tags_found.has(tag):
+	
+	var tags = ['WATER_BOTTLE']
+	for tag in tags_found:
+		if tags.has(tag.strings[1]):
 			var item = preload("res://elements/items/item_data/beer.tres")
+			Inventory.open()
 			Inventory.add_item(item)
 		
-		
+	answer = re_tag.sub(answer,"",true)
 	return answer
 	
 	
