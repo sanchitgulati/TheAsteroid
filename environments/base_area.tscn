@@ -279,7 +279,7 @@ fill_to = Vector2(0.153846, 0.905983)
 size = Vector2(51, 99)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_73bti"]
-size = Vector2(96, 36.5)
+size = Vector2(99, 36.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v07l2"]
 size = Vector2(26, 101)
@@ -1917,7 +1917,7 @@ offset_bottom = 199.0
 color = Color(0.0446046, 0.128797, 0.148593, 0.945098)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="FogOWar/FogOf War_Hub"]
-position = Vector2(-41, 531.25)
+position = Vector2(-39.5, 531.25)
 shape = SubResource("RectangleShape2D_73bti")
 
 [node name="FogOf War_Crew" parent="FogOWar" instance=ExtResource("57_1o4s5")]

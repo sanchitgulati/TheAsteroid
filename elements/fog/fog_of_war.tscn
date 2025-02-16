@@ -1,9 +1,51 @@
-[gd_scene load_steps=2 format=3 uid="uid://b48t1qnaqbqkr"]
+[gd_scene load_steps=5 format=3 uid="uid://b48t1qnaqbqkr"]
 
 [ext_resource type="Script" path="res://elements/fog/destroy_self_and_children.gd" id="1_agsb0"]
+
+[sub_resource type="Animation" id="Animation_rd5pv"]
+resource_name = "fade_out"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.366667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_4yc8i"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_taf2a"]
+_data = {
+"RESET": SubResource("Animation_4yc8i"),
+"fade_out": SubResource("Animation_rd5pv")
+}
 
 [node name="FogOf War" type="Area2D"]
 position = Vector2(-163, -634)
 script = ExtResource("1_agsb0")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_taf2a")
+}
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
