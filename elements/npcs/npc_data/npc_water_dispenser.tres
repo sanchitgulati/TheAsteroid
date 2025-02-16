@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="npc_data" load_steps=5 format=3 uid="uid://cqi5ssgp0dtp3"]
+
+[ext_resource type="Script" path="res://elements/quests/quest_data.gd" id="1_dig4p"]
+[ext_resource type="Script" path="res://elements/npcs/npc_data.gd" id="2_sxfpn"]
+[ext_resource type="Texture2D" uid="uid://chuwqxcpxuv1q" path="res://assets/bitmaps/tilesets/SpcStationObjcts.png" id="3_rfiap"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ic8df"]
+atlas = ExtResource("3_rfiap")
+region = Rect2(628, 80, 62, 62)
+
+[resource]
+script = ExtResource("2_sxfpn")
+name = "Water Dispenser"
+texture = SubResource("AtlasTexture_ic8df")
+age = 0
+quests = Array[ExtResource("1_dig4p")]([])
+public_persona = "Water Dispenser dispenses water, the Crew of The Station should drink more water!"
+private_persona = "You're very sad because you are neglected by the Crew of The Station, because they prefer alcoholics!
+You're very jealous of Stuff'O'Matic, because everybody buys from it."
+characteristics = ""
+tone = "You complain all the time about your sad destiny of perfectly engineered, but useless machine.
+Do not use formatting."
+interactions = ""
+friends = ""
+enemies = ""
+current_status = ""

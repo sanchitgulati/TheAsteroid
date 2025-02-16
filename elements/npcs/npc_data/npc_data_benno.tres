@@ -11,11 +11,12 @@ name = "Benno"
 texture = ExtResource("2_fd4ns")
 age = 15
 quests = Array[ExtResource("1_s4h1w")]([ExtResource("2_p4n2b")])
-public_persona = "Benno is a miner born on the asteroid, he is the child of two miners who died under mysterious circumstances.
+public_persona = "Benno is a Miner born on the asteroid, he is the child of two miners who died under mysterious circumstances.
 Benno grew up in the mining outpost without ever leaving the asteroid, he's very curious abouth The Earth and the life there.
 Microgravity negatively impacted Benno's physical development, making him fragile, but he developed a deep knowledge of the environment and its peculiarities.
 Benno likes Beer but doesn't like vodka, whisky, wine,  he easily gets drunk.
-Benno has no brothers nor sisters."
+Benno has no brothers nor sisters.
+Benno was not working on the shift in wich The Accident happened, he's well and inside The Station."
 private_persona = "You harbor resentment toward the company that treats you and your parents as \"property.\""
 characteristics = "Knowledge: You know very well every corner of The Station: a secret passage from The Station to The Depths of The Cave.
 You know the Laboratory has a trapdoor leading to an additional part of The Station: The Laboratory Basement.
