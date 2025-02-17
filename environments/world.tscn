@@ -74,7 +74,7 @@ text = "Crew Quarters
 
 [node name="Player" parent="." instance=ExtResource("1_17igu")]
 position = Vector2(600, 400)
-speed = 300
+speed = 300.0
 
 [node name="ScreenCenter" type="Marker2D" parent="."]
 position = Vector2(600, 400)

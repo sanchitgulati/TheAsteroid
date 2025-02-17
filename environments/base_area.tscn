@@ -1,4 +1,4 @@
-[gd_scene load_steps=127 format=4 uid="uid://cy2se4msxc27f"]
+[gd_scene load_steps=131 format=4 uid="uid://cy2se4msxc27f"]
 
 [ext_resource type="Script" path="res://environments/world.gd" id="1_cu36i"]
 [ext_resource type="TileSet" uid="uid://dli1an21v3xpa" path="res://assets/bitmaps/tilesets/Grounds2.tres" id="3_d4kqp"]
@@ -20,11 +20,11 @@
 [ext_resource type="Texture2D" uid="uid://dssxatogwko4m" path="res://assets/generated/env/kitchen_forniture4.png" id="11_4aseb"]
 [ext_resource type="PackedScene" uid="uid://b4iaaacfaffpx" path="res://elements/doors/DoorMedVert.tscn" id="11_tmvlt"]
 [ext_resource type="Texture2D" uid="uid://bd2tipbn1ojkq" path="res://assets/generated/env/desk_computer.png" id="12_se4yj"]
-[ext_resource type="PackedScene" path="res://environments/servers.tscn" id="13_xyybr"]
+[ext_resource type="PackedScene" uid="uid://dhdcixbvblhwl" path="res://environments/servers.tscn" id="13_xyybr"]
 [ext_resource type="Texture2D" uid="uid://dydi55p2mh7v2" path="res://assets/generated/env/sink.png" id="14_ct5gn"]
-[ext_resource type="PackedScene" path="res://environments/cpu_desk.tscn" id="14_ho7jo"]
+[ext_resource type="PackedScene" uid="uid://q2qd01otejqf" path="res://environments/cpu_desk.tscn" id="14_ho7jo"]
 [ext_resource type="Texture2D" uid="uid://4qlb17h4xwgu" path="res://assets/generated/env/bench.png" id="15_rsbas"]
-[ext_resource type="PackedScene" path="res://environments/hydrop_tray.tscn" id="15_usxpw"]
+[ext_resource type="PackedScene" uid="uid://ctxhswu64v6tk" path="res://environments/hydrop_tray.tscn" id="15_usxpw"]
 [ext_resource type="FontFile" uid="uid://fvujwj53nmld" path="res://assets/fonts/tiny-3x5/tiny-3x5.ttf" id="17_odwda"]
 [ext_resource type="Texture2D" uid="uid://deb1b65t8f5fi" path="res://assets/generated/env/crew_bed.png" id="19_u66wm"]
 [ext_resource type="Texture2D" uid="uid://gt3vnc80rjdd" path="res://assets/generated/env/crew_desk.png" id="20_hsin3"]
@@ -32,9 +32,8 @@
 [ext_resource type="Texture2D" uid="uid://dom56fe08ru71" path="res://assets/generated/env/plant2.png" id="22_588vq"]
 [ext_resource type="Texture2D" uid="uid://chuwqxcpxuv1q" path="res://assets/bitmaps/tilesets/SpcStationObjcts.png" id="22_c8x03"]
 [ext_resource type="Texture2D" uid="uid://cifhfiwkp7bgp" path="res://assets/generated/env/Lockers.png" id="22_t64qr"]
-[ext_resource type="Resource" path="res://elements/items/item_data/key_pssprt.tres" id="23_0royy"]
+[ext_resource type="Resource" uid="uid://c3oxm6qx2xy66" path="res://elements/items/item_data/key_pssprt.tres" id="23_0royy"]
 [ext_resource type="Texture2D" uid="uid://bjpsaarrhhrjn" path="res://assets/generated/env/cryo.png" id="23_nb6l0"]
-[ext_resource type="Texture2D" uid="uid://cip03cryipm8w" path="res://assets/generated/env/plant1.png" id="26_61xtf"]
 [ext_resource type="Material" uid="uid://b265yq8x2i4aj" path="res://assets/shaders/EnvAndShadow.tres" id="27_0hoxd"]
 [ext_resource type="Resource" uid="uid://dhhcwrimnbagq" path="res://elements/items/item_data/coins.tres" id="36_memte"]
 [ext_resource type="Resource" uid="uid://b76kc0k4f1w0y" path="res://elements/items/item_data/met_benno.tres" id="37_2ewrf"]
@@ -47,7 +46,6 @@
 [ext_resource type="Texture2D" uid="uid://cw8v44padduwg" path="res://assets/generated/env/energy_control.png" id="41_7mh01"]
 [ext_resource type="Theme" uid="uid://c3gfwu5jojd" path="res://themes/Dialogue_theme.tres" id="41_rrr02"]
 [ext_resource type="Resource" uid="uid://dwseu1fmbin03" path="res://elements/npcs/npc_data/npc_john_lin.tres" id="42_qxk8x"]
-[ext_resource type="Texture2D" uid="uid://do2xejiglmol5" path="res://assets/generated/env/desk_alt.png" id="42_y3rwu"]
 [ext_resource type="Resource" uid="uid://c4ckkmv0baq7p" path="res://elements/npcs/npc_data/npc_data_scientist.tres" id="43_kag5v"]
 [ext_resource type="Resource" uid="uid://dvigw1d87rldf" path="res://elements/npcs/npc_data/npc_vending_machine.tres" id="44_0jtl1"]
 [ext_resource type="Script" path="res://debug.gd" id="45_ndqxi"]
@@ -56,6 +54,7 @@
 [ext_resource type="Resource" uid="uid://trcqtrhdeok1" path="res://elements/items/item_data/keycard_hydro.tres" id="48_bc463"]
 [ext_resource type="Resource" uid="uid://dfehf5de81l3v" path="res://elements/npcs/npc_data/npc_water_dispenser.tres" id="49_um1pd"]
 [ext_resource type="Resource" uid="uid://ddgwqudsnpagn" path="res://elements/items/item_data/keycard_grey.tres" id="53_c28mn"]
+[ext_resource type="Script" path="res://show_at_start.gd" id="55_bps7k"]
 [ext_resource type="PackedScene" uid="uid://b48t1qnaqbqkr" path="res://elements/fog/fog_of_war.tscn" id="57_1o4s5"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7ef21"]
@@ -99,7 +98,27 @@ region = Rect2(0, 256, 64, 32)
 [sub_resource type="CircleShape2D" id="CircleShape2D_6vuf0"]
 radius = 8.0
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_yd8ch"]
+atlas = ExtResource("22_c8x03")
+region = Rect2(896, 216, 32, 40)
+
 [sub_resource type="SphereMesh" id="SphereMesh_4k21t"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o4o81"]
+atlas = ExtResource("22_c8x03")
+region = Rect2(512, 16, 64, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4u45q"]
+atlas = ExtResource("22_c8x03")
+region = Rect2(360, 664, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0bkun"]
+atlas = ExtResource("22_c8x03")
+region = Rect2(424, 664, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bk3ns"]
+atlas = ExtResource("22_c8x03")
+region = Rect2(992, 168, 32, 56)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0nunf"]
 atlas = ExtResource("22_c8x03")
@@ -505,6 +524,11 @@ theme_override_font_sizes/font_size = 15
 text = "HIDROPHONICS"
 vertical_alignment = 1
 
+[node name="Plant2" type="Sprite2D" parent="Hydroponics"]
+position = Vector2(-211, -561)
+texture = ExtResource("22_588vq")
+flip_h = true
+
 [node name="SocialHub" type="Node2D" parent="."]
 
 [node name="KitchenForniture1" type="Sprite2D" parent="SocialHub"]
@@ -829,10 +853,9 @@ vertical_alignment = 1
 
 [node name="CrewQuart" type="Node2D" parent="."]
 
-[node name="Lockers" type="Sprite2D" parent="CrewQuart"]
-material = ExtResource("27_0hoxd")
-position = Vector2(1106, -56)
-texture = ExtResource("22_t64qr")
+[node name="Sprite2D3" type="Sprite2D" parent="CrewQuart"]
+position = Vector2(1136, 7)
+texture = SubResource("AtlasTexture_yd8ch")
 
 [node name="Lockers4" type="Sprite2D" parent="CrewQuart"]
 material = ExtResource("27_0hoxd")
@@ -854,18 +877,14 @@ material = ExtResource("27_0hoxd")
 position = Vector2(1106, 327.5)
 texture = ExtResource("22_t64qr")
 
-[node name="Plant2" type="Sprite2D" parent="CrewQuart"]
-position = Vector2(1132, -35)
-texture = ExtResource("22_588vq")
-
 [node name="CrewBed2" type="Sprite2D" parent="CrewQuart"]
 material = ExtResource("27_0hoxd")
-position = Vector2(1117.5, 32.5)
+position = Vector2(1117.5, 35.5)
 texture = ExtResource("19_u66wm")
 
 [node name="CrewBed" type="Sprite2D" parent="CrewQuart"]
 material = ExtResource("27_0hoxd")
-position = Vector2(1117.5, 54.5)
+position = Vector2(1117.5, 57.5)
 texture = ExtResource("19_u66wm")
 
 [node name="CrewBedVert" type="Sprite2D" parent="CrewQuart"]
@@ -892,10 +911,6 @@ texture = ExtResource("19_u66wm")
 material = ExtResource("27_0hoxd")
 position = Vector2(1028, 539.5)
 texture = ExtResource("20_hsin3")
-
-[node name="Plant1" type="Sprite2D" parent="CrewQuart"]
-position = Vector2(1029, -72)
-texture = ExtResource("26_61xtf")
 
 [node name="Smoke" type="Node2D" parent="CrewQuart"]
 
@@ -1063,11 +1078,6 @@ item_unlock = ExtResource("23_0royy")
 position = Vector2(1128, 184)
 data = ExtResource("36_memte")
 
-[node name="DeskAlt" type="Sprite2D" parent="CrewQuart"]
-material = ExtResource("27_0hoxd")
-position = Vector2(1040, 40)
-texture = ExtResource("42_y3rwu")
-
 [node name="ColorRect4" type="ColorRect" parent="CrewQuart"]
 visible = false
 offset_left = 873.0
@@ -1090,6 +1100,26 @@ theme_override_fonts/font = ExtResource("17_odwda")
 theme_override_font_sizes/font_size = 15
 text = "CREW QUART"
 vertical_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="CrewQuart"]
+position = Vector2(1027, -40)
+texture = SubResource("AtlasTexture_o4o81")
+
+[node name="Sprite2D2" type="Sprite2D" parent="CrewQuart"]
+position = Vector2(1025, -60)
+texture = SubResource("AtlasTexture_4u45q")
+
+[node name="Sprite2D4" type="Sprite2D" parent="CrewQuart"]
+position = Vector2(1087, -40)
+texture = SubResource("AtlasTexture_o4o81")
+
+[node name="Sprite2D5" type="Sprite2D" parent="CrewQuart"]
+position = Vector2(1085, -60)
+texture = SubResource("AtlasTexture_0bkun")
+
+[node name="Sprite2D6" type="Sprite2D" parent="CrewQuart"]
+position = Vector2(1136, -55)
+texture = SubResource("AtlasTexture_bk3ns")
 
 [node name="Astroport" type="Node2D" parent="."]
 
@@ -1392,7 +1422,7 @@ face_opposite = true
 data = ExtResource("43_kag5v")
 
 [node name="VendingMachine" parent="Chars" instance=ExtResource("5_jgyno")]
-position = Vector2(510, -33)
+position = Vector2(511, -33)
 data = ExtResource("44_0jtl1")
 
 [node name="VendingMachine2" parent="Chars" instance=ExtResource("5_jgyno")]
@@ -1780,10 +1810,12 @@ offset_bottom = 632.0
 texture = SubResource("GradientTexture2D_ydvkp")
 
 [node name="FogOWar" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("55_bps7k")
 
 [node name="ColorRect" type="ColorRect" parent="FogOWar"]
 layout_mode = 0
