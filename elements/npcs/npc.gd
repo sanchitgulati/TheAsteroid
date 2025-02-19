@@ -22,6 +22,7 @@ func _ready() -> void:
 		texture_rect.flip_h = true
 	
 	if data == null: return
+	print('data', data.name)
 	for quest in data.quests:
 		if quest == null: continue 
 		quest.default_npc = data
