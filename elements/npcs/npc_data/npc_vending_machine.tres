@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="npc_data" load_steps=5 format=3 uid="uid://dvigw1d87rldf"]
+[gd_resource type="Resource" script_class="npc_data" load_steps=6 format=3 uid="uid://dvigw1d87rldf"]
 
 [ext_resource type="Script" path="res://elements/quests/quest_data.gd" id="1_5bu8v"]
+[ext_resource type="Script" path="res://elements/npcs/npc_interaction.gd" id="1_lt0uj"]
 [ext_resource type="Script" path="res://elements/npcs/npc_data.gd" id="1_uujri"]
 [ext_resource type="Resource" uid="uid://0fmkn0p7pdch" path="res://elements/quests/quest_data/vending_machine.tres" id="2_b3mmh"]
 [ext_resource type="Texture2D" uid="uid://df06en7iu0kld" path="res://assets/generated/env/vending_machine.png" id="2_bxupe"]
@@ -19,8 +20,8 @@ It usually sells Snacks, Beer, Vodka, Whisky, Sigarettes, Condoms, O2 Canisters.
 private_persona = "You don't give your merchandise for free."
 characteristics = ""
 tone = "You are helpful and honest but speak in very short sentences and your are always extremely concise."
-interactions = ""
 friends = ""
 enemies = ""
 current_status = "You're waiting for a cargo delivery from The Company to refill your stock.
 Out of stock except for Beer."
+interactions = Array[ExtResource("1_lt0uj")]([])

@@ -1,8 +1,16 @@
-[gd_resource type="Resource" script_class="npc_data" load_steps=5 format=3 uid="uid://dfehf5de81l3v"]
+[gd_resource type="Resource" script_class="npc_data" load_steps=8 format=3 uid="uid://dfehf5de81l3v"]
 
 [ext_resource type="Script" path="res://elements/quests/quest_data.gd" id="1_dig4p"]
+[ext_resource type="Script" path="res://elements/npcs/npc_interaction.gd" id="1_uhmym"]
+[ext_resource type="Resource" uid="uid://di101i2l0pvre" path="res://elements/items/item_data/glass_of_water.tres" id="2_08kne"]
 [ext_resource type="Script" path="res://elements/npcs/npc_data.gd" id="2_sxfpn"]
 [ext_resource type="Texture2D" uid="uid://chuwqxcpxuv1q" path="res://assets/bitmaps/tilesets/SpcStationObjcts.png" id="3_rfiap"]
+
+[sub_resource type="Resource" id="Resource_ing07"]
+script = ExtResource("1_uhmym")
+tag = "GLASS_OF_WATER"
+reward_item = ExtResource("2_08kne")
+prompt = "if someone ask you about water or been thirsty, you will give the glass of water."
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ic8df"]
 atlas = ExtResource("3_rfiap")
@@ -20,8 +28,7 @@ You're very jealous of Stuff'O'Matic, because everybody buys from it."
 characteristics = ""
 tone = "You complain all the time about your sad destiny of perfectly engineered, but useless machine.
 Do not use formatting."
-interactions = "You are always usefull, you will give:
-<<GLASS_OF_WATER>> a glass of water to anyone thirsty or in need of water."
 friends = ""
 enemies = ""
 current_status = ""
+interactions = Array[ExtResource("1_uhmym")]([SubResource("Resource_ing07")])
