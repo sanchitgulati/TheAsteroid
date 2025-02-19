@@ -3,7 +3,12 @@ extends Node
 @export var Dialog: Dialogue
 @onready var Model: NobodyWhoModel  = $Model
 
+var base_item_path = "res://elements/items/item_data/"
+
 var chat_once: NobodyWhoChat = null 
+
+var summarizer: NobodyWhoChat = null 
+
 var last_answer = ""
 var talking = false
 var re_newline: RegEx
@@ -23,6 +28,8 @@ func clear_chat():
 	if chat_once != null:
 		remove_child(chat_once)
 		chat_once.queue_free()
+		
+
 
 func init_chat(prompt:String):
 	clear_chat()
@@ -67,19 +74,23 @@ func _on_chat_response_finished(_response: String) -> void:
 	LLM.Dialog.llm_input.text = ""
 	
 func check_tags(answer:String):
-	var tags_found = re_tag.search_all(answer)
 	
-	var base_path = "res://elements/items/item_data/"
-	var tags = {}
-	tags['GLASS_OF_WATER'] = 'glass_of_water'
-	tags['GREY_KEYCARD']= 'keycard_grey'
+	
+	var tags_found = re_tag.search_all(answer)
+	var npc = WorldState.current_npc.data
+	
+	var interactions = npc.interactions
+	var known_tags = {}
+	for inter: npc_interaction in interactions:
+		known_tags[inter.tag] = inter.reward_item
+	
 	for tag in tags_found:
-		var res = tags.get(tag.strings[1])
-		if res != null:
-			var item = load(base_path + res +'.tres')
-			# if Inventory.contains(item): continue # ONLY ONE
+		var tag_name = tag.strings[1]
+		var item_found = known_tags.get(tag_name)
+		if item_found != null:
+			# if Inventory.contains(item_found): continue # ONLY ONE
 			Inventory.open()
-			Inventory.add_item(item)
+			Inventory.add_item(item_found)
 		
 	answer = re_tag.sub(answer,"",true)
 	return answer
