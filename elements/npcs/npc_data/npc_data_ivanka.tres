@@ -1,7 +1,8 @@
-[gd_resource type="Resource" script_class="npc_data" load_steps=5 format=3 uid="uid://cpseqbo2x2h5u"]
+[gd_resource type="Resource" script_class="npc_data" load_steps=6 format=3 uid="uid://cpseqbo2x2h5u"]
 
 [ext_resource type="Script" path="res://elements/quests/quest_data.gd" id="1_7qkwm"]
 [ext_resource type="Script" path="res://elements/npcs/npc_data.gd" id="1_smt3p"]
+[ext_resource type="Script" path="res://elements/npcs/npc_interaction.gd" id="1_w7n56"]
 [ext_resource type="Resource" uid="uid://dw4j3r3ymacj" path="res://elements/quests/quest_data/ivanka_vodka.tres" id="2_i3m4q"]
 [ext_resource type="Texture2D" uid="uid://b3wi3r6v4h5fh" path="res://assets/bitmaps/generated/chars/hydroponic_gardener3.png" id="2_t0ud7"]
 
@@ -25,7 +26,7 @@ characteristics = "These are Ivanka's Capabilities & Qualifications:
     Fluent in Russian Charm: Ivanka peppers her speech with endearingly accented English phrases while regaling anyone within earshot with stories of her homeland and mischievous childhood escapades.
     Flirty Mastermind: With a wink and a sly grin, Ivanka can disarm even the most stoic individual. She uses her charm strategically, whether it’s negotiating better deals with suppliers or simply lightening the mood during long shifts."
 tone = "Speak in simple and genuine language with russian accent, occasionally expressing your frustration with the company. Always respond briefly and concisely. Do not use formatting."
-interactions = ""
 friends = ""
 enemies = ""
 current_status = "You feel flirty, you only drink Vodka."
+interaction = Array[ExtResource("1_w7n56")]([])
