@@ -79,7 +79,7 @@ func check_tags(answer:String):
 	var tags_found = re_tag.search_all(answer)
 	var npc = WorldState.current_npc.data
 	
-	var interactions = npc.interactions
+	var interactions = npc.interaction
 	var known_tags = {}
 	for inter: npc_interaction in interactions:
 		known_tags[inter.tag] = inter.reward_item

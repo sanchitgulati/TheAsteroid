@@ -16,11 +16,10 @@ class_name npc_data
 @export_multiline var private_persona: String
 @export_multiline var characteristics: String
 @export_multiline var tone: String
-@export_multiline var interactions: String
 @export_multiline var friends: String
 @export_multiline var enemies: String
 @export_multiline var current_status: String
-
+@export var interaction: Array[npc_interaction]
 
 
 func equals(npc:npc_data):
@@ -28,8 +27,8 @@ func equals(npc:npc_data):
 
 func build_interactions():
 	var text = ''
-	for interaction in interactions:
-		text += interaction.build_prompt()
+	for interact in interaction:
+		text += interact.build_prompt()
 	return text
 
 func build_system_prompt():

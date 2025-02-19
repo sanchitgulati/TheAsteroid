@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="npc_data" load_steps=5 format=3 uid="uid://dfehf5de81l3v"]
+[gd_resource type="Resource" script_class="npc_data" load_steps=6 format=3 uid="uid://dfehf5de81l3v"]
 
 [ext_resource type="Script" path="res://elements/quests/quest_data.gd" id="1_dig4p"]
+[ext_resource type="Script" path="res://elements/npcs/npc_interaction.gd" id="1_enl4l"]
 [ext_resource type="Script" path="res://elements/npcs/npc_data.gd" id="2_sxfpn"]
 [ext_resource type="Texture2D" uid="uid://chuwqxcpxuv1q" path="res://assets/bitmaps/tilesets/SpcStationObjcts.png" id="3_rfiap"]
 
@@ -20,8 +21,7 @@ You're very jealous of Stuff'O'Matic, because everybody buys from it."
 characteristics = ""
 tone = "You complain all the time about your sad destiny of perfectly engineered, but useless machine.
 Do not use formatting."
-interactions = "You are always usefull, you will give:
-<<GLASS_OF_WATER>> a glass of water to anyone thirsty or in need of water."
 friends = ""
 enemies = ""
 current_status = ""
+interaction = Array[ExtResource("1_enl4l")]([])
