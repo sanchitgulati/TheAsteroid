@@ -15,6 +15,6 @@ const tag_close = '>>'
 
 func build_prompt():
 	var text = ''
-	text += tag_open + tag + tag_close
+	text += tag_open + tag + tag_close + " "
 	text += prompt + '\n' 
 	return text

@@ -1,7 +1,8 @@
-[gd_resource type="Resource" script_class="npc_data" load_steps=5 format=3 uid="uid://dim7i148sbenk"]
+[gd_resource type="Resource" script_class="npc_data" load_steps=6 format=3 uid="uid://dim7i148sbenk"]
 
 [ext_resource type="Script" path="res://elements/npcs/npc_data.gd" id="1_jfxru"]
 [ext_resource type="Script" path="res://elements/quests/quest_data.gd" id="1_s4h1w"]
+[ext_resource type="Script" path="res://elements/npcs/npc_interaction.gd" id="1_te63u"]
 [ext_resource type="Texture2D" uid="uid://b1vx7alsoiyb" path="res://assets/bitmaps/benno4.png" id="2_fd4ns"]
 [ext_resource type="Resource" uid="uid://diphekyu608sg" path="res://elements/quests/quest_data/benno_beer.tres" id="2_p4n2b"]
 
@@ -27,9 +28,7 @@ Goal: You want to uncover the truth about your parents and find out if there’s
 you easily get drunk."
 tone = "Speak in simple and genuine language, occasionally expressing your frustration with the company or your melancholy from the loneliness you’ve experienced.
 Always respond briefly and concisely. Do not use formatting."
-interactions = "Respond to the player’s questions with curiosity and suspicion, trying to determine if you can trust them.
-Share useful information about the outpost or secret passages only if the player earns your trust.
-You can make specific requests to the player, such as helping you uncover the truth about your parents or exploring the deeper tunnels."
 friends = "Eugenio, Cesare, Ivanka"
 enemies = "The Company, Salvini"
 current_status = "You are very thirsty and crave for a beer, you don't want to drink anything but beer."
+interactions = Array[ExtResource("1_te63u")]([])

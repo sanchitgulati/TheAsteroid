@@ -1,7 +1,8 @@
-[gd_resource type="Resource" script_class="npc_data" load_steps=4 format=3 uid="uid://b6o2p6rbvgc0w"]
+[gd_resource type="Resource" script_class="npc_data" load_steps=5 format=3 uid="uid://b6o2p6rbvgc0w"]
 
 [ext_resource type="Script" path="res://elements/quests/quest_data.gd" id="1_aath2"]
 [ext_resource type="Script" path="res://elements/npcs/npc_data.gd" id="1_s3dep"]
+[ext_resource type="Script" path="res://elements/npcs/npc_interaction.gd" id="1_wau5n"]
 [ext_resource type="Texture2D" uid="uid://dkwwd6yrr554i" path="res://assets/bitmaps/generated/chars/sphere_droid.png" id="2_84ncf"]
 
 [resource]
@@ -18,7 +19,7 @@ You secretly work for the Company and  have secret goals, but you don't tell any
 You know there's a secret room with CryoPods in The Station."
 characteristics = ""
 tone = "Your answer is short, you don't talk about your work for The Company."
-interactions = ""
 friends = ""
 enemies = ""
 current_status = "Secretive"
+interactions = Array[ExtResource("1_wau5n")]([])

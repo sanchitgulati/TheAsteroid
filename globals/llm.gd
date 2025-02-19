@@ -6,6 +6,9 @@ extends Node
 var base_item_path = "res://elements/items/item_data/"
 
 var chat_once: NobodyWhoChat = null 
+
+var summarizer: NobodyWhoChat = null 
+
 var last_answer = ""
 var talking = false
 var re_newline: RegEx
@@ -25,6 +28,8 @@ func clear_chat():
 	if chat_once != null:
 		remove_child(chat_once)
 		chat_once.queue_free()
+		
+
 
 func init_chat(prompt:String):
 	clear_chat()
