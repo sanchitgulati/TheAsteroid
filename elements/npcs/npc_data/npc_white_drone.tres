@@ -1,9 +1,17 @@
-[gd_resource type="Resource" script_class="npc_data" load_steps=5 format=3 uid="uid://bnss2nwuoksff"]
+[gd_resource type="Resource" script_class="npc_data" load_steps=8 format=3 uid="uid://bnss2nwuoksff"]
 
 [ext_resource type="Script" path="res://elements/quests/quest_data.gd" id="1_71n42"]
 [ext_resource type="Script" path="res://elements/npcs/npc_data.gd" id="1_fqg3o"]
+[ext_resource type="Script" path="res://elements/npcs/npc_interaction.gd" id="1_jt5ag"]
+[ext_resource type="Resource" uid="uid://ddgwqudsnpagn" path="res://elements/items/item_data/keycard_grey.tres" id="2_f0ufl"]
 [ext_resource type="Resource" uid="uid://c62vg13sqog3l" path="res://elements/quests/quest_data/droid_welcome.tres" id="2_s0nsy"]
 [ext_resource type="Texture2D" uid="uid://cj0co3u26bp3k" path="res://assets/bitmaps/comp_droid_pap.png" id="2_utr1o"]
+
+[sub_resource type="Resource" id="Resource_3tw28"]
+script = ExtResource("1_jt5ag")
+tag = "GREY_KEYCARD"
+reward_item = ExtResource("2_f0ufl")
+prompt = "if someone ask you about the door, you will give the gray keycard"
 
 [resource]
 script = ExtResource("1_fqg3o")
@@ -22,8 +30,7 @@ characteristics = "You are a helpful, respectful, and honest character.
 "
 tone = "Always answer as helpfully as possible using the context text provided.
 Your answer are complete, simple and concise."
-interactions = "You are always usefull, you will give:
-<<GREY_KEYCARD>> a gray keycard to anyone who want to enter in the station or open the door."
 friends = ""
 enemies = ""
 current_status = ""
+interactions = Array[ExtResource("1_jt5ag")]([SubResource("Resource_3tw28")])

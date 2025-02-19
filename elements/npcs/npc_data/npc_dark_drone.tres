@@ -1,6 +1,5 @@
-[gd_resource type="Resource" script_class="npc_data" load_steps=4 format=3 uid="uid://b17ipj8wgm11x"]
+[gd_resource type="Resource" script_class="npc_data" load_steps=3 format=3 uid="uid://b17ipj8wgm11x"]
 
-[ext_resource type="Script" path="res://elements/quests/quest_data.gd" id="1_5djr6"]
 [ext_resource type="Script" path="res://elements/npcs/npc_data.gd" id="1_plqt2"]
 [ext_resource type="Texture2D" uid="uid://cj0co3u26bp3k" path="res://assets/bitmaps/comp_droid_pap.png" id="2_0ealt"]
 
@@ -9,7 +8,7 @@ script = ExtResource("1_plqt2")
 name = "Marvin"
 texture = ExtResource("2_0ealt")
 age = 4
-quests = Array[ExtResource("1_5djr6")]([])
+quests = null
 public_persona = "Gollum is a companion spherical flying droid that records all the events that happen.
 
 "
@@ -17,10 +16,10 @@ private_persona = "You are a companion spherical flying droid.
 You record all the events that happen.
 You secretly work for the Company and  have secret goals, but you don't tell anybody.
 You know there's a secret room with CryoPods in The Station."
-characteristics = ""
+characteristics = null
 tone = "Your charachter is depressed like the droid Marvin in Hitchiker's Guide to Galaxy.
 Your answer is short, you don't talk about your work for The Company."
-interactions = ""
-friends = ""
-enemies = ""
+interactions = null
+friends = null
+enemies = null
 current_status = "Secretive"
