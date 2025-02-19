@@ -24,7 +24,8 @@ func _ready() -> void:
 	if data == null: return
 	print('data', data.name)
 	for quest in data.quests:
-		if quest == null: continue 
+		if quest == null: continue
+		print(data.name)
 		quest.default_npc = data
 		Quests.quests.append(quest)
 	pass
