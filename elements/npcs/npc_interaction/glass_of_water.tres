@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="npc_interaction" load_steps=3 format=3 uid="uid://dh3tkbmb7qgro"]
+
+[ext_resource type="Resource" uid="uid://di101i2l0pvre" path="res://elements/items/item_data/glass_of_water.tres" id="1_w4ccw"]
+[ext_resource type="Script" path="res://elements/npcs/npc_interaction.gd" id="2_fi1ky"]
+
+[resource]
+script = ExtResource("2_fi1ky")
+tag = "GLASS_OF_WATER"
+reward_item = ExtResource("1_w4ccw")
+prompt = "if someone is thirsy, give a glass of water.
+if someone asks for water, give a glass of water.
+"
