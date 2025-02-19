@@ -6,7 +6,7 @@
 script = ExtResource("1_3wcse")
 
 [node name="Model" type="NobodyWhoModel" parent="."]
-model_path = "res://models/gemma-2-2b-it-Q4_K_M.gguf"
+model_path = "res://models/gemma-2-2b-it-Q8_0.gguf"
 
 [node name="NobodyWhoDB" type="NobodyWhoDB" parent="."]
 

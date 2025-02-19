@@ -10,7 +10,7 @@
 script = ExtResource("1_uhmym")
 tag = "GLASS_OF_WATER"
 reward_item = ExtResource("2_08kne")
-prompt = "if someone ask you about water or been thirsty, you will give the glass of water."
+prompt = "only if someone ask you about water or been thirsty, you will give the glass of water."
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ic8df"]
 atlas = ExtResource("3_rfiap")
