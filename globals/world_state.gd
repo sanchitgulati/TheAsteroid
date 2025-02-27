@@ -30,6 +30,9 @@ func getScenePublicPersonasPrompts():
 	
 	var prompts = ""
 	for npc in scene_npc:
+		if npc.data.public_persona == null: 
+			print("Error NPC: ",npc.data.name)
+			continue
 		prompts += npc.data.public_persona + "\n"
 	#print(prompts)
 	return prompts

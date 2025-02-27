@@ -28,7 +28,7 @@ func _process(_delta: float) -> void:
 	if visible:
 		if Input.is_action_just_pressed("esc"): close()
 		if Input.is_action_just_pressed("enter"): talk()
-		LLM.Dialog.llm_input.editable = not LLM.talking
+		#LLM.Dialog.llm_input.editable = not LLM.talking
 		
 	if npc_data_cur != null:
 		character_texture.texture = npc_data_cur.texture
