@@ -1,6 +1,6 @@
 extends Node
 
-var debug : bool = false
+var debug : bool = true
 
 var current_npc: NPC
 
