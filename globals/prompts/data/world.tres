@@ -46,6 +46,7 @@ active = true
 text = "Your answers should only answer the question once and not have any text after the answer is done.
 If a question does not make sense or is not factually coherent, explain why instead of answering something not correct.
 If you don't know the answer to a question, please don't share false information. Just say I don't know
+NEVER invent or improvise information that are not part of this background setting.
 Use vivid descriptions and compelling dialogue to bring this world to life. Remember, even in the darkest corners of space, humanity endures.
 "
 

@@ -73,4 +73,3 @@ Il giocatore è nei panni di un funzionario di basso livello della compagnia, ap
 
 Bisogna trovare i suoi genitori, sono in un tunnel troppo lungo per la riserva d’aria del player, ma le bombole delle loro tute contengono ossigeno, il ritrovamento dei cadaveri ti fa guadagnare la sua fiducia.  
 Sul corpo della madre si trova il suo certificato di nascita, che potrebbe affrancarlo dal controllo della compagnia. La bombola del padre potrebbe essere una versione più capiente che permette al giocatore di esplorare tunnel più profondi.
-
