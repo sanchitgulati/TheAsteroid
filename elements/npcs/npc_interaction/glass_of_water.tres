@@ -7,6 +7,5 @@
 script = ExtResource("2_fi1ky")
 tag = "GLASS_OF_WATER"
 reward_item = ExtResource("1_w4ccw")
-prompt = "if someone is thirsy, give a glass of water.
-if someone asks for water, give a glass of water.
+prompt = "If asked about water or drinking or being thristy, you provide a glass of water.
 "

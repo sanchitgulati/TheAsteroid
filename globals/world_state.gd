@@ -40,6 +40,23 @@ func getScenePublicPersonasPrompts():
 	#print(prompts)
 	return prompts
 	
+func getScenePublicPersonasPromptList():
+	var scene_npc=[]
+	var root = get_tree().root
+	findNPCs(root, scene_npc)
+	
+	var prompts = []
+	for npc in scene_npc:
+		if npc.data == null: 
+			print("Error NPC: " )
+			print(npc.position.x )
+			print(npc.position.y )
+			print(npc.get_path())
+			continue
+		prompts.append( npc.data.public_persona )
+	#print(prompts)
+	return prompts
+	
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	

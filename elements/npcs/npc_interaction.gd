@@ -18,3 +18,8 @@ func build_prompt():
 	text += tag_open + tag + tag_close + "\n"
 	text += prompt + '\n\n'
 	return text
+	
+func build_dictionay():
+	var action = {}
+	action[tag]= prompt
+	return action
