@@ -7,6 +7,4 @@
 script = ExtResource("2_ustct")
 tag = "GREY_KEYCARD"
 reward_item = ExtResource("1_v12mv")
-prompt = "if someone asks about the door to enter the station, you give the gray keycard.
-if someone asks a gray keycard, you give the gray keycard.
-"
+prompt = "If asked about entering The Station or for a gray keycard, provide it."

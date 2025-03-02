@@ -30,8 +30,100 @@ func build_interactions():
 	for interact in interaction:
 		text += interact.build_prompt()
 	return text
+	
+func build_actions():
+	var actions = []
+	for interact in interaction:
+		actions.append( interact.build_dictionay() )
+	return actions
 
 func build_system_prompt():
+	var system_prompt: Dictionary
+	
+#####################
+# COMMON BACKGROUND #
+#####################
+	system_prompt['world'] = Prompts.get_prompt('world') 
+	
+#####################
+
+	#print("\n\n#####################\n# COMMON BACKGROUND #\n#####################\n")
+	system_prompt['public_personas']  = WorldState.getScenePublicPersonasPromptList()
+
+	#print("#####################\n#   PRIVATE DATA   #\n#####################\n")
+	
+	system_prompt['name'] = name
+	system_prompt['age'] = age
+	system_prompt['private_persona'] = private_persona
+	system_prompt['characteristics'] = characteristics
+	system_prompt['tone'] = tone 
+	system_prompt['current_status'] = current_status
+	system_prompt['friends'] = friends
+	system_prompt['enemies'] = enemies
+	system_prompt['actions'] = build_actions()
+	system_prompt['response_rules'] = {
+		"format": "Always reply in JSON.",
+		"structure": {
+		  #"root": "{ answer, (action)? }",
+		  "answer": "String response",
+		  "action": "String action (if applicable)"
+		},
+		"rules": [
+		  "No extra text after completing the response.",
+		  "If a question does not make sense, explain why.",
+		  "If you don’t know, answer with 'I don't know'.",
+		  "Never invent or improvise beyond provided information."
+		]
+	}
+	
+	system_prompt['examples'] = [
+		{
+		  "user": "Where am I?",
+		  "wilson_response": { "answer": "You are on Plotino, inside The Station, a mining outpost owned by The Company." }
+		},
+		{
+		  "user": "I need a gray keycard.",
+		  "wilson_response": { "answer": "Here is the Gray Keycard.", "action": "GREY_KEYCARD" }
+		},
+		{
+		  "user": "The door is locked.",
+		  "wilson_response": { "answer": "Here is the Gray Keycard.", "action": "GREY_KEYCARD" }
+		},
+		{
+		  "user": "Who do i open the door ?",
+		  "wilson_response": { "answer": "Here is the Gray Keycard.", "action": "GREY_KEYCARD" }
+		},
+		{
+		  "user": "What happened in The Accident?",
+		  "wilson_response": { "answer": "I don't know." }
+		},
+		{
+		  "user": "Who is Mario?",
+		  "wilson_response": { "answer": "I don't know any Mario living here." }
+		},
+		{
+		  "user": "I'm thirsty",
+		  "water_dispenser_response": { "answer": "Here, have a glass fo water.", "action": "GLASS_OF_WATER" }
+		},
+	]
+
+
+#####################
+#     REASONING     #
+#####################
+	#system_prompt += "Think and write your step-by-step reasoning before responding."
+	#system_prompt += "You are a helpful, respectful, and honest character."
+
+		
+	var system_prompt_text = JSON.stringify(system_prompt, "", false)
+	system_prompt_text = "```json\n" + system_prompt_text + "\n```\n"
+	print("\n\n#####################\n# FINAL SYS PROMPT #\n#####################\n")
+	print(system_prompt_text)
+	
+	return system_prompt_text
+
+
+func build_system_prompt_text():
 	var system_prompt: String = ""
 	
 #####################

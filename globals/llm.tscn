@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://cqq3rahd0e8fj"]
+[gd_scene load_steps=3 format=3 uid="uid://cqq3rahd0e8fj"]
 
 [ext_resource type="Script" path="res://globals/llm.gd" id="1_3wcse"]
+
+[sub_resource type="NobodyWhoSampler" id="NobodyWhoSampler_pplma"]
+use_grammar = true
 
 [node name="LLM" type="Node"]
 script = ExtResource("1_3wcse")
@@ -8,6 +11,5 @@ script = ExtResource("1_3wcse")
 [node name="Model" type="NobodyWhoModel" parent="."]
 model_path = "res://models/gemma-2-2b-it-Q8_0.gguf"
 
-[node name="NobodyWhoDB" type="NobodyWhoDB" parent="."]
-
 [node name="NobodyWhoChat" type="NobodyWhoChat" parent="."]
+sampler = SubResource("NobodyWhoSampler_pplma")
