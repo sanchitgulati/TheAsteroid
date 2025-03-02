@@ -37,6 +37,7 @@ script = ExtResource("1_sbqg6")
 [node name="VertMedClose_area" type="StaticBody2D" parent="."]
 
 [node name="close_shape" type="CollisionShape2D" parent="VertMedClose_area"]
+visible = false
 position = Vector2(16, -48)
 shape = SubResource("RectangleShape2D_i5pvj")
 disabled = true
@@ -45,13 +46,14 @@ disabled = true
 position = Vector2(0, -64)
 
 [node name="interaction_shape" type="CollisionShape2D" parent="VertMedInteraction_area"]
+visible = false
 position = Vector2(16, 0)
 shape = SubResource("RectangleShape2D_doodw")
-disabled = true
 
 [node name="HorMedClose_area" type="StaticBody2D" parent="."]
 
 [node name="close_shape" type="CollisionShape2D" parent="HorMedClose_area"]
+visible = false
 position = Vector2(56, -20)
 shape = SubResource("RectangleShape2D_gm7oq")
 disabled = true
@@ -60,6 +62,7 @@ disabled = true
 position = Vector2(0, -64)
 
 [node name="interaction_shape" type="CollisionShape2D" parent="HorMedInteraction_area"]
+visible = false
 position = Vector2(56, 44)
 shape = SubResource("RectangleShape2D_5sw3t")
 disabled = true
