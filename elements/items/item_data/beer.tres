@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="item_data" load_steps=3 format=3 uid="uid://feoqskgukx3t"]
 
-[ext_resource type="Script" path="res://elements/items/item_data.gd" id="1_bjuoi"]
+[ext_resource type="Script" uid="uid://bik0bxqnfew5c" path="res://elements/items/item_data.gd" id="1_bjuoi"]
 [ext_resource type="Texture2D" uid="uid://cnfgl44xjnyor" path="res://assets/bitmaps/items/beer_can_small.png" id="2_eb7m3"]
 
 [resource]
@@ -8,3 +8,4 @@ script = ExtResource("1_bjuoi")
 name = "Beer"
 description = "A can full of beer, the brand Benno likes most."
 texture = ExtResource("2_eb7m3")
+quest_item = false

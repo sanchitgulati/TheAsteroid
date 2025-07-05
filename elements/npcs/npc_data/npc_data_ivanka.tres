@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="npc_data" load_steps=6 format=3 uid="uid://cpseqbo2x2h5u"]
 
-[ext_resource type="Script" path="res://elements/quests/quest_data.gd" id="1_7qkwm"]
-[ext_resource type="Script" path="res://elements/npcs/npc_data.gd" id="1_smt3p"]
-[ext_resource type="Script" path="res://elements/npcs/npc_interaction.gd" id="1_w7n56"]
+[ext_resource type="Script" uid="uid://dwpeuyv4k4hj3" path="res://elements/quests/quest_data.gd" id="1_7qkwm"]
+[ext_resource type="Script" uid="uid://78jnf5phq08j" path="res://elements/npcs/npc_data.gd" id="1_smt3p"]
+[ext_resource type="Script" uid="uid://chs40v4tvsbqa" path="res://elements/npcs/npc_interaction.gd" id="1_w7n56"]
 [ext_resource type="Resource" uid="uid://dw4j3r3ymacj" path="res://elements/quests/quest_data/ivanka_vodka.tres" id="2_i3m4q"]
 [ext_resource type="Texture2D" uid="uid://b3wi3r6v4h5fh" path="res://assets/bitmaps/generated/chars/hydroponic_gardener3.png" id="2_t0ud7"]
 

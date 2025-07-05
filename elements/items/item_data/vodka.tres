@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="item_data" load_steps=3 format=3 uid="uid://bnakhswxbfenw"]
 
-[ext_resource type="Script" path="res://elements/items/item_data.gd" id="1_gokka"]
+[ext_resource type="Script" uid="uid://bik0bxqnfew5c" path="res://elements/items/item_data.gd" id="1_gokka"]
 [ext_resource type="Texture2D" uid="uid://ca1lb838nlnpl" path="res://assets/generated/items/vodka_bottle_small.png" id="2_y52cj"]
 
 [resource]

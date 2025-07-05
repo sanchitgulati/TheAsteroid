@@ -1,9 +1,9 @@
 [gd_scene load_steps=41 format=3 uid="uid://ceievfwtkqso0"]
 
-[ext_resource type="Script" path="res://elements/player/player.gd" id="1_qsi7k"]
+[ext_resource type="Script" uid="uid://b4ro30jr8n4jj" path="res://elements/player/player.gd" id="1_qsi7k"]
 [ext_resource type="Texture2D" uid="uid://diegeklda3sgw" path="res://assets/bitmaps/detective/idle.png" id="2_52lrd"]
 [ext_resource type="Texture2D" uid="uid://18el8wjflkqf" path="res://assets/bitmaps/detective/walk.png" id="3_dys7o"]
-[ext_resource type="Script" path="res://elements/player/player_light.gd" id="4_vgi0x"]
+[ext_resource type="Script" uid="uid://x0d5yhbtc4s4" path="res://elements/player/player_light.gd" id="4_vgi0x"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hn822"]
 radius = 12.0

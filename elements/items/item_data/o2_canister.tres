@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="item_data" load_steps=3 format=3 uid="uid://bibx77gxraj46"]
 
-[ext_resource type="Script" path="res://elements/items/item_data.gd" id="1_gam2j"]
+[ext_resource type="Script" uid="uid://bik0bxqnfew5c" path="res://elements/items/item_data.gd" id="1_gam2j"]
 [ext_resource type="Texture2D" uid="uid://4rmcalddoh4j" path="res://assets/generated/items/o2_canister.png" id="2_uiskp"]
 
 [resource]
@@ -8,3 +8,4 @@ script = ExtResource("1_gam2j")
 name = "O2 Canister"
 description = "Never leave The Station without a bunch."
 texture = ExtResource("2_uiskp")
+quest_item = false

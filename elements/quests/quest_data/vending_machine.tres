@@ -1,11 +1,11 @@
 [gd_resource type="Resource" script_class="quest_data" load_steps=10 format=3 uid="uid://0fmkn0p7pdch"]
 
-[ext_resource type="Script" path="res://elements/quests/quest_data.gd" id="2_37bik"]
-[ext_resource type="Script" path="res://elements/quests/quest_step.gd" id="3_gk836"]
-[ext_resource type="Script" path="res://elements/items/item_data.gd" id="4_shtyy"]
-[ext_resource type="Script" path="res://elements/quests/quest_reward.gd" id="5_c4ho1"]
+[ext_resource type="Script" uid="uid://dwpeuyv4k4hj3" path="res://elements/quests/quest_data.gd" id="2_37bik"]
+[ext_resource type="Script" uid="uid://ewkckguoejxj" path="res://elements/quests/quest_step.gd" id="3_gk836"]
+[ext_resource type="Script" uid="uid://bik0bxqnfew5c" path="res://elements/items/item_data.gd" id="4_shtyy"]
+[ext_resource type="Script" uid="uid://nit6h2p71en8" path="res://elements/quests/quest_reward.gd" id="5_c4ho1"]
 [ext_resource type="Resource" uid="uid://dhhcwrimnbagq" path="res://elements/items/item_data/coins.tres" id="5_g1xq6"]
-[ext_resource type="Script" path="res://elements/quests/reward_item.gd" id="8_povr5"]
+[ext_resource type="Script" uid="uid://bg0xni7nvjx4q" path="res://elements/quests/reward_item.gd" id="8_povr5"]
 [ext_resource type="Resource" uid="uid://feoqskgukx3t" path="res://elements/items/item_data/beer.tres" id="8_wtmjd"]
 
 [sub_resource type="Resource" id="Resource_gnhdn"]

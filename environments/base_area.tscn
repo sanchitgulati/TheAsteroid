@@ -1,6 +1,6 @@
 [gd_scene load_steps=131 format=4 uid="uid://cy2se4msxc27f"]
 
-[ext_resource type="Script" path="res://environments/world.gd" id="1_cu36i"]
+[ext_resource type="Script" uid="uid://dt8vcimwvn7td" path="res://environments/world.gd" id="1_cu36i"]
 [ext_resource type="TileSet" uid="uid://dli1an21v3xpa" path="res://assets/bitmaps/tilesets/Grounds2.tres" id="3_d4kqp"]
 [ext_resource type="TileSet" uid="uid://bhgia0gmuylsx" path="res://assets/bitmaps/tilesets/SpaceStation.tres" id="3_r8imx"]
 [ext_resource type="Texture2D" uid="uid://ctcd27ctg2jbd" path="res://assets/generated/env/hydrp_greenhouse.png" id="4_4mpff"]
@@ -48,13 +48,13 @@
 [ext_resource type="Resource" uid="uid://dwseu1fmbin03" path="res://elements/npcs/npc_data/npc_john_lin.tres" id="42_qxk8x"]
 [ext_resource type="Resource" uid="uid://c4ckkmv0baq7p" path="res://elements/npcs/npc_data/npc_data_scientist.tres" id="43_kag5v"]
 [ext_resource type="Resource" uid="uid://dvigw1d87rldf" path="res://elements/npcs/npc_data/npc_vending_machine.tres" id="44_0jtl1"]
-[ext_resource type="Script" path="res://debug.gd" id="45_ndqxi"]
+[ext_resource type="Script" uid="uid://cesl2vmunfpjg" path="res://debug.gd" id="45_ndqxi"]
 [ext_resource type="Texture2D" uid="uid://d4md5s6gte37u" path="res://assets/generated/canister.png" id="46_mqkpd"]
 [ext_resource type="Texture2D" uid="uid://fdpblg2u1wwk" path="res://assets/generated/env/airlock_door.png" id="47_uxo0t"]
 [ext_resource type="Resource" uid="uid://trcqtrhdeok1" path="res://elements/items/item_data/keycard_hydro.tres" id="48_bc463"]
 [ext_resource type="Resource" uid="uid://dfehf5de81l3v" path="res://elements/npcs/npc_data/npc_water_dispenser.tres" id="49_um1pd"]
 [ext_resource type="Resource" uid="uid://ddgwqudsnpagn" path="res://elements/items/item_data/keycard_grey.tres" id="53_c28mn"]
-[ext_resource type="Script" path="res://show_at_start.gd" id="55_bps7k"]
+[ext_resource type="Script" uid="uid://cjwr3ijy3x3jx" path="res://show_at_start.gd" id="55_bps7k"]
 [ext_resource type="PackedScene" uid="uid://b48t1qnaqbqkr" path="res://elements/fog/fog_of_war.tscn" id="57_1o4s5"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7ef21"]

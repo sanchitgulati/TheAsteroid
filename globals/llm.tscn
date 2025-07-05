@@ -1,13 +1,23 @@
 [gd_scene load_steps=2 format=3 uid="uid://cqq3rahd0e8fj"]
 
-[ext_resource type="Script" path="res://globals/llm.gd" id="1_3wcse"]
+[ext_resource type="Script" uid="uid://cl0r0qbjnfebi" path="res://globals/llm.gd" id="1_3wcse"]
 
 [node name="LLM" type="Node"]
 script = ExtResource("1_3wcse")
 
 [node name="Model" type="NobodyWhoModel" parent="."]
-model_path = "res://models/gemma-2-2b-it-Q8_0.gguf"
+model_path = "res://gemma-2-2b-it-Q4_K_M.gguf"
 
 [node name="NobodyWhoDB" type="NobodyWhoDB" parent="."]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+physics_interpolation_mode = 0
+auto_translate_mode = 0
+editor_description = ""
+script = null
 
 [node name="NobodyWhoChat" type="NobodyWhoChat" parent="."]

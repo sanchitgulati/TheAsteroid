@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://rp4eqiqkbdpx"]
 
-[ext_resource type="Script" path="res://UI/inventory/inventory_ui.gd" id="1_ljtkx"]
+[ext_resource type="Script" uid="uid://6abr3oitksch" path="res://UI/inventory/inventory_ui.gd" id="1_ljtkx"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_oxm3p"]
 

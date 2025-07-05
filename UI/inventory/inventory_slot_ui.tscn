@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://sdf4pddtnkro"]
 
-[ext_resource type="Script" path="res://UI/inventory/inventory_slot_ui.gd" id="1_ufp15"]
+[ext_resource type="Script" uid="uid://cq6753ty5s053" path="res://UI/inventory/inventory_slot_ui.gd" id="1_ufp15"]
 [ext_resource type="Texture2D" uid="uid://dk72pbqq5osj7" path="res://assets/bitmaps/ui/inventory_9patch.png" id="2_cm6o3"]
 [ext_resource type="FontFile" uid="uid://fvujwj53nmld" path="res://assets/fonts/tiny-3x5/tiny-3x5.ttf" id="3_d5llf"]
 [ext_resource type="Texture2D" uid="uid://cnfgl44xjnyor" path="res://assets/bitmaps/items/beer_can_small.png" id="3_h87q1"]

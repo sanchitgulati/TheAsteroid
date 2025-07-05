@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://c2vwucr66kagg"]
 
-[ext_resource type="Script" path="res://globals/prompts/prompts.gd" id="1_0aks4"]
+[ext_resource type="Script" uid="uid://c1p2j704xraio" path="res://globals/prompts/prompts.gd" id="1_0aks4"]
 
 [node name="Prompts" type="Node"]
 script = ExtResource("1_0aks4")

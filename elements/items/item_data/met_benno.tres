@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="item_data" load_steps=3 format=3 uid="uid://b76kc0k4f1w0y"]
 
-[ext_resource type="Script" path="res://elements/items/item_data.gd" id="1_cejtr"]
+[ext_resource type="Script" uid="uid://bik0bxqnfew5c" path="res://elements/items/item_data.gd" id="1_cejtr"]
 [ext_resource type="Texture2D" uid="uid://c6aid4th7s057" path="res://assets/bitmaps/benno_small.png" id="2_ca7la"]
 
 [resource]

@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="item_data" load_steps=4 format=3 uid="uid://di101i2l0pvre"]
 
-[ext_resource type="Script" path="res://elements/items/item_data.gd" id="1_shf2s"]
+[ext_resource type="Script" uid="uid://bik0bxqnfew5c" path="res://elements/items/item_data.gd" id="1_shf2s"]
 [ext_resource type="Texture2D" uid="uid://chuwqxcpxuv1q" path="res://assets/bitmaps/tilesets/SpcStationObjcts.png" id="2_26s6t"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_l3pm2"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://2skldmflessm"]
 
-[ext_resource type="Script" path="res://UI/questlog/quest_log.gd" id="1_dl6rg"]
+[ext_resource type="Script" uid="uid://di07leernbo02" path="res://UI/questlog/quest_log.gd" id="1_dl6rg"]
 [ext_resource type="StyleBox" uid="uid://drblnwg1fpmyu" path="res://themes/Button_box_grey.tres" id="2_vqhan"]
 [ext_resource type="Theme" uid="uid://c3gfwu5jojd" path="res://themes/Dialogue_theme.tres" id="3_21jqb"]
 [ext_resource type="FontFile" uid="uid://bcfe8imdhx3q7" path="res://assets/fonts/Billy_Font/Billy-Bold.ttf" id="3_mfw03"]

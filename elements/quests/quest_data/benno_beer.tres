@@ -1,15 +1,15 @@
 [gd_resource type="Resource" script_class="quest_data" load_steps=19 format=3 uid="uid://diphekyu608sg"]
 
-[ext_resource type="Script" path="res://elements/quests/quest_data.gd" id="1_3spgr"]
-[ext_resource type="Script" path="res://elements/quests/quest_step.gd" id="2_4viar"]
-[ext_resource type="Script" path="res://elements/items/item_data.gd" id="4_hjjbp"]
-[ext_resource type="Script" path="res://elements/quests/quest_reward.gd" id="5_ivy6v"]
+[ext_resource type="Script" uid="uid://dwpeuyv4k4hj3" path="res://elements/quests/quest_data.gd" id="1_3spgr"]
+[ext_resource type="Script" uid="uid://ewkckguoejxj" path="res://elements/quests/quest_step.gd" id="2_4viar"]
+[ext_resource type="Script" uid="uid://bik0bxqnfew5c" path="res://elements/items/item_data.gd" id="4_hjjbp"]
+[ext_resource type="Script" uid="uid://nit6h2p71en8" path="res://elements/quests/quest_reward.gd" id="5_ivy6v"]
 [ext_resource type="Resource" uid="uid://b76kc0k4f1w0y" path="res://elements/items/item_data/met_benno.tres" id="6_wdx4l"]
 [ext_resource type="Resource" uid="uid://bnakhswxbfenw" path="res://elements/items/item_data/vodka.tres" id="8_olo00"]
 [ext_resource type="Resource" uid="uid://feoqskgukx3t" path="res://elements/items/item_data/beer.tres" id="8_xtep5"]
-[ext_resource type="Script" path="res://elements/quests/reward_item.gd" id="9_t2nsb"]
+[ext_resource type="Script" uid="uid://bg0xni7nvjx4q" path="res://elements/quests/reward_item.gd" id="9_t2nsb"]
 [ext_resource type="Resource" uid="uid://dosp8iscgnwxh" path="res://elements/items/item_data/benno_parent_journal.tres" id="10_3i8gi"]
-[ext_resource type="Script" path="res://elements/quests/reward_prompt_world.gd" id="10_we7w0"]
+[ext_resource type="Script" uid="uid://cq2wy5oaod6ls" path="res://elements/quests/reward_prompt_world.gd" id="10_we7w0"]
 
 [sub_resource type="Resource" id="Resource_jme3x"]
 script = ExtResource("9_t2nsb")

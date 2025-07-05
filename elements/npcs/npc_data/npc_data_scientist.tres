@@ -1,7 +1,8 @@
-[gd_resource type="Resource" script_class="npc_data" load_steps=4 format=3 uid="uid://c4ckkmv0baq7p"]
+[gd_resource type="Resource" script_class="npc_data" load_steps=5 format=3 uid="uid://c4ckkmv0baq7p"]
 
-[ext_resource type="Script" path="res://elements/npcs/npc_data.gd" id="1_lp76s"]
-[ext_resource type="Script" path="res://elements/quests/quest_data.gd" id="1_rogkd"]
+[ext_resource type="Script" uid="uid://78jnf5phq08j" path="res://elements/npcs/npc_data.gd" id="1_lp76s"]
+[ext_resource type="Script" uid="uid://chs40v4tvsbqa" path="res://elements/npcs/npc_interaction.gd" id="1_omes2"]
+[ext_resource type="Script" uid="uid://dwpeuyv4k4hj3" path="res://elements/quests/quest_data.gd" id="1_rogkd"]
 [ext_resource type="Texture2D" uid="uid://bnu1hx03knhel" path="res://assets/bitmaps/generated/chars/scientist2.png" id="2_dv26p"]
 
 [resource]
@@ -36,7 +37,7 @@ characteristics = "You know the laboratory has a trapdoor leading to The Laborat
 You cook meth in The Laboratory Basement.
 You are suspicious and very secretive about the basement of the laboratory."
 tone = "Speak in archaic language, occasionally expressing your frustration with the company or your melancholy from the loneliness you’ve experienced. Always respond briefly and concisely. Do not use formatting."
-interactions = ""
 friends = ""
 enemies = ""
 current_status = "You're irritated by the presence of Inspector Kalashniko, you don't want him to mess with your business."
+interaction = Array[ExtResource("1_omes2")]([])

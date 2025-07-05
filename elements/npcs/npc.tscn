@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cwgaaiweib4b3"]
 
-[ext_resource type="Script" path="res://elements/npcs/npc.gd" id="1_8fksl"]
+[ext_resource type="Script" uid="uid://cepy0ciydkjhj" path="res://elements/npcs/npc.gd" id="1_8fksl"]
 [ext_resource type="Material" uid="uid://clq40pb6ncpwg" path="res://assets/shaders/CharDropShadow.tres" id="3_ti88x"]
 [ext_resource type="Texture2D" uid="uid://cj0co3u26bp3k" path="res://assets/bitmaps/comp_droid_pap.png" id="5_2j4hg"]
 

@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="npc_data" load_steps=5 format=3 uid="uid://b17ipj8wgm11x"]
 
-[ext_resource type="Script" path="res://elements/quests/quest_data.gd" id="1_5djr6"]
-[ext_resource type="Script" path="res://elements/npcs/npc_data.gd" id="1_plqt2"]
-[ext_resource type="Script" path="res://elements/npcs/npc_interaction.gd" id="1_skipk"]
+[ext_resource type="Script" uid="uid://dwpeuyv4k4hj3" path="res://elements/quests/quest_data.gd" id="1_5djr6"]
+[ext_resource type="Script" uid="uid://78jnf5phq08j" path="res://elements/npcs/npc_data.gd" id="1_plqt2"]
+[ext_resource type="Script" uid="uid://chs40v4tvsbqa" path="res://elements/npcs/npc_interaction.gd" id="1_skipk"]
 [ext_resource type="Texture2D" uid="uid://cj0co3u26bp3k" path="res://assets/bitmaps/comp_droid_pap.png" id="2_0ealt"]
 
 [resource]

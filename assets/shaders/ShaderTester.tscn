@@ -1,11 +1,11 @@
 [gd_scene load_steps=17 format=3 uid="uid://l40mfx1lof5h"]
 
-[ext_resource type="Shader" path="res://assets/shaders/Outline.gdshader" id="1_0p54k"]
+[ext_resource type="Shader" uid="uid://cblv0nhgyeosh" path="res://assets/shaders/Outline.gdshader" id="1_0p54k"]
 [ext_resource type="Texture2D" uid="uid://b1vx7alsoiyb" path="res://assets/bitmaps/benno4.png" id="1_7rv6t"]
-[ext_resource type="Shader" path="res://assets/shaders/CastShadow.gdshader" id="3_h48ml"]
-[ext_resource type="Shader" path="res://assets/shaders/SpriteAndDropShadow.gdshader" id="4_wlu7c"]
+[ext_resource type="Shader" uid="uid://03y8klo5qmqd" path="res://assets/shaders/CastShadow.gdshader" id="3_h48ml"]
+[ext_resource type="Shader" uid="uid://dkcdlvf1l33nb" path="res://assets/shaders/SpriteAndDropShadow.gdshader" id="4_wlu7c"]
 [ext_resource type="Material" uid="uid://cermd26dujlt8" path="res://assets/shaders/ColorAdj.tres" id="5_cowys"]
-[ext_resource type="Shader" path="res://assets/shaders/Outline_CursCore.gdshader" id="6_hme0j"]
+[ext_resource type="Shader" uid="uid://bw8q0muntv0en" path="res://assets/shaders/Outline_CursCore.gdshader" id="6_hme0j"]
 [ext_resource type="Theme" uid="uid://c3gfwu5jojd" path="res://themes/Dialogue_theme.tres" id="7_a6rvs"]
 [ext_resource type="Texture2D" uid="uid://d117yhbmf8o0f" path="res://assets/bitmaps/ui/textfield_9patch.png" id="8_n3eln"]
 [ext_resource type="Texture2D" uid="uid://bvipvx3esky5g" path="res://assets/bitmaps/ui/dialog_neutral.png" id="9_o3xdc"]
@@ -25,7 +25,7 @@ shader = ExtResource("4_wlu7c")
 shader_parameter/debug = false
 shader_parameter/border_scale = 2.0
 shader_parameter/shadow_offset = Vector2(-10, -10)
-shader_parameter/color = null
+shader_parameter/color = Color(0, 0, 0, 1)
 shader_parameter/blur_amount = 0.0
 shader_parameter/shadow_scale = 1.5
 shader_parameter/disable_rotating = false

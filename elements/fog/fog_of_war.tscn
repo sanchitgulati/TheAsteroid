@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://b48t1qnaqbqkr"]
 
-[ext_resource type="Script" path="res://elements/fog/destroy_self_and_children.gd" id="1_agsb0"]
+[ext_resource type="Script" uid="uid://buvm7skg0vs00" path="res://elements/fog/destroy_self_and_children.gd" id="1_agsb0"]
 
 [sub_resource type="Animation" id="Animation_4yc8i"]
 length = 0.001
@@ -35,8 +35,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_taf2a"]
 _data = {
-"RESET": SubResource("Animation_4yc8i"),
-"fade_out": SubResource("Animation_rd5pv")
+&"RESET": SubResource("Animation_4yc8i"),
+&"fade_out": SubResource("Animation_rd5pv")
 }
 
 [node name="FogOf War" type="Area2D"]
